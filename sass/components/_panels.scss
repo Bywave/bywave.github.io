@@ -1,0 +1,178 @@
+// ------------------------------------------------------------\\
+//  PANELS                                              
+// ------------------------------------------------------------\\
+
+
+.panel {
+    @include clear();
+    display: block;
+    margin-bottom: $panel-margin-bottom;
+    overflow: hidden;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .panel-top {
+        background-color: $panel-top-bg;
+        padding: $panel-top-padding-top-normal $panel-top-padding-right-normal $panel-top-padding-bottom-normal $panel-top-padding-left-normal;
+        color: $panel-top-color;
+        border: $panel-top-border;
+        border-bottom: none;
+        margin-bottom: $panel-top-margin-bottom;
+        @include border-top-radius($panel-top-border-radius);
+        @include clear();
+        h1, h2, h3, h4, h5, h6 {
+            color: $panel-top-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .panel-bottom {
+        background-color: $panel-bottom-bg;
+        padding: $panel-bottom-padding-top-normal $panel-bottom-padding-right-normal $panel-bottom-padding-bottom-normal $panel-bottom-padding-left-normal;
+        color: $panel-bottom-color;
+        @include border-bottom-radius($panel-bottom-border-radius);
+        h1, h2, h3, h4, h5, h6 {
+            color: $panel-bottom-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .left, .push-left {
+        margin-right: $panel-margin-right;
+    }
+    .right, .push-right {
+        margin-left: $panel-margin-left;
+    }
+    .panel-content {
+        position: relative;
+        background-color:$panel-content-bg;
+        color: $panel-content-color;
+        border: $panel-content-border;
+        padding: $panel-content-padding-top-normal $panel-content-padding-right-normal $panel-content-padding-bottom-normal $panel-content-padding-left-normal;
+        @include border-radius($panel-content-border-radius);
+        @include border-bottom-radius($panel-content-border-radius-bottom);
+        @include clear();
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .panel-details {
+        overflow: hidden;
+        padding-bottom: 1px;
+    }
+    .panel-data {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .panel-banner {
+        position: relative;
+        img {
+            display: block;
+        }
+    }
+    .panel-caption {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: $panel-caption-bottom;
+        top: $panel-caption-top;
+        display: block;
+        padding: $panel-caption-padding-top-normal $panel-caption-padding-right-normal $panel-caption-padding-bottom-normal $panel-caption-padding-left-normal;
+        h1, h2, h3, h4, h5, h6 {
+            text-align: $panel-caption-align;
+            color: $panel-caption-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+}
+
+
+.panel-normal {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.panel-primary {
+    .panel-content {
+        background-color:$color-primary;
+        border-color: $color-primary;
+        color: $panel-content-color-primary;
+        h1, h2, h3, h4, h5, h6 {
+            color: $panel-content-color-primary;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.panel-secondary {
+    .panel-content {
+        background-color:$color-secondary;
+        border-color: $color-secondary;
+        color: $panel-content-color-secondary;
+    }
+}
+
+.panel-tertiary {
+    .panel-content {
+        background-color:$color-tertiary;
+        border-color: $color-tertiary;
+        color: $panel-content-color-tertiary;
+    }
+}
+
+.panel-white {
+    .panel-content {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.panel-black {
+    .panel-content {
+        background-color: $color-black;
+        color: $color-black;
+    }
+}
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    .panel {
+        .panel-top {
+            padding: $panel-top-padding-top-moderate $panel-top-padding-right-moderate $panel-top-padding-bottom-moderate $panel-top-padding-left-moderate;
+        }
+        .panel-content {
+            padding: $panel-content-padding-top-moderate $panel-content-padding-right-moderate $panel-content-padding-bottom-moderate $panel-content-padding-left-moderate;
+        }
+        .panel-caption {
+            padding: $panel-caption-padding-top-moderate $panel-caption-padding-right-moderate $panel-caption-padding-bottom-moderate $panel-caption-padding-left-moderate;
+        }
+    }
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+    .panel {
+        .panel-top {
+            padding: $panel-top-padding-top-light $panel-top-padding-right-light $panel-top-padding-bottom-light $panel-top-padding-left-light;
+        }
+        .panel-content {
+            padding: $panel-content-padding-top-light $panel-content-padding-right-light $panel-content-padding-bottom-light $panel-content-padding-left-light;
+        }
+        .panel-caption {
+            padding: $panel-caption-padding-top-light $panel-caption-padding-right-light $panel-caption-padding-bottom-light $panel-caption-padding-left-light;
+        }
+    }
+}

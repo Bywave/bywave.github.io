@@ -1,0 +1,111 @@
+// ------------------------------------------------------------\\
+//  IMAGES                                               
+// ------------------------------------------------------------\\
+
+img {
+    vertical-align: middle;
+}
+
+
+// Image FLUID 
+//-------------------------------------------------------------\\
+
+.image-full {
+    margin-bottom: $image-banner-margin-bottom;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+// Image Banner - Common Banner
+//-------------------------------------------------------------\\
+
+.image-banner {
+    margin-bottom: $image-banner-margin-bottom;
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+
+// Image Circular
+//-------------------------------------------------------------\\
+
+.image-circular {
+    border-radius: 50%;
+    overflow: hidden;
+    border: $image-border;
+    margin-bottom: $image-margin-bottom;
+}
+
+// Image Curve
+//-------------------------------------------------------------\\
+
+.image-curve {
+    border-radius: $image-border-radius;
+    border: $image-border;
+    display: block;
+    margin-bottom: $image-margin-bottom;
+}
+
+// Image Thumbnails - curve, circular, common, fluid, etc.
+//-------------------------------------------------------------\\
+
+.image-thumbnail {
+    border: $image-thumbnail-border;
+    border-radius: $image-border-radius;
+    background-color: $image-thumbnail-bg;
+    padding: $image-thumbnail-padding;
+    display: block;
+    margin-bottom: $image-margin-bottom;
+    width: 100%;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.image-content {
+    display: block;
+    margin-bottom: $image-margin-bottom;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    img {
+        display: block;
+        margin-bottom: 0;
+    }
+    .image-caption {
+        position: $image-caption-position;
+        left: 0;
+        top: $image-caption-position-top;
+        bottom: $image-caption-position-bottom;
+        padding: $image-caption-padding-top-normal $image-caption-padding-right-normal $image-caption-padding-bottom-normal $image-caption-padding-left-normal;
+        a {
+            color: $color-black;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    .image-content {
+        .image-caption {
+            padding: $image-caption-padding-top-moderate $image-caption-padding-right-moderate $image-caption-padding-bottom-moderate $image-caption-padding-left-moderate;
+        }
+    }
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+    .image-content {
+        .image-caption {
+            padding: $image-caption-padding-top-light $image-caption-padding-right-light $image-caption-padding-bottom-light $image-caption-padding-left-light;
+        }
+    }
+}

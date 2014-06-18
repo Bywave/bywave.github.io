@@ -1,0 +1,85 @@
+// ------------------------------------------------------------\\
+//  BAR                                               
+// ------------------------------------------------------------\\
+
+
+.bar {
+	display: block;
+	padding: $bar-padding-top-normal $bar-padding-right-normal $bar-padding-bottom-normal $bar-padding-right-normal;
+	background: $bar-bg;
+	border-top: $bar-border-top;
+	border-bottom: $bar-border-bottom;
+	border: $bar-border;
+	margin-bottom: $bar-margin-bottom;
+	@include clear();
+	position: relative;
+	z-index: 9;
+}
+
+
+// Topbar 
+//-------------------------------------------------------------\\
+
+.top-bar {
+	padding: $topbar-padding-top-normal $topbar-padding-right-normal $topbar-padding-bottom-normal $topbar-padding-right-normal;
+	background: $topbar-bg;
+	color: $topbar-color;
+	border-top: $topbar-border-top;
+	border-bottom: $topbar-border-bottom;
+	border: $topbar-border;
+	margin-bottom: $bar-margin-bottom;
+	@include clear();
+	position: relative;
+	z-index: 9;
+}
+
+
+
+// Navbar 
+//-------------------------------------------------------------\\
+
+.nav-bar {
+	padding: $navbar-padding-top-normal $navbar-padding-right-normal $navbar-padding-bottom-normal $navbar-padding-right-normal;
+	background: $navbar-bg;
+	color: $navbar-color;
+	border-top: $navbar-border-top;
+	border-bottom: $navbar-border-bottom;
+	border: $navbar-border;
+	margin-bottom: $navbar-margin-bottom;
+	@include clear();
+	position: relative;
+	z-index: 9;
+}
+
+
+// Bottombar
+//-------------------------------------------------------------\\
+
+.bottom-bar {
+	padding: $bottombar-padding-top-normal $bottombar-padding-right-normal $bottombar-padding-bottom-normal $bottombar-padding-right-normal;
+	background: $bottombar-bg;
+	color: $bottombar-color;
+	border-top: $bottombar-border-top;
+	border-bottom: $bottombar-border-bottom;
+	border: $bottombar-border;
+	margin-bottom: $bottombar-margin-bottom;
+	@include clear();
+	position: relative;
+	z-index: 9;
+}
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+   	.navbar > .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

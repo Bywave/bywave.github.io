@@ -1,0 +1,40 @@
+// ------------------------------------------------------------\\
+//  PAGING                                              
+// ------------------------------------------------------------\\
+
+
+// Page
+
+.paging {
+	@include clear();
+	a {
+		
+	}
+}
+
+
+
+// Pagination
+
+ul.pagination {
+	@include clear();
+	display: block;
+	li {
+		display: inline;	
+	}
+}
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+   
+}

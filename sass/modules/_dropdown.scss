@@ -1,0 +1,41 @@
+// ------------------------------------------------------------\\
+//  DROPDOWN                                             
+// ------------------------------------------------------------\\
+
+.dropdown-content {
+	position: $dropdown-position;
+	left: $dropdown-position-left;
+	right: $dropdown-position-right;
+	top: $dropdown-position-top;
+	z-index: 9;
+	background: $dropdown-bg;
+	color: $dropdown-color;
+	border: $dropdown-border;
+	min-width: $dropdown-min-width;
+	display: none;
+	> li {
+		display: block;
+		border-top: $dropdown-list-border-top;
+		border-bottom: $dropdown-list-border-bottom;
+	}
+	> li > a {
+		color: $dropdown-color;
+		padding: $dropdown-padding-top-normal $dropdown-padding-right-normal $dropdown-padding-bottom-normal $dropdown-padding-left-normal;
+		display: block;
+	}
+}
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+   
+}

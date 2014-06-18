@@ -1,0 +1,59 @@
+// ------------------------------------------------------------\\
+//  DETAILS                                               
+// ------------------------------------------------------------\\
+
+
+.details {
+    @include clear();
+    .details-top {
+        
+    }
+    .details-left {
+        padding-right: $details-padding-right;
+    }
+    .details-right {
+        padding-left: $details-padding-left;
+    }
+    .details-content {
+        overflow: hidden;
+        padding-bottom: 1px;
+    }
+    .details-data {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .details-data.bottom {
+        vertical-align: bottom;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .button {
+        margin-bottom: 0;
+    }
+}
+
+
+.details-normal {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+   
+}
