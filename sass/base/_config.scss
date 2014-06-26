@@ -1,49 +1,49 @@
 // ------------------------------------------------------------\\
-// 	VARIABLES 									
+// 	VARIABLES
 // ------------------------------------------------------------\\
 
-// Colors 
+// Colors
 //-------------------------------------------------------------\\
 
 $color-black:     		#000000 !default;
 $color-white:     		#ffffff !default;
 
 $color-gray: 			#808080 !default;
-$color-gray-darken: 	darken($color-gray, 20%) !default; 
-$color-gray-lighten: 	lighten($color-gray, 45%) !default; 		
-			
+$color-gray-darken: 	darken($color-gray, 20%) !default;
+$color-gray-lighten: 	lighten($color-gray, 45%) !default;
+
 $color-normal:         	$color-gray-darken !default;
-$color-primary: 	    #db3340 !default;
+$color-primary: 	    #f2664f !default;
 $color-secondary:     	#28abe3 !default;
 $color-tertiary:     	#f7eac8 !default;
 $color-completed: 		#47bc28 !default;
 $color-error: 			#ff0000 !default;
 
 
-// Global 
+// Global
 //-------------------------------------------------------------\\
 
 
 $global-padding-top-normal: 			10px !default;
 $global-padding-bottom-normal: 			10px !default;
 $global-padding-left-normal: 			20px !default;
-$global-padding-right-normal: 			20px !default;	
+$global-padding-right-normal: 			20px !default;
 
 $global-padding-top-moderate: 			8px !default;
 $global-padding-bottom-moderate: 		8px !default;
 $global-padding-left-moderate: 			10px !default;
-$global-padding-right-moderate: 		10px !default;	
+$global-padding-right-moderate: 		10px !default;
 
 $global-padding-top-light: 				8px !default;
 $global-padding-bottom-light: 			8px !default;
 $global-padding-left-light: 			10px !default;
-$global-padding-right-light: 			10px !default;	
+$global-padding-right-light: 			10px !default;
 
 $global-border-radius-normal: 			0px !default;
 $global-border-color: 					#f5f5f5 !default;
 
-$global-font-size-normal:      			14px;
-$global-font-size-moderate:      			12px;
+$global-font-size-normal:      			18px;
+$global-font-size-moderate:      			14px;
 $global-font-size-light:      			12px;
 
 $global-line-height-normal:  			1.5 !default; // 16/11
@@ -62,11 +62,11 @@ $hr-margin-bottom: 						$global-margin-bottom-normal !default;
 
 $valign-height: 						300px !default;
 
-// Typography 
+// Typography
 //-------------------------------------------------------------\\
 
 
-$font-family-normal:      		Arial, sans-serif !default;
+$font-family-normal:      		'proxima-nova',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
 $font-family-primary:  			'font-name', Arial, sans-serif !default;
 $font-family-secondary:  		'font-name', Arial, sans-serif !default;
 $font-family-tertiary:  		'font-name', Arial, sans-serif !default;
@@ -80,16 +80,16 @@ $heading-font-weight: 			normal !default;
 $heading-1-normal: 				36px !default;
 $heading-2-normal: 				30px !default;
 $heading-3-normal: 				24px !default;
-$heading-4-normal: 				18px !default;	
+$heading-4-normal: 				18px !default;
 $heading-5-normal: 				14px !default;
 $heading-6-normal: 				12px !default;
 
 $heading-1-light: 				36px !default;
 $heading-2-light: 				30px !default;
 $heading-3-light: 				24px !default;
-$heading-4-light: 				18px !default;	
+$heading-4-light: 				18px !default;
 $heading-5-light: 				14px !default;
-$heading-6-light: 				12px !default;		
+$heading-6-light: 				12px !default;
 
 $heading-margin-bottom-normal: 	$global-margin-bottom-normal !default;
 $heading-margin-bottom-moderate: 	$global-margin-bottom-moderate !default;
@@ -182,8 +182,8 @@ $navbar-padding-right-normal: 			0px !default;
 
 $navbar-margin-bottom: 					10px !default;
 
-$navbar-bg: 							$color-gray-darken !default;
-$navbar-color: 							$color-white !default;
+$navbar-bg: 							$color-white !default;
+$navbar-color: 							$color-primary !default;
 
 $navbar-border: 						none !default; // 1px solid $color-primary
 $navbar-border-top: 					none !default; // 1px solid $color-primary
@@ -198,7 +198,7 @@ $bottombar-padding-right-normal: 		0px !default;
 
 $bottombar-margin-bottom: 				10px !default;
 
-$bottombar-bg: 							$color-gray-darken !default;		
+$bottombar-bg: 							$color-gray-darken !default;
 $bottombar-color: 						$color-white !default;
 
 $bottombar-border: 						none !default; // 1px solid $color-primary
@@ -207,7 +207,7 @@ $bottombar-border-bottom: 				none !default; // 1px solid $color-primary
 
 
 
-// Nav 
+// Nav
 //-------------------------------------------------------------\\
 
 $nav-padding-top-normal: 				10px !default;
@@ -450,7 +450,7 @@ $button-error-border-color: 		$color-error !default;
 
 
 
-// Dropdown 
+// Dropdown
 //-------------------------------------------------------------\\
 
 $dropdown-padding-top-normal: 			10px !default;
@@ -531,7 +531,7 @@ $list-bg-padding-bottom-normal: 			$list-padding-bottom-normal !default;
 $list-bg-padding-left-normal: 				10px !default;
 $list-bg-padding-right-normal: 				10px !default;
 
-// List arrow styling 
+// List arrow styling
 $list-arrow-color: 							$color-normal !default;
 $list-arrow-size-normal: 					4px !default;
 $list-arrow-size-moderate: 					4px !default;
@@ -551,13 +551,13 @@ $list-bullet-position-top: 					$list-padding-top-normal !default;
 
 
 $dt-font-weight: 							bold !default;
-$dt-font-size-normal:						$global-font-size-normal !default; 
+$dt-font-size-normal:						$global-font-size-normal !default;
 $dt-dd-margi-bottom: 						10px !default;
 $dt-color: 									$color-normal !default;
 
 
 
-// Form 
+// Form
 //-------------------------------------------------------------\\
 
 $input-padding-top-normal: 			4px !default;
@@ -664,7 +664,7 @@ $image-border:  							1px solid transparent !default;
 $image-banner-margin-bottom: 				$image-margin-bottom !default;
 
 // Image Curve
-$image-border-radius: 						$global-border-radius-normal !default; 
+$image-border-radius: 						$global-border-radius-normal !default;
 
 // Image Thumbnail
 $image-thumbnail-border: 					$image-border !default;
@@ -959,7 +959,7 @@ $block-margin-bottom-moderate: 			0px !default;
 $block-margin-bottom-light: 			0px !default;
 
 
-// Details 
+// Details
 //-------------------------------------------------------------\\
 
 $details-padding-right: 				15px !default;
@@ -1001,7 +1001,7 @@ $grid-cell-padding-left-normal: 		20px !default;
 $grid-cell-padding-right-normal: 		20px !default;
 
 
-// Grid off borders. 
+// Grid off borders.
 $grid-off-border-width: 				1px !default;
 $grid-off-border-bg: 					darken($color-gray-lighten, 10%) !default;
 
@@ -1045,7 +1045,7 @@ $container-heavy:  				((1140px + $grid-gutter-normal)) !default;
 
 
 
-// Breakpoints 
+// Breakpoints
 //-------------------------------------------------------------\\
 
 $grid-light: 						767px !default;

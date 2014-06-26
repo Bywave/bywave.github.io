@@ -258,7 +258,7 @@ th {
   padding: 0;
 }
 
-/* line 17, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -280,45 +280,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -349,8 +349,8 @@ html {
 /* line 20, ../sass/base/_global.scss */
 body {
   background-color: white !important;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
   text-align: left;
   color: #4d4d4d;
   -webkit-font-smoothing: antialiased;
@@ -358,7 +358,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 20, ../sass/base/_global.scss */
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -400,7 +400,7 @@ input::-moz-focus-inner {
 
 /* line 48, ../sass/base/_global.scss */
 pre {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 /* line 52, ../sass/base/_global.scss */
@@ -414,7 +414,7 @@ pre {
 }
 /* line 59, ../sass/base/_global.scss */
 .html-tags .tag {
-  color: #db3340;
+  color: #f2664f;
 }
 /* line 62, ../sass/base/_global.scss */
 .html-tags .attr {
@@ -901,7 +901,7 @@ pre {
 .grid-cell.with-bg .heavy-10,
 .grid-cell.with-bg .heavy-11,
 .grid-cell.with-bg .heavy-12 {
-  background: #db3340;
+  background: #f2664f;
   color: white;
   padding: 20px 20px 20px 20px;
 }
@@ -4537,7 +4537,7 @@ pre {
 /* line 18, ../sass/base/_typography.scss */
 p, address {
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 /* line 23, ../sass/base/_typography.scss */
@@ -4572,7 +4572,7 @@ em {
 /* line 48, ../sass/base/_typography.scss */
 .heading-category {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 25, ../sass/base/_mixins.scss */
 .heading-category:before, .heading-category:after {
@@ -4599,8 +4599,8 @@ em {
 
 /* line 65, ../sass/base/_typography.scss */
 .heading-bar {
-  margin-bottom: 24px;
-  background: #db3340;
+  margin-bottom: 30px;
+  background: #f2664f;
   display: block;
   padding: 8px 20px 8px 20px;
 }
@@ -4642,10 +4642,10 @@ em {
 
 /* line 88, ../sass/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   line-height: 1.1;
   color: #4d4d4d;
-  font-family: Arial, sans-serif;
+  font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
 }
 /* line 94, ../sass/base/_typography.scss */
@@ -4697,7 +4697,7 @@ blockquote {
   color: black;
   font-weight: bold;
   font-size: 22px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 139, ../sass/base/_typography.scss */
 blockquote p {
@@ -4723,17 +4723,17 @@ blockquote .author {
 
   /* line 160, ../sass/base/_typography.scss */
   p, address {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   /* line 163, ../sass/base/_typography.scss */
   .heading-category {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   /* line 166, ../sass/base/_typography.scss */
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -4775,17 +4775,17 @@ blockquote .author {
 
   /* line 198, ../sass/base/_typography.scss */
   p, address {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   /* line 201, ../sass/base/_typography.scss */
   .heading-category {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   /* line 204, ../sass/base/_typography.scss */
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 }
 /* line 5, ../sass/base/_footer.scss */
@@ -7405,7 +7405,7 @@ hr {
   height: 0px;
   overflow: hidden;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   text-align: center;
   padding: 0;
 }
@@ -7801,9 +7801,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #d9d9d9 0 -3px 0px 0 inset;
 }
 /* line 64, ../sass/components/_buttons.scss */
 .button.normal:after {
@@ -7821,13 +7821,13 @@ button {
 /* line 75, ../sass/components/_buttons.scss */
 .button.primary {
   color: white;
-  background-color: #db3340;
-  border-color: #db3340;
+  background-color: #f2664f;
+  border-color: #f2664f;
 }
 /* line 54, ../sass/base/_mixins.scss */
 .button.primary:hover {
-  background-color: #a41d28;
-  border-color: #a41d28;
+  background-color: #e42f11;
+  border-color: #e42f11;
 }
 /* line 59, ../sass/base/_mixins.scss */
 .button.primary:after {
@@ -7837,9 +7837,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #ba212d 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #ba212d 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #ba212d 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #ee3d20 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #ee3d20 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #ee3d20 0 -3px 0px 0 inset;
 }
 /* line 77, ../sass/components/_buttons.scss */
 .button.primary h1, .button.primary h2, .button.primary h3, .button.primary h4, .button.primary h5, .button.primary h6 {
@@ -7869,9 +7869,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #198dbf 0 -3px 0px 0 inset;
 }
 /* line 87, ../sass/components/_buttons.scss */
 .button.secondary h1, .button.secondary h2, .button.secondary h3, .button.secondary h4, .button.secondary h5, .button.secondary h6 {
@@ -7901,9 +7901,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #f1d99b 0 -3px 0px 0 inset;
 }
 /* line 97, ../sass/components/_buttons.scss */
 .button.tertiary h1, .button.tertiary h2, .button.tertiary h3, .button.tertiary h4, .button.tertiary h5, .button.tertiary h6 {
@@ -7933,9 +7933,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #37921f 0 -3px 0px 0 inset;
 }
 /* line 107, ../sass/components/_buttons.scss */
 .button.completed h1, .button.completed h2, .button.completed h3, .button.completed h4, .button.completed h5, .button.completed h6 {
@@ -7965,9 +7965,9 @@ button {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
-  -moz-box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
-  box-shadow: rgba(186, 33, 45, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
+  -webkit-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
+  -moz-box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
+  box-shadow: rgba(238, 61, 32, 0) 0 0px 5px 0, #cc0000 0 -3px 0px 0 inset;
 }
 /* line 117, ../sass/components/_buttons.scss */
 .button.error h1, .button.error h2, .button.error h3, .button.error h4, .button.error h5, .button.error h6 {
@@ -7989,7 +7989,7 @@ button {
   height: 0;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
-  border-left: 30px solid #db3340;
+  border-left: 30px solid #f2664f;
 }
 
 /* line 148, ../sass/components/_buttons.scss */
@@ -8198,7 +8198,7 @@ button {
   background: none;
   border: 1px solid gray;
   border-radius: 0;
-  font-family: Arial, sans-serif;
+  font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   margin-bottom: 6px;
   -webkit-box-shadow: rgba(103, 103, 103, 0.5) 0 1px 2px 0, rgba(77, 77, 77, 0) 0 -2px 0px 0 inset;
   -moz-box-shadow: rgba(103, 103, 103, 0.5) 0 1px 2px 0, rgba(77, 77, 77, 0) 0 -2px 0px 0 inset;
@@ -8268,7 +8268,7 @@ textarea {
   background: none;
   border: 1px solid gray;
   border-radius: 0;
-  font-family: Arial, sans-serif;
+  font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* line 94, ../sass/components/_form.scss */
@@ -8285,7 +8285,7 @@ select {
   border-radius: 0;
   color: black;
   background: none;
-  font-family: Arial, sans-serif;
+  font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 12px;
   background: url(../images/icons/icon-select.png) 100% 1px no-repeat #fafafa;
   -moz-appearance: none;
@@ -8631,8 +8631,8 @@ select::-ms-expand {
 /* line 41, ../sass/components/_bar.scss */
 .nav-bar {
   padding: 0px 0px 0px 0px;
-  background: #4d4d4d;
-  color: white;
+  background: white;
+  color: #f2664f;
   border-top: none;
   border-bottom: none;
   border: none;
@@ -8711,7 +8711,7 @@ select::-ms-expand {
 .nav-page-title {
   float: left;
   font-size: 14px;
-  color: #db3340;
+  color: #f2664f;
   margin-top: 13px;
   display: none;
   text-transform: uppercase;
@@ -8776,18 +8776,18 @@ select::-ms-expand {
 .nav > li > a:hover {
   text-decoration: none;
   background-color: none;
-  color: #db3340;
+  color: #f2664f;
   border-top: none;
-  border-bottom: 2px solid #db3340;
+  border-bottom: 2px solid #f2664f;
 }
 
 /* line 107, ../sass/components/_nav.scss */
 .nav > li.active > a {
   text-decoration: none;
   background-color: none;
-  color: #db3340;
+  color: #f2664f;
   border-top: none;
-  border-bottom: 2px solid #db3340;
+  border-bottom: 2px solid #f2664f;
 }
 
 /* line 119, ../sass/components/_nav.scss */
@@ -8913,8 +8913,8 @@ select::-ms-expand {
 }
 /* line 9, ../sass/components/_lists.scss */
 dl {
-  margin-bottom: 24px;
-  font-size: 14px;
+  margin-bottom: 30px;
+  font-size: 18px;
   display: block;
 }
 /* line 13, ../sass/components/_lists.scss */
@@ -8922,7 +8922,7 @@ dl dt {
   line-height: 1.5;
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 18px;
   color: #4d4d4d;
 }
 /* line 20, ../sass/components/_lists.scss */
@@ -8933,8 +8933,8 @@ dl dd {
 /* line 31, ../sass/components/_lists.scss */
 ol {
   list-style-type: decimal;
-  margin-bottom: 24px;
-  padding-left: 21px;
+  margin-bottom: 30px;
+  padding-left: 27px;
 }
 /* line 35, ../sass/components/_lists.scss */
 ol li {
@@ -8949,7 +8949,7 @@ ol a {
 
 /* line 51, ../sass/components/_lists.scss */
 ul {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 53, ../sass/components/_lists.scss */
 ul:last-child {
@@ -8973,7 +8973,7 @@ ul li:before {
   top: 5px;
   content: "\2022";
   padding-right: 5px;
-  color: #db3340;
+  color: #f2664f;
   font-size: 18px;
   line-height: 1.25;
 }
@@ -8985,7 +8985,7 @@ ul a {
 ul.with-bg li {
   padding-left: 25px;
   width: 100%;
-  background: #db3340;
+  background: #f2664f;
   color: white;
 }
 /* line 84, ../sass/components/_lists.scss */
@@ -9002,7 +9002,7 @@ ul.with-bg a {
 }
 /* line 94, ../sass/components/_lists.scss */
 ul.with-bg a:hover {
-  background-color: #a41d28;
+  background-color: #e42f11;
   text-decoration: none;
 }
 /* line 97, ../sass/components/_lists.scss */
@@ -9019,8 +9019,8 @@ ul.with-bg a:hover:before {
 
 /* line 113, ../sass/components/_lists.scss */
 .list-flexible, .list-inline {
-  margin-bottom: 24px;
-  font-size: 14px;
+  margin-bottom: 30px;
+  font-size: 18px;
   display: block;
   color: #4d4d4d;
   list-style-type: none;
@@ -9052,7 +9052,7 @@ ul.with-bg a:hover:before {
 .list-flexible.with-bg li {
   padding: 5px 10px 5px 10px;
   width: 100%;
-  background: #db3340;
+  background: #f2664f;
   color: white;
 }
 /* line 156, ../sass/components/_lists.scss */
@@ -9068,7 +9068,7 @@ ul.with-bg a:hover:before {
 }
 /* line 165, ../sass/components/_lists.scss */
 .list-flexible.with-bg a:hover {
-  background-color: #a41d28;
+  background-color: #e42f11;
   text-decoration: none;
 }
 /* line 170, ../sass/components/_lists.scss */
@@ -9117,7 +9117,7 @@ ul.with-bg a {
 
 /* line 226, ../sass/components/_lists.scss */
 .list-flexible.border {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 228, ../sass/components/_lists.scss */
 .list-flexible.border li {
@@ -9139,7 +9139,7 @@ ul.with-bg a {
 
 /* line 250, ../sass/components/_lists.scss */
 .list-flexible.arrow {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 252, ../sass/components/_lists.scss */
 .list-flexible.arrow li {
@@ -9193,7 +9193,7 @@ ul.with-bg a {
 /* line 6, ../sass/components/_articles.scss */
 .article {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 25, ../sass/base/_mixins.scss */
 .article:before, .article:after {
@@ -9210,7 +9210,7 @@ ul.with-bg a {
 }
 /* line 13, ../sass/components/_articles.scss */
 .article .article-heading {
-  background-color: #db3340;
+  background-color: #f2664f;
   padding: 10px 10px 10px 10px;
   color: black;
 }
@@ -9385,7 +9385,7 @@ ul.with-bg a {
 /* line 6, ../sass/components/_panels.scss */
 .panel {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 /* line 25, ../sass/base/_mixins.scss */
@@ -9403,7 +9403,7 @@ ul.with-bg a {
 }
 /* line 14, ../sass/components/_panels.scss */
 .panel .panel-top {
-  background-color: #db3340;
+  background-color: #f2664f;
   padding: 10px 20px 10px 20px;
   color: white;
   border: 0;
@@ -9435,7 +9435,7 @@ ul.with-bg a {
 }
 /* line 30, ../sass/components/_panels.scss */
 .panel .panel-bottom {
-  background-color: #db3340;
+  background-color: #f2664f;
   padding: 8px 15px 8px 15px;
   color: white;
   -moz-border-radius-bottomleft: 0px;
@@ -9540,8 +9540,8 @@ ul.with-bg a {
 
 /* line 102, ../sass/components/_panels.scss */
 .panel-primary .panel-content {
-  background-color: #db3340;
-  border-color: #db3340;
+  background-color: #f2664f;
+  border-color: #f2664f;
   color: white;
 }
 /* line 106, ../sass/components/_panels.scss */
@@ -9610,7 +9610,7 @@ ul.with-bg a {
 /* line 6, ../sass/components/_blocks.scss */
 .block {
   padding: 20px 0px 20px 0px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 /* line 25, ../sass/base/_mixins.scss */
 .block:before, .block:after {
@@ -9698,7 +9698,7 @@ table {
 /* line 11, ../sass/components/_tables.scss */
 table th {
   font-weight: bold;
-  background-color: #db3340;
+  background-color: #f2664f;
   color: white;
 }
 /* line 16, ../sass/components/_tables.scss */
@@ -9732,7 +9732,7 @@ table tr:nth-child(even):hover {
 
 /* line 40, ../sass/components/_tables.scss */
 .table-flexible {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   display: block;
 }
 /* line 25, ../sass/base/_mixins.scss */
@@ -9811,7 +9811,7 @@ img {
 
 /* line 13, ../sass/components/_images.scss */
 .image-full {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   display: block;
   width: 100%;
   height: auto;
@@ -9819,7 +9819,7 @@ img {
 
 /* line 23, ../sass/components/_images.scss */
 .image-banner {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   width: auto;
   max-width: 100%;
   display: block;
@@ -9830,7 +9830,7 @@ img {
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid transparent;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 /* line 43, ../sass/components/_images.scss */
@@ -9838,7 +9838,7 @@ img {
   border-radius: 0px;
   border: 1px solid transparent;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 /* line 53, ../sass/components/_images.scss */
@@ -9848,7 +9848,7 @@ img {
   background-color: white;
   padding: 0px;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   width: 100%;
 }
 /* line 61, ../sass/components/_images.scss */
@@ -9859,7 +9859,7 @@ img {
 /* line 66, ../sass/components/_images.scss */
 .image-content {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   position: relative;
 }
 /* line 70, ../sass/components/_images.scss */
@@ -9898,12 +9898,12 @@ img {
 }
 /* line 5, ../sass/components/_colors.scss */
 .color-primary {
-  color: #db3340;
+  color: #f2664f;
 }
 
 /* line 8, ../sass/components/_colors.scss */
 .bg-primary {
-  background-color: #db3340;
+  background-color: #f2664f;
 }
 
 /* line 12, ../sass/components/_colors.scss */
@@ -9998,7 +9998,7 @@ img {
 
 /* line 12, ../sass/modules/_accordion.scss */
 .accordion-switch {
-  background: #db3340;
+  background: #f2664f;
   display: block;
   cursor: pointer;
   padding-top: 6px;
@@ -10018,7 +10018,7 @@ img {
 }
 /* line 30, ../sass/modules/_accordion.scss */
 .accordion-switch:hover {
-  background-color: #a41d28;
+  background-color: #e42f11;
 }
 
 /* line 35, ../sass/modules/_accordion.scss */
@@ -10056,7 +10056,7 @@ img {
   right: auto;
   top: 20px;
   z-index: 9;
-  background: #db3340;
+  background: #f2664f;
   color: black;
   border: 1px solid #f3f3f3;
   min-width: 250px;
@@ -10126,7 +10126,7 @@ img {
 .tab > li > a:hover {
   text-decoration: none;
   background-color: none;
-  color: #db3340;
+  color: #f2664f;
   border-top: none;
   border-bottom: none;
 }
@@ -10135,7 +10135,7 @@ img {
 .tab > li.active > a {
   text-decoration: none;
   background-color: none;
-  color: #db3340;
+  color: #f2664f;
   border-top: none;
   border-bottom: none;
 }
@@ -10206,6 +10206,35 @@ img {
   /* line 108, ../sass/modules/_tab.scss */
   .tab > li > a {
     padding: 0px 0px 0px 10px;
+  }
+}
+/* line 6, ../sass/pages/_home.scss */
+.main-top img {
+  margin-top: 100px;
+}
+/* line 9, ../sass/pages/_home.scss */
+.main-top h1 {
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+  color: #121212;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 19, ../sass/pages/_home.scss */
+  .main-top h1 {
+    font-size: 42px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 26, ../sass/pages/_home.scss */
+  .main-top h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 33, ../sass/pages/_home.scss */
+  .main-top h1 {
+    font-size: 36px;
   }
 }
 /* line 38, ../sass/base/_override.scss */

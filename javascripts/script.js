@@ -19,15 +19,15 @@ var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
 				var curHeight = navCollapse.height();
 				var autoHeight = navCollapse.css('height', 'auto').height();
 				navCollapse.height(curHeight).animate({
-					height : autoHeight									 
+					height : autoHeight
 				}, 200, function() {
 					navCollapse.css('height', 'auto');
-					
-				});	
+
+				});
 				$('.mobile-menu-bg').fadeIn();
 			} else {
 				navCollapse.height(curHeight).animate({
-					height : 0								 
+					height : 0
 				}, 200);
 				$('.mobile-menu-bg').hide();
 			}
@@ -36,7 +36,7 @@ var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
 		if (isMobile) {
 			$navList.on('click', function() {
 				navCollapse.height(navCollapse.height()).animate({
-					height : 0								 
+					height : 0
 				}, 200);
 				$('.mobile-menu-bg').hide();
 			});
@@ -45,14 +45,14 @@ var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
 					var curHeight = navCollapse.height();
 					var autoHeight = navCollapse.css('height', 'auto').height();
 					navCollapse.height(curHeight).animate({
-						height : autoHeight									 
+						height : autoHeight
 					}, 200, function() {
 						navCollapse.css('height', 'auto');
-					});	
+					});
 					$('.mobile-menu-bg').fadeIn();
 				} else {
 					navCollapse.height(curHeight).animate({
-						height : 0								 
+						height : 0
 					}, 200);
 					navbar.removeClass('open');
 					$('.mobile-menu-bg').hide();
@@ -61,7 +61,7 @@ var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
 			});
 			$(document).on('click', function() {
 				navCollapse.height(navCollapse.height()).animate({
-					height : 0								 
+					height : 0
 				}, 200);
 				$('.mobile-menu-bg').hide();
 			});
@@ -138,5 +138,5 @@ var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
 		    FastClick.attach(document.body);
 		});
 	});
-	
+
 })(jQuery);
