@@ -34,7 +34,7 @@ function initFadingHeaderEvents(){
 				console.log('if 2');
 				$header.animate({
 					opacity: 1,
-					// height: 'toggle',
+					marginTop: '0px', 
 				}, 250);
 			}
 		}
@@ -46,7 +46,7 @@ function initFadingHeaderEvents(){
 				timeout_fadingHeader = setTimeout(function(){
 					$header.animate({
 						opacity: 0,
-						// height: 'toggle',
+						marginTop: '-45px',
 					}, 250);
 					is_fadingHeader = false;
 				}, 500);
