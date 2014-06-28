@@ -38,3 +38,33 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.nav-center{
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-center li{
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fading-header{
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.static-header{
+  background-color: transparent;
+  padding: 10px;
+}
+#section-home{
+  height: 100vh;
+}
+div[data-magellan-destination]{
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+}
+div[name="about"]{
+	background-color: #F4F6F8;
+}

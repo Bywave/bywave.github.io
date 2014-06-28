@@ -153,7 +153,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 100%;
 }
 /* line 181, ../bower_components/foundation/scss/foundation/components/_global.scss */
 .row:before, .row:after {
@@ -7006,7 +7006,7 @@ meta.foundation-mq-topbar {
 
   /* line 457, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 62.5rem;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
   }
@@ -8050,4 +8050,46 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important;
   }
+}
+/* line 42, ../_sass/app.scss */
+.nav-center {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 47, ../_sass/app.scss */
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 52, ../_sass/app.scss */
+.fading-header {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 57, ../_sass/app.scss */
+.static-header {
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* line 61, ../_sass/app.scss */
+#section-home {
+  height: 100vh;
+}
+
+/* line 64, ../_sass/app.scss */
+div[data-magellan-destination] {
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+}
+
+/* line 68, ../_sass/app.scss */
+div[name="about"] {
+  background-color: #F4F6F8;
 }
