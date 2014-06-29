@@ -1,40 +1,6 @@
 @import "settings";
 @import "foundation";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-
 .front, .back {
   backface-visibility: hidden;
   transition: all 0.4s ease-in-out 0s;
@@ -75,12 +41,10 @@
   background: none repeat scroll 0% 0% #ADD8E6;
   transform: rotateY(-180deg);
 }
-#sub-about
-{
+#sub-about {
   font-style:italic;
 }
-#p-about
-{
+#p-about {
   line-spacing: 10px;
 }
 #footer {
@@ -89,7 +53,7 @@
   overflow: hidden;
   padding: 8rem 0px 1.5rem;
   text-align: center;
-  }
+}
 
 // chrome rotation not yet fixed
 // other
@@ -98,8 +62,7 @@
   width: 300px;
   height: 300px;
 }
-.panel
-{  
+.panel {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
   perspective: 600px;
@@ -135,8 +98,7 @@
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
-.panel.flip .front
-{
+.panel.flip .front {
   z-index: 900;
   border-color: #eee;
   background: #333;
@@ -177,8 +139,38 @@
 .panel.flip .back
 {
   z-index: 1000;
-
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg);
+}
+
+.nav-center {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fading-header {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin-top: -45px;
+}
+.static-header {
+  background-color: transparent;
+  padding: 10px;
+}
+#section-home {
+  height: 100vh; // This is interesting, however we should check browser support
+}
+div[data-magellan-destination] {
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+}
+div[name="about"] {
+	background-color: #F4F6F8;
 }

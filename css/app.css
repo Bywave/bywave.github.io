@@ -153,7 +153,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem;
+  max-width: 100%;
 }
 /* line 181, ../bower_components/foundation/scss/foundation/components/_global.scss */
 .row:before, .row:after {
@@ -7006,7 +7006,7 @@ meta.foundation-mq-topbar {
 
   /* line 457, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 62.5rem;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
   }
@@ -8051,7 +8051,7 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 38, ../_sass/app.scss */
+/* line 4, ../_sass/app.scss */
 .front, .back {
   backface-visibility: hidden;
   transition: all 0.4s ease-in-out 0s;
@@ -8064,30 +8064,30 @@ th.hide-for-touch {
   perspective: 600px;
 }
 
-/* line 49, ../_sass/app.scss */
+/* line 15, ../_sass/app.scss */
 .flip-container {
   perspective: 500px;
 }
 
-/* line 52, ../_sass/app.scss */
+/* line 18, ../_sass/app.scss */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
 }
 
-/* line 55, ../_sass/app.scss */
+/* line 21, ../_sass/app.scss */
 .flip-container, .front, .back {
   width: 300px;
   height: 300px;
 }
 
-/* line 59, ../_sass/app.scss */
+/* line 25, ../_sass/app.scss */
 .flipper {
   transition: 0.4s;
   transform-style: preserve-3d;
   position: relative;
 }
 
-/* line 64, ../_sass/app.scss */
+/* line 30, ../_sass/app.scss */
 .front, .back {
   backface-visibility: hidden;
   position: absolute;
@@ -8096,28 +8096,28 @@ th.hide-for-touch {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.9);
 }
 
-/* line 71, ../_sass/app.scss */
+/* line 37, ../_sass/app.scss */
 .front {
   z-index: 2;
 }
 
-/* line 74, ../_sass/app.scss */
+/* line 40, ../_sass/app.scss */
 .back {
   background: none repeat scroll 0% 0% #ADD8E6;
   transform: rotateY(-180deg);
 }
 
-/* line 79, ../_sass/app.scss */
+/* line 44, ../_sass/app.scss */
 #sub-about {
   font-style: italic;
 }
 
-/* line 83, ../_sass/app.scss */
+/* line 47, ../_sass/app.scss */
 #p-about {
   line-spacing: 10px;
 }
 
-/* line 86, ../_sass/app.scss */
+/* line 50, ../_sass/app.scss */
 #footer {
   background: none repeat scroll 0% 0% #262624;
   color: #CFCFCF;
@@ -8126,14 +8126,14 @@ th.hide-for-touch {
   text-align: center;
 }
 
-/* line 97, ../_sass/app.scss */
+/* line 61, ../_sass/app.scss */
 .panel,
 .panel img {
   width: 300px;
   height: 300px;
 }
 
-/* line 102, ../_sass/app.scss */
+/* line 65, ../_sass/app.scss */
 .panel {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -8143,7 +8143,7 @@ th.hide-for-touch {
 }
 
 /* -- general styles, including Y axis rotation -- */
-/* line 110, ../_sass/app.scss */
+/* line 73, ../_sass/app.scss */
 .panel .front {
   position: absolute;
   top: 0;
@@ -8168,7 +8168,7 @@ th.hide-for-touch {
   transition: all .4s ease-in-out;
 }
 
-/* line 139, ../_sass/app.scss */
+/* line 101, ../_sass/app.scss */
 .panel.flip .front {
   z-index: 900;
   border-color: #eee;
@@ -8179,7 +8179,7 @@ th.hide-for-touch {
   transform: rotateY(-180deg);
 }
 
-/* line 149, ../_sass/app.scss */
+/* line 111, ../_sass/app.scss */
 .panel .back {
   float: none;
   position: absolute;
@@ -8206,10 +8206,54 @@ th.hide-for-touch {
   transition: all .4s ease-in-out;
 }
 
-/* line 178, ../_sass/app.scss */
+/* line 140, ../_sass/app.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* line 147, ../_sass/app.scss */
+.nav-center {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 152, ../_sass/app.scss */
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 157, ../_sass/app.scss */
+.fading-header {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin-top: -45px;
+}
+
+/* line 163, ../_sass/app.scss */
+.static-header {
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* line 167, ../_sass/app.scss */
+#section-home {
+  height: 100vh;
+}
+
+/* line 170, ../_sass/app.scss */
+div[data-magellan-destination] {
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+}
+
+/* line 174, ../_sass/app.scss */
+div[name="about"] {
+  background-color: #F4F6F8;
 }
