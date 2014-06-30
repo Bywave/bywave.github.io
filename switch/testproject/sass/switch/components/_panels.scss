@@ -1,0 +1,148 @@
+// ------------------------------------------------------------\\
+//  PANELS                                              
+// ------------------------------------------------------------\\
+
+
+.panel {
+    @include clear();
+    display: block;
+    margin-bottom: $panel-margin-bottom;
+    overflow: hidden;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .panel-top {
+        background-color: $panel-top-bg;
+        padding: $panel-top-padding-top-default $panel-top-padding-right-default $panel-top-padding-bottom-default $panel-top-padding-left-default;
+        color: $panel-top-color;
+        border: $panel-top-border;
+        border-bottom: none;
+        @include border-top-radius($panel-top-border-radius);
+        @include clear();
+        h1, h2, h3, h4, h5, h6 {
+            color: $panel-top-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .panel-content {
+        position: relative;
+        background-color:$panel-content-bg;
+        color: $panel-content-color;
+        border: $panel-content-border;
+        padding: $panel-content-padding-top-default $panel-content-padding-right-default $panel-content-padding-bottom-default $panel-content-padding-left-default;
+        @include border-radius($panel-content-border-radius);
+        @include border-bottom-radius($panel-content-border-radius-bottom);
+        @include clear();
+        h1, h2, h3, h4, h5, h6 {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .panel-bottom {
+        background-color: $panel-bottom-bg;
+        padding: $panel-bottom-padding-top-default $panel-bottom-padding-right-default $panel-bottom-padding-bottom-default $panel-bottom-padding-left-default;
+        color: $panel-bottom-color;
+        border: $panel-bottom-border;
+        border-top: none;
+        @include border-bottom-radius($panel-bottom-border-radius);
+        h1, h2, h3, h4, h5, h6 {
+            color: $panel-bottom-color;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    &.default {
+        .panel-top, .panel-bottom {
+            @extend .bg-default;
+        }
+        .panel-content {
+            border-color: darken($color-default, 10%) !important;
+        }
+    }
+    &.primary {
+        .panel-top, .panel-bottom {
+            @extend .bg-primary;
+        }
+        .panel-content {
+            border-color: darken($color-primary, 10%) !important;
+        }
+    }
+    &.secondary {
+        .panel-top, .panel-bottom {
+            @extend .bg-secondary;
+        }
+        .panel-content {
+            border-color: darken($color-secondary, 10%) !important;
+        }
+    }
+    &.tertiary {
+        .panel-top, .panel-bottom {
+            @extend .bg-tertiary;
+        }
+        .panel-content {
+            border-color: darken($color-tertiary, 10%) !important;
+        }
+    }
+    &.completed {
+        .panel-top, .panel-bottom {
+            @extend .bg-completed;
+        }
+        .panel-content {
+            border-color: darken($color-completed, 10%) !important;
+        }
+    }
+    &.error {
+        .panel-top, .panel-bottom {
+            @extend .bg-error;
+        }
+        .panel-content {
+            border-color: darken($color-error, 10%) !important;
+        }
+    }
+    &.important {
+        .panel-top, .panel-bottom {
+            @extend .bg-important;
+        }
+        .panel-content {
+            border-color: darken($color-important, 10%) !important;
+        }
+    }
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .panel {
+        .panel-top {
+            padding: $panel-top-padding-top-medium $panel-top-padding-right-medium $panel-top-padding-bottom-medium $panel-top-padding-left-medium;
+        }
+        .panel-content {
+            padding: $panel-content-padding-top-medium $panel-content-padding-right-medium $panel-content-padding-bottom-medium $panel-content-padding-left-medium;
+        }
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+    .panel {
+        .panel-top {
+            padding: $panel-top-padding-top-small $panel-top-padding-right-small $panel-top-padding-bottom-small $panel-top-padding-left-small;
+        }
+        .panel-content {
+            padding: $panel-content-padding-top-small $panel-content-padding-right-small $panel-content-padding-bottom-small $panel-content-padding-left-small;
+        }
+    }
+}

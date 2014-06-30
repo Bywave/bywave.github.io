@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Project Name</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../testproject/stylesheets/switch.css" rel="stylesheet" />
+	<link href="../assets/stylesheets/docs.css" rel="stylesheet" />
+	<!--[if lte IE 8]>
+   		<link href="stylesheets/ie8.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 9]>
+   		<link href="stylesheets/ie9.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script>window.html5 || document.write('<script src="../../testproject/javascripts/libs/html5.js"><\/script>')</script>
+	<![endif]-->
+</head>
+<body>
+<div class="header">
+	<div class="top-bar">
+		<div class="container">
+			<ul class="header-social force-right">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+				<li><a href="#"><i class="fa fa-github"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<div class="container">
+			<div class="nav-bar-content left">
+				<a href="index.html" class="header-logo">Switch</a>
+				<a href="#" class="nav-switch">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</a>
+			</div>
+			<div class="nav-fold right">
+				<ul class="nav">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../overview.html">Overview</a></li>
+					<li class="active"><a href="../base.html">Base</a></li>
+					<li><a href="../components.html">Components</a></li>
+					<li><a href="../modules.html">Modules</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="grid-9 center text-center">
+					<h1>Base</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, laboriosam, autem, nemo, magni quod praesentium optio adipisci temporibus culpa commodi officia harum iusto eaque quae atque asperiores at.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="grid-3">
+				<div class="sidebar">
+					<div class="block">
+						<ul class="sidenav">
+							<li><a href="grid_system.html">Grid System</a></li>
+							<li><a href="colors.html">Colors</a></li>
+							<li><a href="typography.html">Typography</a></li>
+							<li class="active"><a href="utilities.html">Utilities</a></li>
+							<li><a href="visibility.html">Visibility</a></li>
+							<li><a href="media_queries.html">Media Queries</a></li>
+							<li><a href="css_resets.html">CSS Resets</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid-9">
+				<div class="main-content">
+					<div class="block">
+						<h1>Utilities</h1>
+						<p class="text-large">Switch creates a built-in utility classes to provide a quick and helpful approach to your elements. </p>
+						<br><hr><br>
+						<h2>Floats</h2>
+						<p>An html element can easily manipulate by using these classes namely <strong class="color-primary">.left</strong> and <strong class="color-primary">.right</strong>. When using floats, make sure it clears the floats by using a class name "<strong class="color-primary">.clearfix</strong>". It should be put on the parent container. Another approach would be using a class name "<strong class="color-primary">.clear</strong>" in the bottom of the <strong>float classes</strong>.</p>
+						<div class="panel important">
+							<div class="panel-top"><strong>Important!</strong></div>
+							<div class="panel-content">
+								<p>In small screen (mobile devices), all floats element will be displayed as <strong>block</strong>.</p>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="grid-12">
+								<div class="left">
+								<h4>Float to left</h4>
+								<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image full">
+							</div>
+							<br>
+							<div class="right">
+								<h4>Float to right</h4>
+								<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image full">
+							</div>
+							</div>
+						</div>
+						<br>
+						<div><strong>HTML</strong> example markup</div>
+							<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"clearfix"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"left"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"right"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"classname"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"left"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"right"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"clear"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></div></code></pre>
+						<br><hr><br>
+						<h3>Force Floats</h3>
+						<p>Since all the float classes is displayed as <strong>block</strong> on small screens, Switch makes it flexible by using these classes "<strong class="color-primary">.force-left</strong>" and <strong class="color-primary">.force-right</strong> to force the element to stay at floats. So if the element is meant to float to all devices, just use these two classes. </p>
+						<div class="row">
+							<div class="grid-12">
+								<div class="force-left">
+								<h4>Float to left</h4>
+								<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image">
+							</div>
+							<div class="force-right">
+								<h4>Float to right</h4>
+								<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image">
+							</div>
+							</div>
+						</div>
+						<br>
+						<div><strong>HTML</strong> example markup</div>
+							<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"force-left"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"force-right"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span></div></code></pre>
+						<br><br>
+						<hr><br>
+						<h2>Gutters</h2>
+						<p>Adjustable Gutters for different spacing. For some reasons, <strong>gutters</strong> needed some breather, so these classes namely <strong class="color-primary">.gutter-small</strong>, <strong class="color-primary">.gutter-medium</strong>, <strong class="color-primary">.gutter-large</strong>, <strong class="color-primary">.gutter-xlarge</strong> makes it happen.</p>
+						<br>
+						<h3>Gutter Small</h3>
+						<div class="row gutter-small">
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+						</div>
+						<br>
+						<h3>Gutter Medium</h3>
+						<div class="row gutter-medium">
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+						</div>
+						<br>
+						<h3>Gutter Large</h3>
+						<div class="row gutter-large">
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+						</div>
+						<br>
+						<h3>Gutter Extra Large</h3>
+						<div class="row gutter-xlarge">
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+							<div class="grid-6">
+								<div class="bar text-center">grid 6</div>
+							</div>
+						</div>
+						<br>
+						<div><strong>HTML</strong> example markup</div>
+				<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"row gutter-small"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"row gutter-medium"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-8"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-4"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"row gutter-large"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"row gutter-xlarge"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+	<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"grid-6"</span><span class="tag">&gt;</span> <strong>...</strong> <span class="tag">&lt;/div&gt</span>
+<span class="tag">&lt;/div&gt</span></div></code></pre>
+						<br><hr><br>
+						<h2>Text Sizes</h2>
+						<p>A simple reference for different text sizes.</p>
+						<p class="text-small">This is a "small" text</p>
+						<p class="text-medium">This is a "medium" text</p>
+						<p class="text-large">This is a "large" text</p>
+						<p class="text-xlarge">This is a "xlarge" text</p>
+						<div><strong>HTML</strong> example markup</div>
+				<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;p</span> <span class="attr">class=</span><span class="value">"text-small"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class=</span><span class="value">"text-medium"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class=</span><span class="value">"text-large"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span> <span class="attr">class=</span><span class="value">"text-xlarge"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/p&gt;</span></div></code></pre>
+						<br><hr><br>
+						<h2>Text Alignment</h2>
+						<p>Alignment of text made easy using these classes "<strong class="color-primary">.text-left</strong>", "<strong class="color-primary">.text-center</strong>", "<strong class="color-primary">.text-right</strong>". All the <strong>images</strong> inside of these classes will also be aligned properly. </p>
+						<div class="panel important">
+							<div class="panel-top"><strong>Important!</strong></div>
+							<div class="panel-content">
+								<p>If you need to align some content in different devices, use these class name's "<strong class="color-primary">.text-center-small</strong>", "<strong class="color-primary">.text-center-medium</strong>", "<strong class="color-primary">.text-center-default</strong>", and "<strong class="color-primary">.text-center-large</strong>".</p>
+								<p>If you want to center the content in all devices, but it happens one device needed to stay in default.  Use these class name's "<strong class="color-primary">.text-center-except-small</strong>", "<strong class="color-primary">.text-center-except-medium</strong>", "<strong class="color-primary">.text-center-except-default</strong>", and "<strong class="color-primary">.text-center-except-large</strong>".</p>
+							</div>
+						</div>
+						<div class="text-left">
+							<h4>Text Left</h4>
+							<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image">
+						</div>
+						<div class="text-center">
+							<h4>Text Center</h4>
+							<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image">
+						</div>
+						<div class="text-right">
+							<h4>Text Right</h4>
+							<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image">
+						</div>
+						<br>
+						<div><strong>HTML</strong> example markup</div>
+						<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"text-left"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"text-center"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"text-right"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span></div></code></pre>
+						<br><hr><br>
+						<h2>Vertical Alignment</h2>
+						<p>This is a very helpful utility class, if it needs to make the content vertically centered. Use a class name "<strong class="color-primary">.valign</strong>" followed by <strong class="color-primary">.valign-content</strong>. This is a simple and cross browser approach for vertically centered content.</p>
+						<div class="panel important">
+							<div class="panel-top"><strong>Important!</strong></div>
+							<div class="panel-content">
+								<p>For this to make it work, you will need to set a height in a class name "<strong class="color-primary">.valign</strong>".</p>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="grid-4">
+								<div class="bar">
+									<div class="valign text-center" style="height:300px;">
+										<div class="valign-content">
+											<h4>Vertical Centered Text</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-4">
+								<div class="bar">
+									<div class="valign text-center" style="height:300px;">
+										<div class="valign-content">
+											<h4>Vertical Centered Image</h4>
+											<img src="http://dummyimage.com/150/f3f3f3/b9b9b9&text=Image+Placeholder" alt="" class="image thumbnail">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-4">
+								<div class="bar">
+									<div class="valign text-center" style="height:300px;">
+										<div class="valign-content">
+											<h4>Vertical Centered Button</h4>
+											<a href="#" class="button secondary">Secondary</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div><strong>HTML</strong> example markup</div>
+						<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div <span class="attr">class=</span><span class="value">"valign"</span></span><span class="tag">&gt;</span>
+	<span class="tag">&lt;div <span class="attr">class=</span><span class="value">"valign-content"</span></span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></div></code></pre>
+						<br><hr><br>
+						<h2>Helpers</h2>
+						<p>Extra classes for easy access.</p>
+						<p>
+							<span class="indent">I am using class name "<strong class="color-primary">.indent</strong>".</span>
+							<span class="display-block">I am using class name "<strong class="color-primary">.display-block</strong>".</span>
+							<span class="display-inline-block">I am using class name "<strong class="color-primary">.display-inline-block</strong>".</span>
+							<span class="clear">I am using class name "<strong class="color-primary">.clear</strong>".</span>
+							<span class="no-padding">I am using class name "<strong class="color-primary">.no-padding</strong>".</span><br>
+							<span class="no-margin">I am using class name "<strong class="color-primary">.no-margin</strong>".</span>
+						</p>
+						<div><strong>HTML</strong> example markup</div>
+							<br>
+							<pre><code class="html-tags"><div class="html-container"><span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"indent"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"display-block"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"display-inline-block"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"cleark"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"no-padding"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"no-margin"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class=</span><span class="value">"no-padding"</span><span class="tag">&gt;</span><strong>...</strong><span class="tag">&lt;/div&gt;</span></div></code></pre>
+						<br><hr><br>
+						<h2>SASS Configuration <small>Variables</small></h2>
+						<pre><code class="html-tags sass"><div class="html-container"><span class="html-comment">// Grid Gutters for different spacing. (A layout fixes if you want some breather)</span>
+$grid-gutter-small: <span class="value">10px</span> <span class="tag">!default</span>;
+$grid-gutter-medium: <span class="value">14px</span> <span class="tag">!default</span>;
+$grid-gutter-large: <span class="value">30px</span> <span class="tag">!default</span>;
+$grid-gutter-xlarge: <span class="value">40px</span> <span class="tag">!default</span>;
+
+<span class="html-comment">// Font Sizes</span>
+<span class="html-comment">// Font Sizes for different text sizes.</span>
+$text-font-size-small: <span class="value">12px</span> <span class="tag">!default</span>;
+$text-font-size-medium: <span class="value">14px</span> <span class="tag">!default</span>;
+$text-font-size-large: <span class="value">18px</span> <span class="tag">!default</span>;
+$text-font-size-xlarge: <span class="value">22px</span> <span class="tag">!default</span>;
+
+<span class="html-comment">// Horizontal Rule</span>
+<span class="html-comment">// Horizontal Rule - Divider</span>
+$hr-border: <span class="value">1px</span> solid $color-tertiary <span class="tag">!default</span>;
+$hr-margin-bottom: <span class="value">20px</span> <span class="tag">!default</span>;
+
+<span class="html-comment">// Indention</span>
+$indent: <span class="value">20px</span> <span class="tag">!default</span>;
+</div></code></pre>
+						<p>See <a href="../../testproject/sass/switch/base/_config.scss" class="underline"><strong>config.scss</strong></a> for complete reference.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<a href="#" class="btt"><span><i class="fa fa-chevron-up"></i></span></a>
+	<div class="footer-content">
+		<div class="container text-center-small">
+			<div class="row">
+				<div class="grid-7">
+					<div class="footer-logo">Switch</div>
+					<ul class="footer-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="grid-5">
+					<ul class="footer-social right">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom text-center">
+		<div class="copyright">&copy; 2014 Switch. All rights reserved. </div>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../testproject/javascripts/libs/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="../../testproject/javascripts/plugins.js"></script>
+<script src="../../testproject/javascripts/script.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+</body>
+</html>

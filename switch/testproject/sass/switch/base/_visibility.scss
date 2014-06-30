@@ -1,0 +1,79 @@
+// ------------------------------------------------------------\\
+//  VISIBILITY                                              
+// ------------------------------------------------------------\\
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide-on-small {
+    display: block !important;
+}
+
+.hide-on-medium {
+    display: block !important;
+}
+
+.hide-on-default {
+    display: block !important;
+}
+
+.hide-on-large {
+    display: block !important;
+}
+
+.show-on-small {
+    display: none !important;
+}
+
+.show-on-medium {
+    display: none !important;
+}
+
+.show-on-default {
+    display: none !important;
+}
+
+.show-on-large {
+    display: none !important;
+}
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .hide-on-medium {
+        display: none !important;
+    }
+    .show-on-medium {
+        display: block !important
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-default - 1) {
+    .hide-on-default {
+        display: none !important;
+    }
+    .show-on-default {
+        display: block !important;
+    }
+}
+
+@media (min-width: $query-default) {
+    .hide-on-large {
+        display: none !important;
+    }
+    .show-on-large {
+        display: block !important;
+    }
+}
+
+@media (max-width: $query-small) {
+    .hide-on-small {
+        display: none !important;
+    }
+    .show-on-small {
+        display: block !important;
+    }
+}

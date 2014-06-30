@@ -1,0 +1,61 @@
+// ------------------------------------------------------------\\
+//  BAR                                               
+// ------------------------------------------------------------\\
+
+
+.bar {
+	display: block;
+	padding: $bar-padding-top $bar-padding-right $bar-padding-bottom $bar-padding-right;
+	background: $bar-bg;
+	border: $bar-border;
+	margin-bottom: $bar-margin-bottom;
+	@include clear();
+	position: relative;
+	z-index: 9;
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&.default {
+		@extend .bg-default;
+	}
+	&.primary {
+		@extend .bg-primary;
+	}
+	&.secondary {
+		@extend .bg-secondary;
+	}
+	&.tertiary {
+		@extend .bg-tertiary;
+	}
+	&.completed {
+		@extend .bg-completed;
+	}
+	&.error {
+		@extend .bg-error;
+	}
+	&.important {
+		@extend .bg-important;
+	}
+
+}
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

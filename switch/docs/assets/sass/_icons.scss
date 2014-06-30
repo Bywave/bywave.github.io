@@ -1,0 +1,156 @@
+// ------------------------------------------------------------\\
+//  Figures                                              
+// ------------------------------------------------------------\\
+
+
+.icon-image {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	position: relative;
+	top: -1px;
+	line-height: $line-height-default;
+	margin-right: $icon-margin;
+}
+
+.icon-right {
+	margin-left: $icon-margin;
+	margin-right: 0;
+}
+
+
+.icon-image-cog-white {
+	background: url(../images/icons/icon-cog-white.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-cog {
+	background: url(../images/icons/icon-cog.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-envelope {
+	background: url(../images/icons/icon-envelope.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 12px;
+}
+
+.icon-image-home {
+	background: url(../images/icons/icon-home.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-home-white {
+	background: url(../images/icons/icon-home-white.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-instagram-white {
+	background: url(../images/icons/icon-instagram-white.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-instagram {
+	background: url(../images/icons/icon-instagram.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-figure.pin {
+	background: url(../images/icons/icon-pin.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-check-white {
+	background: url(../images/icons/icon-check-white.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-check {
+	background: url(../images/icons/icon-check.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-image-error-white {
+	background: url(../images/icons/icon-error-white.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+.icon-image-error {
+	background: url(../images/icons/icon-error.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+.icon-image-tag {
+	background: url(../images/icons/icon-tag.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+.icon-image-tag-white {
+	background: url(../images/icons/icon-tag-white.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+.icon-image-search {
+	background: url(../images/icons/icon-search.png) 0 0 no-repeat;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.icon-image-important-white {
+	background: url(../images/icons/icon-important-white.png) 0 0 no-repeat;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.icon-image-important {
+	background: url(../images/icons/icon-important.png) 0 0 no-repeat;
+	background-size: 18px 18px;
+	width: 18px;
+	height: 18px;
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

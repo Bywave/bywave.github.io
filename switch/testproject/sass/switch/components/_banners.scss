@@ -1,0 +1,137 @@
+// ------------------------------------------------------------\\
+//  BANNER                                             
+// ------------------------------------------------------------\\
+
+
+.banner {
+    .banner-image {
+        position: relative;
+        img {
+            width: 100%;
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+    .caption {
+        width: 100%;
+        position: $banner-caption-position;
+        left: 0;
+        top: $banner-caption-position-top;
+        bottom: $banner-caption-position-bottom;
+        padding: $banner-caption-padding-top-default $banner-caption-padding-right-default $banner-caption-padding-bottom-default $banner-caption-padding-left-default;
+        background: $banner-caption-bg;
+        color: $banner-caption-color;
+        a {
+            color: $banner-caption-link-color;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .banner-content {
+        padding: $banner-content-padding-top-default $banner-content-padding-right-default $banner-content-padding-bottom-default $banner-content-padding-left-default;
+    }
+    .ribbon {
+        //background: url(../images/ribbon.png) 0 0 no-repeat;
+        width: 99px;
+        height: 99px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .ribbon-content {
+            position: relative;
+            background: $banner-ribbon-bg;
+            color: $banner-ribbon-color;
+            @include rotate(-45deg);
+            width: 140px;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            top: 20px;
+            left: -32px;
+            a {
+                color: $banner-ribbon-color;
+            }
+        }
+        &.right {
+            margin:0;
+            left: auto;
+            right: 0;
+            .ribbon-content {
+                @include rotate(45deg);
+                top: 20px;
+                left: -8px;
+            }
+        }
+        &.bottom.right {
+            .ribbon-content {
+                @include rotate(316deg);
+                top: 47px;
+                left: -10px;
+            }
+        }
+        &.bottom {
+            top: auto;
+            bottom: 0;
+            .ribbon-content {
+                @include rotate(-316deg);
+                top: 46px;
+                left: -32px;
+            }
+        }
+    }
+    .tag {
+        background: $banner-tag-bg;
+        color: $banner-tag-color;
+        font-size: 14px;
+        padding: 10px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: $banner-tag-offset;
+        &.right {
+            left: auto;
+            right: 0;
+        }
+        &.bottom {
+            top: auto;
+            bottom: $banner-tag-offset;
+        }
+    }
+}
+
+
+// Image Content - with caption.
+//-------------------------------------------------------------\\
+
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .caption {
+        padding: $banner-caption-padding-top-medium $banner-caption-padding-right-medium $banner-caption-padding-bottom-medium $banner-caption-padding-left-medium;
+    }
+    .banner-content {
+        padding: $banner-content-padding-top-medium $banner-content-padding-right-medium $banner-content-padding-bottom-medium $banner-content-padding-left-medium;
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+    
+}
+
+@media (max-width: $query-small) {
+    .caption {
+        padding: $banner-caption-padding-top-small $banner-caption-padding-right-small $banner-caption-padding-bottom-small $banner-caption-padding-left-small;
+    }
+    .banner-content {
+        padding: $banner-content-padding-top-small $banner-content-padding-right-small $banner-content-padding-bottom-small $banner-content-padding-left-small;
+    }
+}

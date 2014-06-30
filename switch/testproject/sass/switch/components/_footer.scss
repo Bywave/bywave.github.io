@@ -1,0 +1,181 @@
+// ------------------------------------------------------------\\
+//  FOOTER                                                
+// ------------------------------------------------------------\\
+
+.footer {
+	color: $footer-color;
+	display: block;
+	position: relative;
+	@include clear();
+}
+
+.footer-logo {
+	color: $footer-logo-color;
+	font-size: $footer-logo-font-size;
+	border-right:$footer-logo-border-right;
+	float: left;
+	padding-right: $footer-logo-padding-right;
+	margin-right: $footer-logo-margin-right;
+	margin-top: $footer-logo-margin-top;
+}
+
+.footer-content {
+	background: $footer-content-bg;
+	display: block;
+	@include clear();
+	padding: $footer-content-padding-top-default $footer-content-padding-right-default $footer-content-padding-bottom-default $footer-content-padding-left-default
+}
+
+.footer-top {
+	color: $footer-top-color;
+	background-color: $footer-top-bg;
+	padding: $footer-top-padding;
+	border-top: $footer-top-border;
+	border-bottom: $footer-top-border;
+	@include clear();
+	display: block;
+}
+
+.footer-bottom {
+	color: $footer-bottom-color;
+	background: $footer-bottom-bg;
+	border-top: $footer-bottom-border;
+	padding: $footer-bottom-padding;
+	@include clear();
+	display: block;
+}
+
+.copyright {
+	font-size: $copyright-font-size;
+	color: $copyright-color;
+}
+
+// Footer Social
+//-------------------------------------------------------------\\
+
+.footer-social {
+	font-size: 0;
+	list-style: none;
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: $footer-social-margin-top;
+	margin-bottom: $footer-social-margin-bottom;
+	margin-right: $footer-social-margin-right;
+	margin-left: $footer-social-margin-left;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin:0;
+		padding: 0;
+		margin-right: $footer-social-list-margin-right;
+		margin-left: $footer-social-list-margin-left;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	a {
+		font-size: $footer-social-link-font-size;
+		color: $footer-social-link-color;
+		width: $footer-social-link-dimension;
+		height: $footer-social-link-dimension;
+		line-height: $footer-social-link-dimension;
+		display: block;
+		text-align: center;
+		border-radius: $footer-social-link-border-radius;
+		background-color: $footer-social-link-bg;
+		@include transition-property(background-color);
+		@include transition-duration(.3s);
+		@include transition-timing-function(ease-out);
+		&:hover {
+			background-color: $footer-social-link-bg-hover;
+		}
+	}
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+	.footer-content {
+		background: $footer-content-bg;
+		padding: $footer-content-padding-top-medium $footer-content-padding-right-medium $footer-content-padding-bottom-medium $footer-content-padding-left-medium
+	}
+	.footer-logo {
+		float: none;
+		display: block;
+		border-right: none;
+		position: relative;
+		margin-top: 0;
+		padding: 0;
+		padding-bottom: 20px;
+		text-align: center;
+		&:after {
+			content: '';
+			height: 3px ;
+			background-color: #d34548;
+			width: 50px;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			@include translate(-50%, 0px);
+		}
+	}
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+	.footer-content {
+		background: $footer-content-bg;
+		padding: $footer-content-padding-top-small $footer-content-padding-right-small $footer-content-padding-bottom-small $footer-content-padding-left-small
+	}
+	.footer-logo {
+		float: none;
+		display: block;
+		border-right: none;
+		position: relative;
+		margin-top: 0;
+		padding: 0;
+		padding-bottom: 20px;
+		text-align: center;
+		margin-right: 0;
+		&:after {
+			content: '';
+			height: 3px ;
+			background-color: #d34548;
+			width: 50px;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			@include translate(-50%, 0px);
+		}
+	}
+	.footer-nav {
+        font-size: 12px;
+        margin-bottom: 20px;
+        li {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+    .footer-social {
+        a {
+            font-size: 22px;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+        }
+    }
+}

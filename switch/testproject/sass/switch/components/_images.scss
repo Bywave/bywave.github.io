@@ -1,0 +1,91 @@
+// ------------------------------------------------------------\\
+//  IMAGES                                               
+// ------------------------------------------------------------\\
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+// Image Banner - Common Banner
+//-------------------------------------------------------------\\
+
+.image {
+    margin-bottom: $image-margin-bottom;
+    border-radius: $image-border-radius;
+    display: block;
+}
+
+
+// Image Circular
+//-------------------------------------------------------------\\
+
+.image.circular {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+// Image Border
+//-------------------------------------------------------------\\
+
+.image.border {
+    border: $image-border-border;
+}
+
+
+// Image Thumbnails - curve, circular, common, fluid, etc.
+//-------------------------------------------------------------\\
+
+.image.thumbnail {
+    border: $image-thumbnail-border;
+    border-radius: $image-border-radius;
+    background-color: $image-thumbnail-bg;
+    padding: $image-thumbnail-padding;
+    display: block;
+    margin-bottom: $image-margin-bottom;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+}
+
+
+// Image Full
+//-------------------------------------------------------------\\
+
+.image.full {
+    width: 100%;
+    height: auto;
+}
+
+
+// Image Sizes - light, moderate, normal, heavy
+//-------------------------------------------------------------\\
+
+img.small {
+    width: $image-size-small !important;
+}
+img.medium {
+    width: $image-size-medium !important;
+}
+img.large {
+    width: $image-size-large !important;
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

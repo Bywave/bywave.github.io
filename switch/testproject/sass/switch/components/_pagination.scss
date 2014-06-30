@@ -1,0 +1,98 @@
+// ------------------------------------------------------------\\
+//  BREADCRUMBS                                            
+// ------------------------------------------------------------\\
+
+
+.pagination {
+	margin:0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: $list-container-bottom;
+    font-size: 0;
+    li {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: inline-block;
+        vertical-align: top;
+        font-size: $pagination-font-size;
+        position: relative;
+        margin-right: $pagination-list-margin-right;
+        margin-bottom: $pagination-list-margin-bottom;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0;
+            content: "";
+            padding-right:0px;
+            color: inherit;
+            font-size: inherit;
+            line-height:  inherit;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+    	display: block;
+    	padding: $pagination-link-padding;
+    	color: $pagination-link-color;
+    	background: $pagination-link-bg;
+    	&:hover {
+    		background: $pagination-link-bg-hover;
+    		color: $pagination-link-color-hover;
+    		text-decoration: none;
+    	}
+    }
+    li.active {
+        a {
+            background: $pagination-link-bg-active;
+            color: $pagination-link-color-active;
+            cursor: default;
+        }
+    }
+    li.inactive {
+        a {
+            opacity: 0.6;
+            cursor: default;
+            &:hover {
+                color: $pagination-link-color;
+                background: $pagination-link-bg;
+            }
+        }
+    }
+    &.center {
+        text-align: center;
+    }
+    &.right, &.left {
+        float: none !important;
+        margin:0;
+        text-align: right;
+    }
+}
+
+
+
+@media (min-width: $query-medium) {
+	
+}
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+	
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   	
+}
+
+

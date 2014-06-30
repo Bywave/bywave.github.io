@@ -1,0 +1,1554 @@
+// ------------------------------------------------------------\\
+// 	VARIABLES							
+// ------------------------------------------------------------\\
+
+// Colors 
+//-------------------------------------------------------------\\
+
+// Theme Colors
+$color-default:        	 			#38434c !default;
+$color-primary: 	    			#ea4d51 !default;
+$color-secondary:     				#6b7986 !default;
+$color-tertiary:     				#e6dfd5 !default;
+$color-completed: 					#47bc28 !default;
+$color-error: 						#ff0000 !default;
+$color-important: 					#1fadb2 !default;
+
+// Helper Colors
+$color-black:     					#000000 !default;
+$color-white:     					#ffffff !default;
+$color-gray: 						#808080 !default;
+$color-gray-darken: 				darken($color-gray, 30%) !default; 
+$color-gray-lighten: 				lighten($color-gray, 47%) !default;
+
+// Theme Colors / Backgrounds
+// Set colors for text and background that will match with each other.
+$bg-default-bg: 					$color-default !default;
+$bg-default-color: 					$color-white !default;
+
+$bg-primary-bg: 					$color-primary !default;
+$bg-primary-color: 					$color-white !default;
+
+$bg-secondary-bg: 					$color-secondary !default;
+$bg-secondary-color: 				$color-white !default;
+
+$bg-tertiary-bg: 					$color-tertiary !default;
+$bg-tertiary-color: 				$color-default !default;
+
+$bg-completed-bg: 					$color-completed !default;
+$bg-completed-color: 				$color-white !default;
+
+$bg-error-bg: 						$color-error !default;
+$bg-error-color: 					$color-white !default;
+
+$bg-important-bg: 					$color-important !default;
+$bg-important-color: 				$color-white !default;
+
+// Theme Colors / Background - Hover
+// When these colors used as a link this will be the hover. 
+$bg-default-bg-hover: 				darken($bg-default-bg, 15%) !default;
+$bg-default-color-hover: 			$color-white !default;
+
+$bg-primary-bg-hover: 				darken($bg-primary-bg, 15%) !default;
+$bg-primary-color-hover: 			$color-white !default;
+
+$bg-secondary-bg-hover: 			darken($bg-secondary-bg, 15%) !default;
+$bg-secondary-color-hover: 			$color-white !default;
+
+$bg-tertiary-bg-hover: 				darken($bg-tertiary-bg, 15%) !default;
+$bg-tertiary-color-hover: 			$color-default !default;
+
+$bg-completed-bg-hover: 			darken($bg-completed-bg, 15%) !default;
+$bg-completed-color-hover: 			$color-white !default;
+
+$bg-error-bg-hover: 				darken($bg-error-bg, 15%) !default;
+$bg-error-color-hover: 				$color-white !default;
+
+$bg-important-bg-hover: 			darken($bg-important-bg, 15%) !default;
+$bg-important-color-hover: 			$color-white !default;
+
+
+// Helper Colors / Backgrounds
+// Set colors for text and background that will match with each other.
+$bg-black-bg: 						$color-black !default; 
+$bg-black-color: 					$color-white !default; 
+
+$bg-white-bg: 						$color-white !default; 
+$bg-white-color: 					$color-default !default;
+
+$bg-gray-bg: 						$color-gray !default;
+$bg-gray-color: 					$color-default !default;
+
+$bg-gray-darken-bg: 				$color-gray-darken !default;
+$bg-gray-darken-color: 				$color-white !default;
+
+$bg-gray-lighten-bg: 				$color-gray-lighten !default;
+$bg-gray-lighten-color: 			$color-default !default;
+
+// Theme Colors / Background - Hover
+// When these colors used as a link this will be the hover. 
+$bg-black-bg-hover: 				darken($bg-black-bg, 15%) !default;
+$bg-black-color-hover: 				$color-white !default;
+
+$bg-white-bg-hover: 				darken($bg-white-bg, 15%) !default;
+$bg-white-color-hover: 				$color-default !default;
+
+$bg-gray-bg-hover: 					darken($bg-gray-bg, 15%) !default;
+$bg-gray-color-hover: 				$color-default !default;
+
+$bg-gray-darken-bg-hover: 			darken($bg-gray-darken-bg, 15%) !default;
+$bg-gray-darken-color-hover: 		$color-white !default;
+
+$bg-gray-lighten-bg-hover: 			darken($bg-gray-lighten-bg, 15%) !default;
+$bg-gray-lighten-color-hover: 		$color-default !default;
+
+
+// Global 
+//-------------------------------------------------------------\\
+
+// Global - Basic Styling
+$body-bg:  									$color-white !default;
+$text-color: 								$color-default !default;
+
+$border-radius-default: 					0px !default;
+$border-color: 								#f5f5f5 !default;
+
+// Global - Alignment Styling
+$padding-top-default: 						10px !default;
+$padding-bottom-default: 					10px !default;
+$padding-left-default: 						20px !default;
+$padding-right-default: 					20px !default;
+
+$padding-top-medium: 						8px !default;
+$padding-bottom-medium: 					8px !default;
+$padding-left-medium: 						10px !default;
+$padding-right-medium: 						10px !default;	
+
+$padding-top-small: 						8px !default;
+$padding-bottom-small: 						8px !default;
+$padding-left-small: 						10px !default;
+$padding-right-small: 						10px !default;	
+
+
+// Utilities
+//-------------------------------------------------------------\\
+
+// Grid Gutters
+// Grid Gutters for different spacing. (A layout fixes if you want some breather)
+$grid-gutter-small:  					10px !default;
+$grid-gutter-medium:  					14px !default;
+$grid-gutter-large: 					30px !default;
+$grid-gutter-xlarge: 					40px !default;
+
+// Font Sizes 
+// Font Sizes for different text sizes.
+$text-font-size-small: 						12px !default;
+$text-font-size-medium: 					14px !default;
+$text-font-size-large: 						19px !default;
+$text-font-size-xlarge: 					22px !default;
+
+// Horizontal Rule - Divider
+$hr-border: 								1px solid $color-tertiary !default;
+$hr-margin-bottom: 							20px !default;
+
+// Indention
+$indent: 									20px !default;
+
+
+// Typography 
+//-------------------------------------------------------------\\
+
+// Typography - Font styling
+$font-family-default:      					Arial, sans-serif !default;
+$font-family-primary:  						'font-name', Arial, sans-serif !default;
+$font-family-secondary:  					'font-name', Arial, sans-serif !default;
+$font-family-tertiary:  					'font-name', Arial, sans-serif !default;
+
+// Typogrpahy - Font Size for different screens
+$font-size-default:      					14px !default;
+$font-size-small:      						14px !default;
+$font-size-medium:      					14px !default;
+$font-size-large: 							14px !default;
+
+// Typography - Line height
+$line-height-default:  						1.5 !default; // 16/11
+
+// Default Margin Bottom, Based on font size and line height.
+// Used for global margins for all elements.
+$margin-bottom-default: 					floor($font-size-default * $line-height-default) !default;
+
+// Typography - Link styling
+$text-link: 								#1fadb2 !default;
+$text-link-hover: 							darken($text-link, 15%) !default;
+
+// Heading
+// Heading - Basic styling
+$heading-font-family: 						$font-family-default !default;
+$heading-font-weight: 						bold !default;
+$heading-color: 							$color-default !default;
+$heading-line-height: 						1.1 !default;
+
+// Heading - font size
+$h1-font-size: 								45px !default;
+$h2-font-size: 								30px !default;
+$h3-font-size: 								24px !default;
+$h4-font-size:								18px !default;	
+$h5-font-size:								14px !default;
+$h6-font-size:								12px !default;
+
+// Heading - font size for small screen
+$h1-font-size-small: 						32px !default;
+$h2-font-size-small: 						28px !default;
+$h3-font-size-small: 						24px !default;
+$h4-font-size-small: 						18px !default;	
+$h5-font-size-small: 						14px !default;
+$h6-font-size-small: 						12px !default;
+
+// Heading - Margin bottom
+$heading-margin-bottom-default: 			$margin-bottom-default !default;
+$heading-margin-bottom-small: 				$margin-bottom-default !default;
+$heading-margin-bottom-medium: 				$margin-bottom-default !default;
+
+// Heading Small
+// Heading - Description <small>
+$heading-small-font-size: 					65% !default;
+$heading-small-font-weight: 				bold !default;
+$heading-small-color: 						$color-gray !default;
+
+// Heading Subtitle
+// heading Subtitle - basic styling
+$heading-subtitle-font-size: 				65% !default;
+$heading-subtitle-font-weight: 				bold !default;
+$heading-subtitle-color: 					$color-gray !default;
+
+// Heading Border
+// Heading Border - basic styling
+$heading-border-bottom: 					1px solid $color-gray !default;
+$heading-border-top: 						0px solid $color-gray !default;
+
+// Heading Border - padding styling
+$heading-border-padding-top-default: 		0px !default;
+$heading-border-padding-bottom-default: 	15px !default;
+$heading-border-padding-left-default: 		0 !default;
+$heading-border-padding-right-default: 		0 !default;
+
+// Blockquote
+// Blockquote - Basic Styling
+$blockquote-bg: 							none !default;
+$blockquote-color: 							$color-black !default;
+$blockquote-font-size: 						22px !default;
+$blockquote-font-weight: 					bold !default;
+$blockquote-author-font-size: 				12px !default;
+$blockquote-author-text-align: 				left !default;
+$blockquote-border-left: 					2px solid $color-default !default;
+$blockquote-border-right: 					0px solid $color-default !default;
+
+// Blockquote - Paddings
+$blockquote-padding-top: 					10px !default;
+$blockquote-padding-bottom: 				10px !default;
+$blockquote-padding-left: 					40px !default;
+$blockquote-padding-right: 					10px !default;
+
+
+// Header
+//-------------------------------------------------------------\\
+
+// Header Margin Bottom
+$header-margin-bottom: 						0px !default;
+
+// Margin for using ".left" and ".right"
+$header-right-margin:						15px !default;
+$header-left-margin: 						15px !default;
+
+// Header Logo
+// Header Logo basic styling - If you are using a plain text
+$header-logo-color: 						$color-white !default;
+$header-logo-font-size: 					24px !default;
+
+// Header Logo margin - for alignment purposes
+$header-logo-margin-top: 					10px !default;
+$header-logo-margin-right: 					20px !default;
+
+// Header Tagline
+// Header tagline basic styling
+$header-tagline-font-size: 					inherit !default;
+$header-tagline-margin-top: 				inherit !default;
+
+// Header Social
+// Header social basic styling
+$header-social-font-size: 					14px !default;
+
+// Header links
+$header-social-link-padding: 				10px !default; // top, right, bottom, left.
+$header-social-link-color: 					$color-default !default;
+$header-social-link-bg: 					inherit !default;
+
+// Header links hover
+$header-social-link-color-hover: 			$color-white !default;
+$header-social-link-bg-hover: 				$color-primary !default;
+
+// Header Form
+// Header form basic styling
+$header-form-input-width: 					210px !default;
+$header-form-input-margin-bottom: 			10px !default;
+
+// Header form margin
+$header-form-margin-top: 					5px !default;
+
+
+// Top bar
+//-------------------------------------------------------------\\
+
+// Top bar basic styling
+$topbar-bg: 								$color-gray-lighten !default;
+$topbar-color:								$color-default !default;
+$topbar-font-size: 							14px !default;
+
+// Top bar padding
+$topbar-padding-top: 						0px !default;
+$topbar-padding-bottom: 					0px !default;
+$topbar-padding-left: 						15px !default;
+$topbar-padding-right: 						15px !default;
+
+// Top bar margin bottom
+$topbar-margin-bottom: 						0px !default;
+
+// Top bar height
+$topbar-height: 							40px !default;
+
+// Top bar border
+$topbar-border-top: 						none !default; // 1px solid $color-primary
+$topbar-border-bottom: 						none !default; // 1px solid $color-primary
+$topbar-border-left: 						none !default; // 1px solid $color-primary
+$topbar-border-right: 						none !default; // 1px solid $color-primary
+
+
+// Nav bar
+//-------------------------------------------------------------\\
+
+// Nav bar basic styling
+$navbar-bg: 								#d34548 !default;
+$navbar-color: 								$color-white !default;
+
+// Nav bar padding
+$navbar-padding-top: 						18px !default;
+$navbar-padding-bottom: 					18px !default;
+$navbar-padding-left: 						20px !default;
+$navbar-padding-right: 						20px !default;
+
+// Nav bar margin bottom
+$navbar-margin-bottom: 						0px !default;
+
+// Nav bar height
+$navbar-height: 							82px !default;
+
+// Nav bar border
+$navbar-border-top: 						none !default; // 1px solid $color-primary
+$navbar-border-bottom: 						none !default; // 1px solid $color-primary
+$navbar-border-left: 						none !default; // 1px solid $color-primary
+$navbar-border-right: 						none !default; // 1px solid $color-primary
+
+
+// Navigation
+//-------------------------------------------------------------\\
+
+// Nav
+// Nav - Basic styling
+$nav-font-size-default: 					16px !default;
+$nav-font-size-small: 						inherit !default; // Mobile
+$nav-font-size-medium: 						inherit !default; // Tablet
+
+$nav-font-family: 							$font-family-primary !default;
+$nav-font-weight: 							normal !default;
+$nav-text-transform: 						none !default;
+
+// Nav - Margins / Alignment from Navbar
+$nav-margin-top: 							6px !default; 
+$nav-margin-bottom: 						0 !default;
+$nav-margin-right: 							0 !default;
+$nav-margin-left: 							0 !default;
+
+// Nav List - Margins default
+$nav-list-margin-right-default: 			0 !default; 
+$nav-list-margin-left-default:      		20px !default;
+
+// Nav List - Margins for Small screen
+$nav-list-margin-right-small: 				inherit !default; 
+$nav-list-margin-left-small:      			inherit !default;
+
+// Nav List - Margins for Medium screen
+$nav-list-margin-right-medium: 				inherit !default; 
+$nav-list-margin-left-medium:      			inherit !default;
+
+// Nav List - borders left / right
+$nav-list-border-left:  					none !default;
+$nav-list-border-right:  					none !default;
+
+// Nav Link
+$nav-link-bg: 								none !default;
+$nav-link-color: 							$color-white !default;
+$nav-link-border-top: 	 					none !default;
+$nav-link-border-bottom: 					3px solid transparent !default;
+$nav-link-border-right:						none !default;
+$nav-link-border-left:						none !default;
+
+// Nav Link - Hover
+$nav-link-bg-hover: 						none !default;
+$nav-link-color-hover: 						$color-white !default;
+$nav-link-border-top-hover: 	 			none !default;
+$nav-link-border-bottom-hover: 				3px solid $color-white !default;
+$nav-link-border-right-hover:  				none !default;
+$nav-link-border-left-hover:  				none !default;
+
+// Nav Link - Active
+$nav-link-bg-active: 						$nav-link-bg-hover !default;
+$nav-link-color-active: 					$nav-link-color-hover !default;
+$nav-link-border-top-active: 	 			$nav-link-border-top-hover !default;
+$nav-link-border-bottom-active: 			$nav-link-border-bottom-hover !default;
+$nav-link-border-right-active:  			$nav-link-border-right-hover !default;
+$nav-link-border-left-active:  				$nav-link-border-left-hover !default;
+
+// Nav Link - Padding styling
+$nav-link-padding-top-default: 				6px !default; // Desktop 
+$nav-link-padding-bottom-default: 			6px !default;
+$nav-link-padding-right-default: 			15px !default;
+$nav-link-padding-left-default: 			15px !default;
+
+// Nav Link - Padding for Small screen
+$nav-link-padding-top-small: 				10px !default; // Mobile
+$nav-link-padding-bottom-small: 			10px !default;
+$nav-link-padding-right-small: 				10px !default;
+$nav-link-padding-left-small: 				10px !default;
+
+// Nav Link - Padding for Medium screen
+$nav-link-padding-top-medium: 				inherit !default; // Tablet
+$nav-link-padding-bottom-medium: 			inherit !default;
+$nav-link-padding-right-medium: 			inherit !default;
+$nav-link-padding-left-medium: 				inherit !default;
+
+// Nav Switch
+// Nav switch padding
+$nav-switch-padding: 						10px !default; // top, right, bottom, left.
+
+// Nav switch margin - for alignment purposes
+$nav-switch-margin: 						7px -10px 0 0 !default; // top, right, bottom, left.
+
+// Nav switch curve
+$nav-switch-border-radius: 					4px !default;
+
+// Nav switch background color
+$nav-switch-bg: 							transparent !default;
+$nav-switch-bg-hover: 						$color-primary !default;
+
+// Nav switch line dimension
+$nav-switch-line-width: 					22px !default;
+$nav-switch-line-height: 					2px !default;
+$nav-switch-line-border-radius:				3px !default;
+
+// Nav switch margin in between
+$nav-switch-line-margin: 					4px !default;
+
+// Nav switch line background color
+$nav-switch-line-bg: 						$color-white !default;
+
+// Top Nav
+// Top Nav - Basic Styling
+$topnav-font-size: 							12px !default;
+
+// Top Nav - for alignment purposes
+$topnav-margin-top: 						8px !default;
+$topnav-margin-bottom: 						7px !default;
+
+// Top Nav List - for alignment purposes
+$topnav-list-margin-left: 					0px !default;
+$topnav-list-margin-right: 					10px !default;
+
+// Top Nav - Link 
+$topnav-link-color: 						$topbar-color !default;
+$topnav-link-bg: 							transparent !default;
+$topnav-link-border: 						1px solid $color-default !default;
+
+// Top Nav - Link padding
+$topnav-link-padding-top: 					3px !default;
+$topnav-link-padding-bottom: 				3px !default;
+$topnav-link-padding-left: 					5px !default;
+$topnav-link-padding-right: 				5px !default;
+
+// Top Nav - Hover
+$topnav-link-color-hover: 					$color-white !default;
+$topnav-link-bg-hover: 						$color-primary !default;
+$topnav-link-border-hover: 					inherit !default;
+
+// Top Nav - Active
+$topnav-link-color-active: 					$topnav-link-color-hover !default;
+$topnav-link-bg-active: 					$topnav-link-bg-hover !default;
+$topnav-link-border-active: 				$topnav-link-border-hover !default;
+
+// Side Nav
+// Side Nav - Basic styling
+$sidenav-font-size: 						14px !default;
+$sidenav-font-family: 						$nav-font-family !default;
+$sidenav-font-weight: 						bold !default;
+
+// Sidenav Link
+$sidenav-link-color:						$color-default !default;
+$sidenav-link-bg: 							inherit !default;
+$sidenav-link-padding: 						10px 15px !default; // top, right, bottom, left
+
+// Sidenav Link - Hover
+$sidenav-link-color-hover:					$color-white !default;
+$sidenav-link-bg-hover: 					$color-primary !default;
+
+// Sidenav Link - Active
+$sidenav-link-color-active: 				$sidenav-link-color-hover !default;
+$sidenav-link-bg-active: 					$sidenav-link-bg-hover !default;
+
+// Sidenav - Child Styling 
+$sidenav-inner-font-size: 					14px !default;
+
+// Sidenav Link
+$sidenav-link-color-link: 					darken($color-gray-lighten, 15%) !default;
+$sidenav-link-bg-link: 						transparent !default;
+$sidenav-link-padding-link: 				5px 15px !default; // top, right, bottom, left
+
+// Sidenav Link - Child Link Styling - Hover
+$sidenav-link-color-link-hover: 			$color-default !default;
+$sidenav-link-bg-link-hover: 				transparent !default;
+
+// Sidenav Link - Child Link Styling - Active
+$sidenav-link-color-link-active: 			$color-primary !default;
+$sidenav-link-bg-link-active: 				transparent !default;
+
+// Footer nav
+// Footer Nav - Basic Styling
+$footernav-color: 							#373636 !default;
+$footernav-font-size: 						14px !default;
+$footernav-font-family: 					$font-family-default !default;
+
+// Footer Nav - for alignment purposes
+$footernav-margin-top: 						19px !default;
+$footernav-margin-bottom: 					19px !default;
+$footernav-margin-right: 					0 !default;
+$footernav-margin-left: 					0 !default;
+
+// Footer Nav List - for alignment purposes
+$footernav-list-margin-right: 				12px !default;
+$footernav-list-margin-left: 				12px !default;
+
+// Footer Nav Link
+$footernav-link-color: 						$color-white !default;
+$footernav-link-bg: 						transparent !default;
+$footernav-link-padding: 					0 !default; // top, right, bottom, left.
+
+// Footer Nav Link - Hover
+$footernav-link-color-hover: 				$color-primary !default;
+$footernav-link-bg-hover: 					transparent !default;
+
+// Footer Nav Link - Active
+$footernav-link-color-active: 				$footernav-link-color-hover !default;
+$footernav-link-bg-active: 					$footernav-link-bg-hover !default;
+
+
+
+// Bar
+//-------------------------------------------------------------\\
+
+// Bar - Basic Styling
+$bar-bg: 								$color-gray-lighten !default;
+$bar-color: 							$color-default !default;
+$bar-border: 							1px solid darken($color-gray-lighten, 10%) !default;
+
+// Bar - padding
+$bar-padding-top: 						10px !default;
+$bar-padding-bottom: 					10px !default;
+$bar-padding-left: 						10px !default;
+$bar-padding-right: 					10px !default;
+
+// Bar - margin bottom
+$bar-margin-bottom: 					10px !default;
+
+
+
+
+
+// Tab
+//-------------------------------------------------------------\\
+
+$tab-padding-top-normal: 			0px !default;
+$tab-padding-bottom-normal: 		0px !default;
+$tab-padding-left-normal: 			10px !default;
+$tab-padding-right-normal: 			10px !default;
+
+$tab-padding-top-moderate: 			0px !default;
+$tab-padding-bottom-moderate: 		0px !default;
+$tab-padding-left-moderate: 			10px !default;
+$tab-padding-right-moderate: 			10px !default;
+
+$tab-padding-top-light: 			0px !default;
+$tab-padding-bottom-light: 		0px !default;
+$tab-padding-left-light: 			10px !default;
+$tab-padding-right-light: 			0px !default;
+
+$tab-margin-left-normal: 			0 !default;
+$tab-margin-left-moderate: 			0 !default;
+$tab-margin-right-normal: 			0 !default;
+$tab-margin-right-moderate: 			10px !default;
+
+$tab-margin-bottom: 				0px !default;
+
+$tab-font-size-normal: 				17px !default;
+$tab-font-size-moderate: 				14px !default;
+$tab-font-size-light: 				14px !default;
+
+$tab-font-family: 					$font-family-secondary;
+$tab-font-weight: 					300 !default;
+$tab-text-transform: 				uppercase !default;
+
+
+// Normal
+$tab-bg: 							none !default;
+$tab-color: 						$color-white;
+$tab-border-top: 	 				none !default;
+$tab-border-bottom: 				none !default;
+$tab-border-left:  					none !default;
+$tab-border-right:  				none !default;
+
+// Hover
+$tab-bg-hover: 						none !default;
+$tab-color-hover: 					$color-primary !default;
+$tab-border-top-hover: 	 			none !default;
+$tab-border-bottom-hover: 			none !default;
+$tab-border-left-hover:  			none !default;
+$tab-border-right-hover:  			none !default;
+
+// Active
+$tab-bg-active: 					$tab-bg-hover !default;
+$tab-color-active: 					$tab-color-hover !default;
+$tab-border-top-active: 	 		$tab-border-top-hover !default;
+$tab-border-bottom-active: 			$tab-border-bottom-hover !default;
+$tab-border-left-active:  			$tab-border-left-hover !default;
+$tab-border-right-active:  			$tab-border-right-hover !default;
+
+
+// Buttons
+//-------------------------------------------------------------\\
+
+// Button paddings / marings styling
+$button-padding-top-default: 		7px !default;
+$button-padding-bottom-default: 	7px !default;
+$button-padding-left-default: 		15px !default;
+$button-padding-right-default: 		15px !default;
+
+// Button paddings for Small buttons
+$button-padding-top-small: 			7px !default;
+$button-padding-bottom-small: 		7px !default;
+$button-padding-left-small: 		10px !default;
+$button-padding-right-small: 		10px !default;
+
+// Button paddings for Medium buttons
+$button-padding-top-medium: 		7px !default;
+$button-padding-bottom-medium: 		7px !default;
+$button-padding-left-medium: 		12px !default;
+$button-padding-right-medium: 		12px !default;
+
+// Button paddings for Large buttons
+$button-padding-top-large: 			9px !default;
+$button-padding-bottom-large: 		9px !default;
+$button-padding-left-large: 		20px !default;
+$button-padding-right-large: 		20px !default;
+
+// Button margin bottom
+$button-margin-bottom: 				10px !default;
+
+// Button border styling
+$button-border: 					1px solid transparent !default;
+$button-border-radius:  			$border-radius-default !default;
+
+// Button font / colors stlying
+$button-font-family: 				$font-family-primary !default;
+$button-color: 						$color-default !default;
+$button-font-weight: 				normal !default;
+$button-test-transoform: 			none !default;
+
+// Button font sizes (default, small, medium, large)
+$button-font-size-default: 			14px !default;
+$button-font-size-small: 			11px !default;
+$button-font-size-medium: 			13px !default;
+$button-font-size-large: 			16px !default;
+$button-min-width: 					auto !default;
+
+// Shadow Inset
+$button-shadow-inset-color: 		darken($color-primary, 10%) !default;
+$button-shadow-inset-opacity: 		1 !default;
+$button-shadow-inset-category: 		0 -3px 0px 0 !default; // h-shadow, v-shadow, blur, spread;
+
+// Shadow Outset
+$button-shadow-color: 				darken($color-primary, 10%) !default;
+$button-shadow-opacity: 			0 !default; // Disable Outset Shadow, by giving 0 opacity;
+$button-shadow-category: 			0 0px 5px 0 !default; // h-shadow, v-shadow, blur, spread;
+
+// Button Arrow
+// Button Arrow Styling
+$button-arrow-size: 				5px !default;
+$button-arrow-color: 				$color-primary !default;
+
+// Button Category
+// margin for left aligned.
+$button-category-margin-right: 		0px !default;
+//margin for center aligned.
+$button-category-margin-center: 	0px !default;
+//margin for right aligned.
+$button-category-margin-left: 		0px !default;
+
+// Button Default
+$button-default-bg: 				$color-gray-lighten !default;
+$button-default-color: 				$color-default !default;
+$button-default-border-color: 		darken($color-gray-lighten, 15%) !default;
+
+// Button Primary
+$button-primary-bg: 				$color-primary !default;
+$button-primary-color: 				$color-white !default;
+$button-primary-border-color: 		$color-primary !default;
+
+// Button Secondary
+$button-secondary-bg: 				$color-secondary !default;
+$button-secondary-color: 			$color-white !default;
+$button-secondary-border-color: 	$color-secondary !default;
+
+// Button Tertiary
+$button-tertiary-bg: 				$color-tertiary !default;
+$button-tertiary-color: 			$color-default !default;
+$button-tertiary-border-color: 		$color-tertiary !default;
+
+// Button Completed
+$button-completed-bg: 				$color-completed !default;
+$button-completed-color: 			$color-white !default;
+$button-completed-border-color: 	$color-completed !default;
+
+// Button Error
+$button-error-bg: 					$color-error !default;
+$button-error-color: 				$color-white;
+$button-error-border-color: 		$color-error !default;
+
+// Button Important
+$button-important-bg: 				$color-important !default;
+$button-important-color: 			$color-white;
+$button-important-border-color: 	$color-important !default;
+
+
+// Dropdown 
+//-------------------------------------------------------------\\
+
+$dropdown-padding-top-normal: 			10px !default;
+$dropdown-padding-bottom-normal: 		10px !default;
+$dropdown-padding-left-normal: 			10px !default;
+$dropdown-padding-right-normal: 		10px !default;
+
+$dropdown-padding-top-moderate: 		10px !default;
+$dropdown-padding-bottom-moderate: 		10px !default;
+$dropdown-padding-left-moderate: 		10px !default;
+$dropdown-padding-right-moderate: 		10px !default;
+
+$dropdown-padding-top-light: 			10px !default;
+$dropdown-padding-bottom-light: 		10px !default;
+$dropdown-padding-left-light: 			10px !default;
+$dropdown-padding-right-light: 			10px !default;
+
+$dropdown-position: 					absolute !default;
+$dropdown-position-left: 				0 !default;
+$dropdown-position-right: 				auto !default;
+$dropdown-position-top: 				$nav-link-padding-top-default * 2 !default;
+
+$dropdown-bg: 							$color-primary !default;
+$dropdown-color: 						$color-black !default;
+
+$dropdown-min-width: 					250px !default;
+
+$dropdown-border: 						1px solid $color-gray-lighten !default;
+$dropdown-list-border-top: 				inherit !default;
+$dropdown-list-border-bottom: 			1px solid $color-gray-lighten !default;
+
+
+
+// Breadcrumbs
+//-------------------------------------------------------------\\
+
+// Breadcrumbs Basic Styling
+$breadcrumbs-color: 						$color-default !default;
+$breadcrumbs-font-size: 					14px !default;
+$breadcrumbs-margin-bottom: 				10px !default;
+
+// Breadcrumbs Padding Styling
+$breadcrumbs-padding-top:					10px !default;
+$breadcrumbs-padding-bottom:				10px !default;
+$breadcrumbs-padding-left:					15px !default;
+$breadcrumbs-padding-right:					15px !default;
+
+// Breadcrumbs List - divider
+$breadcrumbs-list-divider: 					'/' !default;
+$breadcrumbs-list-divider-color: 			lighten($color-gray, 30%) !default;
+
+// Breadcrumbs Link - Link
+$breadcrumbs-link-color: 					$color-default !default;
+
+// Breadcrumbs Link - Hover
+$breadcrumbs-link-color-hover: 				$color-primary !default;
+$breadcrumbs-link-text-decoration-hover: 	underline !default;
+
+// Breadcrumbs Link - Active
+$breadcrumbs-link-color-active: 			$color-primary !default;
+
+// Breadcrumbs Background
+// Breadcrumbs Background - Styling
+$breadcrumbs-bg-list-divider-color: 		lighten($color-primary, 10%) !default;
+$breadcrumbs-bg-bg: 						$color-primary !default;
+
+// Breadcrumbs Background - Link
+$breadcrumbs-bg-color: 						$color-white !default;
+
+// Breadcrumbs Background - Hover
+$breadcrumbs-bg-color-hover: 				inherit !default;
+
+// Breadcrumbs Background - Hover
+$breadcrumbs-bg-color-active: 				darken($color-primary, 30%) !default;
+
+
+
+// Pagination
+//-------------------------------------------------------------\\
+
+
+// Pagination Basic Styling
+$pagination-color: 						$color-default !default;
+$pagination-font-size: 					14px !default;
+$pagination-margin-bottom: 				10px !default;
+
+// Paginatin List
+// Pagination List - Margin Styling
+$pagination-list-margin-bottom: 		5px !default;
+$pagination-list-margin-right: 			2px !default;
+
+// Pagination Link
+// Pagination Link - Basic Styling
+$pagination-link-bg: 					$color-secondary !default;	
+$pagination-link-color: 				$color-white !default;
+$pagination-link-padding: 				10px 15px 10px 15px !default; // top, right, bottom, left.
+
+// Pagination Link - Hover
+$pagination-link-bg-hover: 				$color-primary !default;	
+$pagination-link-color-hover: 			$color-white !default;
+
+// Pagination Link - Active
+$pagination-link-bg-active: 			$pagination-link-bg-hover !default;	
+$pagination-link-color-active: 			$pagination-link-color-hover !default;
+
+
+
+// Tables
+//-------------------------------------------------------------\\
+
+// Table basic styling
+$table-bg: 								transparent !default;
+$table-color: 							inherit !default;
+
+// Table padding/margin styling
+$table-padding-top: 					10px !default;
+$table-padding-bottom: 					10px !default;
+$table-padding-left: 					10px !default;
+$table-padding-right: 					10px !default;
+
+$table-margin-bottom: 					$margin-bottom-default !default;
+
+// Table border in between
+$table-border-between: 					2px solid $color-white !default;
+
+// Table th/td vertical alignment
+$table-vertical-align: 					middle !default;
+
+// Table th styling
+$table-th-bg: 							$color-primary !default;
+$table-th-color: 						$color-white !default;
+$table-th-font-weight: 					bold !default;
+
+// Table tr odd/even colored styling
+$table-row-odd-bg: 						$color-gray-lighten !default;
+$table-row-odd-color: 					$color-black !default;
+$table-row-even-bg: 					$color-white !default;
+$table-row-even-color: 					$color-black !default;
+
+// Table tr - hover
+$table-row-even-bg-hover: 				none !default; // darken($table-row-even-bg, 15%)
+$table-row-odd-bg-hover: 				none !default; // darken($table-row-odd-bg, 15%)
+
+// Table w/ borders
+$table-border-top: 						1px solid darken($color-gray-lighten, 10%) !default;
+$table-border-bottom: 					1px solid darken($color-gray-lighten, 10%) !default;
+$table-border-left: 					1px solid darken($color-gray-lighten, 10%) !default;
+$table-border-right: 					1px solid darken($color-gray-lighten, 10%) !default;
+
+
+// List
+//-------------------------------------------------------------\\
+
+// List Basic Styling
+$list-line-height: 							$line-height-default !default;
+$list-font-size: 							$font-size-default !default;
+$list-color: 								$text-color !default;
+
+// List Paddings
+$list-padding-top: 							5px !default;
+$list-padding-bottom: 						5px !default;
+$list-padding-left: 						0px !default;
+$list-padding-right: 						0px !default;
+
+// List margin
+$list-container-bottom: 					$margin-bottom-default !default;
+
+// List Border
+// List border top or bottom.
+$list-border-top: 							none !default;
+$list-border-bottom: 						1px solid $color-gray !default;
+
+// List combination of border and background
+$list-border-bg-top: 						none !default;
+$list-border-bg-bottom: 					1px solid $color-white !default;
+
+
+// List to display block / fluid
+$list-display: 								normal !default;
+
+// List Indention
+$list-indent: 								$indent !default;
+
+// List inline styling
+$list-inline-margin-right: 					20px !default;
+
+// List Backgorund
+// List with background - all styling
+$list-bg-padding-top: 						$list-padding-top !default;
+$list-bg-padding-bottom: 					$list-padding-bottom !default;
+$list-bg-padding-left: 						10px !default;
+$list-bg-padding-right: 					10px !default;
+
+// List with background - background
+$list-bg-bg: 								$color-gray-lighten !default;
+$list-bg-bg-hover: 							$color-primary !default;
+$list-bg-color: 							$color-default !default;
+$list-bg-color-hover: 						$color-white !default;
+$list-bg-bg-active: 						$list-bg-bg-hover !default;
+$list-bg-color-active: 						$list-bg-color-hover !default;
+
+// List Arror
+// List Arrow - basic styling 
+$list-arrow-color: 							$color-default !default;
+$list-arrow-size: 							4px !default;
+$list-arrow-indent: 						$list-bg-padding-left + $list-arrow-size - 1 !default;
+$list-arrow-position-top: 					floor($line-height-default * $list-arrow-size) !default;
+
+// List Bullet
+// List bullet styling
+$list-bullet-color: 						$color-primary !default;
+$list-bullet-font-size: 					18px !default;
+$list-bullet-line-height: 					1.25 !default;
+$list-bullet-padding-left: 					$list-bg-padding-left !default;
+$list-bullet-position-top: 					0 !default;
+
+// List Icons
+// List Icons - Basic styling
+$list-icon-icon-width: 						25px !default;
+
+// Definition List
+// Definition List -Basic styling
+$dt-font-weight: 							bold !default;
+$dt-font-size:								$font-size-default !default; 
+$dt-dd-margin-bottom: 						10px !default;
+$dt-color: 									$color-default !default;
+
+
+
+// Form 
+//-------------------------------------------------------------\\
+
+// Form Margin Bottom
+$form-margin-bottom: 				15px !default;
+
+// Input Padding 
+$input-padding-top-default: 		7px !default;
+$input-padding-bottom-default: 		7px !default;
+$input-padding-left-default: 		10px !default;
+$input-padding-right-default: 		10px !default;
+
+// Input Padding - for medium screens
+$input-padding-top-medium: 			4px !default;
+$input-padding-bottom-medium: 		4px !default;
+$input-padding-left-medium: 		10px !default;
+$input-padding-right-medium: 		10px !default;
+
+// Input Padding - for small screens
+$input-padding-top-small: 			4px !default;
+$input-padding-bottom-small: 		4px !default;
+$input-padding-left-small: 			10px !default;
+$input-padding-right-small: 		10px !default;
+
+// Input (text, textarea) - Styling
+$input-bg: 							$color-white !default;
+$input-border: 						1px solid darken($color-gray-lighten, 10%) !default;
+$input-border-radius:  				0px !default;
+$input-placehoder: 					$color-gray !default;
+$input-color:          				$color-default !default;
+
+// Input - Font styling
+$input-font-family: 				$font-family-default !default;
+$input-transform: 					none !default;
+$input-font-weight: 				normal !default;
+
+// Input Font-size
+$input-font-size-default: 			14px !default;
+$input-font-size-small: 			12px !default;
+$input-font-size-medium: 			13px !default;
+
+// Input height
+$input-height: 						floor(($input-padding-top-default + $input-padding-bottom-default) + ($input-font-size-default * $line-height-default) + 2) !default;
+
+// Input Margin Bottom
+$input-margin-bottom: 				6px !default;
+
+// Input Shadow Inset
+$input-shadow-inset-color: 			$color-gray !default;
+$input-shadow-inset-opacity: 		0.2 !default;
+$input-shadow-inset-category: 		0 1px 1px 0 !default; // h-shadow, v-shadow, blur, spread;
+
+// Input Shadow Outset
+$input-shadow-color: 				darken($color-gray, 10%) !default;
+$input-shadow-opacity: 				0 !default; // Disable Outset Shadow, by giving 0 opacity;
+$input-shadow-category: 			0 1px 2px 0 !default; // h-shadow, v-shadow, blur, spread;
+
+// Input Focus
+$input-shadow-color-focus: 			$color-primary !default;
+
+// Label - Styling
+$label-font-family: 				$font-family-primary !default;
+$label-margin-bottom: 				2px !default;
+$label-font-size: 					13px !default;
+$label-font-weight: 				bold !default;
+
+// Input Category
+$input-category-label-bg: 			$color-primary !default;
+$input-category-label-color: 		$color-white !default;
+$input-category-label-border: 		1px solid transparent !default;
+
+
+// Select Box - Styling
+$select-color: 						#7f7f7f !default;
+
+
+// Images
+//-------------------------------------------------------------\\
+
+// Image - Default basic styling
+$image-margin-bottom: 					$margin-bottom-default !default;
+$image-border-radius: 					0px !default; 
+
+// Image Border
+// Image Border - basic styling
+$image-border-border:  					1px solid darken($color-gray-lighten, 10%) !default;
+
+// Image Thumbnail
+// Image Thumbnail - basic styling
+$image-thumbnail-border: 				$image-border-border !default;
+$image-thumbnail-bg: 					$color-white !default;
+$image-thumbnail-padding: 				5px !default;
+
+// Image Sizes 
+// Image Sizes - light, moderate, normal, heavy
+$image-size-small: 						25% !default;
+$image-size-medium: 					40% !default;
+$image-size-large: 						60% !default;
+
+
+// Banners
+//-------------------------------------------------------------\\
+
+// Banner Content - padding default
+$banner-content-padding-top-default: 			15px !default;
+$banner-content-padding-bottom-default: 		15px !default;
+$banner-content-padding-right-default: 			15px !default;
+$banner-content-padding-left-default: 			15px !default;
+
+// Banner Content - padding for small screen
+$banner-content-padding-top-small: 				inherit !default;
+$banner-content-padding-bottom-small: 			inherit !default;
+$banner-content-padding-right-small: 			inherit !default;
+$banner-content-padding-left-small: 			inherit !default;
+
+// Banner Content - padding for medium screen
+$banner-content-padding-top-medium: 			inherit !default;
+$banner-content-padding-bottom-medium: 			inherit !default;
+$banner-content-padding-right-medium: 			inherit !default;
+$banner-content-padding-left-medium: 			inherit !default;
+
+// Ribbon styling
+$banner-ribbon-bg: 								$color-primary !default;
+$banner-ribbon-color: 							$color-white !default;
+
+// Tag styling
+$banner-tag-bg: 								$color-primary !default;
+$banner-tag-color: 								$color-white !default;
+$banner-tag-offset: 							20px !default; // Position top/bottom offset.
+
+// Banner Caption - padding default
+$banner-caption-padding-top-default: 			15px !default;
+$banner-caption-padding-right-default: 			15px !default;
+$banner-caption-padding-bottom-default: 		15px !default;
+$banner-caption-padding-left-default: 			15px !default;
+
+// Banner Caption - padding for small screen
+$banner-caption-padding-top-small: 				inherit !default;
+$banner-caption-padding-right-small: 			inherit !default;
+$banner-caption-padding-bottom-small: 			inherit !default;
+$banner-caption-padding-left-small: 			inherit !default;
+
+// Banner Caption - padding for medium screen
+$banner-caption-padding-top-medium: 			inherit !default;
+$banner-caption-padding-right-medium: 			inherit !default;
+$banner-caption-padding-bottom-medium: 			inherit !default;
+$banner-caption-padding-left-medium: 			inherit !default;
+
+// Caption positioning
+$banner-caption-position: 						absolute !default;
+$banner-caption-position-top: 					auto !default;  // value "auto" needed if you want to position to bottom.
+$banner-caption-position-bottom: 				0 !default; // value "auto" needed if you want to position to top.
+
+// Caption styling - background, color, etc.
+$banner-caption-bg: 							$color-tertiary !default; // rgba($color-primary, 0.5) - for transparent bg.
+$banner-caption-color: 							$color-default !default;
+$banner-caption-link-color: 					$text-link !default;
+
+
+// Hero
+//-------------------------------------------------------------\\
+
+// Hero - Basic Styling
+$hero-bg:   									$color-gray-lighten !default;
+$hero-color: 									$color-default !default;
+$hero-font-size: 								14px !default;
+$hero-border:   								0px solid #000000 !default;
+
+// Hero - Shadows
+$hero-shadow: 									$color-black !default;
+$hero-shadow-opacity: 							0 !default;
+$hero-shadow-category: 							3px 6px 13px 0px !default; // h-shadow, v-shadow, blur, spread;
+
+// Hero Image - Height
+$hero-image-height-default: 					400px !default;
+$hero-image-height-small: 						200px !default;
+$hero-image-height-medium: 						300px !default;
+
+// Hero Intro - Basic Styling
+$hero-intro-bg: 								rgba($color-tertiary, 0.5) !default;
+
+// Hero Intro - padding styling
+$hero-intro-padding-top-default:				15px !default;
+$hero-intro-padding-bottom-default:				15px !default;
+$hero-intro-padding-right-default:				20px !default;
+$hero-intro-padding-left-default:				20px !default;
+
+// Hero Intro - padding for Small screen
+$hero-intro-padding-top-small:					inherit !default;
+$hero-intro-padding-bottom-small:				inherit !default;
+$hero-intro-padding-right-small:				inherit !default;
+$hero-intro-padding-left-small:					inherit !default;
+
+// Hero Intro - padding for Medium screen
+$hero-intro-padding-top-medium:					inherit !default;
+$hero-intro-padding-bottom-medium:				inherit !default;
+$hero-intro-padding-right-medium:				inherit !default;
+$hero-intro-padding-left-medium:				inherit !default;
+
+// Hero Content - Basic Styling
+$hero-content-bg: 								none !default;
+$hero-content-color: 							$color-default !default;
+
+// Hero Content - padding styling
+$hero-content-padding-top-default: 		    	45px !default;
+$hero-content-padding-bottom-default: 		    45px !default;
+$hero-content-padding-right-default: 		    45px !default;
+$hero-content-padding-left-default: 		    45px !default;
+
+// Hero Content - padding for small screen
+$hero-content-padding-top-small: 		    	20px !default;
+$hero-content-padding-bottom-small: 		    20px !default;
+$hero-content-padding-right-small: 		    	20px !default;
+$hero-content-padding-left-small: 		    	20px !default;
+
+// Hero Content - padding for medium screen
+$hero-content-padding-top-medium: 		    	30px !default;
+$hero-content-padding-bottom-medium: 		    30px !default;
+$hero-content-padding-right-medium: 		    30px !default;
+$hero-content-padding-left-medium:		    	30px !default;
+
+
+
+// Icons
+//-------------------------------------------------------------\\
+
+// Icon Margin
+// Icon Margin - Left and Right margins
+$icon-margin: 								3px !default;
+
+// Icon Width
+$icon-width: 								22px !default;				
+
+// Icon Circular
+// Icon Circular - basic styling						
+$icon-circular-dimension: 					50px !default; // Width and Height	
+$icon-circular-margin-bottom: 				5px !default;
+
+// Icon Circular - Colors
+$icon-circular-bg: 							$color-gray-lighten !default;
+$icon-circular-color: 						$color-default !default;
+
+// Icon Circular - Hover
+$icon-circular-bg-hover: 					darken($color-gray-lighten, 15%) !default;
+$icon-circular-color-hover: 				$color-default !default;
+
+// Icon Circular Sizes
+$icon-circular-dimension-small:				floor(($icon-circular-dimension * 60) / 100) !default;
+$icon-circular-dimension-medium:			floor(($icon-circular-dimension * 75) / 100) !default;
+$icon-circular-dimension-large: 			floor(($icon-circular-dimension * 125) / 100) !default;
+
+// Icon Circular Font Sizes - for Font Awesome
+$icon-circular-font-size-default: 			18px !default;
+$icon-circular-font-size-small: 			12px !default;
+$icon-circular-font-size-medium: 			14px !default;
+$icon-circular-font-size-large: 			24px !default;
+
+// Icon Images 
+// Icon Images Sizes - the higher percentage the bigger the size.
+$icon-circular-image-dimension-default: 	37% !default;
+$icon-circular-image-dimension-small: 		30% !default;
+$icon-circular-image-dimension-medium: 		35% !default;
+$icon-circular-image-dimension-large: 		40% !default;
+
+// Panels
+//-------------------------------------------------------------\\
+
+// Panel - Basic Styling
+$panel-margin-bottom: 							$margin-bottom-default !default;
+$panel-border-radius: 							$border-radius-default !default;
+
+// Panel Top - Basic Styling
+$panel-top-bg: 									inherit !default;
+$panel-top-color: 								inherit !default;
+$panel-top-border: 								1px solid darken($color-gray-lighten, 15%) !default;
+$panel-top-border-radius: 						$border-radius-default !default;
+
+
+// Panel Top - padding adjustable top / right / bottom / left.
+$panel-top-padding-top-default: 				$padding-top-default !default;
+$panel-top-padding-bottom-default: 				$padding-bottom-default !default;
+$panel-top-padding-left-default: 				$padding-left-default !default;
+$panel-top-padding-right-default: 				$padding-right-default !default;
+
+// Panel Top - padding for Small screen
+$panel-top-padding-top-small: 					$padding-top-default !default;
+$panel-top-padding-bottom-small: 				$padding-bottom-default !default;
+$panel-top-padding-left-small: 					$padding-left-default !default;
+$panel-top-padding-right-small: 				$padding-right-default !default;
+
+// Panel Top - padding for Medium screen
+$panel-top-padding-top-medium: 					$padding-top-default !default;
+$panel-top-padding-bottom-medium: 				$padding-bottom-default !default;
+$panel-top-padding-left-medium: 				$padding-left-default !default;
+$panel-top-padding-right-medium: 				$padding-right-default !default;
+
+// Panel Content - Basic Styling
+$panel-content-bg: 								transparent !default;
+$panel-content-color: 							inherit !default;
+$panel-content-border: 							1px solid darken($color-gray-lighten, 15%) !default;
+$panel-content-border-radius: 					0 !default;
+$panel-content-border-radius-bottom: 			0 !default;
+
+// Panel Content - padding adjustable top / right / bottom / left.
+$panel-content-padding-top-default: 			20px !default;
+$panel-content-padding-bottom-default: 			20px !default;
+$panel-content-padding-left-default: 			20px !default;
+$panel-content-padding-right-default: 			20px !default;
+
+// Panel Content - padding for Small screen
+$panel-content-padding-top-small: 				20px !default;
+$panel-content-padding-bottom-small: 			20px !default;
+$panel-content-padding-left-small: 				20px !default;
+$panel-content-padding-right-small: 			20px !default;
+
+// Panel Content - padding for Medium screen
+$panel-content-padding-top-medium: 				20px !default;
+$panel-content-padding-bottom-medium: 			20px !default;
+$panel-content-padding-left-medium: 			20px !default;
+$panel-content-padding-right-medium: 			20px !default;
+
+
+// Panel Bottom - Basic Styling
+$panel-bottom-bg: 								inherit !default;
+$panel-bottom-color: 							inherit !default;
+$panel-bottom-border: 							1px solid darken($color-gray-lighten, 15%) !default;
+$panel-bottom-border-radius: 					$border-radius-default !default;
+
+// Panel Bottom - padding adjustable top / right / bottom / left.
+$panel-bottom-padding-top-default: 				$panel-top-padding-top-default !default;
+$panel-bottom-padding-bottom-default: 			$panel-top-padding-bottom-default !default;
+$panel-bottom-padding-left-default: 			$panel-top-padding-left-default !default;
+$panel-bottom-padding-right-default: 			$panel-top-padding-right-default !default;
+
+// Panel Top - padding for Small screen
+$panel-bottom-padding-top-small: 				$panel-top-padding-top-small !default;
+$panel-bottom-padding-bottom-small: 			$panel-top-padding-bottom-small !default;
+$panel-bottom-padding-left-small: 				$panel-top-padding-left-small !default;
+$panel-bottom-padding-right-small: 				$panel-top-padding-right-small !default;
+
+// Panel Top - padding for Medium screen
+$panel-bottom-padding-top-medium: 				$panel-top-padding-top-medium !default;
+$panel-bottom-padding-bottom-medium: 			$panel-top-padding-bottom-medium !default;
+$panel-bottom-padding-left-medium: 				$panel-top-padding-left-medium !default;
+$panel-bottom-padding-right-medium: 			$panel-top-padding-right-medium !default;
+
+
+
+// Articles
+//-------------------------------------------------------------\\
+
+// Article - margin bottom
+$article-margin-bottom: 						$margin-bottom-default !default;
+
+// Article Content - padding adjustable top, right, bottom, left
+$article-content-padding-top-default: 			0px !default;
+$article-content-padding-bottom-default: 		0px !default;
+$article-content-padding-left-default: 			0px !default;
+$article-content-padding-right-default: 		0px !default;
+
+// Article Content - padding for Small screen
+$article-content-padding-top-small: 			10px !default;
+$article-content-padding-bottom-small: 			10px !default;
+$article-content-padding-left-small: 			10px !default;
+$article-content-padding-right-small: 			10px !default;
+
+// Article Content - padding for Medium screen
+$article-content-padding-top-medium: 			10px !default;
+$article-content-padding-bottom-medium: 		10px !default;
+$article-content-padding-left-medium: 			10px !default;
+$article-content-padding-right-medium: 			10px !default;
+
+// Article Date styling
+$article-date-color: 							$color-primary !default;
+$article-date-font-size: 						14px !default;
+$article-date-font-weight: 						bold !default;		
+
+// Article Links - Basic Styling
+$article-links-border: 							1px solid darken($color-gray-lighten, 10%) !default;
+
+// Article Links - ".left/.right/".
+$article-links-link-margin-left: 				15px !default;
+$article-links-link-margin-right: 				15px !default;
+
+// Article Links - padding
+$article-links-padding-top: 					10px !default;
+$article-links-padding-bottom: 					10px !default;
+$article-links-padding-left: 					10px !default;
+$article-links-padding-right: 					10px !default;
+
+
+// Blocks
+//-------------------------------------------------------------\\
+
+// Block Padding - adjustable top / bottom
+$block-padding-top-default: 			20px !default;
+$block-padding-bottom-default: 			40px !default;
+
+// Block - padding for Small screen
+$block-padding-top-small: 				20px !default;
+$block-padding-bottom-small: 			20px !default;
+
+// Block - padding for Medium screen
+$block-padding-top-medium: 				20px !default;
+$block-padding-bottom-medium: 			20px !default;
+
+// Block - margin
+$block-margin-bottom-default: 			$margin-bottom-default !default;
+$block-margin-bottom-small: 			$margin-bottom-default !default;
+$block-margin-bottom-medium: 			$margin-bottom-default !default;
+
+// Block - border styling
+$block-border-bottom: 					1px solid $color-tertiary !default; //1px solid darken($color-gray-lighten, 10%)
+
+// Block Content - padding left / right
+$block-content-padding-left: 			20px !default;
+$block-content-padding-right: 			20px !default;
+
+
+
+
+
+// Details 
+//-------------------------------------------------------------\\
+
+$details-padding-right: 				15px !default;
+$details-padding-left: 					15px !default;
+
+
+
+
+// Footer
+//-------------------------------------------------------------\\
+
+// Footer - Basic Styling.
+$footer-color: 								$color-secondary !default;
+
+// Footer Content - Basic Styling
+$footer-content-bg: 						$color-default !default;
+
+// Footer Content - padding
+$footer-content-padding-top-default: 		70px !default;
+$footer-content-padding-bottom-default: 	70px !default;
+$footer-content-padding-left-default: 		0px !default;
+$footer-content-padding-right-default: 		0px !default;
+
+// Footer Content - padding for Small screen
+$footer-content-padding-top-small: 			40px !default;
+$footer-content-padding-bottom-small: 		40px !default;
+$footer-content-padding-left-small: 		0px !default;
+$footer-content-padding-right-small: 		0px !default;
+
+// Footer Content - padding for Medium screen
+$footer-content-padding-top-medium: 		40px !default;
+$footer-content-padding-bottom-medium: 		40px !default;
+$footer-content-padding-left-medium: 		0px !default;
+$footer-content-padding-right-medium: 		0px !default;
+
+// Footer Logo - Basic Styling
+$footer-logo-color: 						$color-secondary !default;
+$footer-logo-font-size: 					28px !default;
+$footer-logo-border-right: 					3px solid #d34548 !default;
+
+// Footer Logo - padding (if you put a border)
+$footer-logo-padding-right: 				25px !default;
+
+// Footer Logo - margins for alignment purposes
+$footer-logo-margin-top: 					13px !default;
+$footer-logo-margin-right: 					25px !default;
+
+// Footer Social - Basic Styling
+
+// Footer Social - margins
+$footer-social-margin-top: 					0px !default;
+$footer-social-margin-bottom: 				0px !default;
+$footer-social-margin-right: 				0px !default;
+$footer-social-margin-left: 				0px !default;
+
+// Footer Social List 
+$footer-social-list-margin-right: 			8px !default;
+$footer-social-list-margin-left: 			8px !default;
+
+// Footer Social Link 
+$footer-social-link-font-size: 		  		30px !default;
+$footer-social-link-color: 					$color-white !default;			
+$footer-social-link-bg: 					#425563 !default;
+
+// Optional if  you want a circle background. 
+$footer-social-link-dimension: 				58px !default; // This will set the width/height/line-height
+$footer-social-link-border-radius: 			50% !default; // To make it a circle background
+
+// Footer Social Link - Hover
+$footer-social-link-color: 					$color-white !default;
+$footer-social-link-bg-hover: 				$color-primary !default;
+
+
+// Footer Top - Optional Elements
+// Footer Top - Styling
+$footer-top-color: 							$color-default !default;
+$footer-top-bg: 							$color-gray-lighten !default;
+$footer-top-border: 						none !default;
+
+// Footer Top - padding
+$footer-top-padding:						24px !default;
+
+// Footer Bottom - Styling
+$footer-bottom-color: 						$color-white !default;
+$footer-bottom-bg: 							$footer-content-bg !default;
+$footer-bottom-border: 						1px solid #425563 !default;
+
+// Footer Bottom - padding
+$footer-bottom-padding: 					24px !default;
+
+// Footer Copyright
+$copyright-font-size: 						14px !default;
+$copyright-color: 							$color-white !default;
+
+
+
+
+// Grid System
+//-------------------------------------------------------------\\
+
+// Grid Columns
+// Grid Columns - Number of columns the layout will be divided.
+$grid-columns: 							12px !default;
+
+// Grid Gutters
+// Grid Gutters - Default Gutters
+$grid-gutter-default:  					30px !default;
+
+// Container Padding - for small screen
+// Sometimes, you needed to put extra padding on small screens.
+$grid-container-row-small: 				30px !default;
+
+// Grid Margins for small screen, In default every grid have a margin bottom styling
+$grid-margin-bottom-small: 				10px !default;
+
+// Grid Content
+// Grid Content - Basic styling
+$grid-content-bg: 						none !default;
+$grid-content-color: 					inherit !default;
+
+// Grid Content - padding styling, adjustable top / right / bottom / left.
+$grid-content-padding-top: 				20px !default;
+$grid-content-padding-bottom: 			20px !default;
+$grid-content-padding-right: 			20px !default;
+$grid-content-padding-left: 			20px !default;
+
+// Grid Cell
+// Grid Cell - with border in between styling.
+$grid-cell-border-between: 				1px solid darken($color-gray-lighten, 10%) !default; 
+
+// Grid Cell - with background Styling
+$grid-cell-bg-bg: 						$color-primary !default;
+$grid-cell-bg-color: 					$color-white !default;
+$grid-cell-bg-link: 					$color-tertiary !default;
+
+// Grid Off
+// Grid Off - with background styling. 
+$grid-off-bg-bg: 						$color-primary !default;
+$grid-off-bg-color: 					$color-white !default;
+$grid-off-bg-link: 						$color-tertiary !default;
+
+// Grid Off - with border in between styling. 
+$grid-off-border-between: 				1px solid darken($color-gray-lighten, 10%) !default; 
+
+
+// Container / Breakpoints
+//-------------------------------------------------------------\\
+
+// Container - This will be the breakpoints, you can change it whatever you desire.
+$container-medium:  				((720px + $grid-gutter-default)) !default; // Container for Medium screen
+$container-default:  				((940px + $grid-gutter-default)) !default; // Container for Large screen
+$container-large:  					((1140px + $grid-gutter-default)) !default; // Container for Extra Large screen
+
+
+
+// Media Queries for different devices 
+//-------------------------------------------------------------\\
+
+// Media Queries (mobile, tablet, desktop, desktop/wide)
+$query-small: 						767px !default;
+$query-medium: 						768px !default;
+$query-default: 					992px !default;
+$query-large: 						1200px !default;
