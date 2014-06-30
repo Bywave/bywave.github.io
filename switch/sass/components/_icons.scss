@@ -1,0 +1,107 @@
+// ------------------------------------------------------------\\
+//  Figures                                              
+// ------------------------------------------------------------\\
+
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	position: relative;
+	top: -1px;
+	line-height: $global-line-height-normal;
+	margin-right: $icon-margin;
+}
+
+.icon-right {
+	margin-left: $icon-margin;
+	margin-right: 0;
+}
+
+.icon-bar {
+	height: 2px;
+	background: $icon-bar-color;
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+
+.icon-bar + .icon-bar {
+  	margin-top: 4px;
+}
+
+.icon-block {
+	display: block;
+	margin-bottom: 25px;
+}
+
+.icon-cog-white {
+	background: url(../images/icons/icon-cog-white.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-envelope {
+	background: url(../images/icons/icon-envelope.png) no-repeat 0 0;
+	background-size: 15px 12px;
+	width: 15px;
+	height: 12px;
+}
+
+.icon-home {
+	background: url(../images/icons/icon-home.png) no-repeat 0 0;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-instagram-white {
+	background: url(../images/icons/icon-instagram.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-figure.pin {
+	background: url(../images/icons/icon-pin.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-check-white {
+	background: url(../images/icons/icon-check-white.png) 0 0 no-repeat;
+	background-size: 15px 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.icon-error-white {
+	background: url(../images/icons/icon-error-white.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+.icon-tag {
+	background: url(../images/icons/icon-tag.png) 0 0 no-repeat;
+	background-size: 12px 12px;
+	width: 12px;
+	height: 12px;
+}
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+   
+}

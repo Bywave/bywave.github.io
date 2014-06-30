@@ -1,0 +1,73 @@
+// ------------------------------------------------------------\\
+//  HERO                                               
+// ------------------------------------------------------------\\
+
+
+.hero {
+    background: $hero-bg;
+    border: $hero-border;
+    font-size: $hero-font-size;
+    color: $hero-color;
+    padding: $hero-padding-top-normal $hero-padding-right-normal $hero-padding-bottom-normal $hero-padding-left-normal; 
+    @include box-shadow(rgba($hero-shadow, $hero-shadow-opacity) 3px 6px 13px 0px);
+    @include clear();
+}
+
+.hero-banner {
+    display: block;
+    border: $hero-banner-border;
+    position: relative;
+}
+
+.hero-full {
+    .hero-banner {
+        background-size: cover !important;
+        background-position: 50% 50% !important;
+        height: $hero-banner-height-normal;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hero-banner img {
+    display: block;
+}
+
+.hero-content {
+    padding: $hero-content-padding-top-normal $hero-content-padding-right-normal $hero-content-padding-bottom-normal $hero-content-padding-left-normal;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 1px;
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    .hero-content {
+        padding: $hero-content-padding-top-moderate $hero-content-padding-right-moderate $hero-content-padding-bottom-moderate $hero-content-padding-left-moderate;
+    }
+    .hero-full {
+        .hero-banner {
+            height: $hero-banner-height-moderate;
+        }
+    }
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+    .hero-content {
+        padding: $hero-content-padding-top-light $hero-content-padding-right-light $hero-content-padding-bottom-light $hero-content-padding-left-light;
+    }
+    .hero-full {
+        .hero-banner {
+            height: $hero-banner-height-light;
+        }
+    }
+}

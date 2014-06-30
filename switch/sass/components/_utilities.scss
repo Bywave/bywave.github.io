@@ -1,0 +1,215 @@
+// ------------------------------------------------------------\\
+//  UTILITIES                                             
+// ------------------------------------------------------------\\
+
+
+.right {
+    float:right !important;;
+}
+
+.left {
+    float:left !important;;
+}
+
+.force-right {
+    float:right !important;
+}
+
+.force-left {
+    float: left !important;
+}
+
+
+// Indention
+
+.indent {
+    padding-left: $global-indent;
+}
+
+
+// Alignment
+
+.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    float: none !important;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.text-left {
+    text-align: left !important;
+    display: block !important;
+}
+
+.text-center {
+    text-align: center !important;
+    display: block !important;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.text-right {
+    text-align: right !important;
+    display: block !important;
+    img {
+        text-align: right;
+        display: inline-block !important;
+    }
+}
+
+
+
+// Clearing Floats
+
+.clear {
+    @include clear();
+}
+
+
+
+// Horizontal Rule
+
+hr {
+    border-top:$hr-border;
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    display:block;
+    height:0px;
+    overflow:hidden;
+    margin: 0;
+    margin-bottom: $hr-margin-bottom;
+    text-align:center;
+    padding:0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+// Vertical Alignment
+
+.valign {
+    width: 100%;
+    display: table;
+    text-align: center;
+    height: $valign-height;
+    img {
+        margin:0 auto;
+    }
+}
+
+.valign-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    .text-center-moderate {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-moderate {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-moderate {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (min-width: $grid-normal) and (max-width: $grid-heavy - 1) {
+    .text-center-normal {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-normal {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-normal {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (min-width: $grid-heavy) {
+    .text-center-heavy {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-heavy {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-heavy {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: $grid-light) {
+    .text-center-light {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-light {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-light {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .right, .left {
+        float: none !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        display: block;
+    }
+    .push-left {
+        float: left !important;
+    }
+    .push-right {
+        float: right !important;
+    }
+
+}

@@ -1,0 +1,87 @@
+// ------------------------------------------------------------\\
+//  TABLES                                              
+// ------------------------------------------------------------\\
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: $table-bg;
+    color: $table-color;
+    th {
+        font-weight: $table-th-font-weight;
+        background-color: $table-th-bg;
+        color: $table-th-color;
+    }
+    th, td {
+        padding: $table-padding-top-normal $table-padding-right-normal $table-padding-bottom-normal $table-padding-left-normal;
+        vertical-align: $table-vertical-align;
+        border-right: $table-border-between;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    tr:nth-child(odd) {
+        background-color: $table-row-odd-bg;
+        color: $table-row-odd-color;
+        &:hover {
+            background-color: $table-row-odd-hover;
+        }
+    }
+    tr:nth-child(even) {
+        background-color: $table-row-even-bg;
+        color: $table-row-even-color;
+        &:hover {
+            background-color: $table-row-even-hover;
+        }
+    }
+}
+
+.table-flexible {
+    margin-bottom: $table-margin-bottom;
+    display: block;
+    @include clear();
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .border {
+        border-top: $table-border-top;
+        border-bottom: $table-border-bottom;
+        border-left: $table-border-left;
+        border-right: $table-border-right;
+        th, td {
+            border-top: $table-border-top;
+            border-bottom: $table-border-bottom;
+            border-left: $table-border-left;
+            border-right: $table-border-right;
+            padding: $table-padding-top-normal $table-padding-right-normal $table-padding-bottom-normal $table-padding-left-normal;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: $grid-moderate) and (max-width: $grid-normal - 1) {
+    
+}
+
+@media (min-width: $grid-normal) {
+    
+}
+
+@media (max-width: $grid-light) {
+    .table-flexible {
+        width: 100%;
+        margin-bottom: 14.25px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #dddddd;
+        -webkit-overflow-scrolling: touch;
+    }
+}
