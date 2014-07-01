@@ -1,0 +1,474 @@
+// ------------------------------------------------------------\\
+//  FORMS                                             
+// ------------------------------------------------------------\\
+
+.form {
+	display: block;
+	@include clear();
+	margin-bottom: $form-margin-bottom;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form-category {
+	margin-bottom: $form-margin-bottom;
+	@include clear();
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+form {
+	.row {
+		margin-bottom: $form-margin-bottom;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+// Input Text
+//-------------------------------------------------------------\\
+
+.input-text {
+	display: block;
+	width: 100%;
+	margin: 0;
+	position: relative;
+	height: $input-height;
+	line-height:$line-height-default;
+	font-size: $input-font-size-default;
+	padding: $input-padding-top-default $input-padding-right-default $input-padding-bottom-default $input-padding-left-default;
+	color: $input-color;
+	background: $input-bg;
+	border:$input-border;
+	border-radius: $input-border-radius;
+	font-family: $input-font-family;
+	margin-bottom:$input-margin-bottom;
+	font-weight: $input-font-weight;
+	text-transform: $input-transform;
+	@include box-shadow(rgba($input-shadow-color, $input-shadow-opacity) $input-shadow-category, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(ease-out);
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:focus {
+		border-color: $input-shadow-color-focus;
+		@include box-shadow(rgba($input-shadow-color-focus, 1) 0 0 5px 0px, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	}
+}
+
+input[type="text"].error, textarea.error, select.error {
+	border-color: $color-error;
+	&:focus {
+		border-color: $color-error;
+		@include box-shadow(rgba($color-error, 1) 0 0 5px 0px, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	}
+}
+
+input[type="text"].completed, textarea.completed, select.completed {
+	border-color: $color-completed;
+	&:focus {
+		border-color: $color-completed;
+		@include box-shadow(rgba($color-completed, 1) 0 0 5px 0px, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	}
+}
+
+
+// Use this class to position the icon/button etc. on top of input text
+.input-icon {
+	position: relative;
+	font-size: $input-font-size-default;
+	color: $input-color;
+	margin-bottom: $input-margin-bottom;
+	.icon-position {
+		position: absolute;
+		right: $input-padding-right-default;
+		top: ceil(($input-height - ($input-padding-top-default * 2)) / 2);
+		z-index: 9;
+	}
+	.input-text {
+		margin-bottom: 0;
+	}
+	button {
+		margin-bottom: 0;
+	}
+}
+
+.input-sm {
+	
+}
+
+.input-md {
+
+}
+
+.input-lg {
+
+}
+
+
+// Labels
+//-------------------------------------------------------------\\
+
+label {
+	display: inline-block;
+	font-family: $label-font-family;
+	line-height:$line-height-default;
+}
+
+label.error {
+	color: $color-error;
+}
+
+label.completed {
+	color: $color-completed;
+}
+
+.input-label {
+	font-weight: $label-font-weight;
+	font-size: $label-font-size;
+	padding-bottom: $input-padding-bottom-default;
+	display: block;
+}
+
+.input-label.valign {
+	display: table;
+	width: 100%;
+	height: $input-height;
+	padding: 0;
+	text-align: left;
+	span {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.label-details {
+	overflow: hidden;
+	padding-bottom: 1px;
+	display: block;
+}
+
+
+// Textarea
+//-------------------------------------------------------------\\
+
+textarea {
+	width: 100%;
+	-webkit-appearance: none;
+	overflow: auto;
+	display: block;
+	font-weight: $input-font-weight;
+	padding: $input-padding-top-default $input-padding-right-default $input-padding-bottom-default $input-padding-left-default;
+	font-size: $input-font-size-default;
+	color: $input-color;
+	background: $input-bg;
+	border:$input-border;
+	border-radius: $input-border-radius;
+	font-family: $input-font-family;
+	@include box-shadow(rgba($input-shadow-color, $input-shadow-opacity) $input-shadow-category, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(ease-out);
+	&:focus {
+		border-color: $input-shadow-color-focus;
+		@include box-shadow(rgba($input-shadow-color-focus, 1) 0 0 5px 0px, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	}
+	margin-bottom: $form-margin-bottom;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+// Select Box
+//-------------------------------------------------------------\\
+
+.select-box {
+	position: relative;
+	@include clear();
+	margin-bottom: $form-margin-bottom;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:after {
+		content: '';
+		background: url(../images/icons/icon-chevron-down.png) 0 0 no-repeat;
+		background-size: 15px 9px;
+		width: 15px;
+		height: 9px;
+		position: absolute;
+		z-index: 1;
+		right: $input-padding-right-default;
+		top: $input-padding-top-default * 2;
+	}
+}
+
+select {
+	width: 100%;
+	font-weight: $input-font-weight;
+	text-transform: $input-transform;
+	padding: $input-padding-top-default $input-padding-right-default $input-padding-bottom-default $input-padding-left-default;
+	-webkit-appearance: none;
+	height: $input-height;
+	line-height:$line-height-default;
+	font-size: $input-font-size-default;
+	border:$input-border;
+	border-radius: $input-border-radius;
+	color: $input-placehoder;
+	background: none;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	font-family: $input-font-family;
+	font-size: $input-font-size-default;
+	display: block;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    @include box-shadow(rgba($input-shadow-color, $input-shadow-opacity) $input-shadow-category, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+    @include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(ease-out);
+	&:focus {
+		border-color: $input-shadow-color-focus;
+		@include box-shadow(rgba($input-shadow-color-focus, 1) 0 0 5px 0px, rgba(darken($input-shadow-color, 10%), $input-shadow-inset-opacity) $input-shadow-inset-category inset);
+	}
+}
+
+
+// @-moz-document url-prefix() {
+// 	select {
+// 		padding-top: $input-padding-top-default + 2;
+// 	}
+// }
+
+select::-ms-expand {
+    display: none;
+}
+
+
+// Checkbox 
+//-------------------------------------------------------------\\
+
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+input[type="checkbox"] {
+	-webkit-appearance: checkbox;
+}
+input[type="radio"], input[type="checkbox"] {
+	position: relative;
+	top: 4px;
+}
+
+.input-checkbox, .input-radio {
+	margin-bottom: $input-margin-bottom;
+	display: block;
+	@include clear();
+	label {
+		margin-bottom: $input-margin-bottom;
+		cursor: pointer;
+		display: block;
+		line-height:$line-height-default;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	input[type="checkbox"], input[type="radio"] {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.input-checkbox.inline, .input-radio.inline {
+	label {
+		cursor: pointer;
+		display: inline-block;
+		line-height:$line-height-default;
+		vertical-align: middle;
+		margin-right: 10px;
+		margin-bottom: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.icheckbox {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icons/icon-checkbox.png) 0 0 no-repeat;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    float: left;
+}
+.icheckbox {
+    background-position: 0 0;
+}
+.icheckbox.checked {
+    background-position: 0px -20px;
+    cursor: default;
+}
+
+
+// Radio
+//-------------------------------------------------------------\\
+
+
+.iradio {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icons/icon-radio.png) 0 0 no-repeat;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    float: left;
+}
+
+.iradio {
+    background-position: 0 0;
+}
+.iradio.checked {
+    background-position: 0px -20px;
+    cursor: default;
+}
+
+
+// Placeholder
+//-------------------------------------------------------------\\
+
+
+:-moz-placeholder {
+  color: $input-placehoder;
+  opacity: 1 !important;
+}
+
+::-moz-placeholder {
+  color: $input-placehoder;
+  opacity: 1 !important;
+}
+
+:-ms-input-placeholder {
+  color: $input-placehoder;
+}
+
+::-webkit-input-placeholder {
+  color: $input-placehoder;
+}
+
+
+// Input Category with Labels, Buttons, etc.
+//-------------------------------------------------------------\\
+
+
+.input-category {
+	display: table;
+	position: relative;
+	border-spacing: 0;
+	border-collapse: separate;
+	margin-bottom: $form-margin-bottom;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	button {
+		margin-bottom: 0;
+	}
+	.input-append {
+		display: table-cell;
+		vertical-align: middle;
+		line-height: 1;
+		text-align: center;
+		width: 1%;
+	 	white-space: nowrap;
+	 	overflow: hidden;
+	 	&:last-child {
+			@include border-right-radius($input-border-radius);
+		}
+		&:first-child {
+			@include border-left-radius($input-border-radius);
+		}
+	}
+	label {
+		background: $input-category-label-bg;
+		color: $input-category-label-color;
+		padding: $input-padding-top-default $input-padding-right-default $input-padding-bottom-default $input-padding-left-default;
+		border: $input-category-label-border;
+	}
+	.input-text, .select-box {
+		display: table-cell;
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: 100%;
+		margin-bottom: 0;
+		&:last-child {
+			@include border-left-radius(0px);
+		}
+		&:first-child {
+			@include border-right-radius(0px);
+		}
+	}
+	input[type="radio"], input[type="checkbox"] {
+		position: relative;
+		top: 2px;
+	}
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+	.form-group {
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+	form {
+		.row {
+			margin-bottom: 0;
+		}
+	}
+
+    .input-label {
+		padding-bottom: $input-padding-bottom-default;
+		&.valign {
+			display: block;
+			height: auto;
+		}
+	}
+
+   	.input-col {
+		float: none;
+		display: block;
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+	}
+	
+	.form-group {
+		margin-bottom: 10px;
+	}
+
+}

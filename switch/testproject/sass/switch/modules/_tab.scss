@@ -1,0 +1,115 @@
+// ------------------------------------------------------------\\
+//  TAB                                              
+// ------------------------------------------------------------\\
+
+.tab {
+	font-size: $tab-font-size-normal;
+	font-family: $tab-font-family;
+	list-style:none;
+	padding: 0;
+	margin: 0;
+	text-transform: $tab-text-transform;
+}
+
+.tab > li {
+	position: relative;
+	float: left;
+	padding: 0;
+	margin-right: $tab-margin-right-normal;
+	margin-left: $tab-margin-left-normal;
+	margin-bottom: $tab-margin-bottom;
+	border-left: $tab-border-right;
+	border-right: $tab-border-right;
+	&:last-child {
+		border-right: none;
+		margin-right: 0;
+	}
+	&:first-child {
+		margin-left: 0;
+		border-left: 0;
+	}
+	&:before {
+		display: none;
+	}
+}
+
+.tab > li > a {
+	padding: $tab-padding-top-normal $tab-padding-right-normal $tab-padding-bottom-normal $tab-padding-left-normal;
+	color: $tab-color;
+	font-weight: $tab-font-weight;
+	background-color: $tab-bg;
+	display: block;
+	border-top: $tab-border-top;
+	border-bottom: $tab-border-bottom;
+}
+
+.tab > li > a:hover {
+	text-decoration: none;
+	background-color: $tab-bg-hover;
+	color: $tab-color-hover;
+	border-top: $tab-border-top-hover;
+	border-bottom: $tab-border-bottom-hover;
+}
+
+.tab > li.active > a {
+	text-decoration: none;
+	background-color: $tab-bg-active;
+	color: $tab-color-active;
+	border-top: $tab-border-top-active;
+	border-bottom: $tab-border-bottom-active;
+}
+
+
+.tab-container {
+    position: relative;
+    @include clear();
+    .tab-content {
+        @include transition-property(opacity);
+        @include transition-duration(.2s);
+        @include transition-timing-function(ease-out);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .tab-content.inactive {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .tab-content.active {
+        z-index: 9;
+        opacity: 1;
+        position: relative;
+    }
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .tab {
+		font-size: $tab-font-size-moderate;
+	}
+
+	.tab > li > a {
+		padding: $tab-padding-top-moderate $tab-padding-right-moderate $tab-padding-bottom-moderate $tab-padding-left-moderate;
+	}
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   	.tab {
+		font-size: $tab-font-size-light;
+	}
+
+	.tab > li > a {
+		padding: $tab-padding-top-light $tab-padding-right-light $tab-padding-bottom-light $tab-padding-left-light;
+	}
+}

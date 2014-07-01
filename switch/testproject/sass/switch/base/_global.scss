@@ -1,0 +1,106 @@
+// ------------------------------------------------------------\\
+//  GLOBAL RESETS                                                 
+// ------------------------------------------------------------\\
+
+h1, h2, h3, h4, h5, h6, div, p, a, ul, ol, li, dl, dt, dd {
+    margin:0;
+    padding: 0;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1;
+    font: inherit;
+}
+
+body {
+    @include body-styles();
+}
+
+body, html {
+    width:100%;
+}
+
+:focus {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; 
+}
+
+input, textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+code, pre {
+    font: inherit;
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; 
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; 
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

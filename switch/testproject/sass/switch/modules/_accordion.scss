@@ -1,0 +1,70 @@
+// ------------------------------------------------------------\\
+//  ACCORDION                                             
+// ------------------------------------------------------------\\
+
+
+.accordion {
+	@include clear();
+	display: block;
+	margin-bottom: 20px;
+}
+
+.accordion-switch {
+	background: $color-primary;
+	display: block;
+	cursor: pointer;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 4px;
+	position: relative;
+	h1, h2, h3, h4, h5, h6 {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&.active {
+		margin-bottom: 0;
+	}
+	&:hover {
+		background-color: darken($color-primary, 15%);
+	}
+}
+
+.accordion-fold {
+	background: $color-white;
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	color: $color-black;
+	border-bottom: 3px solid $color-gray-darken;
+	@include clear();
+	form {
+		padding-left: 50px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: $color-black;
+	}
+}
+
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

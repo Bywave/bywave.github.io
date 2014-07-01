@@ -1,0 +1,185 @@
+// ------------------------------------------------------------\\
+//  TYPOGRAPHY                                               
+// ------------------------------------------------------------\\
+
+p, address {
+    line-height:$line-height-default;
+    margin-bottom: $margin-bottom-default;
+}
+
+a {
+    color:$text-link;
+    text-decoration:none;
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
+.underline-link {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+strong {
+    font-weight:bold;
+}
+
+em {
+    font-style:italic;
+}
+
+.heading-category {
+    display: block;
+    margin-bottom: $heading-margin-bottom-default;
+    @include clear();
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .button:last-child {
+        margin-bottom: 0;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        line-height: $heading-line-height;
+        margin-bottom: 0;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .left {
+        margin-right: 20px;
+    }
+    .right {
+        margin-left: 20px;
+    }
+}
+
+.heading-border {
+    border-bottom: $heading-border-bottom;
+    border-top: $heading-border-top;
+    margin-bottom: $heading-margin-bottom-default;
+    padding: $heading-border-padding-top-default $heading-border-padding-right-default $heading-border-padding-bottom-default $heading-border-padding-left-default;
+    display: block;
+    @include clear();
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 0;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: $heading-margin-bottom-default;
+    line-height: $heading-line-height;
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    small {
+        font-size: $heading-small-font-size;
+        font-weight: $heading-small-font-weight;
+        color: $heading-small-color;
+    }
+}
+
+.sub-title {
+    font-size: $heading-subtitle-font-size;
+    color: $heading-subtitle-color;
+    font-weight: $heading-subtitle-font-weight;
+    display: block;
+}
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+h4 {
+    font-size: $h4-font-size;
+}
+
+h5 {
+    font-size: $h5-font-size;
+}
+
+h6 {
+    font-size: $h6-font-size;
+}
+
+blockquote {
+    background: $blockquote-bg;
+    padding: $blockquote-padding-top $blockquote-padding-right $blockquote-padding-bottom $blockquote-padding-left;
+    color: $blockquote-color;
+    font-weight: $blockquote-font-weight;
+    font-size: $blockquote-font-size;
+    border-left: $blockquote-border-left;
+    border-right: $blockquote-border-right;
+    margin: 0;
+    margin-bottom: $margin-bottom-default;
+    p {
+        line-height: $line-height-default;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .author {
+        display: block;
+        font-size: $blockquote-author-font-size;
+        text-align: $blockquote-author-text-align;
+    }
+}
+
+.text-small {
+    font-size: $text-font-size-small;
+}
+.text-medium {
+    font-size: $text-font-size-medium;
+}
+.text-large {
+    font-size: $text-font-size-large;
+}
+.text-xlarge {
+    font-size: $text-font-size-xlarge;
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+    h1 {
+        font-size: $h1-font-size-small;
+    }
+    h2 {
+        font-size: $h2-font-size-small;
+    }
+    h3 {
+        font-size: $h3-font-size-small;
+    }
+    h4 {
+        font-size: $h4-font-size-small;
+    }
+    h5 {
+        font-size: $h5-font-size-small;
+    }
+    h6 {
+        font-size: $h6-font-size-small;
+    }
+}

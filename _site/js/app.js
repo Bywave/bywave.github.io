@@ -1,3 +1,15 @@
+/**
+* Config
+*/
+var durationNavAnim = 250;
+var durationNavHide = 500;
+/**
+* Fading header
+*/
+var timeoutFadingHeader;
+var isFadingHeader = false;
+
+$(function(){
 // Foundation
 $(document).foundation();
 
@@ -8,15 +20,15 @@ $('.hover').hover(function(){
     this.classList.toggle('flip');
 });
 
-// Fading header
-var timeoutFadingHeader;
-var isFadingHeader = false;
-
-$(function(){
+	/**
+	* Fading header
+	*/
 	initFadingHeaderEvents();
 });
 
-// Fading header
+/**
+* Fading header
+*/
 function initFadingHeaderEvents(){
 	$homeSection = $('#section-home');
 
@@ -25,16 +37,14 @@ function initFadingHeaderEvents(){
 			$header = $('.fading-header');
 
 			if($header.css("opacity") == '1' && isFadingHeader){
-				console.log('if 1');
 				clearTimeout(timeoutFadingHeader);
 				isFadingHeader = false;
 			}
 			else if($header.css("opacity") == '0'){
-				console.log('if 2');
 				$header.animate({
 					opacity: 1,
 					marginTop: '0px'
-				}, 250);
+				}, durationNavAnim);
 			}
 		}
 		else{
@@ -42,13 +52,15 @@ function initFadingHeaderEvents(){
 			
 			if($header.css("opacity") == '1' && !isFadingHeader){
 				isFadingHeader = true;
+				console.log('fade hedaer');
+				clearTimeout(timeoutFadingHeader);
 				timeoutFadingHeader = setTimeout(function(){
 					$header.animate({
 						opacity: 0,
 						marginTop: '-45px',
-					}, 250);
+					}, durationNavAnim);
 					isFadingHeader = false;
-				}, 500);
+				}, durationNavHide);
 			}
 		}
 	}, 100);
@@ -59,5 +71,5 @@ function isElementInViewport (el) {
         el = el[0];
     }
     var rect = el.getBoundingClientRect();
-    return rect.y > -(rect.height - 50);
+    return rect.bottom > 50;
 }

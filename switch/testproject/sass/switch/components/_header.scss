@@ -1,0 +1,233 @@
+// ------------------------------------------------------------\\
+//  HEADER                                             
+// ------------------------------------------------------------\\
+
+.header {
+	color: darken($color-gray, 10%);
+	@include clear();
+	margin-bottom: $header-margin-bottom;
+	.left {
+		margin-right: $header-left-margin;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.right {
+		margin-left: $header-right-margin;
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+	.force-left {
+		margin-right: $header-left-margin;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.force-right {
+		margin-left: $header-right-margin;
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.header-logo {
+	font-size: $header-logo-font-size;
+	float: left;
+	margin-right: $header-logo-margin-right;
+	margin-top: $header-logo-margin-top;
+	color: $header-logo-color;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.header-tagline {
+	float: left;
+	font-size: $header-tagline-font-size;
+	margin-top: $header-tagline-margin-top;
+}
+
+
+
+
+
+
+// Social
+//-------------------------------------------------------------\\
+
+.header-social {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@include clear();
+	li {
+		float: left;
+		margin:0;
+		padding: 0;
+		&:before {
+			display: none;
+		}
+	}
+	a {
+		display: block;
+		padding: $header-social-link-padding;
+		color: $header-social-link-color;
+		font-size: $header-social-font-size;
+		background-color: $header-social-link-bg;
+		&:hover {
+			background-color: $header-social-link-bg-hover;
+			color: $header-social-link-color-hover;
+		}
+	}
+}
+
+
+
+// Form
+//-------------------------------------------------------------\\
+
+.header-form {
+	margin-top: $header-form-margin-top;
+	.input-text {
+		width: auto;
+		min-width: $header-form-input-width;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 0;
+
+	}
+	button {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+// Topbar 
+//-------------------------------------------------------------\\
+
+.top-bar {
+	padding: $topbar-padding-top $topbar-padding-right $topbar-padding-bottom $topbar-padding-right;
+	background: $topbar-bg;
+	color: $topbar-color;
+	border-top: $topbar-border-top;
+	border-bottom: $topbar-border-bottom;
+	border-left: $topbar-border-left;
+	border-right: $topbar-border-right;
+	margin-bottom: $topbar-margin-bottom;
+	min-height: $topbar-height;
+	line-height: $topbar-height;
+	font-size: $topbar-font-size;
+	@include clear();
+	position: relative;
+	z-index: 999999;
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+// Navbar 
+//-------------------------------------------------------------\\
+
+.nav-bar {
+	padding: $navbar-padding-top $navbar-padding-right $navbar-padding-bottom $navbar-padding-right;
+	background: $navbar-bg;
+	color: $navbar-color;
+	border-top: $navbar-border-top;
+	border-bottom: $navbar-border-bottom;
+	border-left: $navbar-border-left;
+	border-right: $navbar-border-right;
+	margin-bottom: $navbar-margin-bottom;
+	min-height: $navbar-height;
+	@include clear();
+	position: relative;
+	z-index: 999999;
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.nav-bar-content {
+	position: relative;
+	@include clear();
+}
+
+.nav-bar-left {
+	float: left;
+}
+
+.nav-bar-right {
+	float: right;
+}
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+	.header {
+		.left {
+			margin-right: 0px;
+		}
+		.right {
+			margin-left: 0px;
+		}
+	}
+	.header-form {
+		padding: $grid-container-row-small / 2;
+		.input-text {
+			width: 100%;
+			display: block;
+			margin-bottom: $header-form-input-margin-bottom;
+		}
+		button {
+			margin-bottom: 0;
+		}
+	}
+	.header-logo {
+		margin-top: 12px;
+		&.left {
+			float: left !important;
+		}
+		&.right {
+			float: right !important;
+		}
+	}
+	.nav-bar {
+		background: none;
+		min-height: 1px;
+		padding: 0;
+		margin:0;
+	}
+   	.nav-bar > .container, .top-bar > .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.nav-bar-content {
+		background: $navbar-bg;
+		height: 50px;
+		padding-left: $grid-container-row-small / 2;
+		padding-right: $grid-container-row-small / 2;
+	}
+}

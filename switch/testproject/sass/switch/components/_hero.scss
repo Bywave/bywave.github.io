@@ -1,0 +1,107 @@
+// ------------------------------------------------------------\\
+//  HERO                                               
+// ------------------------------------------------------------\\
+
+
+.hero {
+    position: relative;
+    background: $hero-bg;
+    border: $hero-border;
+    font-size: $hero-font-size;
+    color: $hero-color;
+    @include box-shadow(rgba($hero-shadow, $hero-shadow-opacity) 3px 6px 13px 0px);
+    @include clear();
+}
+
+.hero-image {
+    display: block;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .hero-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .valign {
+        height: 100%;
+    }
+    .hero-intro {
+        background: $hero-intro-bg;
+        padding: $hero-intro-padding-right-default $hero-intro-padding-bottom-default $hero-intro-padding-left-default;
+    }
+}
+
+.hero-full {
+    .hero-image {
+        background-size: cover !important;
+        background-position: 50% 50% !important;
+        height: $hero-image-height-default;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hero-image img {
+    display: block;
+}
+
+.hero-content {
+    padding: $hero-content-padding-top-default $hero-content-padding-right-default $hero-content-padding-bottom-default $hero-content-padding-left-default;
+    color: $hero-content-color;
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .hero-intro {
+        
+    }
+}
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .hero-content {
+        padding: $hero-content-padding-top-medium $hero-content-padding-right-medium $hero-content-padding-bottom-medium $hero-content-padding-left-medium;
+    }
+    .hero-full {
+        .hero-image {
+            height: $hero-image-height-medium;
+        }
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+    .hero-content {
+        padding: $hero-content-padding-top-small $hero-content-padding-right-small $hero-content-padding-bottom-small $hero-content-padding-left-small;
+    }
+    .hero-full {
+        .hero-image {
+            height: $hero-image-height-small;
+        }
+    }
+    .hero-image {
+        .hero-content {
+            position: relative;
+        }
+        .valign {
+            height: 100%;
+        }
+        .hero-intro {
+            background: $hero-intro-bg;
+            padding: $hero-intro-padding-right-default $hero-intro-padding-bottom-default $hero-intro-padding-left-default;
+        }
+    }
+}

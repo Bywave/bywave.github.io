@@ -1,0 +1,133 @@
+// ------------------------------------------------------------\\
+//  ICONS                                          
+// ------------------------------------------------------------\\
+
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	position: relative;
+	top: -1px;
+	line-height: $line-height-default;
+	margin-right: $icon-margin;
+}
+
+.icon-right {
+	margin-left: $icon-margin;
+	margin-right: 0;
+}
+
+// Icon Width
+.icon-width {
+	width: $icon-width !important;
+	background-position: 50% 0 !important;
+	margin: 0;
+}
+
+
+
+// Icon Circular
+.icon-circular {
+	background-color: $icon-circular-bg;
+	border-radius: 50%;
+	width: $icon-circular-dimension;
+	height: $icon-circular-dimension;
+	font-size: $icon-circular-font-size-default;
+	position: relative;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	color: $icon-circular-color;
+	@include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    margin-bottom: $icon-circular-margin-bottom;
+	&:hover {
+		text-decoration: none;
+		background-color: $icon-circular-bg-hover
+	}
+	i {
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+		height: 100%;
+		width: 100%;
+		background-position: 50% 50%;
+		line-height: $icon-circular-dimension;
+	}
+	.icon-image {
+		background-size: $icon-circular-image-dimension-default $icon-circular-image-dimension-default;
+	}
+	&.default {
+		@extend .bg-default;
+	}
+	&.primary {
+		@extend .bg-primary;
+	}
+	&.secondary {
+		@extend .bg-secondary;
+	}
+	&.tertiary {
+		@extend .bg-tertiary;
+	}
+	&.completed {
+		@extend .bg-completed;
+	}
+	&.error {
+		@extend .bg-error;
+	}
+	&.important {
+		@extend .bg-important;
+	}
+	&.small {
+		width: $icon-circular-dimension-small;
+		height: $icon-circular-dimension-small;
+		i {
+			line-height: $icon-circular-dimension-small;
+			font-size: $icon-circular-font-size-small;
+		}
+		.icon-image {
+			background-size: $icon-circular-image-dimension-small $icon-circular-image-dimension-small;
+		}
+	}
+	&.medium {
+		width: $icon-circular-dimension-medium;
+		height: $icon-circular-dimension-medium;
+		i {
+			line-height: $icon-circular-dimension-medium;
+			font-size: $icon-circular-font-size-medium;
+		}
+		.icon-image {
+			background-size: $icon-circular-image-dimension-medium $icon-circular-image-dimension-medium;
+		}
+	}
+	&.large {
+		width: $icon-circular-dimension-large;
+		height: $icon-circular-dimension-large;
+		i {
+			line-height: $icon-circular-dimension-large;
+			font-size: $icon-circular-font-size-large;
+		}
+		.icon-image {
+			background-size: $icon-circular-image-dimension-large $icon-circular-image-dimension-large;
+		}
+	}
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

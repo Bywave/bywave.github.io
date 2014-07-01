@@ -1,0 +1,48 @@
+// ------------------------------------------------------------\\
+//  BLOCKS                                               
+// ------------------------------------------------------------\\
+
+
+.block {
+    padding-top: $block-padding-top-default;
+    padding-bottom: $block-padding-bottom-default;
+    margin-bottom: $block-margin-bottom-default;
+    border-bottom: $block-border-bottom;
+    display: block;
+    @include clear();
+    .block-content {
+        padding-left: $block-content-padding-left;
+        padding-right: $block-content-padding-right;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .block {
+	    padding-top: $block-padding-top-medium;
+        padding-bottom: $block-padding-bottom-medium;
+	    margin-bottom: $block-margin-bottom-medium;
+	}
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   	.block {
+	    padding-top: $block-padding-top-small;
+        padding-bottom: $block-padding-bottom-small;
+	    margin-bottom: $block-margin-bottom-small;
+	}
+}

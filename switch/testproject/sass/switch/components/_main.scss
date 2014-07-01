@@ -1,0 +1,36 @@
+// ------------------------------------------------------------\\
+//  MAIN                                              
+// ------------------------------------------------------------\\
+
+.main {
+	
+}
+
+.main-top {
+	color: $color-default;
+	border-bottom: 1px solid $color-tertiary;
+	margin-bottom: 30px;
+	
+	background-color: $color-gray-lighten;
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

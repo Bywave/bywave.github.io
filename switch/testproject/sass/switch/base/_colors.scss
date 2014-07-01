@@ -1,0 +1,399 @@
+// ------------------------------------------------------------\\
+//  COLORS                                               
+// ------------------------------------------------------------\\
+
+// Default
+//-------------------------------------------------------------\\
+.color-default {
+    color: $color-default !important;
+    a {
+        color: $color-default !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-default;
+    }
+}
+.bg-default {
+    background-color: $bg-default-bg !important;
+    color: $bg-default-color !important;
+    border-color: darken($bg-default-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-default-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-default-color;
+    }
+}
+a.bg-default {
+    &:hover {
+        background-color: $bg-default-bg-hover !important;
+        color: $bg-default-color-hover !important;
+        border-color: darken($bg-default-bg-hover, 10%) !important;
+    }
+}
+
+// Color Primary
+//-------------------------------------------------------------\\
+.color-primary {
+    color: $color-primary !important;
+    a {
+        color: $color-primary !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-primary;
+    }
+}
+.bg-primary {
+    background-color: $bg-primary-bg !important;
+    color: $bg-primary-color !important;
+    border-color: darken($bg-primary-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-primary-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-primary-color;
+    }
+}
+a.bg-primary {
+    &:hover {
+        background-color: $bg-primary-bg-hover !important;
+        color: $bg-primary-color-hover !important;
+        border-color: darken($bg-primary-bg-hover, 10%) !important;
+    }
+}
+
+// Color Secondary
+//-------------------------------------------------------------\\
+.color-secondary {
+    color: $color-secondary !important;
+    a {
+        color: $color-secondary !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-secondary;
+    }
+}
+.bg-secondary {
+    background-color: $bg-secondary-bg !important;
+    color: $bg-secondary-color !important;
+    border-color: darken($bg-secondary-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-secondary-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-secondary-color;
+    }
+}
+a.bg-secondary {
+    &:hover {
+        background-color: $bg-secondary-bg-hover !important;
+        color: $bg-secondary-color-hover !important;
+        border-color: darken($bg-secondary-bg-hover, 10%) !important;
+    }
+}
+
+// Color Tertiary
+//-------------------------------------------------------------\\
+.color-tertiary {
+    color: $color-tertiary !important;
+    a {
+        color: $color-tertiary !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-tertiary;
+    }
+}
+.bg-tertiary {
+    background-color: $bg-tertiary-bg !important;
+    color: $bg-tertiary-color !important;
+    border-color: darken($bg-tertiary-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-tertiary-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-tertiary-color;
+    }
+}
+a.bg-tertiary {
+    &:hover {
+        background-color: $bg-tertiary-bg-hover !important;
+        color: $bg-tertiary-color-hover !important;
+        border-color: darken($bg-tertiary-bg-hover, 10%) !important;
+    }
+}
+
+// Color Completed
+//-------------------------------------------------------------\\
+.color-completed {
+    color: $color-completed !important;
+    a {
+        color: $color-completed !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-completed;
+    }
+}
+.bg-completed {
+    background-color: $bg-completed-bg !important;
+    color: $bg-completed-color !important;
+    border-color: darken($bg-completed-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-completed-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-completed-color;
+    }
+}
+a.bg-completed {
+    &:hover {
+        background-color: $bg-completed-bg-hover !important;
+        color: $bg-completed-color-hover !important;
+        border-color: darken($bg-completed-bg-hover, 10%) !important;
+    }
+}
+
+// Color Error
+//-------------------------------------------------------------\\
+.color-error {
+    color: $color-error !important;
+    a {
+        color: $color-error !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-error;
+    }
+}
+.bg-error {
+    background-color: $bg-error-bg !important;
+    color: $bg-error-color !important;
+    border-color: darken($bg-error-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-error-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-error-color;
+    }
+}
+a.bg-error {
+    &:hover {
+        background-color: $bg-error-bg-hover !important;
+        color: $bg-error-color-hover !important;
+        border-color: darken($bg-error-bg-hover, 10%) !important;
+    }
+}
+
+// Color Important
+//-------------------------------------------------------------\\
+.color-important {
+    color: $color-important !important;
+    a {
+        color: $color-important !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-important;
+    }
+}
+.bg-important {
+    background-color: $bg-important-bg !important;
+    color: $bg-important-color !important;
+    border-color: darken($bg-important-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-important-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-important-color;
+    }
+}
+a.bg-important {
+    &:hover {
+        background-color: $bg-important-bg-hover !important;
+        color: $bg-important-color-hover !important;
+        border-color: darken($bg-important-bg-hover, 10%) !important;
+    }
+}
+
+// Color White
+//-------------------------------------------------------------\\
+.color-white {
+    color: $color-white !important;
+    a {
+        color: $color-white !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-white;
+    }
+}
+.bg-white {
+    background-color: $bg-white-bg !important;
+    color: $bg-white-color !important;
+    border-color: darken($bg-white-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-white-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-white-color;
+    }
+}
+a.bg-white {
+    &:hover {
+        background-color: $bg-white-bg-hover !important;
+        color: $bg-white-color-hover !important;
+        border-color: darken($bg-white-bg-hover, 10%) !important;
+    }
+}
+
+// Color Black
+//-------------------------------------------------------------\\
+.color-black {
+    color: $color-black !important;
+    a {
+        color: $color-black !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-black;
+    }
+}
+.bg-black {
+    background-color: $bg-black-bg !important;
+    color: $bg-black-color !important;
+    border-color: darken($bg-black-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-black-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-black-color;
+    }
+}
+a.bg-black {
+    &:hover {
+        background-color: $bg-black-bg-hover !important;
+        color: $bg-black-color-hover !important;
+        border-color: darken($bg-black-bg-hover, 10%) !important;
+    }
+}
+
+// Color Gray
+//-------------------------------------------------------------\\
+.color-gray {
+    color: $color-gray !important;
+    a {
+        color: $color-gray !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-gray;
+    }
+}
+.bg-gray {
+    background-color: $bg-gray-bg !important;
+    color: $bg-gray-color !important;
+    border-color: darken($bg-gray-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-gray-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-gray-color;
+    }
+}
+a.bg-gray {
+    &:hover {
+        background-color: $bg-gray-bg-hover !important;
+        color: $bg-gray-color-hover !important;
+        border-color: darken($bg-gray-bg-hover, 10%) !important;
+    }
+}
+
+// Color Gray Darken
+//-------------------------------------------------------------\\
+.color-gray-darken {
+    color: $color-gray-darken !important;
+    a {
+        color: $color-gray-darken !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-gray-darken;
+    }
+}
+.bg-gray-darken {
+    background-color: $bg-gray-darken-bg !important;
+    color: $bg-gray-darken-color !important;
+    border-color: darken($bg-gray-darken-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-gray-darken-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-gray-darken-color;
+    }
+}
+a.bg-gray-darken {
+    &:hover {
+        background-color: $bg-gray-darken-bg-hover !important;
+        color: $bg-gray-darken-color-hover !important;
+        border-color: darken($bg-gray-darken-bg-hover, 10%) !important;
+    }
+}
+
+// Color Gray Lighten
+//-------------------------------------------------------------\\
+.color-gray-lighten {
+    color: $color-gray-lighten !important;
+    a {
+        color: $color-gray-lighten !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-gray-lighten;
+    }
+}
+.bg-gray-lighten {
+    background-color: $bg-gray-lighten-bg !important;
+    color: $bg-gray-lighten-color !important;
+    border-color: darken($bg-gray-lighten-bg, 10%) !important;
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-out);
+    a {
+        color: $bg-gray-lighten-color !important;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $bg-gray-lighten-color;
+    }
+}
+a.bg-gray-lighten {
+    &:hover {
+        background-color: $bg-gray-lighten-bg-hover !important;
+        color: $bg-gray-lighten-color-hover !important;
+        border-color: darken($bg-gray-lighten-bg-hover, 10%) !important;
+    }
+}

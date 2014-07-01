@@ -1,0 +1,263 @@
+// ------------------------------------------------------------\\
+//  UTILITIES                                             
+// ------------------------------------------------------------\\
+
+// Floats
+
+.right {
+    float:right !important;;
+}
+
+.left {
+    float:left !important;;
+}
+
+.force-right {
+    float:right !important;
+}
+
+.force-left {
+    float: left !important;
+}
+
+
+// Indention
+
+.indent {
+    padding-left: $indent;
+}
+
+
+// Displays
+
+.display-block {
+    display: block !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+
+// Alignment
+
+.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    float: none !important;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.text-left {
+    text-align: left !important;
+    display: block !important;
+}
+
+.text-center {
+    text-align: center !important;
+    display: block !important;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.text-right {
+    text-align: right !important;
+    display: block !important;
+    img {
+        text-align: right;
+        display: inline-block !important;
+    }
+}
+
+.text-center-except-small, .text-center-except-medium, .text-center-except-default, .text-center-except-large {
+    text-align: center !important;
+    display: block !important;
+}
+
+
+// Clearing Floats
+
+.clear {
+    @include clear();
+}
+
+.clearfix {
+    @include clear();
+}
+
+
+// Horizontal Rule
+
+hr {
+    border-top:$hr-border;
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    display:block;
+    height:0px;
+    overflow:hidden;
+    margin: 0;
+    margin-bottom: $hr-margin-bottom;
+    text-align:center;
+    padding:0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Vertical Alignment
+
+.valign {
+    width: 100%;
+    display: table !important;
+}
+
+.valign-content {
+    display: table-cell !important;
+    vertical-align: middle;
+}
+
+
+// Underline
+
+.underline {
+    text-decoration: underline;
+}
+a.underline {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .text-center-medium {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-medium {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-medium {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .text-center-except-medium {
+        text-align: inherit !important;
+        display: inherit !important;
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    .text-center-default {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-default {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-default {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .text-center-except-default {
+        text-align: inherit !important;
+        display: inherit !important;
+    }
+}
+
+@media (min-width: $query-large) {
+    .text-center-xlarge {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-xlarge {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-xlarge {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .text-center-except-large {
+        text-align: inherit !important;
+        display: inherit !important;
+    }
+
+}
+
+@media (max-width: $query-small) {
+    .text-center-small {
+        text-align: center !important;
+        display: block !important;
+    }
+    .text-right-small {
+        text-align: right !important;
+        display: block !important;
+    }
+    .center-small {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        float: none !important;
+        text-align: center;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .text-center-except-small {
+        text-align: inherit !important;
+        display: inherit !important;
+    }
+    .right, .left {
+        float: none !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        display: block;
+    }
+    .force-left {
+        float: left !important;
+    }
+    .force-right {
+        float: right !important;
+    }
+}

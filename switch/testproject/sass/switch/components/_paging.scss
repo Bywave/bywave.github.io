@@ -1,0 +1,44 @@
+// ------------------------------------------------------------\\
+//  PAGING                                              
+// ------------------------------------------------------------\\
+
+
+// Page
+
+.paging {
+	@include clear();
+	a {
+		
+	}
+}
+
+
+
+// Pagination
+
+ul.pagination {
+	@include clear();
+	display: block;
+	li {
+		display: inline;	
+	}
+}
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

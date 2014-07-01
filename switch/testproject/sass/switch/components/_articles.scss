@@ -1,0 +1,83 @@
+// ------------------------------------------------------------\\
+//  ARTICLES                                                
+// ------------------------------------------------------------\\
+
+
+.article {
+    @include clear();
+    display: block;
+    margin-bottom: $article-margin-bottom;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .article-content {
+        padding: $article-content-padding-top-default $article-content-padding-right-default $article-content-padding-bottom-default $article-content-padding-left-default;
+        margin-bottom: $article-margin-bottom;
+        display: block;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .article-date {
+        font-size: $article-date-font-size;
+        color: $article-date-color;
+        font-weight: $article-date-font-weight;
+    }
+    .article-links {
+        clear: both;
+        border-top: $article-links-border;
+        border-bottom: $article-links-border;
+        display: block;
+        @include clear();
+        width: 100%;
+        padding: $article-links-padding-top $article-links-padding-right $article-links-padding-bottom $article-links-padding-left;
+        .left, .force-left {
+            a {
+                margin-right: $article-links-link-margin-right;
+                &.left, &.force-left {
+                    margin-right: $article-links-link-margin-right;
+                }
+            }
+        }
+        .right, .force-right {
+            a {
+                margin-right: $article-links-link-margin-left;
+                &.right, &.force-right {
+                    margin-right: $article-links-link-margin-left;
+                }
+            }
+        }
+    }
+    .button {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+    .article {
+        .article-content {
+            padding: $article-content-padding-top-medium $article-content-padding-right-medium $article-content-padding-bottom-medium $article-content-padding-left-medium;
+        }
+    }
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+    .article {
+        .article-content {
+            padding: $article-content-padding-top-small $article-content-padding-right-small $article-content-padding-bottom-small $article-content-padding-left-small;
+        }
+    }
+}

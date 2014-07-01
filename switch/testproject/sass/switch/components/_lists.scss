@@ -1,0 +1,332 @@
+// ------------------------------------------------------------\\
+//  LISTS                                               
+// ------------------------------------------------------------\\
+
+
+// Definition List
+//-------------------------------------------------------------\\
+
+dl {
+    margin-bottom: $list-container-bottom;
+    font-size: $list-font-size;
+    display: block;
+    dt {
+        line-height: $list-line-height;
+        font-weight: $dt-font-weight;
+        margin-bottom: $dt-dd-margin-bottom;
+        font-size: $dt-font-size;
+        color: $dt-color;
+    }
+    dd {
+        margin-bottom: $dt-dd-margin-bottom;
+    }
+}
+
+
+
+
+// Definition List
+//-------------------------------------------------------------\\
+
+ol {
+    list-style-type: decimal;
+    margin-bottom: $list-container-bottom;
+    padding-left: floor($font-size-default * $line-height-default);
+    li {
+        padding: 0;
+        margin:0;
+        line-height: $list-line-height;
+        position: relative;
+    }
+    a {
+        display: $list-display;
+    }
+}
+
+
+
+
+// Unordered List
+//-------------------------------------------------------------\\
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    color: $list-color;
+    font-size: $list-font-size;
+    margin-bottom: $list-container-bottom;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    ul {
+        margin-bottom: 0 !important;
+    }
+    li {
+        margin:0;
+        padding: 0;
+        padding-left: $list-bullet-padding-left;
+        line-height: $list-line-height;
+        position: relative;
+        &:before {
+            position: absolute;
+            left: -2px;
+            top: $list-bullet-position-top;
+            content: "\2022";
+            padding-right:5px;
+            color:$list-bullet-color;
+            font-size: $list-bullet-font-size;
+            line-height: $list-bullet-line-height;
+        }
+    }
+    a {
+        @include transition-property(all);
+        @include transition-duration(.4s);
+        @include transition-timing-function(ease-out);
+    }
+    &.with-bg {
+        li {
+            padding: $list-padding-top $list-padding-right $list-padding-bottom $list-padding-left;
+            padding-left: ($list-bullet-padding-left * 2) + ($list-bg-padding-left / 2);
+            display: block;
+            background: $list-bg-bg;
+            color: $list-bg-color;
+            &:before {
+                left: $list-bg-padding-left;
+                color:$list-color;
+                top: $list-padding-top;
+            }
+        }
+        a {
+            margin-left: -(($list-bullet-padding-left * 2) + ($list-bg-padding-left / 2));
+            padding-left: ($list-bullet-padding-left * 2) + ($list-bg-padding-left / 2);
+            display: block;
+            color: $list-bg-color;
+            &:hover {
+                background-color: $list-bg-bg-hover;
+                color: $list-bg-color-hover;
+                text-decoration: none;
+                &:before {
+                    position: absolute;
+                    left: $list-bg-padding-left;
+                    top: $list-padding-top;
+                    content: "\2022";
+                    padding-right:5px;
+                    color:$list-bg-color-hover;
+                    font-size: $list-bullet-font-size;
+                    line-height: $list-bullet-line-height;
+                }
+            }
+        }
+    }
+}
+
+
+.list {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: $list-container-bottom;
+    li {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0;
+            content: "";
+            padding-right:0px;
+            color: inherit;
+            font-size: inherit;
+            line-height:  inherit;
+        }
+    }
+}
+
+
+
+
+// List w/ Backgrouund
+//-------------------------------------------------------------\\
+
+
+.list.with-bg {
+    li {
+        padding: $list-bg-padding-top $list-bg-padding-right $list-bg-padding-bottom $list-bg-padding-left;
+        width: 100%;
+        background: $list-bg-bg;
+        color: $list-bg-color;
+        &.active {
+            a {
+                background-color: $list-bg-bg-hover;
+                color: $list-bg-color-hover;
+            }
+        }
+    }
+    a {
+        color: $list-bg-color;
+        display: block;
+        padding: $list-bg-padding-top $list-bg-padding-right $list-bg-padding-bottom $list-bg-padding-left;
+        margin-top: -$list-bg-padding-top;
+        margin-left: -$list-bg-padding-left;
+        margin-bottom: -$list-bg-padding-bottom;
+        margin-right: -$list-bg-padding-right;
+        position: relative;
+        &:hover {
+            background-color: $list-bg-bg-hover;
+            color: $list-bg-color-hover;
+            text-decoration: none;
+            &:before {
+                content: "";
+            }
+        }
+    }
+    .no-bg {
+        background: none;
+        color: $list-color;
+    }
+}
+
+ul.with-bg {
+    a {
+        margin-top: -$list-bg-padding-top;
+        margin-bottom: -$list-bg-padding-bottom;
+        padding-top: $list-bg-padding-top;
+        padding-bottom: $list-bg-padding-bottom;
+    }
+}
+
+
+
+// Inline
+//-------------------------------------------------------------\\
+
+
+ul.inline {
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: $list-inline-margin-right;
+        width: auto;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
+// List w/ Indention
+//-------------------------------------------------------------\\
+
+ul.indent {
+    padding-left: $list-indent;
+    &.with-bg {
+        padding-left: 0;
+        li {
+            padding-left: $list-indent;
+        }
+        a {
+            margin-left: -$list-indent;
+            padding-left: $list-indent;
+        }
+    }
+}
+
+
+
+// List w/ Border
+//-------------------------------------------------------------\\
+
+ul.border {
+    margin-bottom: $list-container-bottom;
+    li {
+        padding-top: $list-padding-top;
+        padding-bottom: $list-padding-bottom;
+        border-bottom: $list-border-bottom;
+        &:last-child {
+            border-top: $list-border-top;
+            border-bottom: none;
+        }
+    }
+    &.with-bg {
+        li {
+           border-bottom: $list-border-bg-bottom;
+        }
+    }
+}
+
+
+
+// List w/ Arrow
+//-------------------------------------------------------------\\
+
+ul.arrow {
+    margin-bottom: $list-container-bottom;
+    li {
+        padding-left: $list-arrow-indent;
+        &:before {
+            content: "";
+            width: 0; 
+            height: 0; 
+            border-top: $list-arrow-size solid transparent;
+            border-bottom: $list-arrow-size solid transparent;
+            border-left: $list-arrow-size solid $list-arrow-color;
+            position: absolute;
+            left: 0;
+            top: $list-arrow-position-top;
+        }
+    }
+    &.with-bg {
+        li {
+            padding-left: $list-arrow-indent * 2;
+            &:before {
+                left: $list-arrow-indent;
+                border-left: $list-arrow-size solid $list-arrow-color;
+                top: $list-padding-top + $list-arrow-size + 2;
+            }
+        }
+        a {
+            padding-left: $list-arrow-indent * 2;
+            margin-left: -$list-arrow-indent * 2;
+            &:before {
+                content: "";
+                width: 0; 
+                height: 0; 
+                border-top: $list-arrow-size solid transparent;
+                border-bottom: $list-arrow-size solid transparent;
+                border-left: $list-arrow-size solid $list-arrow-color;
+                position: absolute;
+                top: $list-padding-top + $list-arrow-size + 2;
+                left: $list-arrow-indent;
+                border-left: $list-arrow-size solid $list-arrow-color;
+            }
+            &:hover {
+                &:before {
+                    border-left: $list-arrow-size solid $list-bg-color-hover;
+                    top: $list-padding-top + $list-arrow-size + 2;
+                    left: $list-arrow-indent;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: $query-medium) and (max-width: $query-default - 1) {
+
+}
+
+@media (min-width: $query-default) and (max-width: $query-large - 1) {
+    
+}
+
+@media (min-width: $query-large) {
+
+}
+
+@media (max-width: $query-small) {
+   
+}

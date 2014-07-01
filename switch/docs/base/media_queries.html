@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Project Name</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../../testproject/stylesheets/switch.css" rel="stylesheet" />
+	<link href="../assets/stylesheets/docs.css" rel="stylesheet" />
+	<!--[if lte IE 8]>
+   		<link href="stylesheets/ie8.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 9]>
+   		<link href="stylesheets/ie9.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script>window.html5 || document.write('<script src="../../testproject/javascripts/libs/html5.js"><\/script>')</script>
+	<![endif]-->
+</head>
+<body>
+<div class="header">
+	<div class="top-bar">
+		<div class="container">
+			<ul class="header-social force-right">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+				<li><a href="#"><i class="fa fa-github"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<div class="container">
+			<div class="nav-bar-content left">
+				<a href="index.html" class="header-logo">Switch</a>
+				<a href="#" class="nav-switch">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</a>
+			</div>
+			<div class="nav-fold right">
+				<ul class="nav">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../overview.html">Overview</a></li>
+					<li class="active"><a href="../base.html">Base</a></li>
+					<li><a href="../components.html">Components</a></li>
+					<li><a href="../modules.html">Modules</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="grid-9 center text-center">
+					<h1>Base</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, laboriosam, autem, nemo, magni quod praesentium optio adipisci temporibus culpa commodi officia harum iusto eaque quae atque asperiores at.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="grid-3">
+				<div class="sidebar">
+					<div class="block">
+						<ul class="sidenav">
+							<li><a href="grid_system.html">Grid System</a></li>
+							<li><a href="colors.html">Colors</a></li>
+							<li><a href="typography.html">Typography</a></li>
+							<li><a href="utilities.html">Utilities</a></li>
+							<li><a href="visibility.html">Visibility</a></li>
+							<li class="active"><a href="media_queries.html">Media Queries</a></li>
+							<li><a href="css_resets.html">CSS Resets</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="grid-9">
+				<div class="main-content">
+					<div class="block">
+						<h1>Media Queries</h1>
+						<p class="text-large">We implement media queries based on our grid system. It is composed of different breakpoints across different devices.</p>
+						<br><hr><br>
+						<h2>Basic Setup</h2>
+						<p>A simple way to start a responsive site. Switch media queries uses <strong>px</strong> as unit.</p>
+						<div><strong>CSS</strong> styles</div>
+						<pre><code class="html-tags"><div class="html-container"><span class="html-comment">/* For medium screen (tablet) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">768px</span>) and (<span class="tag">max-width</span>: <span class="value">991px</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For default screen (desktop) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">992px</span>) and (<span class="tag">max-width</span>: <span class="value">1199px</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For large screen (desktop / wide screen) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">1200px</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For small screen (mobile) */</span>
+<strong>@media</strong> (<span class="tag">max-width</span>: <span class="value">767px</span>) {
+	<strong>...</strong>
+}</div></code></pre>
+<br>
+<div><strong>SASS</strong> styles</div>
+
+						<pre><code class="html-tags"><div class="html-container"><span class="html-comment">/* For medium screen (tablet) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">$query-medium</span>) and (<span class="tag">max-width</span>: <span class="value">$query-default - 1</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For default screen (desktop) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">$query-default</span>) and (<span class="tag">max-width</span>: <span class="value">$query-large - 1</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For large screen (desktop / wide screen) */</span>
+<strong>@media</strong> (<span class="tag">min-width</span>: <span class="value">$query-large</span>) {
+	<strong>...</strong>
+}
+<span class="html-comment">/* For small screen (mobile) */</span>
+<strong>@media</strong> (<span class="tag">max-width</span>: <span class="value">$query-small</span>) {
+	<strong>...</strong>
+}</div></code></pre>
+
+						<br><hr><br>
+						<h2>SASS Configuration <small>Variables</small></h2>
+						<pre><code class="html-tags sass"><div class="html-container"><span class="html-comment">// Media Queries for different devices </span>
+$query-small: <span class="value">767px</span> <span class="tag">!default</span>;
+$query-medium: <span class="value">768px</span> <span class="tag">!default</span>;
+$query-default: <span class="value">992px</span> <span class="tag">!default</span>;
+$query-large: <span class="value">1200px</span> <span class="tag">!default</span>;
+</div></code></pre>
+						<p>See <a href="../../testproject/sass/switch/base/_config.scss" class="underline"><strong>config.scss</strong></a> for complete reference.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<a href="#" class="btt"><span><i class="fa fa-chevron-up"></i></span></a>
+	<div class="footer-content">
+		<div class="container text-center-small">
+			<div class="row">
+				<div class="grid-7">
+					<div class="footer-logo">Switch</div>
+					<ul class="footer-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="grid-5">
+					<ul class="footer-social right">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom text-center">
+		<div class="copyright">&copy; 2014 Switch. All rights reserved. </div>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../testproject/javascripts/libs/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="../../testproject/javascripts/plugins.js"></script>
+<script src="../../testproject/javascripts/script.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+</body>
+</html>
