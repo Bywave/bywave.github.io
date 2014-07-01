@@ -8051,21 +8051,160 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* -- Mixins -- */
+/* -- Extend -- */
+/* line 34, ../_sass/_flipcards.scss */
+.flip-card, .panel .front, .panel .back {
+  border-radius: inherit;
+}
+
+/* -- Panel -- */
+/* line 39, ../_sass/_flipcards.scss */
+.panel {
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+  background: transparent;
+  width: 100%;
+  padding: 0px;
+  border-color: transparent;
+  border-radius: 3px;
+  /* -- Front Card -- */
+  /*-- Back card --*/
+}
+/* line 47, ../_sass/_flipcards.scss */
+.panel img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+/* line 53, ../_sass/_flipcards.scss */
+.panel .front {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 1px 2px 0px #aaa;
+}
+/* line 67, ../_sass/_flipcards.scss */
+.panel .back {
+  -webkit-transform: rotateX(0deg) rotateY(-179deg);
+  -moz-transform: rotateX(0deg) rotateY(-179deg);
+  transform: rotateX(0deg) rotateY(-179deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  background: none repeat scroll 0% 0% #f9f9f9;
+  float: none;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  width: inherit;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 86, ../_sass/_flipcards.scss */
+.panel::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 93, ../_sass/_flipcards.scss */
+.panel.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  box-shadow: none;
+}
+/* line 101, ../_sass/_flipcards.scss */
+.panel.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+  box-shadow: 0 1px 2px 0px #aaa;
+}
+
+/* line 108, ../_sass/_flipcards.scss */
+.back > .back-header {
+  border-radius: 3px 3px 0px 0px;
+  padding: 10px;
+  background-color: #f68320;
+  color: #FFF;
+  fill: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 118, ../_sass/_flipcards.scss */
+.back > .back-footer {
+  border-radius: 0px 0px 3px 3px;
+  background-color: #f68320;
+  color: #FFF;
+  fill: #FFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /* line 1, ../_sass/_navbar.scss */
+.static-header li a:hover:after {
+  transition: all 0.1s linear 0s;
+  background-color: #008CBA;
+  content: "";
+  display: block;
+  height: 0.1875em;
+}
+
+/* line 8, ../_sass/_navbar.scss */
+.static-header li {
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
+  text-transform: uppercase;
+}
+
+/* line 12, ../_sass/_navbar.scss */
+.img-icon {
+  float: left;
+  width: 125px;
+  margin-left: 30px;
+}
+
+/* line 17, ../_sass/_navbar.scss */
 .nav-center {
   width: 21em;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 6, ../_sass/_navbar.scss */
+/* line 22, ../_sass/_navbar.scss */
 .nav-center li {
   font-size: 1em;
   font-weight: 700;
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
   text-transform: uppercase;
 }
 
-/* line 11, ../_sass/_navbar.scss */
+/* line 28, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
   opacity: 0;
@@ -8073,218 +8212,29 @@ th.hide-for-touch {
   margin-top: -45px;
 }
 
-/* line 17, ../_sass/_navbar.scss */
+/* line 34, ../_sass/_navbar.scss */
 .static-header {
   background-color: transparent;
   padding: 10px;
 }
 
-/* line 21, ../_sass/_navbar.scss */
+/* line 38, ../_sass/_navbar.scss */
 #section-home {
   height: 100vh;
 }
 
-/* line 24, ../_sass/_navbar.scss */
+/* line 41, ../_sass/_navbar.scss */
 div[data-magellan-destination] {
   padding: 4.4em;
 }
 
-/* line 29, ../_sass/_navbar.scss */
+/* line 45, ../_sass/_navbar.scss */
 div[name="about"],
 div[name="contact"] {
   background-color: #F4F6F8;
 }
 
-/* line 6, ../_sass/app.scss */
-.front, .back {
-  backface-visibility: hidden;
-  transition: all 0.4s ease-in-out 0s;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  perspective: 600px;
-}
-
-/* line 17, ../_sass/app.scss */
-.flip-container {
-  perspective: 500px;
-}
-
-/* line 20, ../_sass/app.scss */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-/* line 23, ../_sass/app.scss */
-.flip-container, .front, .back {
-  width: 300px;
-  height: 300px;
-}
-
-/* line 27, ../_sass/app.scss */
-.flipper {
-  transition: 0.4s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* line 32, ../_sass/app.scss */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* line 39, ../_sass/app.scss */
-.front {
-  z-index: 2;
-}
-
-/* line 42, ../_sass/app.scss */
-.back {
-  background: none repeat scroll 0% 0% #ADD8E6;
-  transform: rotateY(-180deg);
-}
-
-/* line 46, ../_sass/app.scss */
-#sub-about {
-  font-style: italic;
-}
-
-/* line 49, ../_sass/app.scss */
-#p-about {
-  line-spacing: 10px;
-}
-
-/* line 52, ../_sass/app.scss */
-#footer {
-  color: #CFCFCF;
-  overflow: hidden;
-  padding: 8rem 0px 1.5rem;
-  text-align: center;
-}
-
-/* line 63, ../_sass/app.scss */
-.panel,
-.panel img {
-  width: 300px;
-  height: 300px;
-  border-radius: 2px;
-}
-
-/* line 68, ../_sass/app.scss */
-.panel {
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  perspective: 600px;
-  border-color: transparent;
-  background: transparent;
-}
-
-/* -- general styles, including Y axis rotation -- */
-/* line 76, ../_sass/app.scss */
-.panel .front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 900;
-  width: inherit;
-  height: inherit;
-  border: 1px solid #ccc;
-  background: #6b7077;
-  text-align: center;
-  border-radius: 2px;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-  transform: rotateX(0deg) rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  /* -- transition is the magic sauce for animation -- */
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-/* line 104, ../_sass/app.scss */
-.panel.flip .front {
-  z-index: 900;
-  border-color: #eee;
-  background: #333;
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-
-/* line 114, ../_sass/app.scss */
-.panel .back {
-  float: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 800;
-  width: inherit;
-  height: inherit;
-  border: 1px solid #ccc;
-  background: #333;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-179deg);
-  /* setting to 180 causes an unnatural-looking half-flip */
-  transform: rotateY(-179deg);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  /* -- transition is the magic sauce for animation -- */
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-/* line 143, ../_sass/app.scss */
-.panel.flip .back {
-  z-index: 1000;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-  transform: rotateX(0deg) rotateY(0deg);
-}
-
-/* line 153, ../_sass/app.scss */
-.panel .front:before,
-.panel .front:after,
-.panel .back:before,
-.panel .back:after {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  height: 20%;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-
-/* line 170, ../_sass/app.scss */
-.panel .front:after,
-.panel .back:after {
-  right: 10px;
-  left: auto;
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  transform: rotate(3deg);
+/* line 49, ../_sass/_navbar.scss */
+.row .small-12.columns.text-center.img-sub-container img {
+  margin-top: 100px;
 }
