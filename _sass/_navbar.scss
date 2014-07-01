@@ -1,0 +1,50 @@
+.static-header li a:hover:after {
+  transition: all 0.1s linear 0s;
+  background-color: #008CBA;
+  content: "";
+  display: block;
+  height: 0.1875em;
+}
+.static-header li{
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
+  text-transform: uppercase;
+}
+.img-icon{
+  float: left;
+  width:125px;
+  margin-left: 30px;
+}
+.nav-center {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
+  text-transform: uppercase;
+}
+.fading-header {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin-top: -45px;
+}
+.static-header {
+  background-color: transparent;
+  padding: 10px;
+}
+#section-home {
+  height: 100vh; // This is interesting, however we should check browser support
+}
+div[data-magellan-destination] {
+  padding: 4.4em;
+}
+div[name="about"] {
+	background-color: #F4F6F8;
+}
+.row .small-12.columns.text-center.img-sub-container img
+{
+  margin-top: 100px;
+}
