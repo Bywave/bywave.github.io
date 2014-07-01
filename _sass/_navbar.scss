@@ -1,0 +1,31 @@
+.nav-center {
+  width: 21em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fading-header {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin-top: -45px;
+}
+.static-header {
+  background-color: transparent;
+  padding: 10px;
+}
+#section-home {
+  height: 100vh; // This is interesting, however we should check browser support
+}
+div[data-magellan-destination] {
+  padding: 4.4em;
+}
+div[name="about"],
+div[name="contact"]
+{
+  background-color: #F4F6F8;
+}

@@ -1,6 +1,8 @@
 @import "settings";
 @import "foundation";
 
+@import "navbar";
+
 .front, .back {
   backface-visibility: hidden;
   transition: all 0.4s ease-in-out 0s;
@@ -32,7 +34,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.9);
+  // box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.9);
 }
 .front {
   z-index: 2;
@@ -48,7 +50,7 @@
   line-spacing: 10px;
 }
 #footer {
-  background: none repeat scroll 0% 0% #262624;
+//  background: none repeat scroll 0% 0% #262624;
   color: #CFCFCF;
   overflow: hidden;
   padding: 8rem 0px 1.5rem;
@@ -61,6 +63,7 @@
 .panel img{
   width: 300px;
   height: 300px;
+  border-radius: 2px;
 }
 .panel {
   -webkit-perspective: 600px;
@@ -80,7 +83,7 @@
   border: 1px solid #ccc;
   background: #6b7077;
   text-align: center;
-
+  border-radius: 2px;
 
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
@@ -102,7 +105,7 @@
   z-index: 900;
   border-color: #eee;
   background: #333;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  // box-shadow: 0 15px 50px rgba(0,0,0,0.2);
 
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
@@ -144,33 +147,32 @@
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-.nav-center {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+.panel .front:before,
+.panel .front:after,
+.panel .back:before,
+.panel .back:after{
+  content: '';
+  position: absolute;
+  z-index: -2;
+  bottom: 15px;
+  left:  10px;
+  width: 50%;
+  height: 20%;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
-.nav-center li {
-  font-size: 1em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.fading-header {
-  position: fixed;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  margin-top: -45px;
-}
-.static-header {
-  background-color: transparent;
-  padding: 10px;
-}
-#section-home {
-  height: 100vh; // This is interesting, however we should check browser support
-}
-div[data-magellan-destination] {
-  padding-bottom: 4.4em;
-  padding-top: 4.4em;
-}
-div[name="about"] {
-	background-color: #F4F6F8;
+
+.panel .front:after,
+.panel .back:after{
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);  
 }
