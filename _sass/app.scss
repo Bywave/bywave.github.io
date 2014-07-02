@@ -1,4 +1,11 @@
 @import "settings";
 @import "foundation";
+
+
+*{
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
+}
+
+@import "functions";
 @import "flipcards";
 @import "navbar";

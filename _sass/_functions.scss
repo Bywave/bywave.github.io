@@ -1,0 +1,29 @@
+/* -- Mixins -- */
+@mixin rotate($x, $y){
+  -webkit-transform: rotateX($x) rotateY($y);
+  -moz-transform: rotateX($x) rotateY($y);
+  transform: rotateX($x) rotateY($y);
+}
+
+@mixin perspective($pixels){
+  -webkit-perspective: $pixels;
+  -moz-perspective: $pixels;
+  perspective: $pixels;
+}
+
+@mixin style($preserve){
+  -webkit-transform-style: $preserve;
+  -moz-transform-style: $preserve;
+  transform-style: $preserve;
+}
+
+@mixin visibility($type){
+  -webkit-backface-visibility: $type;
+  -moz-backface-visibility: $type;
+  backface-visibility: $type;
+}
+
+@mixin transition($property, $duration, $effect, $delay){
+  -webkit-transition: $property $duration $effect $delay;
+  transition: $property $duration $effect $delay;
+}
