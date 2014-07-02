@@ -1,13 +1,35 @@
-.static-header li a:hover:after {
-  transition: all 0.1s linear 0s;
-  background-color: #008CBA;
-  content: "";
-  display: block;
-  height: 0.1875em;
+.top-bar{
+  padding: 10px;
+
+  li{
+    text-transform: uppercase;
+
+    a{
+      border-bottom: 3px solid transparent;
+      padding-bottom: 8px;
+    }
+    a:hover,
+    a:focus {
+      color: #EEE;
+      text-decoration: none;
+      background-color: transparent;
+      border-color: #F68320;
+      -webkit-transition: border-color 0.218s ease 0s;
+         -moz-transition: border-color 0.218s ease 0s;
+           -o-transition: border-color 0.218s ease 0s;
+              transition: border-color 0.218s ease 0s;
+    }
+  }
 }
-.static-header li{
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
-  text-transform: uppercase;
+.static-header{
+  background-color: transparent;
+
+  li{
+    a:hover,
+    a:focus{
+      color: #262626;
+    }
+  }
 }
 .img-icon{
   float: left;
@@ -18,22 +40,19 @@
   width: 21em;
   margin-left: auto;
   margin-right: auto;
-}
-.nav-center li {
-  font-size: 1em;
-  font-weight: 700;
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
-  text-transform: uppercase;
+
+  li {
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "futura-pt","Roboto","Arial","sans-serif";
+    text-transform: uppercase;
+  }
 }
 .fading-header {
   position: fixed;
   opacity: 0;
   filter: alpha(opacity=0);
   margin-top: -45px;
-}
-.static-header {
-  background-color: transparent;
-  padding: 10px;
 }
 #section-home {
   height: 100vh; // This is interesting, however we should check browser support
@@ -45,7 +64,6 @@ div[name="about"],
 div[name="contact"] {
 	background-color: #F4F6F8;
 }
-
 .row .small-12.columns.text-center.img-sub-container img{
   margin-top: 100px;
 }
