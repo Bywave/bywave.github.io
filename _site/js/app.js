@@ -10,15 +10,15 @@ var timeoutFadingHeader;
 var isFadingHeader = false;
 
 $(function(){
-// Foundation
-$(document).foundation();
+	// Foundation
+	$(document).foundation();
 
-// set up hover panels
-// although this can be done without JavaScript, we've attached these events
-// because it causes the hover to be triggered when the element is tapped on a touch device
-$('.hover').hover(function(){
-    this.classList.toggle('flip');
-});
+	// set up hover panels
+	// although this can be done without JavaScript, we've attached these events
+	// because it causes the hover to be triggered when the element is tapped on a touch device
+	$('.hover').hover(function(){
+	    this.classList.toggle('flip');
+	});
 
 	/**
 	* Fading header
