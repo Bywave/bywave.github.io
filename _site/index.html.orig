@@ -7,7 +7,7 @@
     <title>Bywave</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
-    <link rel="canonical" href="http://bywave.com.au/">
+    <link rel="canonical" href="http://bywave.com.au/.orig">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/app.css">
     <link rel="shortcut icon" href="../img/bywave_ico.png">
@@ -80,6 +80,7 @@
             <img src="img/work/surf-life-active-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
             <div class="back-header">
               Title
             </div>
@@ -89,6 +90,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/organicresponse-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -115,7 +119,7 @@
       <li>
         <div class="hover panel">
           <div class="front">
-           <img src="img/work/organicresponse-tile-1.png">
+           <img src="img/work/organicresponse-tile.png">
           </div>
           <div class="back">
              <div class="back-header">
@@ -137,6 +141,7 @@
             <img src="img/work/transdirect-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
              <div class="back-header">
               Title
             </div>
@@ -146,6 +151,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/surf-life-active-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -156,6 +164,7 @@
               <img src="img/work/surf-life-active-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
              <div class="back-header">
               Title
             </div>
@@ -165,6 +174,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/organicresponse-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -217,6 +229,7 @@
     <p><a class="pageload-link" href="#page-1">Go back</a></p>
   </section>
 </div><!-- /container -->
+
       </div>
     </div>
 

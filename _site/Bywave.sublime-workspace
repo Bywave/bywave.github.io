@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"time",
-				"timeoutFadingHeader"
-			],
-			[
 				"borde",
 				"border-color"
 			],
@@ -23,7 +19,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4433,
+				"buffer_size": 4430,
 				"line_ending": "Windows"
 			}
 		},
@@ -39,7 +35,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 1580,
+				"buffer_size": 1509,
 				"line_ending": "Windows"
 			}
 		},
@@ -47,16 +43,8 @@
 			"file": "_sass/app.scss",
 			"settings":
 			{
-				"buffer_size": 3884,
+				"buffer_size": 3200,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/app.css",
-			"settings":
-			{
-				"buffer_size": 270110,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -175,13 +163,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"line 150",
-			"::after",
-			"box-s",
-			"box-",
-			"work",
-			"data-magellan-arrival",
-			"magellan",
 			"about",
 			"contact",
 			"block-grid-default",
@@ -213,7 +194,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -222,15 +203,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4433,
+						"buffer_size": 4430,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								727,
-								727
+								4225,
+								4225
 							]
 						],
 						"settings":
@@ -240,7 +221,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 315.0,
+						"translation.y": 1954.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -259,21 +240,21 @@
 						"selection":
 						[
 							[
-								260,
-								260
+								518,
+								518
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -282,15 +263,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1580,
+						"buffer_size": 1509,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1074,
-								1074
+								725,
+								725
 							]
 						],
 						"settings":
@@ -299,7 +280,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -311,25 +292,25 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3884,
+						"buffer_size": 3200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3446,
-								3446
+								3143,
+								3143
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2154.0,
+						"translation.y": 1875.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -337,36 +318,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "css/app.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 270110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269219,
-								269219
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 123542.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "_includes/head.html",
 					"semi_transient": false,
 					"settings":
@@ -390,11 +341,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "_includes/header.html",
 					"semi_transient": false,
 					"settings":
@@ -406,8 +357,8 @@
 						"selection":
 						[
 							[
-								123,
-								144
+								0,
+								0
 							]
 						],
 						"settings":
@@ -422,7 +373,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "_includes/footer.html",
 					"semi_transient": false,
 					"settings":
@@ -446,11 +397,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "_sass/_settings.scss",
 					"semi_transient": false,
 					"settings":
@@ -474,7 +425,7 @@
 						"translation.y": 4389.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -484,7 +435,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "_config.yml",
 					"semi_transient": false,
 					"settings":
@@ -496,8 +447,8 @@
 						"selection":
 						[
 							[
-								328,
-								328
+								329,
+								329
 							]
 						],
 						"settings":
@@ -508,7 +459,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

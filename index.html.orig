@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bywave</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
-    <link rel="canonical" href="http://bywave.com.au/">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/app.css">
-    <link rel="shortcut icon" href="../img/bywave_ico.png">
-
-</head>
-
-
-
-
-
-
-    <body>
-
-    <nav class="top-bar fading-header" data-topbar data-magellan-expedition="fixed">
-	<a href="#home"><img class="img-icon" src="img/bywave_clear.png"></a>
-	<ul class="sub-nav nav-center">
-		<li data-magellan-arrival="work"><a href="#work">Work</a></li>
-		<li data-magellan-arrival="about"><a href="#about">About</a></li>
-		<li data-magellan-arrival="contact"><a href="#contact">Contact</a></li>
-	</ul> 
-</nav>
-
-    <div class="page-content">
-      <div class="wrap">
-      <nav class="top-bar static-header" data-topbar>
+---
+layout: default
+---
+<nav class="top-bar static-header" data-topbar>
   <ul class="sub-nav nav-center">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
@@ -80,6 +49,7 @@
             <img src="img/work/surf-life-active-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
             <div class="back-header">
               Title
             </div>
@@ -89,6 +59,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/organicresponse-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -115,7 +88,7 @@
       <li>
         <div class="hover panel">
           <div class="front">
-           <img src="img/work/organicresponse-tile-1.png">
+           <img src="img/work/organicresponse-tile.png">
           </div>
           <div class="back">
              <div class="back-header">
@@ -137,6 +110,7 @@
             <img src="img/work/transdirect-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
              <div class="back-header">
               Title
             </div>
@@ -146,6 +120,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/surf-life-active-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -156,6 +133,7 @@
               <img src="img/work/surf-life-active-tile.png">
           </div>
           <div class="back">
+<<<<<<< HEAD
              <div class="back-header">
               Title
             </div>
@@ -165,6 +143,9 @@
              <div class="back-footer">
               <a href="#">Read More</a>
             </div>
+=======
+            <img src="img/work/organicresponse-tile.png">
+>>>>>>> c53e9593b2e5b51c6e8cdc4705c96a7531769f07
           </div>
         </div>
       </li>
@@ -217,19 +198,3 @@
     <p><a class="pageload-link" href="#page-1">Go back</a></p>
   </section>
 </div><!-- /container -->
-      </div>
-    </div>
-
-    <div class="row" id="footer">
-  <div class="large-12 columns text-center">
-    <h5>This is your footer</h5>
-    <h5 class="subheader">footer blah blah blah blahblahblah blah blah</h5>
-  </div>
-</div>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="bower_components/foundation/js/foundation.magellan.js"></script>
-<script src="js/app.js"></script>
-
-    </body>
-</html>
