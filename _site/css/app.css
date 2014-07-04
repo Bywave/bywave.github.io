@@ -8051,15 +8051,20 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 5, ../_sass/app.scss */
+* {
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
+}
+
 /* -- Mixins -- */
 /* -- Extend -- */
-/* line 34, ../_sass/_flipcards.scss */
+/* line 3, ../_sass/_flipcards.scss */
 .flip-card, .panel .front, .panel .back {
   border-radius: inherit;
 }
 
 /* -- Panel -- */
-/* line 39, ../_sass/_flipcards.scss */
+/* line 8, ../_sass/_flipcards.scss */
 .panel {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -8072,13 +8077,13 @@ th.hide-for-touch {
   /* -- Front Card -- */
   /*-- Back card --*/
 }
-/* line 47, ../_sass/_flipcards.scss */
+/* line 16, ../_sass/_flipcards.scss */
 .panel img {
   width: inherit;
   height: inherit;
   border-radius: inherit;
 }
-/* line 53, ../_sass/_flipcards.scss */
+/* line 22, ../_sass/_flipcards.scss */
 .panel .front {
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
@@ -8098,7 +8103,7 @@ th.hide-for-touch {
   text-align: center;
   box-shadow: 0 1px 2px 0px #aaa;
 }
-/* line 67, ../_sass/_flipcards.scss */
+/* line 36, ../_sass/_flipcards.scss */
 .panel .back {
   -webkit-transform: rotateX(0deg) rotateY(-179deg);
   -moz-transform: rotateX(0deg) rotateY(-179deg);
@@ -8121,14 +8126,14 @@ th.hide-for-touch {
   position: absolute;
 }
 
-/* line 86, ../_sass/_flipcards.scss */
+/* line 55, ../_sass/_flipcards.scss */
 .panel::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 93, ../_sass/_flipcards.scss */
+/* line 62, ../_sass/_flipcards.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -8136,7 +8141,7 @@ th.hide-for-touch {
   transform: rotateY(-180deg);
   box-shadow: none;
 }
-/* line 101, ../_sass/_flipcards.scss */
+/* line 70, ../_sass/_flipcards.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -8145,7 +8150,7 @@ th.hide-for-touch {
   box-shadow: 0 1px 2px 0px #aaa;
 }
 
-/* line 108, ../_sass/_flipcards.scss */
+/* line 77, ../_sass/_flipcards.scss */
 .back > .back-header {
   border-radius: 3px 3px 0px 0px;
   padding: 10px;
@@ -8155,7 +8160,7 @@ th.hide-for-touch {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* line 118, ../_sass/_flipcards.scss */
+/* line 87, ../_sass/_flipcards.scss */
 .back > .back-footer {
   border-radius: 0px 0px 3px 3px;
   background-color: #f68320;
@@ -8168,35 +8173,55 @@ th.hide-for-touch {
 }
 
 /* line 1, ../_sass/_navbar.scss */
-.static-header li a:hover:after {
-  transition: all 0.1s linear 0s;
-  background-color: #008CBA;
-  content: "";
-  display: block;
-  height: 0.1875em;
+.top-bar {
+  padding: 10px;
 }
-
-/* line 8, ../_sass/_navbar.scss */
-.static-header li {
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
+/* line 4, ../_sass/_navbar.scss */
+.top-bar li {
   text-transform: uppercase;
 }
-
+/* line 7, ../_sass/_navbar.scss */
+.top-bar li a {
+  border-bottom: 3px solid transparent;
+  padding-bottom: 8px;
+}
 /* line 12, ../_sass/_navbar.scss */
+.top-bar li a:hover,
+.top-bar li a:focus {
+  color: #EEE;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: #F68320;
+  -webkit-transition: border-color 0.218s ease 0s;
+  -moz-transition: border-color 0.218s ease 0s;
+  -o-transition: border-color 0.218s ease 0s;
+  transition: border-color 0.218s ease 0s;
+}
+
+/* line 24, ../_sass/_navbar.scss */
+.static-header {
+  background-color: transparent;
+}
+/* line 29, ../_sass/_navbar.scss */
+.static-header li a:hover,
+.static-header li a:focus {
+  color: #262626;
+}
+
+/* line 34, ../_sass/_navbar.scss */
 .img-icon {
   float: left;
   width: 125px;
   margin-left: 30px;
 }
 
-/* line 17, ../_sass/_navbar.scss */
+/* line 39, ../_sass/_navbar.scss */
 .nav-center {
   width: 21em;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* line 22, ../_sass/_navbar.scss */
+/* line 44, ../_sass/_navbar.scss */
 .nav-center li {
   font-size: 1em;
   font-weight: 700;
@@ -8204,7 +8229,7 @@ th.hide-for-touch {
   text-transform: uppercase;
 }
 
-/* line 28, ../_sass/_navbar.scss */
+/* line 51, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
   opacity: 0;
@@ -8212,29 +8237,51 @@ th.hide-for-touch {
   margin-top: -45px;
 }
 
-/* line 34, ../_sass/_navbar.scss */
-.static-header {
-  background-color: transparent;
-  padding: 10px;
-}
-
-/* line 38, ../_sass/_navbar.scss */
+/* line 57, ../_sass/_navbar.scss */
 #section-home {
   height: 100vh;
 }
 
-/* line 41, ../_sass/_navbar.scss */
+/* line 60, ../_sass/_navbar.scss */
 div[data-magellan-destination] {
   padding: 4.4em;
 }
 
-/* line 45, ../_sass/_navbar.scss */
+/* line 64, ../_sass/_navbar.scss */
 div[name="about"],
 div[name="contact"] {
   background-color: #F4F6F8;
 }
 
-/* line 49, ../_sass/_navbar.scss */
+/* line 67, ../_sass/_navbar.scss */
 .row .small-12.columns.text-center.img-sub-container img {
   margin-top: 100px;
+}
+
+/* line 3, ../_sass/_contactus.scss */
+.msg-text {
+  height: 150px;
+}
+
+/* line 6, ../_sass/_contactus.scss */
+small.error {
+  opacity: 0;
+  right: 15px;
+  position: absolute;
+}
+
+/* line 11, ../_sass/_contactus.scss */
+.message {
+  display: none;
+}
+
+/* line 14, ../_sass/_contactus.scss */
+.input-label {
+  margin-bottom: 27px;
+}
+
+/* line 18, ../_sass/_contactus.scss */
+.btn-contact {
+  margin-top: 10px;
+  float: right;
 }

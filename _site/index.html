@@ -13,21 +13,15 @@
     <link rel="shortcut icon" href="../img/bywave_ico.png">
 
 </head>
-
-
-
-
-
-
     <body>
 
     <nav class="top-bar fading-header" data-topbar data-magellan-expedition="fixed">
-	<a href="#home"><img class="img-icon" src="img/bywave_clear.png"></a>
-	<ul class="sub-nav nav-center">
-		<li data-magellan-arrival="work"><a href="#work">Work</a></li>
-		<li data-magellan-arrival="about"><a href="#about">About</a></li>
-		<li data-magellan-arrival="contact"><a href="#contact">Contact</a></li>
-	</ul> 
+  <a href="#home"><img class="img-icon" src="img/bywave_clear.png"></a>
+  <ul class="sub-nav nav-center">
+    <li data-magellan-arrival="work"><a href="#work">Work</a></li>
+    <li data-magellan-arrival="about"><a href="#about">About</a></li>
+    <li data-magellan-arrival="contact"><a href="#contact">Contact</a></li>
+  </ul> 
 </nav>
 
     <div class="page-content">
@@ -198,25 +192,55 @@
 </div>
 
 <div class="row" data-magellan-destination="contact">
-  <div class="small-12 columns text-center">
-    <a name="contact"><h3>Contact us</h3></a>
-    <h1>Contact Bywave</h1>
+  <div class="small-12 columns">
+    <a name="contact"><h1 class="text-center">Contact us</h1></a>
+    <p class="text-center">Don't be shy - we want to hear from you!</p>
+    <!-- <h1>Contact Bywave</h1> -->
+    <div class="row">
+      <div class="small-12 medium-6 large-6 columns">
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+        <p class="text-center">Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
+           Surry Hills, NSW, 2010<br/>
+           Phone: +61 (2) 8203 4048<br/>
+           Mail: info@bywave.com.au<br/>
+        </p>
+      </div>
+      <div class="small-12 medium-6 large-6 columns">
+        <p class="message">"OK"</p>
+        <form id="contact-form"> 
+          <p class="text-center">If you have a query, please give us a call or fill out the form. Whether it be a quote request or general enquiry about our services, we’re happy to answer any of your questions.</p>
+           <label class="input-label">Name 
+              <input class="error" id="nameVal" name="entry.1583774038" type="text" placeholder="Name" width="100%">
+              <small class="error prompt reqname">Please fill out this field</small>
+            </label>
+             <label class="input-label">Email 
+              <input class="error" id="email" name="entry.1932651370" type="text" 
+                placeholder="Email" width="100%" onchange="validateEmail(this.value)"> 
+                <small class="error prompt email">Invalid Email</small>
+                <small class="error prompt reqemail">Please fill out this field</small>
+            </label> 
+             <label class="input-label">Message
+              <textarea class="msg-text error" id="msg" name="entry.318137689" width="100%"></textarea>
+              <small class="error prompt reqmsg"> Please fill out this field</small>
+            </label> 
+            <input class="button [tiny radius round] btn-contact" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
-      </div>
-    </div>
-
-    <div class="row" id="footer">
+<div class="row" id="footer">
   <div class="large-12 columns text-center">
     <h5>This is your footer</h5>
     <h5 class="subheader">footer blah blah blah blahblahblah blah blah</h5>
   </div>
 </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="bower_components/foundation/js/foundation.magellan.js"></script>
-<script src="js/app.js"></script>
-
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.magellan.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+    </script>
+    <script src="js/app.js"></script>
     </body>
 </html>

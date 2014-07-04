@@ -1,35 +1,4 @@
-/* -- Mixins -- */
-@mixin rotate($x, $y){
-  -webkit-transform: rotateX($x) rotateY($y);
-  -moz-transform: rotateX($x) rotateY($y);
-  transform: rotateX($x) rotateY($y);
-}
-
-@mixin perspective($pixels){
-  -webkit-perspective: $pixels;
-  -moz-perspective: $pixels;
-  perspective: $pixels;
-}
-
-@mixin style($preserve){
-  -webkit-transform-style: $preserve;
-  -moz-transform-style: $preserve;
-  transform-style: $preserve;
-}
-
-@mixin visibility($type){
-  -webkit-backface-visibility: $type;
-  -moz-backface-visibility: $type;
-  backface-visibility: $type;
-}
-
-@mixin transition($property, $duration, $effect, $delay){
-  -webkit-transition: $property $duration $effect $delay;
-  transition: $property $duration $effect $delay;
-}
-
 $card-radius : 3px;
-
 /* -- Extend -- */
 .flip-card {
   border-radius: inherit;
@@ -37,10 +6,10 @@ $card-radius : 3px;
 
 /* -- Panel -- */
 .panel {
-    @include perspective(600px);
-    background: transparent;
+  @include perspective(600px);
+  background: transparent;
     width: 100%;
-    padding: 0px;
+  padding :0px;
     border-color: transparent;
     border-radius: $card-radius;
 
@@ -48,34 +17,34 @@ $card-radius : 3px;
         width: inherit;
         height: inherit;
         border-radius: inherit
-      }
-  /* -- Front Card -- */
+}
+/* -- Front Card -- */
   .front {
-    @extend .flip-card; 
-    @include rotate(0deg, 0deg);
-    @include style(preserve-3d);
-    @include visibility(hidden);
-    @include transition(all, .4s, ease-in-out, 0s);
-    top: 0;
-    left: 0;
-    z-index: 900;
+  @extend .flip-card; 
+  @include rotate(0deg, 0deg);
+  @include style(preserve-3d);
+  @include visibility(hidden);
+  @include transition(all, .4s, ease-in-out, 0s);
+  top: 0;
+  left: 0;
+  z-index: 900;
     width: 100%;
-    text-align: center;
+  text-align: center; 
     box-shadow: 0 1px 2px 0px #aaa;
-  }
-  /*-- Back card --*/
+}
+/*-- Back card --*/
   .back {
-    @extend .flip-card; 
-    @include rotate(0deg, -179deg); 
-    @include style(preserve-3d);
-    @include visibility(hidden);
-    @include transition(all, .4s, ease-in-out, 0s);
+  @extend .flip-card; 
+  @include rotate(0deg, -179deg); 
+  @include style(preserve-3d);
+  @include visibility(hidden);
+  @include transition(all, .4s, ease-in-out, 0s);
     background: none repeat scroll 0% 0% #f9f9f9;
     // fafafa
-    float: none;
-    top: 0;
-    left: 0;
-    z-index: 800;
+  float: none;
+  top: 0;
+  left: 0;
+  z-index: 800;
     width: inherit;
     height: 100%;
     position: absolute;
@@ -96,11 +65,11 @@ $card-radius : 3px;
     -moz-transform: rotateY(-180deg);
      transform: rotateY(-180deg);
      box-shadow: none;
-   }
+}
 
   .back{
     z-index: 1000;
-    @include rotate(0deg, 0deg); 
+  @include rotate(0deg, 0deg); 
     box-shadow: 0 1px 2px 0px #aaa;
    }
 }
