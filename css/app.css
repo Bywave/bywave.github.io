@@ -8051,11 +8051,6 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 5, ../_sass/app.scss */
-* {
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
-}
-
 /* -- Mixins -- */
 /* -- Extend -- */
 /* line 3, ../_sass/_flipcards.scss */
@@ -8095,6 +8090,8 @@ th.hide-for-touch {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
   top: 0;
   left: 0;
@@ -8115,6 +8112,8 @@ th.hide-for-touch {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
   background: none repeat scroll 0% 0% #f9f9f9;
   float: none;
@@ -8172,56 +8171,73 @@ th.hide-for-touch {
   width: 100%;
 }
 
-/* line 1, ../_sass/_navbar.scss */
+/* line 3, ../_sass/_navbar.scss */
 .top-bar {
   padding: 10px;
 }
-/* line 4, ../_sass/_navbar.scss */
+/* line 6, ../_sass/_navbar.scss */
 .top-bar li {
   text-transform: uppercase;
 }
-/* line 7, ../_sass/_navbar.scss */
+/* line 9, ../_sass/_navbar.scss */
 .top-bar li a {
   border-bottom: 3px solid transparent;
   padding-bottom: 8px;
-}
-/* line 12, ../_sass/_navbar.scss */
-.top-bar li a:hover,
-.top-bar li a:focus {
-  color: #EEE;
-  text-decoration: none;
-  background-color: transparent;
-  border-color: #F68320;
   -webkit-transition: border-color 0.218s ease 0s;
   -moz-transition: border-color 0.218s ease 0s;
   -o-transition: border-color 0.218s ease 0s;
   transition: border-color 0.218s ease 0s;
 }
+/* line 14, ../_sass/_navbar.scss */
+.top-bar li a:hover {
+  color: #EEE;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: #F68320;
+}
+/* line 23, ../_sass/_navbar.scss */
+.top-bar li.active a {
+  color: #EEE;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: #F68320;
+  padding-bottom: 8px;
+  border-radius: 0px;
+  font-weight: bold;
+  -webkit-transition: border-color 0.218 ease 3s;
+  -moz-transition: border-color 0.218 ease 3s;
+  -o-transition: border-color 0.218 ease 3s;
+  transition: border-color 0.218 ease 3s;
+}
+/* line 33, ../_sass/_navbar.scss */
+.top-bar li.active a:hover {
+  background-color: transparent;
+}
 
-/* line 24, ../_sass/_navbar.scss */
+/* line 38, ../_sass/_navbar.scss */
 .static-header {
   background-color: transparent;
 }
-/* line 29, ../_sass/_navbar.scss */
+/* line 43, ../_sass/_navbar.scss */
 .static-header li a:hover,
 .static-header li a:focus {
   color: #262626;
 }
 
-/* line 34, ../_sass/_navbar.scss */
+/* line 48, ../_sass/_navbar.scss */
 .img-icon {
   float: left;
   width: 125px;
   margin-left: 30px;
 }
 
-/* line 39, ../_sass/_navbar.scss */
+/* line 53, ../_sass/_navbar.scss */
 .nav-center {
   width: 21em;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 44, ../_sass/_navbar.scss */
+/* line 58, ../_sass/_navbar.scss */
 .nav-center li {
   font-size: 1em;
   font-weight: 700;
@@ -8229,33 +8245,150 @@ th.hide-for-touch {
   text-transform: uppercase;
 }
 
-/* line 51, ../_sass/_navbar.scss */
+/* line 65, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
-  opacity: 0;
-  filter: alpha(opacity=0);
   margin-top: -45px;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-box-shadow: 0px 2px 2px 0px #aaaaaa;
+  box-shadow: 0px 2px 2px 0px #aaaaaa;
+  border-bottom: solid 1px #000;
 }
 
-/* line 57, ../_sass/_navbar.scss */
+/* line 72, ../_sass/_navbar.scss */
 #section-home {
   height: 100vh;
 }
 
-/* line 60, ../_sass/_navbar.scss */
+/* line 75, ../_sass/_navbar.scss */
 div[data-magellan-destination] {
   padding: 4.4em;
 }
 
-/* line 64, ../_sass/_navbar.scss */
+/* line 79, ../_sass/_navbar.scss */
 div[name="about"],
 div[name="contact"] {
   background-color: #F4F6F8;
 }
 
-/* line 67, ../_sass/_navbar.scss */
+/* line 82, ../_sass/_navbar.scss */
 .row .small-12.columns.text-center.img-sub-container img {
   margin-top: 100px;
+}
+
+/* line 1, ../_sass/_page_loader.scss */
+#loader {
+  z-index: 1;
+}
+
+/* line 4, ../_sass/_page_loader.scss */
+.page {
+  display: none;
+}
+
+/* line 7, ../_sass/_page_loader.scss */
+.page.show {
+  display: block;
+}
+
+/* line 10, ../_sass/_page_loader.scss */
+.pageload-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+/* line 18, ../_sass/_page_loader.scss */
+.pageload-overlay svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+/* line 24, ../_sass/_page_loader.scss */
+.pageload-overlay svg path {
+  fill: #F58220;
+}
+
+/* line 29, ../_sass/_page_loader.scss */
+.pageload-overlay.show {
+  visibility: visible;
+}
+
+/* line 32, ../_sass/_page_loader.scss */
+.pageload-overlay-object, .pageload-overlay::after, .pageload-overlay::before {
+  content: '';
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: opacity 0.15s, visibility 0s 0.15s;
+  transition: opacity 0.15s, visibility 0s 0.15s;
+}
+
+/* line 47, ../_sass/_page_loader.scss */
+.pageload-overlay::after {
+  background: #333333;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-animation: moveRight 0.6s linear infinite alternate;
+  animation: moveRight 0.6s linear infinite alternate;
+}
+
+/* line 55, ../_sass/_page_loader.scss */
+.pageload-overlay::before {
+  background: #F9B982;
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-animation: moveLeft 0.6s linear infinite alternate;
+  animation: moveLeft 0.6s linear infinite alternate;
+}
+
+@-webkit-keyframes moveRight {
+  /* line 65, ../_sass/_page_loader.scss */
+  to {
+    -webkit-transform: translateX(20px);
+  }
+}
+
+@keyframes moveRight {
+  /* line 69, ../_sass/_page_loader.scss */
+  to {
+    transform: translateX(20px);
+  }
+}
+
+@-webkit-keyframes moveLeft {
+  /* line 73, ../_sass/_page_loader.scss */
+  to {
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@keyframes moveLeft {
+  /* line 77, ../_sass/_page_loader.scss */
+  to {
+    transform: translateX(-20px);
+  }
+}
+
+/* line 81, ../_sass/_page_loader.scss */
+.pageload-loading.pageload-overlay::after,
+.pageload-loading.pageload-overlay::before {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 /* line 3, ../_sass/_contactus.scss */
