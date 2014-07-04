@@ -11,3 +11,5 @@ permalink: pretty
 
 sass:
   sass_dir: _sass
+collections:
+- case_studies
