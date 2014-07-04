@@ -1,3 +1,5 @@
+$nav-item-padding : 8px;
+
 .top-bar{
   padding: 10px;
 
@@ -6,18 +8,30 @@
 
     a{
       border-bottom: 3px solid transparent;
-      padding-bottom: 8px;
+      padding-bottom: $nav-item-padding;
+      @include transition(border-color, 0.218s, ease, 0s);
     }
-    a:hover,
-    a:focus {
+    a:hover {
       color: #EEE;
       text-decoration: none;
       background-color: transparent;
       border-color: #F68320;
-      -webkit-transition: border-color 0.218s ease 0s;
-         -moz-transition: border-color 0.218s ease 0s;
-           -o-transition: border-color 0.218s ease 0s;
-              transition: border-color 0.218s ease 0s;
+    }
+  }
+
+  li.active {
+    a{
+      color: #EEE;
+      text-decoration: none;
+      background-color: transparent;
+      border-color: #F68320;
+      padding-bottom: $nav-item-padding;
+      border-radius: 0px;
+      font-weight: bold;
+      @include transition(border-color, 0.218, ease, 3s);
+    }
+    a:hover{
+      background-color: transparent;
     }
   }
 }
@@ -50,9 +64,10 @@
 }
 .fading-header {
   position: fixed;
-  opacity: 0;
-  filter: alpha(opacity=0);
   margin-top: -45px;
+  @include opacity(0);
+  @include box-shadow(0px, 2px, 2px, 0px, #AAA);
+  border-bottom: solid 1px #000;
 }
 #section-home {
   height: 100vh; // This is interesting, however we should check browser support
