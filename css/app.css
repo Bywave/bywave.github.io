@@ -8051,89 +8051,20 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 4, ../_sass/app.scss */
-.front, .back {
-  backface-visibility: hidden;
-  transition: all 0.4s ease-in-out 0s;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  perspective: 600px;
+/* line 5, ../_sass/app.scss */
+* {
+  font-family: "futura-pt","Roboto","Arial","sans-serif";
 }
 
-/* line 15, ../_sass/app.scss */
-.flip-container {
-  perspective: 500px;
+/* -- Mixins -- */
+/* -- Extend -- */
+/* line 3, ../_sass/_flipcards.scss */
+.flip-card, .panel .front, .panel .back {
+  border-radius: inherit;
 }
 
-/* line 18, ../_sass/app.scss */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-/* line 21, ../_sass/app.scss */
-.flip-container, .front, .back {
-  width: 300px;
-  height: 300px;
-}
-
-/* line 25, ../_sass/app.scss */
-.flipper {
-  transition: 0.4s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* line 30, ../_sass/app.scss */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.9);
-}
-
-/* line 37, ../_sass/app.scss */
-.front {
-  z-index: 2;
-}
-
-/* line 40, ../_sass/app.scss */
-.back {
-  background: none repeat scroll 0% 0% #ADD8E6;
-  transform: rotateY(-180deg);
-}
-
-/* line 44, ../_sass/app.scss */
-#sub-about {
-  font-style: italic;
-}
-
-/* line 47, ../_sass/app.scss */
-#p-about {
-  line-spacing: 10px;
-}
-
-/* line 50, ../_sass/app.scss */
-#footer {
-  background: none repeat scroll 0% 0% #262624;
-  color: #CFCFCF;
-  overflow: hidden;
-  padding: 8rem 0px 1.5rem;
-  text-align: center;
-}
-
-/* line 61, ../_sass/app.scss */
-.panel,
-.panel img {
-  width: 300px;
-  height: 300px;
-}
-
-/* line 65, ../_sass/app.scss */
+/* -- Panel -- */
+/* line 8, ../_sass/_flipcards.scss */
 .panel {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -8146,19 +8077,14 @@ th.hide-for-touch {
   /* -- Front Card -- */
   /*-- Back card --*/
 }
-
-/* -- general styles, including Y axis rotation -- */
-/* line 73, ../_sass/app.scss */
-.panel .front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 900;
+/* line 16, ../_sass/_flipcards.scss */
+.panel img {
   width: inherit;
   height: inherit;
-  border: 1px solid #ccc;
-  background: #6b7077;
-  text-align: center;
+  border-radius: inherit;
+}
+/* line 22, ../_sass/_flipcards.scss */
+.panel .front {
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg);
@@ -8177,19 +8103,7 @@ th.hide-for-touch {
   text-align: center;
   box-shadow: 0 1px 2px 0px #aaa;
 }
-
-/* line 101, ../_sass/app.scss */
-.panel.flip .front {
-  z-index: 900;
-  border-color: #eee;
-  background: #333;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-
-/* line 111, ../_sass/app.scss */
+/* line 36, ../_sass/_flipcards.scss */
 .panel .back {
   -webkit-transform: rotateX(0deg) rotateY(-179deg);
   -moz-transform: rotateX(0deg) rotateY(-179deg);
@@ -8212,14 +8126,22 @@ th.hide-for-touch {
   position: absolute;
 }
 
-/* line 86, ../_sass/_flipcards.scss */
+/* line 55, ../_sass/_flipcards.scss */
 .panel::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 140, ../_sass/app.scss */
+/* line 62, ../_sass/_flipcards.scss */
+.panel.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  box-shadow: none;
+}
+/* line 70, ../_sass/_flipcards.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -8228,7 +8150,7 @@ th.hide-for-touch {
   box-shadow: 0 1px 2px 0px #aaa;
 }
 
-/* line 108, ../_sass/_flipcards.scss */
+/* line 77, ../_sass/_flipcards.scss */
 .back > .back-header {
   border-radius: 3px 3px 0px 0px;
   padding: 10px;
@@ -8238,7 +8160,7 @@ th.hide-for-touch {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* line 118, ../_sass/_flipcards.scss */
+/* line 87, ../_sass/_flipcards.scss */
 .back > .back-footer {
   border-radius: 0px 0px 3px 3px;
   background-color: #f68320;
@@ -8251,35 +8173,55 @@ th.hide-for-touch {
 }
 
 /* line 1, ../_sass/_navbar.scss */
-.static-header li a:hover:after {
-  transition: all 0.1s linear 0s;
-  background-color: #008CBA;
-  content: "";
-  display: block;
-  height: 0.1875em;
+.top-bar {
+  padding: 10px;
 }
-
-/* line 8, ../_sass/_navbar.scss */
-.static-header li {
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
+/* line 4, ../_sass/_navbar.scss */
+.top-bar li {
   text-transform: uppercase;
 }
-
+/* line 7, ../_sass/_navbar.scss */
+.top-bar li a {
+  border-bottom: 3px solid transparent;
+  padding-bottom: 8px;
+}
 /* line 12, ../_sass/_navbar.scss */
+.top-bar li a:hover,
+.top-bar li a:focus {
+  color: #EEE;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: #F68320;
+  -webkit-transition: border-color 0.218s ease 0s;
+  -moz-transition: border-color 0.218s ease 0s;
+  -o-transition: border-color 0.218s ease 0s;
+  transition: border-color 0.218s ease 0s;
+}
+
+/* line 24, ../_sass/_navbar.scss */
+.static-header {
+  background-color: transparent;
+}
+/* line 29, ../_sass/_navbar.scss */
+.static-header li a:hover,
+.static-header li a:focus {
+  color: #262626;
+}
+
+/* line 34, ../_sass/_navbar.scss */
 .img-icon {
   float: left;
   width: 125px;
   margin-left: 30px;
 }
 
-/* line 147, ../_sass/app.scss */
+/* line 39, ../_sass/_navbar.scss */
 .nav-center {
   width: 21em;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* line 152, ../_sass/app.scss */
+/* line 44, ../_sass/_navbar.scss */
 .nav-center li {
   font-size: 1em;
   font-weight: 700;
@@ -8287,7 +8229,7 @@ th.hide-for-touch {
   text-transform: uppercase;
 }
 
-/* line 157, ../_sass/app.scss */
+/* line 51, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
   opacity: 0;
@@ -8295,28 +8237,51 @@ th.hide-for-touch {
   margin-top: -45px;
 }
 
-/* line 163, ../_sass/app.scss */
-.static-header {
-  background-color: transparent;
-  padding: 10px;
-}
-
-/* line 167, ../_sass/app.scss */
+/* line 57, ../_sass/_navbar.scss */
 #section-home {
   height: 100vh;
 }
 
-/* line 170, ../_sass/app.scss */
+/* line 60, ../_sass/_navbar.scss */
 div[data-magellan-destination] {
   padding: 4.4em;
 }
 
-/* line 174, ../_sass/app.scss */
-div[name="about"] {
+/* line 64, ../_sass/_navbar.scss */
+div[name="about"],
+div[name="contact"] {
   background-color: #F4F6F8;
 }
 
-/* line 48, ../_sass/_navbar.scss */
+/* line 67, ../_sass/_navbar.scss */
 .row .small-12.columns.text-center.img-sub-container img {
   margin-top: 100px;
+}
+
+/* line 3, ../_sass/_contactus.scss */
+.msg-text {
+  height: 150px;
+}
+
+/* line 6, ../_sass/_contactus.scss */
+small.error {
+  opacity: 0;
+  right: 15px;
+  position: absolute;
+}
+
+/* line 11, ../_sass/_contactus.scss */
+.message {
+  display: none;
+}
+
+/* line 14, ../_sass/_contactus.scss */
+.input-label {
+  margin-bottom: 27px;
+}
+
+/* line 18, ../_sass/_contactus.scss */
+.btn-contact {
+  margin-top: 10px;
+  float: right;
 }
