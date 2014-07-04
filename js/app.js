@@ -148,10 +148,17 @@ function initContactForm(){
 	 		}
 	 		else
 	 		{
+
+				console.log('asdadsasd');
+
+	 		  	$('.field').animate({boxShadow: '0px 0px 5px red !important'}, 'fast');
 	 			$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
 	 			$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
 	 			$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
 				setError();
+
+				$('.field').animate({boxShadow: 'none'}, 'fast');
+	 		  	// $('.field').css('borderColor','transparent').fadeIn();
 			}
 		}
  	});
