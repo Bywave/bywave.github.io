@@ -16,7 +16,12 @@ var timeoutFadingHeader,
 var pageloadDelay = 1000,
 	documentScrollTop,
 	mainPageId = '#main-page';
-
+/**
+* Contact form
+*/
+var nameVal; 
+var email; 
+var msg;
 /**
 * On Ready
 */
@@ -41,6 +46,12 @@ $(function(){
 	* PageLoader
 	*/
 	initPageLoader();
+
+        /**
+	* Contact Form
+	*/
+	initContactForm();
+	google.maps.event.addDomListener(window, 'load', initGoogleMap);
 });
 
 /**
@@ -51,28 +62,28 @@ var FadingHeader = {
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-		setInterval(function(){
+	setInterval(function(){
 			if(!isElementInViewport(document.documentElement)){
 
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
-					clearTimeout(timeoutFadingHeader);
+				clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
-				}
+			}
 				else if(fadingHeader.css("opacity") == '0'){
 					FadingHeader.show();
-				}
 			}
-			else{
+		}
+		else{
 				if(fadingHeader.css("opacity") == '1' && !isHeaderFading){
 					isHeaderFading = true;
-					clearTimeout(timeoutFadingHeader);
-					timeoutFadingHeader = setTimeout(function(){
+				clearTimeout(timeoutFadingHeader);
+				timeoutFadingHeader = setTimeout(function(){
 						FadingHeader.hide();
 						isHeaderFading = false;
-					}, durationNavHide);
-				}
+				}, durationNavHide);
 			}
-		}, 100);
+		}
+	}, 100);
 	},
 	hide: function(){
 		fadingHeader.animate({
@@ -88,12 +99,20 @@ var FadingHeader = {
 	},
 };
 
+/**
+* General Functions
+*/
 function isElementInViewport (el) {
     if (el instanceof jQuery) {
         el = el[0];
     }
     var rect = el.getBoundingClientRect();
     return rect.bottom > 50;
+}
+
+function isEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
 }
 
 /**
@@ -137,3 +156,83 @@ function initPageLoader() {
 		$('#main-page')[0].classList.toggle('show');
 	}, pageloadDelay);
 }
+
+/**
+* Contact Form -- create object
+*/
+function setError() {
+    setTimeout(function(){
+		$('.error.prompt').animate({opacity: 0}, 'fast');
+    		},3000
+    	);
+}
+
+function validateEmail(email){
+	if(!isEmail(email) && email != '')
+	{
+		$('.error.prompt.email').animate({opacity: 1}, 'fast');
+		setError();
+	}
+}
+
+function clearContactFields(){
+	nameVal.val("");
+	email.val("");
+	msg.val("");
+	$('#contact-form').animate({opacity: 0}, 'fast');
+}
+
+function initContactForm(){
+    nameVal = $('#nameVal');
+	email = $('#email');
+	msg = $('#msg');
+
+ 	$('#contact-form').submit(function(e){
+		if(this.checkValidity()){
+			e.preventDefault();
+			console.log(nameVal.val());
+	 		if(nameVal.val() && email.val() && msg.val()){
+	 			$.ajax({
+	 				type: "POST",
+	 				url: 'https://docs.google.com/a/bywave.com.au/forms/d/1IYvB6JIlq6hqqlh2NGv40N8LF03dSexc_yaBc9HMrZg/formResponse',
+	 				data: $(this).serializeArray(),
+	 				dataType: 'xml',
+	 				statusCode: {
+	 					0: function (){
+	 						clearContactFields();
+	                        //Success message
+	                        $('.message').fadeIn();
+	                    },
+	                    200: function (){
+	                    	clearContactFields()
+	                        //Success Message
+	                        $('.message').fadeIn();
+	                    }
+	                }	
+	            });
+	 		}
+	 		else
+	 		{
+	 			$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
+	 			$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
+	 			$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
+				setError();
+			}
+		}
+ 	});
+}
+
+/**
+* GoogleMaps
+*/
+function initGoogleMap(){
+	var mapProp = {
+	  center:new google.maps.LatLng(51.508742,-0.120850),
+	  zoom:5,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP,
+	  disableDefaultUI: true
+	  };
+	var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+}
+
