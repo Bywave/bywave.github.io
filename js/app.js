@@ -1,20 +1,30 @@
 /**
 * Config
 */
-var durationNavAnim = 250;
-var durationNavHide = 500;
+var viewportHeight;
 /**
 * Fading header
 */
-var timeoutFadingHeader;
-var isFadingHeader = false;
+var timeoutFadingHeader,
+	isHeaderFading = false,
+	fadingHeader,
+	durationNavAnim = 250,
+	durationNavHide = 500;
+/**
+* Page Loader
+*/
+var pageloadDelay = 1000,
+	documentScrollTop,
+	mainPageId = '#main-page';
 /**
 * Contact form
 */
 var nameVal; 
 var email; 
 var msg;
-
+/**
+* On Ready
+*/
 $(function(){
 	// Foundation
 	$(document).foundation();
@@ -29,56 +39,69 @@ $(function(){
 	/**
 	* Fading header
 	*/
-	initFadingHeaderEvents();
-	
+	viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	FadingHeader.init();
+
 	/**
+	* PageLoader
+	*/
+	initPageLoader();
+
+        /**
 	* Contact Form
 	*/
 	initContactForm();
 	google.maps.event.addDomListener(window, 'load', initGoogleMap);
-	
 });
 
 /**
 * Fading header
 */
-function initFadingHeaderEvents(){
-	$homeSection = $('#section-home');
+var FadingHeader = {
+	init: function(){
+		fadingHeader = $('.fading-header');
+		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 	setInterval(function(){
-		if(!isElementInViewport($homeSection)){
-			$header = $('.fading-header');
+			if(!isElementInViewport(document.documentElement)){
 
-			if($header.css("opacity") == '1' && isFadingHeader){
+				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
 				clearTimeout(timeoutFadingHeader);
-				isFadingHeader = false;
+					isHeaderFading = false;
 			}
-			else if($header.css("opacity") == '0'){
-				$header.animate({
-					opacity: 1,
-					marginTop: '0px'
-				}, durationNavAnim);
+				else if(fadingHeader.css("opacity") == '0'){
+					FadingHeader.show();
 			}
 		}
 		else{
-			$header = $('.fading-header');
-			
-			if($header.css("opacity") == '1' && !isFadingHeader){
-				isFadingHeader = true;
-				console.log('fade hedaer');
+				if(fadingHeader.css("opacity") == '1' && !isHeaderFading){
+					isHeaderFading = true;
 				clearTimeout(timeoutFadingHeader);
 				timeoutFadingHeader = setTimeout(function(){
-					$header.animate({
-						opacity: 0,
-						marginTop: '-45px',
-					}, durationNavAnim);
-					isFadingHeader = false;
+						FadingHeader.hide();
+						isHeaderFading = false;
 				}, durationNavHide);
 			}
 		}
 	}, 100);
-}
+	},
+	hide: function(){
+		fadingHeader.animate({
+			opacity: 0,
+			marginTop: '-45px',
+		}, durationNavAnim);
+	},
+	show: function(){
+		fadingHeader.animate({
+			opacity: 1,
+			marginTop: '0px'
+		}, durationNavAnim);
+	},
+};
 
+/**
+* General Functions
+*/
 function isElementInViewport (el) {
     if (el instanceof jQuery) {
         el = el[0];
@@ -87,13 +110,56 @@ function isElementInViewport (el) {
     return rect.bottom > 50;
 }
 
-
-// validate email
 function isEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
 
+/**
+* Page Loader
+*/
+var pageWrap = $('.wrap')[0],
+	pages = [].slice.call( pageWrap.querySelectorAll( '.page' ) ),
+	currentPage = 0,
+	triggerLoading = [].slice.call( pageWrap.querySelectorAll( '.pageload-link' ) ),
+	loader = new SVGLoader($('#loader')[0], { speedIn : 400, easingIn : mina.easeinout } );
+	
+/**
+* Case Studies
+*/
+function initPageLoader() {
+	$('.pageload-link').on('click', function(ev){
+		ev.preventDefault();
+		loader.show();
+		$thisObj = $(this);
+
+		// after some time hide loader
+		setTimeout( function() {
+			loader.hide();
+
+			var origin = $thisObj.data('pageOrigin');
+			if(origin == mainPageId) documentScrollTop = $(document).scrollTop();
+			$origin = $(origin)[0].classList.toggle('show');
+
+			var destination = $thisObj.data('pageDestination');
+			$destination = $(destination)[0].classList.toggle('show');
+			if(destination == mainPageId) $(document).scrollTop(documentScrollTop);
+		}, pageloadDelay);
+	});
+
+	var tmpSpeedIn = loader.options.speedIn;
+	loader.options.speedIn = 0;
+	loader.show();
+	setTimeout(function(){
+		loader.options.speedIn = tmpSpeedIn;
+		loader.hide();
+		$('#main-page')[0].classList.toggle('show');
+	}, pageloadDelay);
+}
+
+/**
+* Contact Form -- create object
+*/
 function setError() {
     setTimeout(function(){
 		$('.error.prompt').animate({opacity: 0}, 'fast');
@@ -116,7 +182,6 @@ function clearContactFields(){
 	$('#contact-form').animate({opacity: 0}, 'fast');
 }
 
-// Contact Form
 function initContactForm(){
     nameVal = $('#nameVal');
 	email = $('#email');
@@ -164,7 +229,9 @@ function initContactForm(){
  	});
 }
 
-// google maps
+/**
+* GoogleMaps
+*/
 function initGoogleMap(){
 	var mapProp = {
 	  center:new google.maps.LatLng(51.508742,-0.120850),
