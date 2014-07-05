@@ -166,14 +166,14 @@ layout: default
     </div>
   </div>
 
-  <div class="row" data-magellan-destination="contact">
-    <div class="small-12 columns">
+<div class="row" data-magellan-destination="contact">
+  <div class="small-12 columns">
       <a name="contact"><h1 class="text-center">Contact us</h1></a>
       <p class="text-center">Don't be shy - we want to hear from you!</p>
       <!-- <h1>Contact Bywave</h1> -->
       <div class="row">
         <div class="small-12 medium-6 large-6 columns">
-          <div id="googleMap" style="width:100%;height:400px;"></div>
+          <div id="googleMap" style="width:100%; height:400px;"></div>
           <p class="text-center">Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
              Surry Hills, NSW, 2010<br/>
              Phone: +61 (2) 8203 4048<br/>
@@ -181,21 +181,22 @@ layout: default
           </p>
         </div>
         <div class="small-12 medium-6 large-6 columns">
-          <p class="message">"OK"</p>
+          <p class="success-message">"OK"</p>
           <form id="contact-form"> 
             <p class="text-center">If you have a query, please give us a call or fill out the form. Whether it be a quote request or general enquiry about our services, we’re happy to answer any of your questions.</p>
-             <label class="input-label">Name 
-                <input class="error field" id="nameVal" name="entry.1583774038" type="text" placeholder="Name" width="100%">
+              <label class="input-label">Name 
+                <input class="error" id="nameVal" name="entry.1583774038" type="text" 
+                placeholder="Name" width="100%">
                 <small class="error prompt reqname">Please fill out this field</small>
               </label>
-               <label class="input-label">Email 
-                <input class="error field" id="email" name="entry.1932651370" type="text" 
-                  placeholder="Email" width="100%" onchange="validateEmail(this.value)"> 
-                  <small class="error prompt email">Invalid Email</small>
+              <label class="input-label">Email 
+                <input class="error" id="email" name="entry.1932651370" type="text" 
+                  placeholder="Email" width="100%" onblur="validateEmail(this.value)"> 
+                  <small class="error prompt invemail">Invalid Email</small>
                   <small class="error prompt reqemail">Please fill out this field</small>
               </label> 
-               <label class="input-label">Message
-                <textarea class="msg-text error field" id="msg" name="entry.318137689" width="100%"></textarea>
+              <label class="input-label">Message
+                <textarea class="msg-text error" id="msg" name="entry.318137689" width="100%"></textarea>
                 <small class="error prompt reqmsg"> Please fill out this field</small>
               </label> 
               <input class="button [tiny radius round] btn-contact" type="submit" value="Submit">
@@ -204,7 +205,6 @@ layout: default
       </div>
     </div>
   </div>
-
 </div>
 
 <!-- Case Studies -->

@@ -50,7 +50,8 @@ $(function(){
         /**
 	* Contact Form
 	*/
-	initContactForm();
+	// initContactForm();
+	ContacForm.init();
 	google.maps.event.addDomListener(window, 'load', initGoogleMap);
 });
 
@@ -160,38 +161,20 @@ function initPageLoader() {
 /**
 * Contact Form -- create object
 */
-function setError() {
-    setTimeout(function(){
-		$('.error.prompt').animate({opacity: 0}, 'fast');
-    		},3000
-    	);
-}
 
-function validateEmail(email){
-	if(!isEmail(email) && email != '')
-	{
-		$('.error.prompt.email').animate({opacity: 1}, 'fast');
-		setError();
+var ContacForm = {
+	init: function(){
+
+	if(!nameVal){
+		nameVal = $('#nameVal');
+		email = $('#email');
+		msg = $('#msg');
 	}
-}
-
-function clearContactFields(){
-	nameVal.val("");
-	email.val("");
-	msg.val("");
-	$('#contact-form').animate({opacity: 0}, 'fast');
-}
-
-function initContactForm(){
-    nameVal = $('#nameVal');
-	email = $('#email');
-	msg = $('#msg');
 
  	$('#contact-form').submit(function(e){
 		if(this.checkValidity()){
 			e.preventDefault();
-			console.log(nameVal.val());
-	 		if(nameVal.val() && email.val() && msg.val()){
+	 		if(nameVal.val() && email.val() && msg.val() && isEmail(email.val())){
 	 			$.ajax({
 	 				type: "POST",
 	 				url: 'https://docs.google.com/a/bywave.com.au/forms/d/1IYvB6JIlq6hqqlh2NGv40N8LF03dSexc_yaBc9HMrZg/formResponse',
@@ -199,47 +182,170 @@ function initContactForm(){
 	 				dataType: 'xml',
 	 				statusCode: {
 	 					0: function (){
-	 						clearContactFields();
+	 						ContacForm.clearContactFields();
+	 						ContacForm.displaySuccess();
 	                        //Success message
-	                        $('.message').fadeIn();
 	                    },
 	                    200: function (){
-	                    	clearContactFields()
+	                    	ContacForm.clearContactFields();
 	                        //Success Message
-	                        $('.message').fadeIn();
+	                       	ContacForm.displaySuccess();
 	                    }
 	                }	
 	            });
 	 		}
-	 		else
-	 		{
-
-				console.log('asdadsasd');
-
-	 		  	$('.field').animate({boxShadow: '0px 0px 5px red !important'}, 'fast');
-	 			$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
-	 			$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
-	 			$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
-				setError();
-
-				$('.field').animate({boxShadow: 'none'}, 'fast');
-	 		  	// $('.field').css('borderColor','transparent').fadeIn();
+	 		else{
+	 			if(!nameVal.val()){
+	 				nameVal.addClass('show-error');
+	 				$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
+	 			}
+				if(!email.val()){
+					email.addClass('show-error');
+					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast')
+				}
+				else if(!isEmail(email.val())){
+					email.addClass('show-error');
+					$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+				}
+ 				if(!msg.val()){
+ 					msg.addClass('show-error');
+ 					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
+ 				}
+	 			
+	 			ContacForm.setTimeoutError();
 			}
 		}
  	});
-}
+	},
+	displaySuccess: function(){
+		$('.success-message').fadeIn();
+	},
+	setTimeoutError: function(){
+		setTimeout(function(){
+				nameVal.removeClass('show-error');
+				email.removeClass('show-error');
+				msg.removeClass('show-error');
+			$('.error.prompt').animate({opacity: 0}, 'fast');
+		}, 3000);
+	},
+	clearContactFields: function(){
+		nameVal.val("");
+		email.val("");
+		msg.val("");
+		$('#contact-form').animate({opacity: 0}, 'fast');
+	},
+	validateEmail : function(emailVal){
+		if(!isEmail(emailVal) && email != ''){		
+			email.addClass('show-error');
+			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+			ContacForm.setTimeoutError();
+		}
+	},
+};
+
+
+
+
+
+// function clearContactFields(){
+// 	nameVal.val("");
+// 	email.val("");
+// 	msg.val("");
+// 	$('#contact-form').animate({opacity: 0}, 'fast');
+// }
+
+
+// function validateEmail(email){
+// 	if(!isEmail(email) && email != '')
+// 	{		
+// 		$('#email').addClass('show-error');
+// 		$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+// 		setTimeout(function(){
+// 			$('#email').removeClass('show-error');
+// 	 		$('.error.prompt').animate({opacity: 0}, 'fast');
+//     		},3000
+//     	);
+// 	}
+// }
+
+// function initContactForm(){
+//     nameVal = $('#nameVal');
+// 	email = $('#email');
+// 	msg = $('#msg');
+
+//  	$('#contact-form').submit(function(e){
+// 		if(this.checkValidity()){
+// 			e.preventDefault();
+// 			console.log(nameVal.val());
+// 	 		if(nameVal.val() && email.val() && msg.val() && isEmail(email.val())){
+// 	 			$.ajax({
+// 	 				type: "POST",
+// 	 				url: 'https://docs.google.com/a/bywave.com.au/forms/d/1IYvB6JIlq6hqqlh2NGv40N8LF03dSexc_yaBc9HMrZg/formResponse',
+// 	 				data: $(this).serializeArray(),
+// 	 				dataType: 'xml',
+// 	 				statusCode: {
+// 	 					0: function (){
+// 	 						clearContactFields();
+// 	                        //Success message
+// 	                        $('.success-message').fadeIn();
+// 	                    },
+// 	                    200: function (){
+// 	                    	clearContactFields();
+// 	                        //Success Message
+// 	                        $('.success-message').fadeIn();
+// 	                    }
+// 	                }	
+// 	            });
+// 	 		}
+// 	 		else
+// 	 		{
+
+// 	 		   	$('.field').css("borderColor", "red");
+// 	 			if(!nameVal.val()){
+// 	 				nameVal.addClass('show-error');
+// 	 				$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
+// 	 			}
+// 				if(!email.val()){
+// 					email.addClass('show-error');
+// 					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast')
+// 				}
+// 				else if(!isEmail(email.val())){
+// 					email.addClass('show-error');
+// 					$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+// 				}
+//  				if(!msg.val()){
+//  					msg.addClass('show-error');
+//  					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
+//  				}
+	 			
+// 	 			setTimeout(function(){
+// 	 				nameVal.removeClass('show-error');
+// 	 				email.removeClass('show-error');
+// 	 				msg.removeClass('show-error');
+// 					$('.error.prompt').animate({opacity: 0}, 'fast');
+// 				}, 3000);
+	 		
+// 	 			// 	$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
+//  				// 	$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
+//  				// 	$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
+// 					// setError();
+
+// 	 		  	// $('.field').css('borderColor','transparent').fadeIn();
+// 			}
+// 		}
+//  	});
+// }
 
 /**
 * GoogleMaps
 */
 function initGoogleMap(){
 	var mapProp = {
-	  center:new google.maps.LatLng(51.508742,-0.120850),
-	  zoom:5,
-	  mapTypeId:google.maps.MapTypeId.ROADMAP,
-	  disableDefaultUI: true
+		  center:new google.maps.LatLng(51.508742,-0.120850),
+		  zoom:5,
+		  mapTypeId: google.maps.MapTypeId.ROADMAP,
+		  disableDefaultUI: true
 	  };
 	var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
 }
 
