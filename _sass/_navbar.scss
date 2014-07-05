@@ -58,7 +58,6 @@ $nav-item-padding : 8px;
   li {
     font-size: 1em;
     font-weight: 700;
-    font-family: "futura-pt","Roboto","Arial","sans-serif";
     text-transform: uppercase;
   }
 }
@@ -66,19 +65,5 @@ $nav-item-padding : 8px;
   position: fixed;
   margin-top: -45px;
   @include opacity(0);
-  @include box-shadow(0px, 2px, 2px, 0px, #AAA);
   border-bottom: solid 1px #000;
-}
-#section-home {
-  height: 100vh; // This is interesting, however we should check browser support
-}
-div[data-magellan-destination] {
-  padding: 4.4em;
-}
-div[name="about"],
-div[name="contact"] {
-	background-color: #F4F6F8;
-}
-.row .small-12.columns.text-center.img-sub-container img{
-  margin-top: 100px;
 }
