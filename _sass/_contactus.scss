@@ -1,0 +1,25 @@
+$input-margin-bottom:27px;
+
+.msg-text{
+  height: 150px;
+}
+small.error{
+	opacity: 0;
+	right: 15px;
+	position: absolute;
+}
+.success-message{
+	display: none;
+}
+.input-label{
+	margin-bottom: $input-margin-bottom;
+}
+.btn-contact
+{
+	margin-top: 10px;
+	float: right;
+}
+.show-error{
+	box-shadow: 0px 0px 5px red !important;
+	@include transition(all, 1s, ease-out, 0.2s);
+}

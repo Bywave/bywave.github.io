@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>jQuery Fragment Scroll</title>
+
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.fragmentscroll.min.js"></script>
+		<script type="text/javascript">
+
+		$(window).load(function() {
+			$('body').fragmentScroll();
+		});
+
+		</script>
+	</head>
+	<body>
+		<div id="nav">
+			<div class="container">
+				<h1>jQuery <span>Fragment Scroll</span></h1>
+				<ul>
+					<li><a href="https://github.com/miWebb/jQuery.fragmentScroll/releases">Download</a></li>
+					<li><a href="https://github.com/miWebb/jQuery.fragmentScroll">Documentation</a></li>
+					<li><a href="https://github.com/miWebb">GitHub</a></li>
+					<li><a href="https://www.miwebb.com">miWebb</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="page">
+			<section class="container">
+				<h1>Description</h1>
+				<p>The jQuery fragment scroll plugin replaces the <br />default fragment link behavior with a scroll animation.<br /> The plugin only works for descendants<br />of the given element(s).</p><p>Follow the link to find the fragment<br /><a href="#fragment">&lt;a href="#fragment">&lt;/a></a></p>
+			</section>
+			<section id="fragment" class="container">
+				<h1>Fragment</h1>
+				<p>We created a fragment<br /> to play with.</p>
+			</div>
+		</div>
+	</body>
+</html>
