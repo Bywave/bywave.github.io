@@ -23,6 +23,13 @@ var nameVal;
 var email; 
 var msg;
 /**
+* Google Maps
+*/
+var googleMap,
+	googleMapMarker,
+	companyLocation,
+	markerInfowindow;
+/**
 * On Ready
 */
 $(function(){
@@ -151,10 +158,16 @@ function initPageLoader() {
 	var tmpSpeedIn = loader.options.speedIn;
 	loader.options.speedIn = 0;
 	loader.show();
+
 	setTimeout(function(){
 		loader.options.speedIn = tmpSpeedIn;
 		loader.hide();
 		$('#main-page')[0].classList.toggle('show');
+		/**
+		* Google Maps
+		* init google maps here so that on resize, it wil render a width and height correctly
+		*/
+		setTimeout('initGoogleMap()', pageloadDelay);
 	}, pageloadDelay);
 }
 
@@ -340,12 +353,28 @@ var ContacForm = {
 * GoogleMaps
 */
 function initGoogleMap(){
-	var mapProp = {
-		  center:new google.maps.LatLng(51.508742,-0.120850),
-		  zoom:5,
+	companyLocation = new google.maps.LatLng(7.0622092,125.609086);
+
+	googleMap = new google.maps.Map(document.getElementById("google-map"), {
+		center: companyLocation,
+		zoom: 16,
 		  mapTypeId: google.maps.MapTypeId.ROADMAP,
 		  disableDefaultUI: true
 	  };
 	var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
 
+}
+	    else{
+	    	markerInfowindow.close();
+	    }
+	});
+
+  	google.maps.event.addListener(googleMap, 'center_changed', function() {
+	    // 3 seconds after the center of the map has changed, pan back to the
+	    // marker.
+	    window.setTimeout(function() {
+	    	googleMap.panTo(googleMapMarker.getPosition());
+	    	if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
+	    }, 10000);
+	});
+}
