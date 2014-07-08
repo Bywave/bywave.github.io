@@ -1,0 +1,14 @@
+{
+	"name": "jQuery.fragmentScroll",
+	"description": "The jQuery fragment scroll plugin replaces the default fragment link behavior with a scroll animation. The plugin only works for descendants of the given element(s).",
+	"version": "1.2.0",
+	"main": "assets/js/jquery.fragmentscroll.min.js",
+	"ignore": [
+		"*.md",
+		"LICENSE",
+		"fragmentscroll.jquery.json"
+	],
+	"dependencies": {
+		"jquery": ">= 1.7.0"
+	}
+}
