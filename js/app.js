@@ -59,7 +59,6 @@ $(function(){
 	*/
 	// initContactForm();
 	ContacForm.init();
-	google.maps.event.addDomListener(window, 'load', initGoogleMap);
 });
 
 /**
@@ -248,106 +247,13 @@ var ContacForm = {
 		$('#contact-form').animate({opacity: 0}, 'fast');
 	},
 	validateEmail : function(emailVal){
-		if(!isEmail(emailVal) && email != ''){		
+		if(!isEmail(emailVal) && emailVal != ''){		
 			email.addClass('show-error');
 			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
 			ContacForm.setTimeoutError();
 		}
 	},
 };
-
-
-
-
-
-// function clearContactFields(){
-// 	nameVal.val("");
-// 	email.val("");
-// 	msg.val("");
-// 	$('#contact-form').animate({opacity: 0}, 'fast');
-// }
-
-
-// function validateEmail(email){
-// 	if(!isEmail(email) && email != '')
-// 	{		
-// 		$('#email').addClass('show-error');
-// 		$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
-// 		setTimeout(function(){
-// 			$('#email').removeClass('show-error');
-// 	 		$('.error.prompt').animate({opacity: 0}, 'fast');
-//     		},3000
-//     	);
-// 	}
-// }
-
-// function initContactForm(){
-//     nameVal = $('#nameVal');
-// 	email = $('#email');
-// 	msg = $('#msg');
-
-//  	$('#contact-form').submit(function(e){
-// 		if(this.checkValidity()){
-// 			e.preventDefault();
-// 			console.log(nameVal.val());
-// 	 		if(nameVal.val() && email.val() && msg.val() && isEmail(email.val())){
-// 	 			$.ajax({
-// 	 				type: "POST",
-// 	 				url: 'https://docs.google.com/a/bywave.com.au/forms/d/1IYvB6JIlq6hqqlh2NGv40N8LF03dSexc_yaBc9HMrZg/formResponse',
-// 	 				data: $(this).serializeArray(),
-// 	 				dataType: 'xml',
-// 	 				statusCode: {
-// 	 					0: function (){
-// 	 						clearContactFields();
-// 	                        //Success message
-// 	                        $('.success-message').fadeIn();
-// 	                    },
-// 	                    200: function (){
-// 	                    	clearContactFields();
-// 	                        //Success Message
-// 	                        $('.success-message').fadeIn();
-// 	                    }
-// 	                }	
-// 	            });
-// 	 		}
-// 	 		else
-// 	 		{
-
-// 	 		   	$('.field').css("borderColor", "red");
-// 	 			if(!nameVal.val()){
-// 	 				nameVal.addClass('show-error');
-// 	 				$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
-// 	 			}
-// 				if(!email.val()){
-// 					email.addClass('show-error');
-// 					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast')
-// 				}
-// 				else if(!isEmail(email.val())){
-// 					email.addClass('show-error');
-// 					$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
-// 				}
-//  				if(!msg.val()){
-//  					msg.addClass('show-error');
-//  					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
-//  				}
-	 			
-// 	 			setTimeout(function(){
-// 	 				nameVal.removeClass('show-error');
-// 	 				email.removeClass('show-error');
-// 	 				msg.removeClass('show-error');
-// 					$('.error.prompt').animate({opacity: 0}, 'fast');
-// 				}, 3000);
-	 		
-// 	 			// 	$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
-//  				// 	$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
-//  				// 	$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
-// 					// setError();
-
-// 	 		  	// $('.field').css('borderColor','transparent').fadeIn();
-// 			}
-// 		}
-//  	});
-// }
 
 /**
 * GoogleMaps
@@ -358,12 +264,153 @@ function initGoogleMap(){
 	googleMap = new google.maps.Map(document.getElementById("google-map"), {
 		center: companyLocation,
 		zoom: 16,
-		  mapTypeId: google.maps.MapTypeId.ROADMAP,
-		  disableDefaultUI: true
-	  };
-	var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true,
+		styles: [
+				    {
+				        "featureType": "landscape",
+				        "stylers": [
+				            {
+				                "saturation": -100
+				            },
+				            {
+				                "lightness": 65
+				            },
+				            {
+				                "visibility": "off" //on
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "poi",
+				        "stylers": [
+				            {
+				                "saturation": -100
+				            },
+				            {
+				                "lightness": 51
+				            },
+				            {
+				                "visibility": "simplified"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.highway",
+				        "stylers": [
+				            {
+				                "saturation": -100
+				            },
+				            {
+				                "lightness": 0
+				            },
+				            {
+				                "visibility": "simplified"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.arterial",
+				        "stylers": [
+				            {
+				                "saturation": 100 //-100
+				            },
+				            {
+				                "hue": "#F58220"
+				            },
+				            {
+				                "lightness": -25 //30
+				            },
+				            {
+				                "visibility": "on"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.local",
+				        "stylers": [
+				            {
+				                "saturation": -100
+				            },
+				            {
+				                "lightness": 0 //40
+				            },
+				            {
+				                "visibility": "on"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "transit",
+				        "stylers": [
+				            {
+				                "saturation": -100
+				            },
+				            {
+				                "visibility": "simplified"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "administrative.province",
+				        "stylers": [
+				            {
+				                "visibility": "off"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "water",
+				        "elementType": "labels",
+				        "stylers": [
+				            {
+				                "visibility": "on"
+				            },
+				            {
+				                "lightness": -25
+				            },
+				            {
+				                "saturation": -100
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "water",
+				        "elementType": "geometry",
+				        "stylers": [
+				       		{
+				                "visibility": "off" //on
+				            },
+				            {
+				                "hue": "#ffff00"
+				            },
+				            {
+				                "lightness": -25
+				            },
+				            {
+				                "saturation": -97
+				            }
+				        ]
+				    }
+				],
+	});
+	
+	googleMapMarker = new google.maps.Marker({
+	    position: companyLocation,
+	    map: googleMap,
+	    animation: google.maps.Animation.BOUNCE,
+	});
 
-}
+	markerInfowindow = new google.maps.InfoWindow({
+      content: '<div>asdadas</div>',
+  	});
+
+	// markerInfowindow.open(googleMap, googleMapMarker);
+  	google.maps.event.addListener(googleMapMarker, 'click', function() {
+		//closed
+	    if(markerInfowindow.getMap() == null){
+	    	markerInfowindow.open(googleMap, googleMapMarker);
+	    }
 	    else{
 	    	markerInfowindow.close();
 	    }

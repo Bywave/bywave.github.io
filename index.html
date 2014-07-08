@@ -9,16 +9,18 @@ layout: default
       <li><a href="#contact">Contact</a></li>
     </ul>   
   </nav>
+
+
   
   <div class="row" id="section-home">
-    <div class="small-12 columns text-center img-sub-container">
+    <div class="small-12 large-12 columns text-center img-sub-container">
       <a name="home"></a>
       <img src="img/bywave_clear.png" width="70%"><br/><br/>
       <h3>We create solutions that change the way you do business.</h3>
       <h3>Have a look at our work or get in touch to find out more</h3>
     </div>
   </div>
-
+<hr>
   <div class="row" data-magellan-destination="work">
     <div class="small-12 large-10 columns text-center small-centered">
       <a name="work"><h3>Our Work</h3></a>
@@ -142,9 +144,13 @@ layout: default
   </div>
 
   <div class="row" data-magellan-destination="about" name="about">
-    <div class="small-12 columns text-center">
+    <!-- <div class="small-12 columns text-center"> -->
+    <div class="small-12 columns large-6 text-center small-centered">
       <a name="about"><h3>About us</h3></a>
-      <h1 class="text-center" id="about"><storng>THE BYWAVE ETHOS</storng></h1>
+      <p class="center">We hired ourselves for this product. Learn is a subscription learning service that now teaches over 500 students the skills necessary to launch their own app or get hired as a professional Rails developer. In addition to designing and developing the product, we also create the screencasts, workshops, and e-books as well as provide the mentoring. </p>
+
+      <a href="#" class=""><img src="img/mac.png"></a>
+     <!--  <h1 class="text-center" id="about"><storng>THE BYWAVE ETHOS</storng></h1>
       <h3 id="sub-about">Strategy | Design | Development</h3>
       <div class="row">
         <div class="small-4 large-4 columns text-center small-centered">
@@ -162,7 +168,7 @@ layout: default
             <a href="#">Endorphin Interactive</a>
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -174,7 +180,9 @@ layout: default
       <div class="row">
         <div class="small-12 medium-6 large-6 columns">
           <div id="google-map"></div>
-          <p class="text-center">Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
+          <br/>
+          <p class="text-center">
+             Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
              Surry Hills, NSW, 2010<br/>
              Phone: +61 (2) 8203 4048<br/>
              Mail: info@bywave.com.au<br/>
@@ -182,7 +190,7 @@ layout: default
         </div>
 
         <div class="small-12 medium-6 large-6 columns">
-          <p class="success-message">"OK"</p>
+          <p class="success-message">"Thank you"</p>
           <form id="contact-form"> 
             <p class="text-center">If you have a query, please give us a call or fill out the form. Whether it be a quote request or general enquiry about our services, we’re happy to answer any of your questions.</p>
               <label class="input-label">Name 
@@ -192,7 +200,7 @@ layout: default
               </label>
               <label class="input-label">Email 
                 <input class="error" id="email" name="entry.1932651370" type="text" 
-                  placeholder="Email" width="100%" onblur="validateEmail(this.value)"> 
+                  placeholder="Email" width="100%" onblur="ContacForm.validateEmail(this.value)"> 
                   <small class="error prompt invemail">Invalid Email</small>
                   <small class="error prompt reqemail">Please fill out this field</small>
               </label> 
