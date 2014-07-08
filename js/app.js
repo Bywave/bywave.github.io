@@ -404,15 +404,15 @@ function initGoogleMap(){
   	});
 
 	// markerInfowindow.open(googleMap, googleMapMarker);
-  	google.maps.event.addListener(googleMapMarker, 'click', function() {
-		//closed
-	    if(markerInfowindow.getMap() == null){
-	    	markerInfowindow.open(googleMap, googleMapMarker);
-	    }
-	    else{
-	    	markerInfowindow.close();
-	    }
-	});
+ //  	google.maps.event.addListener(googleMapMarker, 'click', function() {
+	// 	//closed
+	//     if(markerInfowindow.getMap() == null){
+	//     	markerInfowindow.open(googleMap, googleMapMarker);
+	//     }
+	//     else{
+	//     	markerInfowindow.close();
+	//     }
+	// });
 
   	google.maps.event.addListener(googleMap, 'center_changed', function() {
 	    // 3 seconds after the center of the map has changed, pan back to the
@@ -420,7 +420,7 @@ function initGoogleMap(){
 	    clearTimeout(returnToMarkerTimeout);
 	    returnToMarkerTimeout = setTimeout(function() {
 	    	googleMap.panTo(googleMapMarker.getPosition());
-	    	if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
+	    	// if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
 	    }, 10000);
 	});
 }
