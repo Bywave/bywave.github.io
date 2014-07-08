@@ -62,21 +62,22 @@
 		if( this.isAnimating ) return false;
 		this.isAnimating = true;
 		// animate svg
-		var self = this,
+		var $selfObj = $(this.el),
 			onEndAnimation = function() {
-				classie.addClass( self.el, 'pageload-loading' );
+				$selfObj.addClass('pageload-loading');
 			};
 		this._animateSVG( 'in', onEndAnimation );
-		classie.add( this.el, 'show' );
+		$selfObj.addClass('show');
 	}
 
 	SVGLoader.prototype.hide = function() {
 		var self = this;
-		classie.removeClass( this.el, 'pageload-loading' );
+		var $selfObj = $(this.el);
+		$selfObj.removeClass( 'pageload-loading' );
 		this._animateSVG( 'out', function() { 
 			// reset path
 			self.path.attr( 'd', self.initialPath );
-			classie.removeClass( self.el, 'show' );
+			$selfObj.removeClass( 'show' );
 			self.isAnimating = false; 
 		} );
 	}

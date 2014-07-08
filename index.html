@@ -10,18 +10,18 @@ layout: default
     </ul>   
   </nav>
 
-
-  
   <div class="row" id="section-home">
-    <div class="small-12 large-12 columns text-center img-sub-container">
+    <div class="medium-1 columns"></div>
+    <div class="small-12 medium-10 large-8 columns text-center img-sub-container small-centered">
       <a name="home"></a>
-      <img src="img/bywave_clear.png" width="70%"><br/><br/>
+      <img src="img/bywave_clear.png"><br/><br/>
       <h3>We create solutions that change the way you do business.</h3>
       <h3>Have a look at our work or get in touch to find out more</h3>
     </div>
+    <div class="medium-1 columns"></div>
   </div>
-<hr>
-  <div class="row" data-magellan-destination="work">
+
+  <div class="row" data-magellan-destination="work" id="work">
     <div class="small-12 large-10 columns text-center small-centered">
       <a name="work"><h3>Our Work</h3></a>
       <br/><br/>
@@ -143,9 +143,8 @@ layout: default
     </div>
   </div>
 
-  <div class="row" data-magellan-destination="about" name="about">
-    <!-- <div class="small-12 columns text-center"> -->
-    <div class="small-12 columns large-6 text-center small-centered">
+  <div class="row" data-magellan-destination="about" id="about">
+    <div class="small-12 columns text-center">
       <a name="about"><h3>About us</h3></a>
       <p class="center">We hired ourselves for this product. Learn is a subscription learning service that now teaches over 500 students the skills necessary to launch their own app or get hired as a professional Rails developer. In addition to designing and developing the product, we also create the screencasts, workshops, and e-books as well as provide the mentoring. </p>
 
@@ -172,7 +171,7 @@ layout: default
     </div>
   </div>
 
-<div class="row" data-magellan-destination="contact">
+<div class="row" data-magellan-destination="contact" id="contact">
     <div class="small-12 large-10 columns small-centered">
       <a name="contact"><h1 class="text-center">Contact us</h1></a>
       <p class="text-center">Don't be shy - we want to hear from you!</p>
@@ -216,17 +215,7 @@ layout: default
   </div>
 </div>
 
-<!-- Case Studies -->
-<div class="page" id="page-1">
-  <!-- Top Navigation -->
-  <div class="codrops-top clearfix">
-    <a class="codrops-icon codrops-icon-prev pageload-link" data-page-origin="#page-1" data-page-destination="#main-page"><span>Previous Demo</span></a>
-    <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=18880"><span>Back to the Codrops Article</span></a></span>
-  </div>
-  <section>
-    <h2>This is an example for a new page.</h2>
-  </section>
-</div><!-- /case-study -->
+{{ site.case_studies }}
 
 <div id="loader" class="pageload-overlay" data-opening="m -5,-5 0,70 90,0 0,-70 z m 5,35 c 0,0 15,20 40,0 25,-20 40,0 40,0 l 0,0 C 80,30 65,10 40,30 15,50 0,30 0,30 z">
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none" >

@@ -1,0 +1,25 @@
+{
+  "name": "jQuery.fragmentScroll",
+  "description": "The jQuery fragment scroll plugin replaces the default fragment link behavior with a scroll animation. The plugin only works for descendants of the given element(s).",
+  "version": "1.2.0",
+  "main": "assets/js/jquery.fragmentscroll.min.js",
+  "ignore": [
+    "*.md",
+    "LICENSE",
+    "fragmentscroll.jquery.json"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.0"
+  },
+  "homepage": "https://github.com/miWebb/jQuery.fragmentScroll",
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.0",
+    "commit": "365785fc8cad2246fe610b8fc47cbd91f92a283d"
+  },
+  "_source": "git://github.com/miWebb/jQuery.fragmentScroll.git",
+  "_target": "~1.2.0",
+  "_originalSource": "miWebb/jQuery.fragmentScroll",
+  "_direct": true
+}

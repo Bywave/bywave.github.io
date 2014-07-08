@@ -15,7 +15,9 @@ var timeoutFadingHeader,
 */
 var pageloadDelay = 1000,
 	documentScrollTop,
-	mainPageId = '#main-page';
+	mainPageId = '#main-page',
+	loader = new SVGLoader($('#loader')[0], { speedIn : 400, easingIn : mina.easeinout } );
+	
 /**
 * Contact form
 */
@@ -28,7 +30,8 @@ var msg;
 var googleMap,
 	googleMapMarker,
 	companyLocation,
-	markerInfowindow;
+	markerInfowindow,
+	returnToMarkerTimeout;
 /**
 * On Ready
 */
@@ -66,6 +69,8 @@ $(function(){
 */
 var FadingHeader = {
 	init: function(){
+		$('body').fragmentScroll();
+
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
@@ -122,14 +127,6 @@ function isEmail(email) {
     return re.test(email);
 }
 
-/**
-* Page Loader
-*/
-var pageWrap = $('.wrap')[0],
-	pages = [].slice.call( pageWrap.querySelectorAll( '.page' ) ),
-	currentPage = 0,
-	triggerLoading = [].slice.call( pageWrap.querySelectorAll( '.pageload-link' ) ),
-	loader = new SVGLoader($('#loader')[0], { speedIn : 400, easingIn : mina.easeinout } );
 	
 /**
 * Case Studies
@@ -162,6 +159,7 @@ function initPageLoader() {
 		loader.options.speedIn = tmpSpeedIn;
 		loader.hide();
 		$('#main-page')[0].classList.toggle('show');
+		$('#footer')[0].classList.toggle('show');
 		/**
 		* Google Maps
 		* init google maps here so that on resize, it wil render a width and height correctly
@@ -247,7 +245,7 @@ var ContacForm = {
 		$('#contact-form').animate({opacity: 0}, 'fast');
 	},
 	validateEmail : function(emailVal){
-		if(!isEmail(emailVal) && emailVal != ''){		
+		if(!isEmail(emailVal) && email != ''){		
 			email.addClass('show-error');
 			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
 			ContacForm.setTimeoutError();
@@ -419,7 +417,8 @@ function initGoogleMap(){
   	google.maps.event.addListener(googleMap, 'center_changed', function() {
 	    // 3 seconds after the center of the map has changed, pan back to the
 	    // marker.
-	    window.setTimeout(function() {
+	    clearTimeout(returnToMarkerTimeout);
+	    returnToMarkerTimeout = setTimeout(function() {
 	    	googleMap.panTo(googleMapMarker.getPosition());
 	    	if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
 	    }, 10000);
