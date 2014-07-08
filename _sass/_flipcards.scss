@@ -5,7 +5,8 @@
     width: 100%;
     padding :0px;
     border-color: transparent;
-
+    position: relative;
+    
     img {
         width: inherit;
         height: inherit;
@@ -59,6 +60,7 @@
         z-index: 1000;
         @include rotate(0deg, 0deg); 
         box-shadow: 0 1px 2px 0px #aaa;
+        width:100%;
     }
 }
 
