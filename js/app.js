@@ -21,9 +21,9 @@ var pageloadDelay = 1000,
 /**
 * Contact form
 */
-var nameVal; 
-var email; 
-var msg;
+var nameVal, 
+    email,
+    msg;
 /**
 * Google Maps
 */
@@ -57,10 +57,10 @@ $(function(){
 	*/
 	initPageLoader();
 
-    /**
+        /**
 	* Contact Form
 	*/
-	initContactForm();
+    ContactForm.init();
 });
 
 /**
@@ -73,9 +73,8 @@ var FadingHeader = {
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-		setInterval(function(){
+	setInterval(function(){
 			if(!isElementInViewport(document.documentElement)){
-
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
 				clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
@@ -122,10 +121,9 @@ function isElementInViewport (el) {
 }
 
 function isEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    var character = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return character.test(email);
 }
-
 
 /**
 * Case Studies
@@ -170,38 +168,19 @@ function initPageLoader() {
 /**
 * Contact Form -- create object
 */
-function setError() {
-    setTimeout(function(){
-		$('.error.prompt').animate({opacity: 0}, 'fast');
-    		},3000
-    	);
-}
 
-function validateEmail(email){
-	if(!isEmail(email) && email != '')
-	{
-		$('.error.prompt.email').animate({opacity: 1}, 'fast');
-		setError();
+var ContactForm = {
+	init: function(){
+	if(!nameVal){
+		nameVal = $('#nameVal');
+		email = $('#email');
+		msg = $('#msg');
 	}
-}
-
-function clearContactFields(){
-	nameVal.val("");
-	email.val("");
-	msg.val("");
-	$('#contact-form').animate({opacity: 0}, 'fast');
-}
-
-function initContactForm(){
-    nameVal = $('#nameVal');
-	email = $('#email');
-	msg = $('#msg');
 
  	$('#contact-form').submit(function(e){
 		if(this.checkValidity()){
 			e.preventDefault();
-			console.log(nameVal.val());
-	 		if(nameVal.val() && email.val() && msg.val()){
+	 		if(nameVal.val() && email.val() && msg.val() && isEmail(email.val())){
 	 			$.ajax({
 	 				type: "POST",
 	 				url: 'https://docs.google.com/a/bywave.com.au/forms/d/1IYvB6JIlq6hqqlh2NGv40N8LF03dSexc_yaBc9HMrZg/formResponse',
@@ -209,42 +188,71 @@ function initContactForm(){
 	 				dataType: 'xml',
 	 				statusCode: {
 	 					0: function (){
-	 						clearContactFields();
+                                ContactForm.clearContactFields();
+	 						ContacForm.displaySuccess();
 	                        //Success message
-	                        $('.message').fadeIn();
 	                    },
 	                    200: function (){
-	                    	clearContactFields()
+                                ContactForm.clearContactFields();
 	                        //Success Message
-	                        $('.message').fadeIn();
+                                ContactForm.displaySuccess();
 	                    }
 	                }	
 	            });
 	 		}
-	 		else
-	 		{
-
-				console.log('asdadsasd');
-
-	 		  	$('.field').animate({boxShadow: '0px 0px 5px red !important'}, 'fast');
-	 			$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
-	 			$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
-	 			$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
-				setError();
-
-				$('.field').animate({boxShadow: 'none'}, 'fast');
-	 		  	// $('.field').css('borderColor','transparent').fadeIn();
+	 		else{
+	 			if(!nameVal.val()){
+	 				nameVal.addClass('show-error');
+	 				$('.error.prompt.reqname').animate({opacity: 1}, 'fast');
+	 			}
+				if(!email.val()){
+					email.addClass('show-error');
+					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast')
+				}
+				else if(!isEmail(email.val())){
+					email.addClass('show-error');
+					$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+				}
+ 				if(!msg.val()){
+ 					msg.addClass('show-error');
+ 					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
+ 				}
+                    ContactForm.setTimeoutError();
 			}
 		}
  	});
-}
+	},
+	displaySuccess: function(){
+		$('.success-message').fadeIn();
+	},
+	setTimeoutError: function(){
+		setTimeout(function(){
+				nameVal.removeClass('show-error');
+				email.removeClass('show-error');
+				msg.removeClass('show-error');
+			$('.error.prompt').animate({opacity: 0}, 'fast');
+		}, 3000);
+	},
+	clearContactFields: function(){
+		nameVal.val("");
+		email.val("");
+		msg.val("");
+		$('#contact-form').animate({opacity: 0}, 'fast');
+	},
+	validateEmail : function(emailVal){
+		if(!isEmail(emailVal) && email != ''){		
+			email.addClass('show-error');
+			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
+            ContactForm.setTimeoutError();
+		}
+	},
+};
 
 /**
 * GoogleMaps
 */
 function initGoogleMap(){
 	companyLocation = new google.maps.LatLng(7.0622092,125.609086);
-
 	googleMap = new google.maps.Map(document.getElementById("google-map"), {
 		center: companyLocation,
 		zoom: 16,
@@ -390,15 +398,15 @@ function initGoogleMap(){
   	});
 
 	// markerInfowindow.open(googleMap, googleMapMarker);
-  	google.maps.event.addListener(googleMapMarker, 'click', function() {
-		//closed
-	    if(markerInfowindow.getMap() == null){
-	    	markerInfowindow.open(googleMap, googleMapMarker);
-	    }
-	    else{
-	    	markerInfowindow.close();
-	    }
-	});
+ //     google.maps.event.addListener(googleMapMarker, 'click', function() {
+    //  //closed
+    //     if(markerInfowindow.getMap() == null){
+    //      markerInfowindow.open(googleMap, googleMapMarker);
+    //     }
+    //     else{
+    //      markerInfowindow.close();
+    //     }
+    // });
 
   	google.maps.event.addListener(googleMap, 'center_changed', function() {
 	    // 3 seconds after the center of the map has changed, pan back to the
@@ -406,7 +414,7 @@ function initGoogleMap(){
 	    clearTimeout(returnToMarkerTimeout);
 	    returnToMarkerTimeout = setTimeout(function() {
 	    	googleMap.panTo(googleMapMarker.getPosition());
-	    	if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
+            // if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
 	    }, 10000);
 	});
 }

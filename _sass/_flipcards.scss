@@ -1,97 +1,81 @@
-$card-radius : 3px;
-/* -- Extend -- */
-.flip-card {
-  border-radius: inherit;
-}
-
 /* -- Panel -- */
 .panel {
-  @include perspective(600px);
-  background: transparent;
+    @include perspective(600px);
+    background: transparent;
     width: 100%;
-  padding :0px;
+    padding :0px;
     border-color: transparent;
-    border-radius: $card-radius;
 
     img {
         width: inherit;
         height: inherit;
-        border-radius: inherit
-}
+    }
 /* -- Front Card -- */
-  .front {
-  @extend .flip-card; 
-  @include rotate(0deg, 0deg);
-  @include style(preserve-3d);
-  @include visibility(hidden);
-  @include transition(all, .4s, ease-in-out, 0s);
-  top: 0;
-  left: 0;
-  z-index: 900;
-    width: 100%;
-  text-align: center; 
-    box-shadow: 0 1px 2px 0px #aaa;
-}
+    .front {
+        @include rotate(0deg, 0deg);
+        @include style(preserve-3d);
+        @include visibility(hidden);
+        @include transition(all, .4s, ease-in-out, 0s);
+        top: 0;
+        left: 0;
+        z-index: 900;
+        width: 100%;
+        text-align: center; 
+        box-shadow: 0 1px 2px 0px #aaa;
+    }
 /*-- Back card --*/
-  .back {
-  @extend .flip-card; 
-  @include rotate(0deg, -179deg); 
-  @include style(preserve-3d);
-  @include visibility(hidden);
-  @include transition(all, .4s, ease-in-out, 0s);
-    background: none repeat scroll 0% 0% #f9f9f9;
-    // fafafa
-  float: none;
-  top: 0;
-  left: 0;
-  z-index: 800;
-    width: inherit;
-    height: 100%;
-    position: absolute;
-  }
-
+    .back {
+        @include rotate(0deg, -179deg); 
+        @include style(preserve-3d);
+        @include visibility(hidden);
+        @include transition(all, .4s, ease-in-out, 0s);
+        background: none repeat scroll 0% 0% #f9f9f9;
+        float: none;
+        top: 0;
+        left: 0;
+        z-index: 800;
+        width: inherit;
+        height: 100%;
+        position: absolute;
+    }
 }
 
 .panel::after{
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .panel.flip {
-  .front {
-     z-index: 900; 
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(-180deg);
-     transform: rotateY(-180deg);
-     box-shadow: none;
-}
+    .front {
+        z-index: 900; 
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        box-shadow: none;
+    }
 
-  .back{
-    z-index: 1000;
-  @include rotate(0deg, 0deg); 
-    box-shadow: 0 1px 2px 0px #aaa;
-   }
+    .back{
+        z-index: 1000;
+        @include rotate(0deg, 0deg); 
+        box-shadow: 0 1px 2px 0px #aaa;
+    }
 }
 
 .back > .back-header{
-  // display: block;
-  border-radius: $card-radius $card-radius 0px 0px;
-  padding: 10px;
-  background-color: #f68320;
-  color: #FFF;
-  fill: #FFF;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    background-color: #f68320;
+    color: #FFF;
+    fill: #FFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .back > .back-footer{
-  border-radius: 0px 0px $card-radius $card-radius;
-  // padding: 8px;
-  background-color: #f68320;
-  color: #FFF;
-  fill: #FFF;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  position:absolute;                  
-  bottom:0; 
-  width: 100%; 
+    background-color: #f68320;
+    color: #FFF;
+    fill: #FFF;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    position:absolute;                  
+    bottom:0; 
+    width: 100%; 
 }
