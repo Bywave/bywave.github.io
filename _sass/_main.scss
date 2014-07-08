@@ -1,18 +1,25 @@
 #section-home {
-  height: 100vh; // This is interesting, however we should check browser support
+    height: 100vh; // This is interesting, however we should check browser support
 }
 div[data-magellan-destination],
 #footer {
-  padding-bottom: 4.4em;
-  padding-top: 4.4em;
+    padding-bottom: 4.4em;
+    padding-top: 4.4em;
 }
+
 div[name="about"],
 div[name="contact"] {
-	background-color: #F4F6F8;
+    background-color: #F4F6F8;
 }
+
 .row .small-12.columns.text-center.img-sub-container img{
-	margin-top: 100px;
+    margin-top: 100px;
 }
+
 #footer{
-	background-color: #333;
+    background-color: #333; 
+}
+
+#footer-font-color{
+    color:#F58220;
 }

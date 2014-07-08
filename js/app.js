@@ -21,9 +21,9 @@ var pageloadDelay = 1000,
 /**
 * Contact form
 */
-var nameVal; 
-var email; 
-var msg;
+var nameVal, 
+    email,
+    msg;
 /**
 * Google Maps
 */
@@ -60,8 +60,7 @@ $(function(){
         /**
 	* Contact Form
 	*/
-	// initContactForm();
-	ContacForm.init();
+    ContactForm.init();
 });
 
 /**
@@ -76,7 +75,6 @@ var FadingHeader = {
 
 	setInterval(function(){
 			if(!isElementInViewport(document.documentElement)){
-
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
 				clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
@@ -123,11 +121,10 @@ function isElementInViewport (el) {
 }
 
 function isEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    var character = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return character.test(email);
 }
 
-	
 /**
 * Case Studies
 */
@@ -172,9 +169,8 @@ function initPageLoader() {
 * Contact Form -- create object
 */
 
-var ContacForm = {
+var ContactForm = {
 	init: function(){
-
 	if(!nameVal){
 		nameVal = $('#nameVal');
 		email = $('#email');
@@ -192,14 +188,14 @@ var ContacForm = {
 	 				dataType: 'xml',
 	 				statusCode: {
 	 					0: function (){
-	 						ContacForm.clearContactFields();
+                                ContactForm.clearContactFields();
 	 						ContacForm.displaySuccess();
 	                        //Success message
 	                    },
 	                    200: function (){
-	                    	ContacForm.clearContactFields();
+                                ContactForm.clearContactFields();
 	                        //Success Message
-	                       	ContacForm.displaySuccess();
+                                ContactForm.displaySuccess();
 	                    }
 	                }	
 	            });
@@ -221,8 +217,7 @@ var ContacForm = {
  					msg.addClass('show-error');
  					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
  				}
-	 			
-	 			ContacForm.setTimeoutError();
+                    ContactForm.setTimeoutError();
 			}
 		}
  	});
@@ -248,7 +243,7 @@ var ContacForm = {
 		if(!isEmail(emailVal) && email != ''){		
 			email.addClass('show-error');
 			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
-			ContacForm.setTimeoutError();
+            ContactForm.setTimeoutError();
 		}
 	},
 };
@@ -258,7 +253,6 @@ var ContacForm = {
 */
 function initGoogleMap(){
 	companyLocation = new google.maps.LatLng(7.0622092,125.609086);
-
 	googleMap = new google.maps.Map(document.getElementById("google-map"), {
 		center: companyLocation,
 		zoom: 16,
@@ -404,15 +398,15 @@ function initGoogleMap(){
   	});
 
 	// markerInfowindow.open(googleMap, googleMapMarker);
-  	google.maps.event.addListener(googleMapMarker, 'click', function() {
-		//closed
-	    if(markerInfowindow.getMap() == null){
-	    	markerInfowindow.open(googleMap, googleMapMarker);
-	    }
-	    else{
-	    	markerInfowindow.close();
-	    }
-	});
+ //     google.maps.event.addListener(googleMapMarker, 'click', function() {
+    //  //closed
+    //     if(markerInfowindow.getMap() == null){
+    //      markerInfowindow.open(googleMap, googleMapMarker);
+    //     }
+    //     else{
+    //      markerInfowindow.close();
+    //     }
+    // });
 
   	google.maps.event.addListener(googleMap, 'center_changed', function() {
 	    // 3 seconds after the center of the map has changed, pan back to the
@@ -420,7 +414,7 @@ function initGoogleMap(){
 	    clearTimeout(returnToMarkerTimeout);
 	    returnToMarkerTimeout = setTimeout(function() {
 	    	googleMap.panTo(googleMapMarker.getPosition());
-	    	if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
+            // if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
 	    }, 10000);
 	});
 }
