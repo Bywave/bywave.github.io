@@ -8052,14 +8052,8 @@ th.hide-for-touch {
   }
 }
 /* -- Mixins -- */
-/* -- Extend -- */
-/* line 3, ../_sass/_flipcards.scss */
-.flip-card, .panel .front, .panel .back {
-  border-radius: inherit;
-}
-
 /* -- Panel -- */
-/* line 8, ../_sass/_flipcards.scss */
+/* line 2, ../_sass/_flipcards.scss */
 .panel {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -8068,17 +8062,16 @@ th.hide-for-touch {
   width: 100%;
   padding: 0px;
   border-color: transparent;
-  border-radius: 3px;
+  position: relative;
   /* -- Front Card -- */
   /*-- Back card --*/
 }
-/* line 16, ../_sass/_flipcards.scss */
+/* line 10, ../_sass/_flipcards.scss */
 .panel img {
   width: inherit;
   height: inherit;
-  border-radius: inherit;
 }
-/* line 22, ../_sass/_flipcards.scss */
+/* line 15, ../_sass/_flipcards.scss */
 .panel .front {
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
@@ -8100,7 +8093,7 @@ th.hide-for-touch {
   text-align: center;
   box-shadow: 0 1px 2px 0px #aaa;
 }
-/* line 36, ../_sass/_flipcards.scss */
+/* line 28, ../_sass/_flipcards.scss */
 .panel .back {
   -webkit-transform: rotateX(0deg) rotateY(-179deg);
   -moz-transform: rotateX(0deg) rotateY(-179deg);
@@ -8125,14 +8118,14 @@ th.hide-for-touch {
   position: absolute;
 }
 
-/* line 55, ../_sass/_flipcards.scss */
+/* line 44, ../_sass/_flipcards.scss */
 .panel::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 62, ../_sass/_flipcards.scss */
+/* line 51, ../_sass/_flipcards.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -8140,18 +8133,18 @@ th.hide-for-touch {
   transform: rotateY(-180deg);
   box-shadow: none;
 }
-/* line 70, ../_sass/_flipcards.scss */
+/* line 59, ../_sass/_flipcards.scss */
 .panel.flip .back {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg);
   box-shadow: 0 1px 2px 0px #aaa;
+  width: 100%;
 }
 
-/* line 77, ../_sass/_flipcards.scss */
+/* line 67, ../_sass/_flipcards.scss */
 .back > .back-header {
-  border-radius: 3px 3px 0px 0px;
   padding: 10px;
   background-color: #f68320;
   color: #FFF;
@@ -8159,9 +8152,8 @@ th.hide-for-touch {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* line 87, ../_sass/_flipcards.scss */
+/* line 75, ../_sass/_flipcards.scss */
 .back > .back-footer {
-  border-radius: 0px 0px 3px 3px;
   background-color: #f68320;
   color: #FFF;
   fill: #FFF;
@@ -8182,26 +8174,26 @@ th.hide-for-touch {
 /* line 9, ../_sass/_navbar.scss */
 .top-bar li a {
   border-bottom: 3px solid transparent;
-  padding-bottom: 8px;
+  padding-bottom: 0.53em;
   -webkit-transition: border-color 0.218s ease 0s;
   -moz-transition: border-color 0.218s ease 0s;
   -o-transition: border-color 0.218s ease 0s;
   transition: border-color 0.218s ease 0s;
 }
-/* line 14, ../_sass/_navbar.scss */
+/* line 15, ../_sass/_navbar.scss */
 .top-bar li a:hover {
   color: #EEE;
   text-decoration: none;
   background-color: transparent;
   border-color: #F68320;
 }
-/* line 23, ../_sass/_navbar.scss */
+/* line 24, ../_sass/_navbar.scss */
 .top-bar li.active a {
   color: #EEE;
   text-decoration: none;
   background-color: transparent;
   border-color: #F68320;
-  padding-bottom: 8px;
+  padding-bottom: 0.53em;
   border-radius: 0px;
   font-weight: bold;
   -webkit-transition: border-color 0.218 ease 3s;
@@ -8209,73 +8201,61 @@ th.hide-for-touch {
   -o-transition: border-color 0.218 ease 3s;
   transition: border-color 0.218 ease 3s;
 }
-/* line 33, ../_sass/_navbar.scss */
+/* line 35, ../_sass/_navbar.scss */
 .top-bar li.active a:hover {
   background-color: transparent;
 }
 
-/* line 38, ../_sass/_navbar.scss */
+/* line 41, ../_sass/_navbar.scss */
 .static-header {
   background-color: transparent;
 }
-/* line 43, ../_sass/_navbar.scss */
-.static-header li a:hover,
-.static-header li a:focus {
+/* line 45, ../_sass/_navbar.scss */
+.static-header li a:hover {
   color: #262626;
 }
 
-/* line 48, ../_sass/_navbar.scss */
+/* line 51, ../_sass/_navbar.scss */
 .img-icon {
   float: left;
   width: 125px;
   margin-left: 30px;
 }
 
-/* line 53, ../_sass/_navbar.scss */
-.nav-center {
-  width: 21em;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 58, ../_sass/_navbar.scss */
-.nav-center li {
-  font-size: 1em;
-  font-weight: 700;
-  font-family: "futura-pt","Roboto","Arial","sans-serif";
-  text-transform: uppercase;
+/* line 57, ../_sass/_navbar.scss */
+.img-small-icon {
+  float: left;
+  width: 35px;
+  padding-bottom: 8px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 /* line 65, ../_sass/_navbar.scss */
+.nav-center {
+  max-width: 21em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 70, ../_sass/_navbar.scss */
+.nav-center li {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 76, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
   margin-top: -45px;
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
-  -webkit-box-shadow: 0px 2px 2px 0px #aaaaaa;
-  box-shadow: 0px 2px 2px 0px #aaaaaa;
   border-bottom: solid 1px #000;
 }
-
-/* line 72, ../_sass/_navbar.scss */
-#section-home {
-  height: 100vh;
-}
-
-/* line 75, ../_sass/_navbar.scss */
-div[data-magellan-destination] {
-  padding: 4.4em;
-}
-
-/* line 79, ../_sass/_navbar.scss */
-div[name="about"],
-div[name="contact"] {
-  background-color: #F4F6F8;
-}
-
 /* line 82, ../_sass/_navbar.scss */
-.row .small-12.columns.text-center.img-sub-container img {
-  margin-top: 100px;
+.fading-header #company-logo {
+  position: absolute;
 }
 
 /* line 1, ../_sass/_page_loader.scss */
@@ -8283,17 +8263,17 @@ div[name="contact"] {
   z-index: 1;
 }
 
-/* line 4, ../_sass/_page_loader.scss */
+/* line 5, ../_sass/_page_loader.scss */
 .page {
   display: none;
 }
 
-/* line 7, ../_sass/_page_loader.scss */
+/* line 9, ../_sass/_page_loader.scss */
 .page.show {
   display: block;
 }
 
-/* line 10, ../_sass/_page_loader.scss */
+/* line 13, ../_sass/_page_loader.scss */
 .pageload-overlay {
   position: fixed;
   width: 100%;
@@ -8302,24 +8282,24 @@ div[name="contact"] {
   left: 0;
   visibility: hidden;
 }
-/* line 18, ../_sass/_page_loader.scss */
+/* line 21, ../_sass/_page_loader.scss */
 .pageload-overlay svg {
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
 }
-/* line 24, ../_sass/_page_loader.scss */
+/* line 27, ../_sass/_page_loader.scss */
 .pageload-overlay svg path {
   fill: #F58220;
 }
 
-/* line 29, ../_sass/_page_loader.scss */
+/* line 32, ../_sass/_page_loader.scss */
 .pageload-overlay.show {
   visibility: visible;
 }
 
-/* line 32, ../_sass/_page_loader.scss */
+/* line 36, ../_sass/_page_loader.scss */
 .pageload-overlay-object, .pageload-overlay::after, .pageload-overlay::before {
   content: '';
   position: fixed;
@@ -8336,7 +8316,7 @@ div[name="contact"] {
   transition: opacity 0.15s, visibility 0s 0.15s;
 }
 
-/* line 47, ../_sass/_page_loader.scss */
+/* line 52, ../_sass/_page_loader.scss */
 .pageload-overlay::after {
   background: #333333;
   -webkit-transform: translateX(-20px);
@@ -8345,7 +8325,7 @@ div[name="contact"] {
   animation: moveRight 0.6s linear infinite alternate;
 }
 
-/* line 55, ../_sass/_page_loader.scss */
+/* line 61, ../_sass/_page_loader.scss */
 .pageload-overlay::before {
   background: #F9B982;
   -webkit-transform: translateX(20px);
@@ -8355,34 +8335,34 @@ div[name="contact"] {
 }
 
 @-webkit-keyframes moveRight {
-  /* line 65, ../_sass/_page_loader.scss */
+  /* line 71, ../_sass/_page_loader.scss */
   to {
     -webkit-transform: translateX(20px);
   }
 }
 
 @keyframes moveRight {
-  /* line 69, ../_sass/_page_loader.scss */
+  /* line 77, ../_sass/_page_loader.scss */
   to {
     transform: translateX(20px);
   }
 }
 
 @-webkit-keyframes moveLeft {
-  /* line 73, ../_sass/_page_loader.scss */
+  /* line 83, ../_sass/_page_loader.scss */
   to {
     -webkit-transform: translateX(-20px);
   }
 }
 
 @keyframes moveLeft {
-  /* line 77, ../_sass/_page_loader.scss */
+  /* line 89, ../_sass/_page_loader.scss */
   to {
     transform: translateX(-20px);
   }
 }
 
-/* line 81, ../_sass/_page_loader.scss */
+/* line 95, ../_sass/_page_loader.scss */
 .pageload-loading.pageload-overlay::after,
 .pageload-loading.pageload-overlay::before {
   opacity: 1;
@@ -8391,12 +8371,12 @@ div[name="contact"] {
   transition: opacity 0.3s;
 }
 
-/* line 3, ../_sass/_contactus.scss */
+/* line 1, ../_sass/_contactus.scss */
 .msg-text {
   height: 150px;
 }
 
-/* line 6, ../_sass/_contactus.scss */
+/* line 5, ../_sass/_contactus.scss */
 small.error {
   opacity: 0;
   right: 15px;
@@ -8404,17 +8384,71 @@ small.error {
 }
 
 /* line 11, ../_sass/_contactus.scss */
-.message {
+.success-message {
   display: none;
 }
 
-/* line 14, ../_sass/_contactus.scss */
+/* line 15, ../_sass/_contactus.scss */
 .input-label {
   margin-bottom: 27px;
 }
 
-/* line 18, ../_sass/_contactus.scss */
+/* line 19, ../_sass/_contactus.scss */
 .btn-contact {
   margin-top: 10px;
   float: right;
+}
+
+/* line 24, ../_sass/_contactus.scss */
+.show-error {
+  box-shadow: 0px 0px 5px red !important;
+  -webkit-transition: all 1s ease-out 0.2s;
+  -moz-transition: all 1s ease-out 0.2s;
+  -o-transition: all 1s ease-out 0.2s;
+  transition: all 1s ease-out 0.2s;
+}
+
+/* line 1, ../_sass/_googlemap.scss */
+#google-map {
+  width: 100%;
+  height: 400px;
+  background-color: transparent !important;
+  border: solid 2px #F58220;
+}
+/* line 7, ../_sass/_googlemap.scss */
+#google-map .gmnoprint {
+  display: none;
+}
+
+/* line 1, ../_sass/_main.scss */
+#section-home {
+  height: 100vh;
+}
+
+/* line 5, ../_sass/_main.scss */
+div[data-magellan-destination],
+#footer {
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+}
+
+/* line 11, ../_sass/_main.scss */
+div[name="about"],
+div[name="contact"] {
+  background-color: #F4F6F8;
+}
+
+/* line 15, ../_sass/_main.scss */
+.row .small-12.columns.text-center.img-sub-container img {
+  margin-top: 100px;
+}
+
+/* line 19, ../_sass/_main.scss */
+#footer {
+  background-color: #333;
+}
+
+/* line 23, ../_sass/_main.scss */
+#footer-font-color {
+  color: #F58220;
 }
