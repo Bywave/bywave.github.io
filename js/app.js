@@ -63,6 +63,28 @@ $(function(){
     ContactForm.init();
 });
 
+function loadAfterPreLoad(){
+		/**
+		* Google Maps
+		* init google maps here so that on resize, it wil render a width and height correctly
+		*/
+		initGoogleMap();
+		$('#home-logo').css({
+			opacity: 1,
+			marginTop: '100px',
+		});	
+		$('#subtitle-1').css({
+			opacity: 1,
+			marginTop: '0px',
+		});	
+		$('#subtitle-2').css({
+			opacity: 1,
+		});	
+		$('.static-header').css({
+			opacity: 1,
+		});	
+}
+
 /**
 * Fading header
 */
@@ -125,6 +147,8 @@ function isEmail(email) {
     return character.test(email);
 }
 
+
+
 /**
 * Case Studies
 */
@@ -157,11 +181,21 @@ function initPageLoader() {
 		loader.hide();
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
-		/**
-		* Google Maps
-		* init google maps here so that on resize, it wil render a width and height correctly
-		*/
-		setTimeout('initGoogleMap()', pageloadDelay);
+
+		$('#home-bg-transparent').css('backgroundColor', 'rgba(0,0,0,0.4)');
+		$('#img-paralax').backstretch("../img/bg_home_large.jpg");	
+
+		  $('div[data-type="background"]').each(function(){
+		      var $thisObj = $(this);
+		      var $bgobj = $thisObj.find('.backstretch img'); // assigning the object
+		      
+		      $(window).scroll(function() {
+		            var yPos = -($(this).scrollTop() / $thisObj.data('speed'));
+		            $bgobj.css({marginTop: Math.round(-yPos * 5) + 'px'});
+		        });
+		    }); 	
+		
+		setTimeout('loadAfterPreLoad()', pageloadDelay);
 	}, pageloadDelay);
 }
 
