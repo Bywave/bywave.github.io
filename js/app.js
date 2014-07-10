@@ -133,7 +133,7 @@ function isEmail(email) {
 */
 function initPageLoader() {
 	$('.pageload-link').on('click', function(ev){
-		ev.preventDefault();
+		// ev.preventDefault();
 		loader.show();
 		$thisObj = $(this);
 

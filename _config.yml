@@ -8,6 +8,7 @@ url: "http://bywave.com.au"
 # Build settings
 markdown: kramdown
 permalink: pretty
+auto: true
 
 sass:
   sass_dir: _sass
