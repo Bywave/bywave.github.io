@@ -16,7 +16,7 @@
         @include rotate(0deg, 0deg);
         @include style(preserve-3d);
         @include visibility(hidden);
-        @include transition(all, .4s, ease-in-out, 0s);
+        @include transition(all .4s ease-in-out 0s);
         top: 0;
         left: 0;
         z-index: 900;
@@ -29,7 +29,7 @@
         @include rotate(0deg, -179deg); 
         @include style(preserve-3d);
         @include visibility(hidden);
-        @include transition(all, .4s, ease-in-out, 0s);
+        @include transition(all .4s ease-in-out 0s);
         background: none repeat scroll 0% 0% #f9f9f9;
         float: none;
         top: 0;

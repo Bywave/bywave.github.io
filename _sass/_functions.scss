@@ -23,13 +23,6 @@
       backface-visibility: $type;
 }
 
-@mixin transition($property, $duration, $effect, $delay){
-  -webkit-transition: $property $duration $effect $delay;
-    -moz-transition: $property $duration $effect $delay;
-      -o-transition: $property $duration $effect $delay;
-        transition: $property $duration $effect $delay;
-}
-
 @mixin box-shadow($hOffset, $vOffset, $blurRadius, $spreadRadius, $color) {
   -webkit-box-shadow: $hOffset $vOffset $blurRadius $spreadRadius $color; // iOS <4.3 & Android <4.1
     box-shadow: $hOffset $vOffset $blurRadius $spreadRadius $color;
@@ -39,4 +32,47 @@
   -webkit-opacity: $percent;
     -moz-opacity: $percent;
      opacity: $percent;
+}
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+  $vendor-prefixed-properties: transform background-clip background-size;
+  $result: ();
+  @each $prefix in $prefixes {
+    @if index($vendor-prefixed-properties, $property) {
+      $property: -#{$prefix}-#{$property}
+    }
+    $result: append($result, $property);
+  }
+  @return $result;
+}
+
+// Transiton
+@function trans-prefix($transition, $prefix: moz) {
+  $prefixed: ();
+  @each $trans in $transition {
+    $prop-name: nth($trans, 1);
+    $vendor-prop-name: prefix($prop-name, $prefix);
+    $prop-vals: nth($trans, 2);
+    $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+  }
+  @return $prefixed;
+}
+
+@mixin transition($values...) {
+  $transitions: ();
+  @each $declaration in $values {
+    $prop: nth($declaration, 1);
+    $prop-opts: ();
+    $length: length($declaration);
+    @for $i from 2 through $length {
+      $prop-opts: append($prop-opts, nth($declaration, $i));
+    }
+    $trans: ($prop, $prop-opts);
+    $transitions: append($transitions, $trans, comma);
+  }
+  
+  -webkit-transition: trans-prefix($transitions, webkit);
+  -moz-transition: trans-prefix($transitions, moz);
+  -o-transition: trans-prefix($transitions, o);
+  transition: $values;
 }
