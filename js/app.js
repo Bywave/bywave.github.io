@@ -21,9 +21,9 @@ var pageloadDelay = 1000,
 /**
 * Contact form
 */
-var nameVal; 
-var email; 
-var msg;
+var nameVal, 
+    email,
+    msg;
 /**
 * Google Maps
 */
@@ -60,9 +60,30 @@ $(function(){
         /**
 	* Contact Form
 	*/
-	// initContactForm();
-	ContacForm.init();
+    ContactForm.init();
 });
+
+function loadAfterPreLoad(){
+		/**
+		* Google Maps
+		* init google maps here so that on resize, it wil render a width and height correctly
+		*/
+		initGoogleMap();
+		$('#home-logo').css({
+			opacity: 1,
+			marginTop: '100px',
+		});	
+		$('#subtitle-1').css({
+			opacity: 1,
+			marginTop: '0px',
+		});	
+		$('#subtitle-2').css({
+			opacity: 1,
+		});	
+		$('.static-header').css({
+			opacity: 1,
+		});	
+}
 
 /**
 * Fading header
@@ -123,8 +144,8 @@ function isElementInViewport (el) {
 }
 
 function isEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    var character = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return character.test(email);
 }
 
 	
@@ -160,11 +181,21 @@ function initPageLoader() {
 		loader.hide();
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
-		/**
-		* Google Maps
-		* init google maps here so that on resize, it wil render a width and height correctly
-		*/
-		setTimeout('initGoogleMap()', pageloadDelay);
+
+		$('#home-bg-transparent').css('backgroundColor', 'rgba(0,0,0,0.4)');
+		$('#img-paralax').backstretch("../img/bg_home_large.jpg");	
+
+		  $('div[data-type="background"]').each(function(){
+		      var $thisObj = $(this);
+		      var $bgobj = $thisObj.find('.backstretch img'); // assigning the object
+		      
+		      $(window).scroll(function() {
+		            var yPos = -($(this).scrollTop() / $thisObj.data('speed'));
+		            $bgobj.css({marginTop: Math.round(-yPos * 5) + 'px'});
+		        });
+		    }); 	
+		
+		setTimeout('loadAfterPreLoad()', pageloadDelay);
 	}, pageloadDelay);
 }
 
@@ -172,7 +203,7 @@ function initPageLoader() {
 * Contact Form -- create object
 */
 
-var ContacForm = {
+var ContactForm = {
 	init: function(){
 
 	if(!nameVal){
@@ -192,14 +223,14 @@ var ContacForm = {
 	 				dataType: 'xml',
 	 				statusCode: {
 	 					0: function (){
-	 						ContacForm.clearContactFields();
+                                ContactForm.clearContactFields();
 	 						ContacForm.displaySuccess();
 	                        //Success message
 	                    },
 	                    200: function (){
-	                    	ContacForm.clearContactFields();
+                                ContactForm.clearContactFields();
 	                        //Success Message
-	                       	ContacForm.displaySuccess();
+                                ContactForm.displaySuccess();
 	                    }
 	                }	
 	            });
@@ -221,8 +252,7 @@ var ContacForm = {
  					msg.addClass('show-error');
  					$('.error.prompt.reqmsg').animate({opacity: 1}, 'fast');
  				}
-	 			
-	 			ContacForm.setTimeoutError();
+                    ContactForm.setTimeoutError();
 			}
 		}
  	});
@@ -248,7 +278,7 @@ var ContacForm = {
 		if(!isEmail(emailVal) && email != ''){		
 			email.addClass('show-error');
 			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
-			ContacForm.setTimeoutError();
+            ContactForm.setTimeoutError();
 		}
 	},
 };
