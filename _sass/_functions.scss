@@ -72,7 +72,7 @@
   }
   
   -webkit-transition: trans-prefix($transitions, webkit);
-  -moz-transition: trans-prefix($transitions, moz);
-  -o-transition: trans-prefix($transitions, o);
-  transition: $values;
+    -moz-transition: trans-prefix($transitions, moz);
+      -o-transition: trans-prefix($transitions, o);
+        transition: $values;
 }

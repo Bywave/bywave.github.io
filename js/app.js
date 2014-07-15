@@ -68,7 +68,6 @@ function loadAfterPreLoad(){
 		* Google Maps
 		* init google maps here so that on resize, it wil render a width and height correctly
 		*/
-		initGoogleMap();
 		$('#home-logo').css({
 			opacity: 1,
 			marginTop: '100px',
@@ -95,28 +94,28 @@ var FadingHeader = {
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-	setInterval(function(){
-			if(!isElementInViewport(document.documentElement)){
+		$(document).scroll(function(){
+			if(!isElementInViewport(this.documentElement)){
 
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
-				clearTimeout(timeoutFadingHeader);
+					clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
-			}
+				}
 				else if(fadingHeader.css("opacity") == '0'){
 					FadingHeader.show();
+				}
 			}
-		}
-		else{
+			else{
 				if(fadingHeader.css("opacity") == '1' && !isHeaderFading){
 					isHeaderFading = true;
-				clearTimeout(timeoutFadingHeader);
-				timeoutFadingHeader = setTimeout(function(){
-						FadingHeader.hide();
-						isHeaderFading = false;
-				}, durationNavHide);
+					clearTimeout(timeoutFadingHeader);
+					timeoutFadingHeader = setTimeout(function(){
+							FadingHeader.hide();
+							isHeaderFading = false;
+					}, durationNavHide);
+				}
 			}
-		}
-	}, 100);
+		});
 	},
 	hide: function(){
 		fadingHeader.animate({
@@ -196,6 +195,7 @@ function initPageLoader() {
 		    }); 	
 		
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
+		setTimeout('initGoogleMap()', pageloadDelay * 2);
 	}, pageloadDelay);
 }
 
@@ -293,7 +293,11 @@ function initGoogleMap(){
 		center: companyLocation,
 		zoom: 16,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true,
+		// disableDefaultUI: true,
+		streetViewControl: false,
+		panControl: false,
+    	mapTypeControl: false,
+		scrollwheel: false,
 		styles: [
 				    {
 				        "featureType": "landscape",
@@ -426,7 +430,7 @@ function initGoogleMap(){
 	googleMapMarker = new google.maps.Marker({
 	    position: companyLocation,
 	    map: googleMap,
-	    animation: google.maps.Animation.BOUNCE,
+	    // animation: google.maps.Animation.BOUNCE,
 	});
 
 	markerInfowindow = new google.maps.InfoWindow({

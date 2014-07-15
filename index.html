@@ -31,7 +31,7 @@ layout: default
 
     <div class="row" data-magellan-destination="work" id="work">
         <div class="small-12 large-10 columns text-center small-centered">
-            <a name="work"><h3>Our Work</h3></a>
+            <a name="work"><h1>Our Work</h1></a>
             <br/><br/>
             <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 lists">
                 <li>
@@ -156,7 +156,7 @@ layout: default
     <!-- ABOUT -->
     <div class="row" data-magellan-destination="about" id="about">
         <div class="small-12 columns large-6 text-center small-centered">
-            <a name="about"><h3>About us</h3></a>
+            <a name="about"><h1>About us</h1></a>
 
             <p class="center">We hired ourselves for this product. Learn is a subscription learning service that now teaches
                 over 500 students the skills necessary to launch their own app or get hired as a professional Rails
@@ -168,50 +168,50 @@ layout: default
 
     <!-- CONTACT -->
     <div class="row" data-magellan-destination="contact" id="contact">
+        <a name="contact"><h1 class="text-center">Contact us</h1></a>
+        <p class="text-center">Don't be shy - we want to hear from you!</p>
+        
+        <div class="header-shadow"></div>
+        <div id="google-map"></div>
+        
         <div class="small-12 large-10 columns small-centered">
-            <a name="contact"><h1 class="text-center">Contact us</h1></a>
+            <div class="small-12 medium-6 large-6 columns">
+                    
+                <br/>
 
-            <p class="text-center">Don't be shy - we want to hear from you!</p>
+                <p class="text-center">
+                    Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
+                    Surry Hills, NSW, 2010<br/>
+                    Phone: +61 (2) 8203 4048<br/>
+                    Mail: info@bywave.com.au<br/>
+                </p>
+            </div>
 
-            <div class="row">
-                <div class="small-12 medium-6 large-6 columns">
-                    <div id="google-map"></div>
-                    <br/>
+            <div class="small-12 medium-6 large-6 columns">
+                <p class="success-message">"Thank you"</p>
 
+                <form id="contact-form">
                     <p class="text-center">
-                        Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
-                        Surry Hills, NSW, 2010<br/>
-                        Phone: +61 (2) 8203 4048<br/>
-                        Mail: info@bywave.com.au<br/>
+                        If you have a query, please give us a call or fill out the form. Whether it be a quote
+                        request or general enquiry about our services, we’re happy to answer any of your questions.
                     </p>
-                </div>
-
-                <div class="small-12 medium-6 large-6 columns">
-                    <p class="success-message">"Thank you"</p>
-
-                    <form id="contact-form">
-                        <p class="text-center">
-                            If you have a query, please give us a call or fill out the form. Whether it be a quote
-                            request or general enquiry about our services, we’re happy to answer any of your questions.
-                        </p>
-                        <label class="input-label">Name
-                            <input class="error" id="nameVal" name="entry.1583774038" type="text"
-                                   placeholder="Name" width="100%">
-                            <small class="error prompt reqname">Please fill out this field</small>
-                        </label>
-                        <label class="input-label">Email
-                            <input class="error" id="email" name="entry.1932651370" type="text"
-                                   placeholder="Email" width="100%" onblur="ContacForm.validateEmail(this.value)">
-                            <small class="error prompt invemail">Invalid Email</small>
-                            <small class="error prompt reqemail">Please fill out this field</small>
-                        </label>
-                        <label class="input-label">Message
-                            <textarea class="msg-text error" id="msg" name="entry.318137689" width="100%"></textarea>
-                            <small class="error prompt reqmsg"> Please fill out this field</small>
-                        </label>
-                        <input class="button [tiny radius round] btn-contact" type="submit" value="Submit">
-                    </form>
-                </div>
+                    <label class="input-label">Name
+                        <input class="error" id="nameVal" name="entry.1583774038" type="text"
+                               placeholder="Name" width="100%">
+                        <small class="error prompt reqname">Please fill out this field</small>
+                    </label>
+                    <label class="input-label">Email
+                        <input class="error" id="email" name="entry.1932651370" type="text"
+                               placeholder="Email" width="100%" onblur="ContacForm.validateEmail(this.value)">
+                        <small class="error prompt invemail">Invalid Email</small>
+                        <small class="error prompt reqemail">Please fill out this field</small>
+                    </label>
+                    <label class="input-label">Message
+                        <textarea class="msg-text error" id="msg" name="entry.318137689" width="100%"></textarea>
+                        <small class="error prompt reqmsg"> Please fill out this field</small>
+                    </label>
+                    <input class="button [tiny radius round] btn-contact" type="submit" value="Submit">
+                </form>
             </div>
         </div>
     </div>

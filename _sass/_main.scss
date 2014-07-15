@@ -1,27 +1,53 @@
 #section-home {
-    height: 100vh; // This is interesting, however we should check browser support
+  height: 100vh; // This is interesting, however we should check browser support
 }
-div[data-magellan-destination],
-#footer {
-    padding-bottom: 4.4em;
-    padding-top: 4.4em;
+div[data-magellan-destination]{
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
 }
-
 div[name="about"],
 div[name="contact"] {
-    background-color: #F4F6F8;
+  background-color: #F4F6F8;
 }
 
 #footer{
-    background-color: #333; 
-}
+  background-color: #222;
+  padding-top: 1em;
+  border-top: 1px solid #E4E4E4;
 
-#footer-font-color{
-    color:#F58220;
+  a{
+    color: #FFF;
+    border-bottom: 1px solid #333;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .2em;
+    margin-left: .5em;
+    @include transition(all 0.2s ease-in-out 0s);
+  }
+  a:hover{
+    color: #F58220;
+  }
+  p{
+    color: #999;
+  }
 }
-
+#footer-callout {
+  margin-bottom: 7px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+#footer-callout:after {
+  background: none repeat scroll 0% 0% #FFF;
+  content: "";
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  float: none;
+  transform: rotate(45deg);
+}
 #img-paralax{
-   background-attachment: fixed;  
+  background-attachment: fixed;  
 }
 
 #img-paralax-1{
