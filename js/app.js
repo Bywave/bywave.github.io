@@ -68,7 +68,6 @@ function loadAfterPreLoad(){
 		* Google Maps
 		* init google maps here so that on resize, it wil render a width and height correctly
 		*/
-		initGoogleMap();
 		$('#home-logo').css({
 			opacity: 1,
 			marginTop: '100px',
@@ -95,27 +94,28 @@ var FadingHeader = {
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-	setInterval(function(){
-			if(!isElementInViewport(document.documentElement)){
+		$(document).scroll(function(){
+			if(!isElementInViewport(this.documentElement)){
+
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
-				clearTimeout(timeoutFadingHeader);
+					clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
-			}
+				}
 				else if(fadingHeader.css("opacity") == '0'){
 					FadingHeader.show();
+				}
 			}
-		}
-		else{
+			else{
 				if(fadingHeader.css("opacity") == '1' && !isHeaderFading){
 					isHeaderFading = true;
-				clearTimeout(timeoutFadingHeader);
-				timeoutFadingHeader = setTimeout(function(){
-						FadingHeader.hide();
-						isHeaderFading = false;
-				}, durationNavHide);
+					clearTimeout(timeoutFadingHeader);
+					timeoutFadingHeader = setTimeout(function(){
+							FadingHeader.hide();
+							isHeaderFading = false;
+					}, durationNavHide);
+				}
 			}
-		}
-	}, 100);
+		});
 	},
 	hide: function(){
 		fadingHeader.animate({
@@ -147,14 +147,13 @@ function isEmail(email) {
     return character.test(email);
 }
 
-
-
+	
 /**
 * Case Studies
 */
 function initPageLoader() {
 	$('.pageload-link').on('click', function(ev){
-		ev.preventDefault();
+		// ev.preventDefault();
 		loader.show();
 		$thisObj = $(this);
 
@@ -196,6 +195,7 @@ function initPageLoader() {
 		    }); 	
 		
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
+		setTimeout('initGoogleMap()', pageloadDelay * 2);
 	}, pageloadDelay);
 }
 
@@ -205,6 +205,7 @@ function initPageLoader() {
 
 var ContactForm = {
 	init: function(){
+
 	if(!nameVal){
 		nameVal = $('#nameVal');
 		email = $('#email');
@@ -287,11 +288,16 @@ var ContactForm = {
 */
 function initGoogleMap(){
 	companyLocation = new google.maps.LatLng(7.0622092,125.609086);
+
 	googleMap = new google.maps.Map(document.getElementById("google-map"), {
 		center: companyLocation,
 		zoom: 16,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true,
+		// disableDefaultUI: true,
+		streetViewControl: false,
+		panControl: false,
+    	mapTypeControl: false,
+		scrollwheel: false,
 		styles: [
 				    {
 				        "featureType": "landscape",
@@ -424,7 +430,7 @@ function initGoogleMap(){
 	googleMapMarker = new google.maps.Marker({
 	    position: companyLocation,
 	    map: googleMap,
-	    animation: google.maps.Animation.BOUNCE,
+	    // animation: google.maps.Animation.BOUNCE,
 	});
 
 	markerInfowindow = new google.maps.InfoWindow({
@@ -432,15 +438,15 @@ function initGoogleMap(){
   	});
 
 	// markerInfowindow.open(googleMap, googleMapMarker);
- //     google.maps.event.addListener(googleMapMarker, 'click', function() {
-    //  //closed
-    //     if(markerInfowindow.getMap() == null){
-    //      markerInfowindow.open(googleMap, googleMapMarker);
-    //     }
-    //     else{
-    //      markerInfowindow.close();
-    //     }
-    // });
+ //  	google.maps.event.addListener(googleMapMarker, 'click', function() {
+	// 	//closed
+	//     if(markerInfowindow.getMap() == null){
+	//     	markerInfowindow.open(googleMap, googleMapMarker);
+	//     }
+	//     else{
+	//     	markerInfowindow.close();
+	//     }
+	// });
 
   	google.maps.event.addListener(googleMap, 'center_changed', function() {
 	    // 3 seconds after the center of the map has changed, pan back to the
@@ -448,7 +454,7 @@ function initGoogleMap(){
 	    clearTimeout(returnToMarkerTimeout);
 	    returnToMarkerTimeout = setTimeout(function() {
 	    	googleMap.panTo(googleMapMarker.getPosition());
-            // if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
+	    	// if(markerInfowindow.getMap() == null) markerInfowindow.open(googleMap, googleMapMarker);
 	    }, 10000);
 	});
 }

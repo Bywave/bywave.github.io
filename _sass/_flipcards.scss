@@ -1,83 +1,125 @@
+$card-radius : 2px;
+/* -- Extend -- */
+.flip-card {
+  border-radius: inherit;
+  background-color: whitesmoke;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.098), 0px 0px 3px rgba(0, 0, 0, 0.098);
+}
+
 /* -- Panel -- */
 .panel {
-    @include perspective(600px);
-    background: transparent;
-    width: 100%;
-    padding :0px;
-    border-color: transparent;
-    position: relative;
-    
-    img {
-        width: inherit;
-        height: inherit;
-    }
+  @include perspective(600px);
+  background: transparent;
+  width: 100%;
+  padding :0px;
+  border-color: transparent;
+  border-radius: $card-radius;
+
+  img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit
+  }
 /* -- Front Card -- */
-    .front {
-        @include rotate(0deg, 0deg);
-        @include style(preserve-3d);
-        @include visibility(hidden);
-        @include transition(all .4s ease-in-out 0s);
-        top: 0;
-        left: 0;
-        z-index: 900;
-        width: 100%;
-        text-align: center; 
-        box-shadow: 0 1px 2px 0px #aaa;
-    }
+  .front {
+    @extend .flip-card; 
+    @include rotate(0deg, 0deg);
+    @include style(preserve-3d);
+    @include visibility(hidden);
+    @include transition(all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275));
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    text-align: center; 
+    // box-shadow: 0 1px 2px 0px #aaa;
+  }
 /*-- Back card --*/
-    .back {
-        @include rotate(0deg, -179deg); 
-        @include style(preserve-3d);
-        @include visibility(hidden);
-        @include transition(all .4s ease-in-out 0s);
-        background: none repeat scroll 0% 0% #f9f9f9;
-        float: none;
-        top: 0;
-        left: 0;
-        z-index: 800;
-        width: inherit;
-        height: 100%;
-        position: absolute;
+  .back {
+    @extend .flip-card; 
+    @include rotate(0deg, -179deg); 
+    @include style(preserve-3d);
+    @include visibility(hidden);
+    @include transition(all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275));
+    background: none repeat scroll 0% 0% #f9f9f9;
+    // fafafa
+    float: none;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: 100%;
+    position: absolute;
+
+    .pageload-link{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #F68320;
     }
+
+    hr{
+      margin: 1rem 0 0rem;
+      height: 12px;
+      border: 0;
+      box-shadow: 0 6px 12px -12px rgba(0, 0, 0, 0.5) inset
+    }
+
+    core-toolbar{
+      background-color: #F68320;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    core-header-panel{
+      width: inherit;
+      height: inherit;
+    }
+  }
+
 }
 
 .panel::after{
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .panel.flip {
-    .front {
-        z-index: 900; 
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(-180deg);
-        transform: rotateY(-180deg);
-        box-shadow: none;
-    }
+  .front {
+     z-index: 900; 
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(-180deg);
+     transform: rotateY(-180deg);
+     // box-shadow: none;
+}
 
-    .back{
-        z-index: 1000;
-        @include rotate(0deg, 0deg); 
-        box-shadow: 0 1px 2px 0px #aaa;
-        width:100%;
-    }
+  .back{
+    z-index: 1000;
+    @include rotate(0deg, 0deg); 
+    // box-shadow: 0 1px 2px 0px #aaa;
+   }
 }
 
 .back > .back-header{
-    padding: 10px;
-    background-color: #f68320;
-    color: #FFF;
-    fill: #FFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  // display: block;
+  border-radius: $card-radius $card-radius 0px 0px;
+  padding: 10px;
+  background-color: #f68320;
+  color: #FFF;
+  fill: #FFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .back > .back-footer{
-    background-color: #f68320;
-    color: #FFF;
-    fill: #FFF;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-    position:absolute;                  
-    bottom:0; 
-    width: 100%; 
+  border-radius: 0px 0px $card-radius $card-radius;
+  // padding: 8px;
+  background-color: #f68320;
+  color: #FFF;
+  fill: #FFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  position:absolute;                  
+  bottom:0; 
+  width: 100%; 
 }
