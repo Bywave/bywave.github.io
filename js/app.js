@@ -34,6 +34,16 @@ var googleMap,
 	markerInfowindow,
 	returnToMarkerTimeout;
 /**
+* 
+*/
+var sliderImages = [
+	'aboutus1.jpg',
+	'aboutus2.JPG',
+	'aboutus3.jpg',
+	'aboutus4.jpg',
+	];
+
+/**
 * On Ready
 */
 $(function(){
@@ -64,11 +74,23 @@ $(function(){
     ContactForm.init();
 });
 
+
+
 function loadAfterPreLoad(){
-		/**
-		* Google Maps
-		* init google maps here so that on resize, it wil render a width and height correctly
-		*/
+	homeLoad();
+		$('.slider').slick({
+		    autoplay: true,
+		    autoplaySpeed: 2000,
+		});
+
+		$('.slick-slide').each(function(index, element){
+			index = index > sliderImages.length ? 1 : 
+				index <= 0 ? sliderImages.length : index;
+			$(element).backstretch('../img/' + sliderImages[index - 1]);
+		});
+}
+
+function homeLoad(){
 		$('#home-logo').css({
 			opacity: 1,
 			marginTop: '100px',
@@ -184,7 +206,7 @@ function initPageLoader() {
 		$('#footer')[0].classList.toggle('show');
 
 		$('#home-bg-transparent').css('backgroundColor', 'rgba(0,0,0,0.4)');
-		$('#img-paralax').backstretch("../img/bg_home_large.jpg");	
+		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");	
 
 		  $('div[data-type="background"]').each(function(){
 		      var $thisObj = $(this);
