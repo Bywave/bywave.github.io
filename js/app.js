@@ -9,7 +9,8 @@ var timeoutFadingHeader,
 	isHeaderFading = false,
 	fadingHeader,
 	durationNavAnim = 250,
-	durationNavHide = 500;
+	durationNavHide = 500,
+	topBarHeight = -1;
 /**
 * Page Loader
 */
@@ -118,16 +119,17 @@ var FadingHeader = {
 		});
 	},
 	hide: function(){
-		fadingHeader.animate({
+		fadingHeader.css({
 			opacity: 0,
-			marginTop: '-45px',
-		}, durationNavAnim);
+			marginTop: topBarHeight,
+		});
 	},
 	show: function(){
-		fadingHeader.animate({
+		if(topBarHeight == -1) topBarHeight = fadingHeader.css('margin-top');
+		fadingHeader.css({
 			opacity: 1,
 			marginTop: '0px'
-		}, durationNavAnim);
+		});
 	},
 };
 
