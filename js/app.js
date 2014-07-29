@@ -205,7 +205,7 @@ function initPageLoader() {
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
-		$('#home-bg-transparent').css('backgroundColor', 'rgba(0,0,0,0.4)');
+		$('#home-bg-transparent').css('backgroundColor', 'rgba(0, 0, 0, 0.6)');
 		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");	
 
 		  $('div[data-type="background"]').each(function(){
