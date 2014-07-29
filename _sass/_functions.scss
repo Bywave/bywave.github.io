@@ -76,3 +76,9 @@
       -o-transition: trans-prefix($transitions, o);
         transition: $values;
 }
+
+@mixin border-radius($pixels){
+  -webkit-border-radius: $pixels;
+  -moz-border-radius: $pixels;
+  border-radius: $pixels;
+}
