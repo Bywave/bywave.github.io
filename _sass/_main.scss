@@ -1,27 +1,80 @@
-#section-home {
-    height: 100vh; // This is interesting, however we should check browser support
+//---Typography---//
+.heading-shadow{
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
-div[data-magellan-destination],
-#footer {
-    padding-bottom: 4.4em;
-    padding-top: 4.4em;
+.shadow-dark{
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.15);
+}
+.shadow-light{
+  text-shadow: 0px 1px #FFF;
 }
 
+#section-home {
+  height: 100vh; // This is interesting, however we should check browser support
+}
+div[data-magellan-destination]{
+  padding-bottom: 4.4em;
+  padding-top: 4.4em;
+
+  h1{
+    color: #F68320;
+    @extend .shadow-dark;
+  }
+
+  p{
+    color: #666;
+  }
+}
 div[name="about"],
 div[name="contact"] {
-    background-color: #F4F6F8;
+  background-color: #F4F6F8;
 }
 
 #footer{
-    background-color: #333; 
-}
+  background-color: #222;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  border-top: 1px solid #E4E4E4;
 
-#footer-font-color{
-    color:#F58220;
-}
+  @extend .shadow-dark;
 
+  a{
+    color: #FFF;
+    border-bottom: 1px solid #333;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .2em;
+    margin-left: .5em;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include transition(all 0.2s ease-in-out 0s);
+  }
+  a:hover{
+    color: #F58220;
+  }
+  p{
+    color: #999;
+  }
+}
+#footer-callout {
+  margin-bottom: 11px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+#footer-callout:after {
+  background: none repeat scroll 0% 0% #FFF;
+  content: "";
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  float: none;
+  transform: rotate(45deg);
+}
 #img-paralax{
-   background-attachment: fixed;  
+  background-attachment: fixed;  
 }
 
 #img-paralax-1{
@@ -40,6 +93,8 @@ div[name="contact"] {
 	@include transition(margin-top 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 250ms cubic-bezier(0.55, 0.055, 0.675, 0.1) 600ms);
 	color: #fff;
 	opacity: 0;
+
+  @extend .heading-shadow;
 }
 
 #subtitle-2
@@ -47,4 +102,68 @@ div[name="contact"] {
 	color: #fff;
 	opacity: 0;
 	@include transition(margin-top 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94), all 500ms cubic-bezier(0.55, 0.055, 0.675, 0.1) 500ms);
+
+  @extend .heading-shadow;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 40px !important;
+}
+.slick-next {
+    right: 15px !important;
+}
+.slick-prev {
+    left: 15px !important;
+}
+.slick-prev, .slick-next {
+    height: auto !important;
+    width: auto !important;
+ }
+
+.slider{
+	height: 100%;
+	width:100% !important;
+}
+
+.img-1{
+	height: 500px;
+}
+.img-2{
+	height:500px;
+}
+.img-3{
+	height:500px;
+}
+.img-4{
+	height:500px;
+}
+.slick-slider{
+	height: 80vh;
+}
+.slick-slide{
+	height: 80vh !important;
+}
+
+button:hover, button:focus, .button:hover, .button:focus{
+	background-color: transparent;
+}
+
+.img-bg-trans{
+	 position: relative;
+     background: rgba(0,0,0,1);
+    // display: block;
+    // height: 20px;
+    // width: 20px;
+    // line-height: 0;
+    // font-size: 0px;
+    // cursor: pointer;
+    // background: none repeat scroll 0% 0% transparent;
+    // color: transparent;
+    // top: 50%;
+    // margin-top: -10px;
+    // padding: 0px;
+    // border: medium none;
+    // outline: medium none;
+    width: 100% !important;
 }

@@ -1,45 +1,53 @@
-$nav-item-padding : .53em;
-
+$nav-item-padding : 1.25em;
+$top-bar-height: 3.8em;
 
 .top-bar{
   padding: 10px;
+  height: $top-bar-height;
 
-  li{
-    text-transform: uppercase;
+  ul{
+    margin-top: 0.2em;
 
-    a{
-      border-bottom: 3px solid transparent;
-      padding-bottom: $nav-item-padding;
-      @include transition(border-color 0.218s ease 0s);
-    }
-    a:hover {
-      color: #EEE;
-      text-decoration: none;
-      background-color: transparent;
-      border-color: #F68320;
-    }
-  }
+    li{
+      text-transform: uppercase;
+      margin-bottom: 1rem;
 
-  li.active {
-    a{
-      color: #EEE;
-      text-decoration: none;
-      background-color: transparent;
-      border-color: #F68320;
-      padding-bottom: $nav-item-padding;
-      border-radius: 0px;
-      font-weight: bold;
-      @include transition(border-color 0.218 ease 3s);
+      a{
+        border-bottom: 3px solid transparent;
+        padding-bottom: $nav-item-padding;
+        @include transition(all 0.218s ease 0s);
+        @extend .shadow-dark;
+      }
+      a:hover {
+        color: #F68320;
+        text-decoration: none;
+        background-color: transparent;
+        // border-color: #F68320;
+      }
     }
-    a:hover{
-      background-color: transparent;
+
+    li.active {
+      a{
+        color: #EEE;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: #F68320;
+        padding-bottom: $nav-item-padding;
+        border-radius: 0px;
+        font-weight: bold;
+        @include transition(border-color 0.218 ease 3s);
+      }
+      a:hover{
+        background-color: transparent;
+      }
     }
   }
 }
 .static-header{
   background-color: transparent;
   opacity: 0;
-  @include transition(all 3000ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 800ms cubic-bezier(0.55, 0.055, 0.675, 0.1) 800ms);
+  padding-top: .7em;
+  @include transition(opacity 800ms cubic-bezier(0.55, 0.055, 0.675, 0.1) 800ms);
   li{
     // a:focus,
     a:hover{
@@ -60,7 +68,7 @@ $nav-item-padding : .53em;
   padding-left: 5px;
 }
 .nav-center {
-  max-width: 21em;
+  max-width: 17.5em;
   margin-left: auto;
   margin-right: auto;
 
@@ -72,11 +80,15 @@ $nav-item-padding : .53em;
 }
 .fading-header {
   position: fixed;
-  margin-top: -45px;
+  margin-top: -$top-bar-height;
   @include opacity(0);
   border-bottom: solid 1px #000;
+  background-color: #222;
+
+  @include transition(all 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940));
 
   #company-logo{
     position: absolute;
+    top: 1.2em;
   }
 }

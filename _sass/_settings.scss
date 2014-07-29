@@ -6,21 +6,22 @@
 // FOUNDATION SETTINGS
 //
 
-// This is the default html and body font-size for the base rem value.
-// $rem-base: 16px;
-
-// Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
-
-// $experimental: true;
-
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+$base-font-size: 20px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: $base-font-size;
+
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import "foundation/functions";
+
+// $experimental: true;
+
 
 // The $base-font-size is 100% while $base-line-height is 150%
 // $base-line-height: 150%;
@@ -42,14 +43,14 @@
 // Global
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default
-// $font-weight-bold: bold !default
+$font-weight-normal: normal;
+$font-weight-bold: bold;
 
 // We use these to control various global styles
 // $body-bg: #000;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: $font-weight-normal;
+$body-font-family: "freight-text-pro", sans-serif;
+$body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -125,8 +126,8 @@
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+$header-font-family: "freight-sans-pro", sans-serif;
+$header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;

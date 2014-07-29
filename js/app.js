@@ -9,7 +9,8 @@ var timeoutFadingHeader,
 	isHeaderFading = false,
 	fadingHeader,
 	durationNavAnim = 250,
-	durationNavHide = 500;
+	durationNavHide = 500,
+	topBarHeight = -1;
 /**
 * Page Loader
 */
@@ -32,6 +33,16 @@ var googleMap,
 	companyLocation,
 	markerInfowindow,
 	returnToMarkerTimeout;
+/**
+* 
+*/
+var sliderImages = [
+	'aboutus1.jpg',
+	'aboutus2.JPG',
+	'aboutus3.jpg',
+	'aboutus4.jpg',
+	];
+
 /**
 * On Ready
 */
@@ -63,12 +74,23 @@ $(function(){
     ContactForm.init();
 });
 
+
+
 function loadAfterPreLoad(){
-		/**
-		* Google Maps
-		* init google maps here so that on resize, it wil render a width and height correctly
-		*/
-		initGoogleMap();
+	homeLoad();
+		$('.slider').slick({
+		    autoplay: true,
+		    autoplaySpeed: 2000,
+		});
+
+		$('.slick-slide').each(function(index, element){
+			index = index > sliderImages.length ? 1 : 
+				index <= 0 ? sliderImages.length : index;
+			$(element).backstretch('../img/' + sliderImages[index - 1]);
+		});
+}
+
+function homeLoad(){
 		$('#home-logo').css({
 			opacity: 1,
 			marginTop: '100px',
@@ -95,40 +117,41 @@ var FadingHeader = {
 		fadingHeader = $('.fading-header');
 		viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-	setInterval(function(){
-			if(!isElementInViewport(document.documentElement)){
+		$(document).scroll(function(){
+			if(!isElementInViewport(this.documentElement)){
 
 				if(fadingHeader.css("opacity") == '1' && isHeaderFading){
-				clearTimeout(timeoutFadingHeader);
+					clearTimeout(timeoutFadingHeader);
 					isHeaderFading = false;
-			}
+				}
 				else if(fadingHeader.css("opacity") == '0'){
 					FadingHeader.show();
+				}
 			}
-		}
-		else{
+			else{
 				if(fadingHeader.css("opacity") == '1' && !isHeaderFading){
 					isHeaderFading = true;
-				clearTimeout(timeoutFadingHeader);
-				timeoutFadingHeader = setTimeout(function(){
-						FadingHeader.hide();
-						isHeaderFading = false;
-				}, durationNavHide);
+					clearTimeout(timeoutFadingHeader);
+					timeoutFadingHeader = setTimeout(function(){
+							FadingHeader.hide();
+							isHeaderFading = false;
+					}, durationNavHide);
+				}
 			}
-		}
-	}, 100);
+		});
 	},
 	hide: function(){
-		fadingHeader.animate({
+		fadingHeader.css({
 			opacity: 0,
-			marginTop: '-45px',
-		}, durationNavAnim);
+			marginTop: topBarHeight,
+		});
 	},
 	show: function(){
-		fadingHeader.animate({
+		if(topBarHeight == -1) topBarHeight = fadingHeader.css('margin-top');
+		fadingHeader.css({
 			opacity: 1,
 			marginTop: '0px'
-		}, durationNavAnim);
+		});
 	},
 };
 
@@ -183,7 +206,7 @@ function initPageLoader() {
 		$('#footer')[0].classList.toggle('show');
 
 		$('#home-bg-transparent').css('backgroundColor', 'rgba(0,0,0,0.4)');
-		$('#img-paralax').backstretch("../img/bg_home_large.jpg");	
+		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");	
 
 		  $('div[data-type="background"]').each(function(){
 		      var $thisObj = $(this);
@@ -196,6 +219,7 @@ function initPageLoader() {
 		    }); 	
 		
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
+		setTimeout('initGoogleMap()', pageloadDelay * 2);
 	}, pageloadDelay);
 }
 
@@ -293,7 +317,11 @@ function initGoogleMap(){
 		center: companyLocation,
 		zoom: 16,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true,
+		// disableDefaultUI: true,
+		streetViewControl: false,
+		panControl: false,
+    	mapTypeControl: false,
+		scrollwheel: false,
 		styles: [
 				    {
 				        "featureType": "landscape",
@@ -426,7 +454,7 @@ function initGoogleMap(){
 	googleMapMarker = new google.maps.Marker({
 	    position: companyLocation,
 	    map: googleMap,
-	    animation: google.maps.Animation.BOUNCE,
+	    // animation: google.maps.Animation.BOUNCE,
 	});
 
 	markerInfowindow = new google.maps.InfoWindow({
