@@ -4,8 +4,8 @@ layout: default
 <div class="page" id="main-page">
     <!-- Navigation Bar -->
     <div id="img-paralax" data-type="background" data-speed="10">
-        <div id="home-bg-transparent">
 
+        <div id="home-bg-transparent">
 
             <!-- HOME -->
             <div class="row" id="section-home">
@@ -19,7 +19,7 @@ layout: default
                     <h3 id="subtitle-2">Have a look at our work or get in touch to find out more</h3>
                 </div>
 
-                <nav class="top-bar" data-topbar>
+                <nav data-topbar>
                     <ul class="sub-nav nav-center">
                         <li><h5><a href="#work">Work</a></h5></li>
                         <li><h5><a href="#about">About</a></h5></li>
@@ -39,8 +39,7 @@ layout: default
             <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 lists">
                 <li>
                     <div class="card">
-                        <a class="pageload-link" data-page-origin="#main-page"
-                            data-page-destination="#work-1">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-utorial">
                             <div class="image" >
                                 <img src="/img/work/utorial-tile.png">
                             </div>
@@ -66,6 +65,57 @@ layout: default
                             <div class="image" >
                                 <img src="/img/work/transdirect-tile.png">
                             </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page"
+                           data-page-destination="#work-or">
+                            <div class="image" >
+                                <img src="/img/work/organicresponse-tile.png">
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-burbia">
+                            <div class="image"><img src="/img/work/burbia-tile.jpg"></div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-burbia">
+                            <div class="image"><img src="/img/work/f45-academy-tile.jpg"></div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-burbia">
+                            <div class="image"><img src="/img/work/pearson-tile.jpg"></div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-burbia">
+                            <div class="image"><img src="/img/work/worldproperty-tile.jpg"></div>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#work-burbia">
+                            <div class="image"><img src="/img/work/wspa-tile.jpg"></div>
                         </a>
                     </div>
                 </li>
@@ -123,13 +173,11 @@ layout: default
                         request or general enquiry about our services, we’re happy to answer any of your questions.
                     </p>
                     <label class="input-label">Name
-                        <input class="error" id="nameVal" name="entry.1583774038" type="text"
-                               placeholder="Name" width="100%">
+                        <input class="error" id="nameVal" name="entry.1583774038" type="text" width="100%">
                         <small class="error prompt reqname">Please fill out this field</small>
                     </label>
                     <label class="input-label">Email
-                        <input class="error" id="email" name="entry.1932651370" type="text"
-                               placeholder="Email" width="100%" onblur="ContacForm.validateEmail(this.value)">
+                        <input class="error" id="email" name="entry.1932651370" type="text" width="100%" onblur="ContacForm.validateEmail(this.value)">
                         <small class="error prompt invemail">Invalid Email</small>
                         <small class="error prompt reqemail">Please fill out this field</small>
                     </label>

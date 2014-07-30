@@ -119,3 +119,7 @@ div[name="contact"] {
   @include rotate(180deg, 0deg);
   bottom: 0px;
 }
+
+#section-home .top-bar {
+  background: none !important;
+}
