@@ -80,7 +80,7 @@ function loadAfterPreLoad(){
 	homeLoad();
 		$('.slider').slick({
 		    autoplay: true,
-		    autoplaySpeed: 2000,
+		    autoplaySpeed: 2000
 		});
 
 		$('.slick-slide').each(function(index, element){
@@ -93,17 +93,17 @@ function loadAfterPreLoad(){
 function homeLoad(){
 		$('#home-logo').css({
 			opacity: 1,
-			marginTop: '100px',
+			marginTop: '100px'
 		});	
 		$('#subtitle-1').css({
 			opacity: 1,
-			marginTop: '0px',
+			marginTop: '0px'
 		});	
 		$('#subtitle-2').css({
-			opacity: 1,
+			opacity: 1
 		});	
 		$('.static-header').css({
-			opacity: 1,
+			opacity: 1
 		});	
 }
 
@@ -143,7 +143,7 @@ var FadingHeader = {
 	hide: function(){
 		fadingHeader.css({
 			opacity: 0,
-			marginTop: topBarHeight,
+			marginTop: topBarHeight
 		});
 	},
 	show: function(){
@@ -152,7 +152,7 @@ var FadingHeader = {
 			opacity: 1,
 			marginTop: '0px'
 		});
-	},
+	}
 };
 
 /**
@@ -205,7 +205,7 @@ function initPageLoader() {
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
-		$('#home-bg-transparent').css('backgroundColor', 'rgba(0, 0, 0, 0.6)');
+		$('#home-bg-transparent').css('backgroundColor', 'rgba(255, 255, 255, 0.15)');
 		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");	
 
 		  $('div[data-type="background"]').each(function(){
@@ -458,7 +458,7 @@ function initGoogleMap(){
 	});
 
 	markerInfowindow = new google.maps.InfoWindow({
-      content: '<div>asdadas</div>',
+      content: '<div>asdadas</div>'
   	});
 
 	// markerInfowindow.open(googleMap, googleMapMarker);

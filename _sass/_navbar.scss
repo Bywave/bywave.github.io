@@ -1,6 +1,10 @@
 $nav-item-padding : 1.25em;
 $top-bar-height: 3.8em;
 
+#section-home > .top-bar {
+    background: none;
+}
+
 .top-bar{
   padding: 10px;
   height: $top-bar-height;

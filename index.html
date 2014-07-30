@@ -5,13 +5,7 @@ layout: default
     <!-- Navigation Bar -->
     <div id="img-paralax" data-type="background" data-speed="10">
         <div id="home-bg-transparent">
-            <nav class="top-bar static-header" data-topbar>
-                <ul class="sub-nav nav-center">
-                    <li><h5><a href="#work">Work</a></h5></li>
-                    <li><h5><a href="#about">About</a></h5></li>
-                    <li><h5><a href="#contact">Contact</a></h5></li>
-                </ul>
-            </nav>
+
 
             <!-- HOME -->
             <div class="row" id="section-home">
@@ -24,6 +18,15 @@ layout: default
 
                     <h3 id="subtitle-2">Have a look at our work or get in touch to find out more</h3>
                 </div>
+
+                <nav class="top-bar" data-topbar>
+                    <ul class="sub-nav nav-center">
+                        <li><h5><a href="#work">Work</a></h5></li>
+                        <li><h5><a href="#about">About</a></h5></li>
+                        <li><h5><a href="#contact">Contact</a></h5></li>
+                    </ul>
+                </nav>
+
                 <div class="medium-1 columns"></div>
             </div>
         </div>
@@ -35,136 +38,38 @@ layout: default
             <br/><br/>
             <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 lists">
                 <li>
-                    <!-- <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/utorial-tile.png">
-                        </div>
-                        <core-card class="back">
-                            <core-header-panel mode="standard">
-                                <core-toolbar>
-                                    I'm A Title
-                                </core-toolbar>
-
-                                <p>And I'm some text...</p>
-                                <paper-fab icon="av:play-arrow" class="pageload-link"
-                                           data-page-origin="#main-page" data-page-destination="#page-1"></paper-fab>
-                            </core-header-panel>
-                        </core-card>
-                        <div class="back-footer">
-                            <a class="pageload-link" data-page-origin="#main-page" data-page-destination="#page-1">Read More</a>
-                        </div>
-                    </div> -->
                     <div class="card">
                         <a class="pageload-link" data-page-origin="#main-page"
-                            data-page-destination="#page-1">
+                            data-page-destination="#work-1">
                             <div class="image" >
-                                <img src="img/work/utorial-tile.png">
+                                <img src="/img/work/utorial-tile.png">
                             </div>
                         </a>
-                        <!-- <div class="strong-padding">
-                            Located two hours south of Sydney in the Southern Highlands of South Wales, ...
-                            <br><br>
-                            <a href="#" class="button text text-grey text-plus-2">Share</a>
-                            <a class="pageload-link button text text-orange" data-page-origin="#main-page"
-                                data-page-destination="#page-1">Learn more</a>
-                        </div> -->
                     </div>
                 </li>
 
                 <li>
-                    <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/surf-life-active-tile.png">
-                        </div>
-                        <div class="back">
-                            <div class="back-header">
-                                Title
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page"
+                           data-page-destination="#work-2">
+                            <div class="image" >
+                                <img src="/img/work/surf-life-active-tile.png">
                             </div>
-                            <div class="back-body">
-                                Body
-                            </div>
-                            <!-- <div class="back-footer">
-                                <a href="#">Read More</a>
-                            </div> -->
-                        </div>
+                        </a>
                     </div>
                 </li>
 
                 <li>
-                    <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/organicresponse-tile.png">
-                        </div>
-                        <div class="back">
-                            <div class="back-header">
-                                Title
+                    <div class="card">
+                        <a class="pageload-link" data-page-origin="#main-page"
+                           data-page-destination="#work-transdirect">
+                            <div class="image" >
+                                <img src="/img/work/transdirect-tile.png">
                             </div>
-                            <div class="back-body">
-                                Body
-                            </div>
-                            <!-- <div class="back-footer">
-                              <a href="#">Read More</a>
-                            </div> -->
-                        </div>
+                        </a>
                     </div>
                 </li>
 
-                <li>
-                    <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/organicresponse-tile-1.png"/>
-                        </div>
-                        <div class="back">
-                            <div class="back-header">
-                                Title
-                            </div>
-                            <div class="back-body">
-                                Body
-                            </div>
-                            <!-- <div class="back-footer">
-                              <a href="#">Read More</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/transdirect-tile.png"/>
-                        </div>
-                        <div class="back">
-                            <div class="back-header">
-                                Title
-                            </div>
-                            <div class="back-body">
-                                Body
-                            </div>
-                            <!-- <div class="back-footer">
-                              <a href="#">Read More</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="hover panel">
-                        <div class="front">
-                            <img src="img/work/surf-life-active-tile.png"/>
-                        </div>
-                        <div class="back">
-                            <div class="back-header">
-                                Title
-                            </div>
-                            <div class="back-body">
-                                Body
-                            </div>
-                            <!-- <div class="back-footer">
-                              <a href="#">Read More</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
@@ -197,8 +102,8 @@ layout: default
         <div class="header-shadow"></div>
         <div id="google-map"></div>
         
-        <div class="small-12 large-10 columns small-centered">
-            <div class="small-12 medium-6 large-6 columns">
+        <div class="small-12 columns small-centered">
+            <div class="small-12 columns">
                 <br/>
                 <p class="text-center">
                     Address: Suite 1, Level 2, 78-84 Kippax St,<br/>
@@ -208,7 +113,7 @@ layout: default
                 </p>
             </div>
 
-            <div class="small-12 medium-6 large-6 columns">
+            <div class="small-12 large-4 large-centered medium-8 medium-centered columns">
                 <br/>
                 <p class="success-message">"Thank you"</p>
 
