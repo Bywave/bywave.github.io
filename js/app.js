@@ -49,6 +49,7 @@ var sliderImages = [
 $(function(){
 	// Foundation
 	$(document).foundation();
+	  // chromeSmoothScroll.init();
 
 	// set up hover panels
 	// although this can be done without JavaScript, we've attached these events
@@ -72,6 +73,8 @@ $(function(){
 	* Contact Form
 	*/
     ContactForm.init();
+
+		
 });
 
 
@@ -175,25 +178,45 @@ function isEmail(email) {
 /**
 * Case Studies
 */
+
+function clickCard(obj){
+
+		setTimeout( function() {
+			loader.hide();
+
+			var origin = obj.data('pageOrigin');
+			if(origin == mainPageId) documentScrollTop = $(document).scrollTop();
+			$origin = $(origin)[0].classList.toggle('show');
+
+			var destination = obj.data('pageDestination');
+			$destination = $(destination)[0].classList.toggle('show');
+			if(destination == mainPageId) $(document).scrollTop(documentScrollTop);
+			else $(document).scrollTop(0);
+		}, pageloadDelay);
+}
+
+
+
+
+
+
+
+
 function initPageLoader() {
 	$('.pageload-link').on('click', function(ev){
 		// ev.preventDefault();
 		loader.show();
 		$thisObj = $(this);
-
+		clickCard($thisObj);
 		// after some time hide loader
-		setTimeout( function() {
-			loader.hide();
-
-			var origin = $thisObj.data('pageOrigin');
-			if(origin == mainPageId) documentScrollTop = $(document).scrollTop();
-			$origin = $(origin)[0].classList.toggle('show');
-
-			var destination = $thisObj.data('pageDestination');
-			$destination = $(destination)[0].classList.toggle('show');
-			if(destination == mainPageId) $(document).scrollTop(documentScrollTop);
-		}, pageloadDelay);
+	
 	});
+
+		// 	setTimeout(function(){
+		// 	var pathArray = window.location.href.split( '#' );
+		// console.log(pathArray[1]);
+		// clickCard($('#' + pathArray[1]));
+		// }, 2000);
 
 	var tmpSpeedIn = loader.options.speedIn;
 	loader.options.speedIn = 0;
@@ -202,11 +225,20 @@ function initPageLoader() {
 	setTimeout(function(){
 		loader.options.speedIn = tmpSpeedIn;
 		loader.hide();
+
+		var pathArray = window.location.href.split( '#' )[1];
+
+		if(pathArray){
+			$('#' + pathArray)[0].classList.toggle('show');
+			return;
+		}
+
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
 		$('#home-bg-transparent').css('backgroundColor', 'rgba(255, 255, 255, 0.15)');
 		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");
+
 
 		  $('div[data-type="background"]').each(function(){
 		      var $thisObj = $(this);
@@ -216,7 +248,28 @@ function initPageLoader() {
 		            var yPos = -($(this).scrollTop() / $thisObj.data('speed'));
 		            $bgobj.css({marginTop: Math.round(-yPos * 5) + 'px'});
 		        });
-		    }); 	
+		    }); 
+
+		    
+
+        var $window = $(window);
+		var scrollTime = 0.5;
+		var scrollDistance = 170;
+
+		$window.on("mousewheel DOMMouseScroll", function(event){
+		event.preventDefault();	
+
+		var delta = event.originalEvent.wheelDelta/100 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5							
+			});
+
+		});	
 		
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
 		setTimeout('initGoogleMap()', pageloadDelay * 2);
@@ -247,7 +300,7 @@ var ContactForm = {
 	 				dataType: 'xml',
 	 				statusCode: {
 	 					0: function (){
-                                ContactForm.clearContactFields();
+                            ContactForm.clearContactFields();
 	 						ContacForm.displaySuccess();
 	                        //Success message
 	                    },
@@ -299,10 +352,12 @@ var ContactForm = {
 		$('#contact-form').animate({opacity: 0}, 'fast');
 	},
 	validateEmail : function(emailVal){
-		if(!isEmail(emailVal) && email != ''){		
+		if(!isEmail(emailVal) && emailVal != ''){		
 			email.addClass('show-error');
 			$('.error.prompt.invemail').animate({opacity: 1}, 'fast');
             ContactForm.setTimeoutError();
+		}else{
+			email.removeClass('show-error');
 		}
 	},
 };
@@ -311,7 +366,7 @@ var ContactForm = {
 * GoogleMaps
 */
 function initGoogleMap(){
-	companyLocation = new google.maps.LatLng(7.0622092,125.609086);
+	companyLocation = new google.maps.LatLng(-33.884901, 151.21044870000003);
 
 	googleMap = new google.maps.Map(document.getElementById("google-map"), {
 		center: companyLocation,

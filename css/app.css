@@ -8205,13 +8205,14 @@ th.hide-for-touch {
   -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
   display: inline-block;
+  width: 100%;
 }
-/* line 135, ../_sass/_flipcards.scss */
+/* line 136, ../_sass/_flipcards.scss */
 .card .image {
   line-height: 0;
   position: relative;
 }
-/* line 139, ../_sass/_flipcards.scss */
+/* line 140, ../_sass/_flipcards.scss */
 .card .image h2 {
   bottom: 0;
   position: absolute;
@@ -8219,41 +8220,41 @@ th.hide-for-touch {
   margin-bottom: 1em;
   color: #FFF;
 }
-/* line 146, ../_sass/_flipcards.scss */
+/* line 147, ../_sass/_flipcards.scss */
 .card .image img {
   width: 100%;
 }
-/* line 151, ../_sass/_flipcards.scss */
+/* line 152, ../_sass/_flipcards.scss */
 .card .strong-padding {
   padding: 15px;
 }
-/* line 155, ../_sass/_flipcards.scss */
+/* line 156, ../_sass/_flipcards.scss */
 .card .text-orange {
   color: #ff9800;
 }
-/* line 158, ../_sass/_flipcards.scss */
+/* line 159, ../_sass/_flipcards.scss */
 .card .text-orange:hover {
   color: #ff9800;
 }
-/* line 162, ../_sass/_flipcards.scss */
+/* line 163, ../_sass/_flipcards.scss */
 .card .text-grey {
   color: #9e9e9e;
 }
-/* line 165, ../_sass/_flipcards.scss */
+/* line 166, ../_sass/_flipcards.scss */
 .card .text-grey:hover {
   color: #9e9e9e;
 }
-/* line 170, ../_sass/_flipcards.scss */
+/* line 171, ../_sass/_flipcards.scss */
 .card .text-grey .text-plus-2,
 .card .text-grey.text-plus-2 {
   color: #616161;
 }
-/* line 174, ../_sass/_flipcards.scss */
+/* line 175, ../_sass/_flipcards.scss */
 .card .text-grey .text-plus-2:hover,
 .card .text-grey.text-plus-2:hover {
   color: #616161;
 }
-/* line 178, ../_sass/_flipcards.scss */
+/* line 179, ../_sass/_flipcards.scss */
 .card .button {
   padding: 10px 20px;
   -webkit-border-radius: 2px;
@@ -8271,42 +8272,42 @@ th.hide-for-touch {
   -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
 }
-/* line 194, ../_sass/_flipcards.scss */
+/* line 195, ../_sass/_flipcards.scss */
 .card .button.text {
   background: none;
   padding: 0 20px 0 0;
   font-weight: bold;
 }
-/* line 200, ../_sass/_flipcards.scss */
+/* line 201, ../_sass/_flipcards.scss */
 .card .button.text:hover {
   background: none;
   color: #4dd0e1;
 }
-/* line 208, ../_sass/_flipcards.scss */
+/* line 209, ../_sass/_flipcards.scss */
 .card .button.text.disabled {
   background: none;
 }
-/* line 211, ../_sass/_flipcards.scss */
+/* line 212, ../_sass/_flipcards.scss */
 .card .button.text.disabled:hover {
   color: #bdbdbd;
 }
-/* line 214, ../_sass/_flipcards.scss */
+/* line 215, ../_sass/_flipcards.scss */
 .card .button.text.disabled:hover:hover {
   color: #bdbdbd;
 }
 
-/* line 219, ../_sass/_flipcards.scss */
+/* line 220, ../_sass/_flipcards.scss */
 a.card {
   color: inherit;
 }
 
-/* line 224, ../_sass/_flipcards.scss */
+/* line 225, ../_sass/_flipcards.scss */
 a.button:hover,
 a.button:focus {
   text-decoration: none;
 }
 
-/* line 228, ../_sass/_flipcards.scss */
+/* line 229, ../_sass/_flipcards.scss */
 .box-shadow-none, .card .button.text, .card .button.text:hover, .card .button.text:active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -8562,6 +8563,7 @@ small.error {
 
 /* line 19, ../_sass/_contactus.scss */
 .btn-contact {
+  margin-top: 10px;
   float: right;
 }
 
@@ -8577,6 +8579,11 @@ small.error {
 /* line 30, ../_sass/_contactus.scss */
 .contact-input, .msg-text {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
+}
+
+/* line 34, ../_sass/_contactus.scss */
+#contact input[type="submit"]:hover {
+  background-color: none !important;
 }
 
 /* line 1, ../_sass/_googlemap.scss */
@@ -8752,6 +8759,11 @@ div[name="contact"] {
   bottom: 0px;
 }
 
+/* line 123, ../_sass/_main.scss */
+#section-home .top-bar {
+  background: none !important;
+}
+
 /* line 1, ../_sass/_slick_slider.scss */
 .slick-prev:before, .slick-next:before {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -8812,7 +8824,7 @@ div[name="contact"] {
 }
 
 /* line 41, ../_sass/_slick_slider.scss */
-button:hover, button:focus, .button:hover, .button:focus {
+.slider button:hover, .slider button:focus, .slider button:hover, .slider button:focus {
   background-color: transparent;
 }
 

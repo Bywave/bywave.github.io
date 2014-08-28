@@ -1,0 +1,46 @@
+[33mf01af2c[m HEAD@{0}: reset: moving to f01af2c
+[33m0c5142a[m HEAD@{1}: merge leo/master: Merge made by the 'recursive' strategy.
+[33mf01af2c[m HEAD@{2}: commit: Add Slick Slider in about us section.
+[33m9590084[m HEAD@{3}: checkout: moving from a4e92cca116207b06d6c3a162da0dc832a2185c6 to master
+[33ma4e92cc[m HEAD@{4}: checkout: moving from master to a4e92cca116207b06d6c3a162da0dc832a2185c6
+[33m9590084[m HEAD@{5}: checkout: moving from 238f8f1e0de0a3aef680ba7834627dac0696c691 to master
+[33m238f8f1[m HEAD@{6}: checkout: moving from master to 238f8f1e0de0a3aef680ba7834627dac0696c691
+[33m9590084[m HEAD@{7}: checkout: moving from a4e92cca116207b06d6c3a162da0dc832a2185c6 to master
+[33ma4e92cc[m HEAD@{8}: checkout: moving from master to a4e92cca116207b06d6c3a162da0dc832a2185c6
+[33m9590084[m HEAD@{9}: checkout: moving from a4e92cca116207b06d6c3a162da0dc832a2185c6 to master
+[33ma4e92cc[m HEAD@{10}: checkout: moving from master to a4e92cca116207b06d6c3a162da0dc832a2185c6
+[33m9590084[m HEAD@{11}: checkout: moving from a4e92cca116207b06d6c3a162da0dc832a2185c6 to master
+[33ma4e92cc[m HEAD@{12}: checkout: moving from master to a4e92cca116207b06d6c3a162da0dc832a2185c6
+[33m9590084[m HEAD@{13}: commit: Add transitions in home section.
+[33mf5bf828[m HEAD@{14}: checkout: moving from f5bf82890ec0e4d071850908262f2390b4b1c5ee to master
+[33mf5bf828[m HEAD@{15}: checkout: moving from master to f5bf82890ec0e4d071850908262f2390b4b1c5ee
+[33mf5bf828[m HEAD@{16}: commit: Remove site folder
+[33ma17e128[m HEAD@{17}: commit: Update code structure
+[33m36096d9[m HEAD@{18}: checkout: moving from 61342e8d146a82bcc3de85f3362d5d375a91f922 to master
+[33m61342e8[m HEAD@{19}: checkout: moving from master to 61342e8d146a82bcc3de85f3362d5d375a91f922
+[33m36096d9[m HEAD@{20}: commit (merge): Merge branch 'master' of https://github.com/Bywave/bywave.github.io
+[33m8b6ca14[m HEAD@{21}: commit: - Footer and About us section layout. Change the logo in navigation bar.
+[33m5263db9[m HEAD@{22}: commit (merge): Merge remote-tracking branch 'leo/master'
+[33m20a2d7a[m HEAD@{23}: reset: moving to 20a2d7a
+[33me4be349[m HEAD@{24}: checkout: moving from 20a2d7ad4a0eacfe733b3df7f107504e632c4795 to master
+[33m20a2d7a[m HEAD@{25}: commit: -Fix the validation of contact form
+[33m5d307ac[m HEAD@{26}: checkout: moving from master to 5d307aca2e9c0556451051e563e361dfba7fe6bc
+[33me4be349[m HEAD@{27}: commit: contact us css
+[33m28ea264[m HEAD@{28}: merge bywave/master: Merge made by the 'recursive' strategy.
+[33mad322bb[m HEAD@{29}: commit: - contact form design
+[33mf76a3fb[m HEAD@{30}: commit: Contact Us section
+[33mb6e1e3e[m HEAD@{31}: commit: merge and commit files
+[33mcb4b800[m HEAD@{32}: commit (merge): Merge branch 'master' of https://github.com/xXLXx/bywave.github.io
+[33ma084606[m HEAD@{33}: pull bywave master: Fast-forward
+[33me01b316[m HEAD@{34}: commit: -Card reverse layout done. no content yet.
+[33m7567df8[m HEAD@{35}: commit (merge): Merge branch 'master' of https://github.com/Bywave/bywave.github.io
+[33m385436a[m HEAD@{36}: commit: - Fix card flip browser compatibility.
+[33mc451b9f[m HEAD@{37}: pull bywave master: Fast-forward
+[33m4d4635b[m HEAD@{38}: commit: changes in navigation.
+[33m5c3fee7[m HEAD@{39}: commit: nvaigation bar
+[33m82989db[m HEAD@{40}: commit (merge): Merge branch 'master' of https://github.com/Bywave/bywave.github.io
+[33mf5c4061[m HEAD@{41}: commit: Changes, in navigation
+[33mda65bf3[m HEAD@{42}: commit: Initail site structure.
+[33m71d216c[m HEAD@{43}: pull bywave master: Fast-forward
+[33m5bb1fc8[m HEAD@{44}: pull --progress origin: Fast-forward
+[33meb8363d[m HEAD@{45}: clone: from https://github.com/Bywave/bywave.github.io

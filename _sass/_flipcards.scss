@@ -129,6 +129,7 @@ $card-radius : 2px;
   overflow: hidden;
   @include box-shadow(0px, 1px, 2px, 1px, rgba(0,0,0,0.32));
   display: inline-block;
+  width: 100%;
   // display: inline;
   // zoom: 1;
 
