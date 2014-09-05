@@ -82,7 +82,7 @@ $(function(){
 function loadAfterPreLoad(){
 	homeLoad();
 		$('.slider').slick({
-		    autoplay: true,
+		    // autoplay: true,
 		    autoplaySpeed: 2000
 		});
 
@@ -190,8 +190,16 @@ function clickCard(obj){
 
 			var destination = obj.data('pageDestination');
 			$destination = $(destination)[0].classList.toggle('show');
-			if(destination == mainPageId) $(document).scrollTop(documentScrollTop);
-			else $(document).scrollTop(0);
+			if(destination == mainPageId){
+				$(document).scrollTop(documentScrollTop);
+				$('.top-bar.fading-header').css('display', 'block');
+			}
+			else{
+				 $(document).scrollTop(0);
+
+				$('.top-bar.fading-header').css('display', 'none');
+			}
+			
 		}, pageloadDelay);
 }
 
