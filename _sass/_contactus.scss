@@ -18,9 +18,27 @@ small.error{
 
 .btn-contact{
 	margin-top: 10px;
-	float: right;
+	// float: right;
+	margin-left: 35%;
+	padding: 10px 30px 10px 30px;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 3px;
+	background-color: #F68320;
+	border-color: none !important;
+}
+.btn-contact:hover{
+	border-color: none !important;
+	background-color: rgba(245, 138, 46, 0.7);
 }
 
+.btn-contact:focus{
+	background-color: rgba(245, 138, 46, 0.7);
+}
+
+.btn-contact:active{
+	border-color: none !important;
+}
 .show-error{
 	// box-shadow: 0px 0px 1px red !important;
 	border-color: red !important;
@@ -28,9 +46,13 @@ small.error{
 }
 
 .contact-input, .msg-text{
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
+	// box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
 	// border-color: #EEE !important;
 }
 #contact input[type="submit"]:hover{
 	background-color: none !important;
+}
+
+input[type="text"], textarea{
+border: 1px solid #F68320;
 }

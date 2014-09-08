@@ -298,6 +298,7 @@ var ContactForm = {
 	}
 
  	$('#contact-form').submit(function(e){
+ 		$('.btn-contact').css('border-color', '#F68320');
 		if(this.checkValidity()){
 			e.preventDefault();
 	 		if(nameVal.val() && email.val() && msg.val() && isEmail(email.val())){
@@ -327,7 +328,7 @@ var ContactForm = {
 	 			}
 				if(!email.val()){
 					email.addClass('show-error');
-					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast')
+					$('.error.prompt.reqemail').animate({opacity: 1}, 'fast');
 				}
 				else if(!isEmail(email.val())){
 					email.addClass('show-error');
