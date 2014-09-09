@@ -231,3 +231,12 @@ a.button:focus {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+#work .card:hover{
+border: 2px solid #F68320;
+ border-radius: $card-radius $card-radius 0px 0px;
+
+}
+// #work .image{
+// border: 2px solid rgba(255, 255, 255, 0);
+// }

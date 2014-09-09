@@ -74,6 +74,7 @@ $(function(){
 	*/
     ContactForm.init();
 
+ 
 		
 });
 
@@ -211,6 +212,7 @@ function clickCard(obj){
 
 
 function initPageLoader() {
+
 	$('.pageload-link').on('click', function(ev){
 		// ev.preventDefault();
 		loader.show();
@@ -234,13 +236,9 @@ function initPageLoader() {
 		loader.options.speedIn = tmpSpeedIn;
 		loader.hide();
 
-		var pathArray = window.location.href.split( '#' )[1];
+	
 
-		if(pathArray){
-			$('#' + pathArray)[0].classList.toggle('show');
-			return;
-		}
-
+	
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
@@ -258,7 +256,14 @@ function initPageLoader() {
 		        });
 		    }); 
 
-		    
+		setTimeout('loadAfterPreLoad()', pageloadDelay);
+		setTimeout('initGoogleMap()', pageloadDelay * 2);
+
+	    	var pathArray = window.location.href.split( '#' )[1];
+			if(pathArray != 'wordk' && pathArray != 'about' && pathArray != 'contact'){
+			$('#' + pathArray)[0].classList.toggle('show');
+			return;
+			}
 
         var $window = $(window);
 		var scrollTime = 0.5;
@@ -279,8 +284,9 @@ function initPageLoader() {
 
 		});	
 		
-		setTimeout('loadAfterPreLoad()', pageloadDelay);
-		setTimeout('initGoogleMap()', pageloadDelay * 2);
+	
+			
+
 	}, pageloadDelay);
 }
 

@@ -8314,6 +8314,12 @@ a.button:focus {
   box-shadow: none;
 }
 
+/* line 235, ../_sass/_flipcards.scss */
+#work .card:hover {
+  border: 2px solid #F68320;
+  border-radius: 2px 2px 0px 0px;
+}
+
 /* line 4, ../_sass/_navbar.scss */
 .top-bar {
   padding: 10px;
@@ -8911,7 +8917,6 @@ div[name="contact"] {
   position: relative;
   background: #BBB;
   width: 100% !important;
-  margin-top: -30px;
   border-top: 1px solid #DDD;
 }
 
