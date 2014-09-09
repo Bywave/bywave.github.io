@@ -8911,10 +8911,22 @@ div[name="contact"] {
   position: relative;
   background: #BBB;
   width: 100% !important;
+  margin-top: -30px;
   border-top: 1px solid #DDD;
 }
 
-/* line 67, ../_sass/_slick_slider.scss */
+/* line 68, ../_sass/_slick_slider.scss */
+#about h1.text-center {
+  text-shadow: 0px 1px 2px black;
+}
+
+/* line 71, ../_sass/_slick_slider.scss */
+#about .text-center.sub {
+  text-shadow: 0px 1px 2px black;
+  color: #FFF !important;
+}
+
+/* line 77, ../_sass/_slick_slider.scss */
 .text-per-image1 {
   position: absolute;
   top: 100px;
@@ -8922,23 +8934,12 @@ div[name="contact"] {
   width: 30%;
 }
 
-/* line 73, ../_sass/_slick_slider.scss */
-#about h1.text-center {
-  text-shadow: 0px 1px 2px black;
-}
-
-/* line 76, ../_sass/_slick_slider.scss */
-#about .text-center.sub {
-  text-shadow: 0px 1px 2px black;
-  color: #FFF !important;
-}
-
-/* line 84, ../_sass/_slick_slider.scss */
+/* line 83, ../_sass/_slick_slider.scss */
 .text-per-image2 {
   position: absolute;
+  width: 30%;
   left: 250px;
   bottom: 90px;
-  width: 30%;
 }
 
 /* line 92, ../_sass/_slick_slider.scss */

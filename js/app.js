@@ -546,3 +546,11 @@ function initGoogleMap(){
 	    }, 10000);
 	});
 }
+
+function aboutSec(){
+	$('#about-sec-img-bg .img-bg-trans').css('margin-top', '60px');
+}
+
+function aboutSecPos(){
+	$('#about-sec-img-bg .img-bg-trans').css('margin-top', '-30px');
+}
