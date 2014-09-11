@@ -242,7 +242,7 @@ function initPageLoader() {
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
-		$('#home-bg-transparent').css('backgroundColor', 'rgba(255, 255, 255, 0.15)');
+		$('#home-bg-transparent').css('backgroundColor', 'rgba(0, 0, 0, 0.12)');
 		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");
 
 
@@ -258,12 +258,6 @@ function initPageLoader() {
 
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
 		setTimeout('initGoogleMap()', pageloadDelay * 2);
-
-	    	var pathArray = window.location.href.split( '#' )[1];
-			if(pathArray != 'wordk' && pathArray != 'about' && pathArray != 'contact'){
-			$('#' + pathArray)[0].classList.toggle('show');
-			return;
-			}
 
         var $window = $(window);
 		var scrollTime = 0.5;
@@ -284,7 +278,13 @@ function initPageLoader() {
 
 		});	
 		
-	
+		
+
+	    	var pathArray = window.location.href.split( '#' )[1];
+			if(pathArray != 'wordk' && pathArray != 'about' && pathArray != 'contact'){
+			$('#' + pathArray)[0].classList.toggle('show');
+			return;
+			}
 			
 
 	}, pageloadDelay);
