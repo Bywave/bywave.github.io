@@ -8323,11 +8323,7 @@ a.button:focus {
 /* line 4, ../_sass/_navbar.scss */
 .top-bar {
   padding: 10px;
-  height: 3.8em;
-}
-/* line 8, ../_sass/_navbar.scss */
-.top-bar ul {
-  margin-top: 0.2em;
+  height: 2.8em;
 }
 /* line 11, ../_sass/_navbar.scss */
 .top-bar ul li {
@@ -8337,7 +8333,7 @@ a.button:focus {
 /* line 15, ../_sass/_navbar.scss */
 .top-bar ul li a {
   border-bottom: 3px solid transparent;
-  padding-bottom: 1.25em;
+  padding-bottom: 0.65em;
   -webkit-transition: all 0.218s ease 0s;
   -moz-transition: all 0.218s ease 0s;
   -o-transition: all 0.218s ease 0s;
@@ -8355,7 +8351,7 @@ a.button:focus {
   text-decoration: none;
   background-color: transparent;
   border-color: #F68320;
-  padding-bottom: 1.25em;
+  padding-bottom: 0.65em;
   border-radius: 0px;
   font-weight: bold;
   -webkit-transition: border-color 0.218 ease 3s;
@@ -8415,7 +8411,7 @@ a.button:focus {
 /* line 81, ../_sass/_navbar.scss */
 .fading-header {
   position: fixed;
-  margin-top: -3.8em;
+  margin-top: -2.8em;
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
@@ -8429,7 +8425,7 @@ a.button:focus {
 /* line 90, ../_sass/_navbar.scss */
 .fading-header #company-logo {
   position: absolute;
-  top: 1.2em;
+  top: 0.6em;
 }
 
 /* line 96, ../_sass/_navbar.scss */
