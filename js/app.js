@@ -228,23 +228,28 @@ function initPageLoader() {
 		// clickCard($('#' + pathArray[1]));
 		// }, 2000);
 
+	
 	var tmpSpeedIn = loader.options.speedIn;
 	loader.options.speedIn = 0;
 	loader.show();
 
+	
 	setTimeout(function(){
 		loader.options.speedIn = tmpSpeedIn;
 		loader.hide();
 
-	
 
-	
+		var pathArray = window.location.href.split( '#' )[1];
+			if(pathArray && pathArray != 'work' && pathArray != 'about' && pathArray != 'contact'){
+				$('#' + pathArray)[0].classList.toggle('show');
+				return;
+			}
+
 		$('#main-page')[0].classList.toggle('show');
 		$('#footer')[0].classList.toggle('show');
 
 		$('#home-bg-transparent').css('backgroundColor', 'rgba(0, 0, 0, 0.12)');
 		$('#img-paralax').backstretch("../img/scrum-wall2.jpeg");
-
 
 		  $('div[data-type="background"]').each(function(){
 		      var $thisObj = $(this);
@@ -258,8 +263,8 @@ function initPageLoader() {
 
 		setTimeout('loadAfterPreLoad()', pageloadDelay);
 		setTimeout('initGoogleMap()', pageloadDelay * 2);
-
-        var $window = $(window);
+	
+		var $window = $(window);
 		var scrollTime = 0.5;
 		var scrollDistance = 170;
 
@@ -276,16 +281,9 @@ function initPageLoader() {
 				overwrite: 5							
 			});
 
-		});	
-		
-		
+		});		
 
-	    	var pathArray = window.location.href.split( '#' )[1];
-			if(pathArray != 'wordk' && pathArray != 'about' && pathArray != 'contact'){
-			$('#' + pathArray)[0].classList.toggle('show');
-			return;
-			}
-			
+
 
 	}, pageloadDelay);
 }
