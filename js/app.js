@@ -554,7 +554,7 @@ function initGoogleMap(){
 }
 
 function aboutSec(){
-	$('#about-sec-img-bg .img-bg-trans').css('margin-top', '60px');
+	$('#about-sec-img-bg .img-bg-trans').css('margin-top', '40px');
 }
 
 function aboutSecPos(){
