@@ -189,9 +189,10 @@ function clickCard(obj){
 			$origin = $(origin)[0].classList.toggle('show');
 
 			var destination = obj.data('pageDestination');
+			$destination = $(destination)[0].classList.toggle('show');
+			
 			console.log(destination);
 			
-			$destination = $(destination)[0].classList.toggle('show');
 			if(destination == mainPageId){
 				$(document).scrollTop(documentScrollTop);
 				$('.top-bar.fading-header').css('display', 'block');
