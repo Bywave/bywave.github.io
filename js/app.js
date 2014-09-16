@@ -217,7 +217,10 @@ function initPageLoader() {
 		// ev.preventDefault();
 		loader.show();
 		$thisObj = $(this);
+		console.log($thisObj[0]);
 		clickCard($thisObj);
+
+
 		// after some time hide loader
 	
 	});
