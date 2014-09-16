@@ -181,7 +181,7 @@ function isEmail(email) {
 */
 
 function clickCard(obj){
-			console.log(obj);
+			console.log(obj[0]);
 		setTimeout( function() {
 			loader.hide();
 
