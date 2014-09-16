@@ -190,6 +190,7 @@ function clickCard(obj){
 
 			var destination = obj.data('pageDestination');
 			console.log(destination);
+			
 			$destination = $(destination)[0].classList.toggle('show');
 			if(destination == mainPageId){
 				$(document).scrollTop(documentScrollTop);
