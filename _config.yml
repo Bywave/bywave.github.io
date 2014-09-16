@@ -13,4 +13,4 @@ auto: true
 sass:
   sass_dir: _sass
 collections:
-- case_studies
+_case_studies
