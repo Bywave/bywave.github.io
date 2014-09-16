@@ -181,7 +181,6 @@ function isEmail(email) {
 */
 
 function clickCard(obj){
-			console.log(obj[0]);
 		setTimeout( function() {
 			loader.hide();
 
@@ -190,6 +189,7 @@ function clickCard(obj){
 			$origin = $(origin)[0].classList.toggle('show');
 
 			var destination = obj.data('pageDestination');
+			console.log(destination);
 			$destination = $(destination)[0].classList.toggle('show');
 			if(destination == mainPageId){
 				$(document).scrollTop(documentScrollTop);
