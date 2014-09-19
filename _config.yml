@@ -9,10 +9,8 @@ url: "http://bywave.com.au"
 markdown: kramdown
 permalink: pretty
 auto: true
-output: true
-pygments: true
 
-sass:
-  sass_dir: _sass
+# sass:
+#   sass_dir: _sass
 collections:
   - case_studies
