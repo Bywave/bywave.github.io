@@ -8326,18 +8326,46 @@ a.button:focus {
   box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
   opacity: 0.7;
   filter: alpha(opacity=70);
+  margin-top: 90px;
 }
 
-/* line 257, ../_sass/_flipcards.scss */
+/* line 258, ../_sass/_flipcards.scss */
 .page p img:hover {
   opacity: 1.0;
   filter: alpha(opacity=100);
 }
 
-/* line 261, ../_sass/_flipcards.scss */
+/* line 262, ../_sass/_flipcards.scss */
 .page h1 {
   color: #F68320;
   text-shadow: 0px 1px 2px black;
+}
+
+/* line 267, ../_sass/_flipcards.scss */
+.case-title {
+  width: 69%;
+  background-color: #000;
+  text-align: right;
+  /* position: fixed; */
+  /* border-radius: 0% 10% 10% 0%; */
+  padding-right: 30px;
+  /* display: inherit; */
+  margin-top: 10px;
+}
+
+/* line 278, ../_sass/_flipcards.scss */
+.page .side {
+  position: fixed;
+  width: auto;
+}
+
+/* line 283, ../_sass/_flipcards.scss */
+.case-definition {
+  width: 69%;
+  position: absolute;
+  background-color: #f3f3f3;
+  /* margin-top: 7%; */
+  margin-left: -335px;
 }
 
 /* line 4, ../_sass/_navbar.scss */

@@ -74,8 +74,13 @@ $(function(){
 	*/
     ContactForm.init();
 
- 
-		
+        $('.page p img').hover(function(){
+    	$('.case-definition').css('margin-left', '0px');
+    });
+    $('.page p img').mouseleave(function(){
+    	$('.case-definition').css('margin-left', '-335px');
+    });
+
 });
 
 
