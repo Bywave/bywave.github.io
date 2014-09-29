@@ -8343,26 +8343,25 @@ a.button:focus {
 
 /* line 267, ../_sass/_flipcards.scss */
 .case-title {
-  width: 69%;
+  width: 25%;
   background-color: #000;
   text-align: right;
   /* position: fixed; */
   /* border-radius: 0% 10% 10% 0%; */
   padding-right: 30px;
-  /* display: inherit; */
   margin-top: 10px;
 }
 
-/* line 278, ../_sass/_flipcards.scss */
+/* line 277, ../_sass/_flipcards.scss */
 .page .side {
   position: fixed;
-  width: auto;
+  width: 100%;
 }
 
-/* line 283, ../_sass/_flipcards.scss */
+/* line 282, ../_sass/_flipcards.scss */
 .case-definition {
-  width: 69%;
-  position: absolute;
+  width: 25%;
+  position: relative;
   background-color: #f3f3f3;
   /* margin-top: 7%; */
   margin-left: -335px;

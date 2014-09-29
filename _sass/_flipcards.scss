@@ -265,24 +265,23 @@ a.button:focus {
 }
 
 .case-title {
-width: 69%;
+width: 25%;
 background-color: #000;
 text-align: right;
 /* position: fixed; */
 /* border-radius: 0% 10% 10% 0%; */
 padding-right: 30px;
-/* display: inherit; */
 margin-top: 10px;
 }
 
 .page .side{
   position: fixed;
-  width: auto;
+  width: 100%;
 }
 
 .case-definition {
-width: 69%;
-position: absolute;
+width: 25%;
+position: relative;
 background-color: #f3f3f3;
 /* margin-top: 7%; */
 margin-left: -335px;
