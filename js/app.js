@@ -76,10 +76,31 @@ $(function(){
 
         $('.page p img').hover(function(){
     	$('.case-definition').css('margin-left', '0px');
-    });
-    $('.page p img').mouseleave(function(){
-    	$('.case-definition').css('margin-left', '-335px');
-    });
+    	// $('.side-right').css('margin-right', '0px');
+    	});
+	    $('.page p img').mouseleave(function(){
+	    	$('.case-definition').css('margin-left', '-335px');
+	    	// $('.side-right').css('margin-right', '-340px');
+	    });
+
+	    $('.side-right').hover(function(){
+	    	$('i').removeClass('fa-angle-double-left');
+	    	$('i').addClass('fa-angle-double-right');
+
+	    });
+
+	    $('.side-right').mouseleave(function(){
+	    	$('i').removeClass('fa-angle-double-right');
+	    	$('i').addClass('fa-angle-double-left');
+	    });
+
+	    var maxHeight = parseInt($('.case-definition').css('max-height', '580px'));
+	    console.log($('.case-definition').height());
+    	console.log($('.case-definition p').height());
+
+	    if(maxHeight < $('.case-definition p').height()) {
+	        $('.case-definition p').css('font-size', (parseInt($('.case-definition p').css('font-size')) - 1) + "px" );
+    	}
 
 });
 
@@ -201,11 +222,13 @@ function clickCard(obj){
 			if(destination == mainPageId){
 				$(document).scrollTop(documentScrollTop);
 				$('.top-bar.fading-header').css('display', 'block');
+				$('#footer').css('display', 'block');
 			}
 			else{
 				 $(document).scrollTop(0);
 
 				$('.top-bar.fading-header').css('display', 'none');
+				$('#footer').css('display', 'none');
 			}
 			
 		}, pageloadDelay);

@@ -8346,25 +8346,76 @@ a.button:focus {
   width: 25%;
   background-color: #000;
   text-align: right;
-  /* position: fixed; */
-  /* border-radius: 0% 10% 10% 0%; */
   padding-right: 30px;
   margin-top: 10px;
 }
 
-/* line 277, ../_sass/_flipcards.scss */
+/* line 275, ../_sass/_flipcards.scss */
 .page .side {
   position: fixed;
   width: 100%;
 }
 
-/* line 282, ../_sass/_flipcards.scss */
+/* line 280, ../_sass/_flipcards.scss */
 .case-definition {
   width: 25%;
   position: relative;
   background-color: #f3f3f3;
-  /* margin-top: 7%; */
   margin-left: -335px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* line 291, ../_sass/_flipcards.scss */
+.case-definition p {
+  padding: 10%;
+  text-align: justify;
+}
+
+/* line 296, ../_sass/_flipcards.scss */
+.side-right {
+  right: 0;
+  position: fixed;
+  width: 25%;
+  background-color: #000;
+  margin-top: 10px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  margin-right: -300px;
+}
+
+/* line 310, ../_sass/_flipcards.scss */
+.side-right:hover {
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+/* line 315, ../_sass/_flipcards.scss */
+.side-right a {
+  color: #FFF;
+  margin-left: 20px;
+}
+
+/* line 320, ../_sass/_flipcards.scss */
+.side-right a:hover {
+  color: #0078a0;
+}
+
+/* line 324, ../_sass/_flipcards.scss */
+.side-right p {
+  padding: 5% 0 0 0;
+  float: left;
+  margin-left: 10px;
+}
+
+/* line 330, ../_sass/_flipcards.scss */
+.side-right .fa {
+  font-size: 28px;
+  color: #fff;
 }
 
 /* line 4, ../_sass/_navbar.scss */
