@@ -74,13 +74,37 @@ $(function(){
 	*/
     ContactForm.init();
 
+
+	var parentHeight = $('.case-definition').height();
+
+
         $('.page p img').hover(function(){
     	$('.case-definition').css('margin-left', '0px');
-    	// $('.side-right').css('margin-right', '0px');
+				$('.def').each(function(){
+			  	if($(this)[0].clientHeight < parentHeight){
+			  		$('.case-definition').css('height', 'auto');
+			  	}else{
+			  		//$('.case-definition').css('height', '580px');
+			  		$('.def p').css('font-size', '0.9em');
+			  	}
+				});	
+
     	});
 	    $('.page p img').mouseleave(function(){
 	    	$('.case-definition').css('margin-left', '-335px');
 	    	// $('.side-right').css('margin-right', '-340px');
+	    		var parentHeight = $('.case-definition').height();
+				$('.def').each(function(){
+			  	if($(this)[0].clientHeight < parentHeight){
+			  		$('.case-definition').css('height', 'auto');
+			  		//$('.def p').css('font-size', '1rem');
+
+			  	}else{
+			  		//$('.case-definition').css('height', '580px');
+			  		$('.def p').css('font-size', '0.9em');
+			  	}
+				});	
+
 	    });
 
 	    $('.side-right').hover(function(){
@@ -94,16 +118,31 @@ $(function(){
 	    	$('i').addClass('fa-angle-double-left');
 	    });
 
-	    var maxHeight = parseInt($('.case-definition').css('max-height', '580px'));
-	    console.log($('.case-definition').height());
-    	console.log($('.case-definition p').height());
+	    // var maxHeight = parseInt($('.case-definition').css('max-height', '580px'));
+	 
 
-	    if(maxHeight < $('.case-definition p').height()) {
-	        $('.case-definition p').css('font-size', (parseInt($('.case-definition p').css('font-size')) - 1) + "px" );
-    	}
+	    // if(maxHeight < $('.case-definition p').height()) {
+	        // $('.case-definition p').css('font-size', (parseInt($('.case-definition p').css('font-size')) - 1) + "px" );
+    	// }
 
 });
 
+
+function caseStudDefDheight(){
+	 var parentHeight = $('.case-definition').height();
+	$('.def').each(function(){
+	  console.log($(this)[0].clientHeight);
+
+	  	if($(this)[0].clientHeight < parentHeight){
+	  		$('.case-definition').css('height', 'auto');
+	  		$('.def p').css('font-size', '1rem');
+
+	  	}else{
+	  		$('.case-definition').css('height', '580px');
+	  		$('.def p').css('font-size', '0.9em');
+	  	}
+	});	
+}
 
 
 function loadAfterPreLoad(){
@@ -207,6 +246,7 @@ function isEmail(email) {
 */
 
 function clickCard(obj){
+
 		setTimeout( function() {
 			loader.hide();
 
@@ -248,6 +288,9 @@ function initPageLoader() {
 		loader.show();
 		$thisObj = $(this);
 		clickCard($thisObj);
+
+
+   	
 		// after some time hide loader
 	
 	});

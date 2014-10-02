@@ -286,11 +286,16 @@ margin-left: -335px;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+height: 580px;
 }
 
 .case-definition p{
   padding: 10%;
-text-align: justify;
+  text-align: justify;
+}
+
+div.def{
+  height:auto;
 }
 
 .side-right{
