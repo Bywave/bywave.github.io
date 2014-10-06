@@ -82,3 +82,9 @@
   -moz-border-radius: $pixels;
   border-radius: $pixels;
 }
+
+@mixin set-image-transparency($opacity, $filter){
+  opacity: $opacity;
+  filter: $filter;
+}
+

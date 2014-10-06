@@ -8057,7 +8057,7 @@ th.hide-for-touch {
 .flip-card, .panel .front, .panel .back {
   border-radius: inherit;
   background-color: whitesmoke;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.098), 0px 0px 3px rgba(0, 0, 0, 0.098);
+  /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.098), 0px 0px 3px rgba(0, 0, 0, 0.098);*/
 }
 
 /* -- Panel -- */
@@ -8124,10 +8124,20 @@ th.hide-for-touch {
   width: inherit;
   height: 100%;
   position: absolute;
+  /*core-toolbar{
+    background-color: #F68320;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }*/
+  /*core-header-panel{
+    width: inherit;
+    height: inherit;
+  }*/
 }
 /* line 54, ../_sass/_flipcards.scss */
 .panel .back .pageload-link {
-  position: absolute;
+  /*position: absolute; */
   bottom: 10px;
   right: 10px;
   background-color: #F68320;
@@ -8137,29 +8147,19 @@ th.hide-for-touch {
   margin: 1rem 0 0rem;
   height: 12px;
   border: 0;
+  -webkit-box-shadow: 0 6px 12px -12px rgba(0, 0, 0, 0.5) inset;
   box-shadow: 0 6px 12px -12px rgba(0, 0, 0, 0.5) inset;
-}
-/* line 68, ../_sass/_flipcards.scss */
-.panel .back core-toolbar {
-  background-color: #F68320;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-}
-/* line 75, ../_sass/_flipcards.scss */
-.panel .back core-header-panel {
-  width: inherit;
-  height: inherit;
+  /*box-shadow:  inset;*/
 }
 
-/* line 83, ../_sass/_flipcards.scss */
+/* line 84, ../_sass/_flipcards.scss */
 .panel::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 90, ../_sass/_flipcards.scss */
+/* line 91, ../_sass/_flipcards.scss */
 .panel.flip .front {
   z-index: 900;
   -webkit-transform: rotateY(180deg);
@@ -8174,7 +8174,7 @@ th.hide-for-touch {
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 105, ../_sass/_flipcards.scss */
+/* line 104, ../_sass/_flipcards.scss */
 .back > .back-header {
   border-radius: 2px 2px 0px 0px;
   padding: 10px;
@@ -8184,7 +8184,7 @@ th.hide-for-touch {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* line 115, ../_sass/_flipcards.scss */
+/* line 113, ../_sass/_flipcards.scss */
 .back > .back-footer {
   border-radius: 0px 0px 2px 2px;
   background-color: #f68320;
@@ -8196,7 +8196,7 @@ th.hide-for-touch {
   width: 100%;
 }
 
-/* line 127, ../_sass/_flipcards.scss */
+/* line 124, ../_sass/_flipcards.scss */
 .card {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -8207,12 +8207,12 @@ th.hide-for-touch {
   display: inline-block;
   width: 100%;
 }
-/* line 136, ../_sass/_flipcards.scss */
+/* line 133, ../_sass/_flipcards.scss */
 .card .image {
   line-height: 0;
   position: relative;
 }
-/* line 140, ../_sass/_flipcards.scss */
+/* line 137, ../_sass/_flipcards.scss */
 .card .image h2 {
   bottom: 0;
   position: absolute;
@@ -8220,48 +8220,48 @@ th.hide-for-touch {
   margin-bottom: 1em;
   color: #FFF;
 }
-/* line 147, ../_sass/_flipcards.scss */
+/* line 144, ../_sass/_flipcards.scss */
 .card .image img {
   width: 100%;
-  opacity: 1.0;
+  opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 152, ../_sass/_flipcards.scss */
+/* line 148, ../_sass/_flipcards.scss */
 .card .image img:hover {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
-/* line 158, ../_sass/_flipcards.scss */
+/* line 153, ../_sass/_flipcards.scss */
 .card .strong-padding {
   padding: 15px;
 }
-/* line 162, ../_sass/_flipcards.scss */
+/* line 157, ../_sass/_flipcards.scss */
 .card .text-orange {
   color: #ff9800;
 }
-/* line 165, ../_sass/_flipcards.scss */
+/* line 160, ../_sass/_flipcards.scss */
 .card .text-orange:hover {
   color: #ff9800;
 }
-/* line 169, ../_sass/_flipcards.scss */
+/* line 164, ../_sass/_flipcards.scss */
 .card .text-grey {
   color: #9e9e9e;
 }
-/* line 172, ../_sass/_flipcards.scss */
+/* line 167, ../_sass/_flipcards.scss */
 .card .text-grey:hover {
   color: #9e9e9e;
 }
-/* line 177, ../_sass/_flipcards.scss */
+/* line 172, ../_sass/_flipcards.scss */
 .card .text-grey .text-plus-2,
 .card .text-grey.text-plus-2 {
   color: #616161;
 }
-/* line 181, ../_sass/_flipcards.scss */
+/* line 176, ../_sass/_flipcards.scss */
 .card .text-grey .text-plus-2:hover,
 .card .text-grey.text-plus-2:hover {
   color: #616161;
 }
-/* line 185, ../_sass/_flipcards.scss */
+/* line 180, ../_sass/_flipcards.scss */
 .card .button {
   padding: 10px 20px;
   -webkit-border-radius: 2px;
@@ -8279,146 +8279,148 @@ th.hide-for-touch {
   -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.32);
 }
-/* line 201, ../_sass/_flipcards.scss */
+/* line 196, ../_sass/_flipcards.scss */
 .card .button.text {
   background: none;
   padding: 0 20px 0 0;
   font-weight: bold;
 }
-/* line 207, ../_sass/_flipcards.scss */
+/* line 202, ../_sass/_flipcards.scss */
 .card .button.text:hover {
   background: none;
   color: #4dd0e1;
 }
-/* line 215, ../_sass/_flipcards.scss */
+/* line 210, ../_sass/_flipcards.scss */
 .card .button.text.disabled {
   background: none;
 }
-/* line 218, ../_sass/_flipcards.scss */
+/* line 213, ../_sass/_flipcards.scss */
 .card .button.text.disabled:hover {
   color: #bdbdbd;
 }
-/* line 221, ../_sass/_flipcards.scss */
+/* line 216, ../_sass/_flipcards.scss */
 .card .button.text.disabled:hover:hover {
   color: #bdbdbd;
 }
 
-/* line 226, ../_sass/_flipcards.scss */
-a.card {
-  color: inherit;
-}
-
-/* line 231, ../_sass/_flipcards.scss */
-a.button:hover,
-a.button:focus {
-  text-decoration: none;
-}
-
-/* line 235, ../_sass/_flipcards.scss */
+/* line 221, ../_sass/_flipcards.scss */
 .box-shadow-none, .card .button.text, .card .button.text:hover, .card .button.text:active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 252, ../_sass/_flipcards.scss */
+/* line 227, ../_sass/_flipcards.scss */
+a.card {
+  color: inherit;
+}
+
+/* line 232, ../_sass/_flipcards.scss */
+a.button:hover,
+a.button:focus {
+  text-decoration: none;
+}
+
+/* line 236, ../_sass/_flipcards.scss */
 .page p img {
+  -webkit-box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
   opacity: 0.7;
   filter: alpha(opacity=70);
-  margin-top: 90px;
+  margin-top: 78px;
 }
 
-/* line 258, ../_sass/_flipcards.scss */
+/* line 242, ../_sass/_flipcards.scss */
 .page p img:hover {
-  opacity: 1.0;
+  opacity: 1;
   filter: alpha(opacity=100);
 }
 
-/* line 262, ../_sass/_flipcards.scss */
+/* line 246, ../_sass/_flipcards.scss */
 .page h1 {
   color: #F68320;
-  text-shadow: 0px 1px 2px black;
+  text-shadow: 0px 1px 2px black !important;
 }
 
-/* line 267, ../_sass/_flipcards.scss */
-.case-title {
-  width: 25%;
-  background-color: #000;
-  text-align: right;
-  padding-right: 30px;
-  margin-top: 10px;
-}
-
-/* line 275, ../_sass/_flipcards.scss */
+/* line 251, ../_sass/_flipcards.scss */
 .page .side {
   position: fixed;
-  width: 100%;
-}
-
-/* line 280, ../_sass/_flipcards.scss */
-.case-definition {
   width: 25%;
-  position: relative;
-  background-color: #f3f3f3;
-  margin-left: -335px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  height: 580px;
+  z-index: 100;
 }
 
-/* line 292, ../_sass/_flipcards.scss */
-.case-definition p {
-  padding: 10%;
-  text-align: justify;
-}
-
-/* line 297, ../_sass/_flipcards.scss */
-.case-definition .def {
-  height: auto;
-}
-
-/* line 301, ../_sass/_flipcards.scss */
-.side-right {
+/* line 257, ../_sass/_flipcards.scss */
+.page .side-right {
   right: 0;
   position: fixed;
   width: 25%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.62);
   margin-top: 10px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   margin-right: -300px;
+  z-index: 100;
+  padding: 1%;
 }
 
-/* line 315, ../_sass/_flipcards.scss */
+/* line 269, ../_sass/_flipcards.scss */
+.case-title {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.62);
+  text-align: right;
+  padding-right: 30px;
+  margin-top: 10px;
+}
+
+/* line 278, ../_sass/_flipcards.scss */
+.case-definition {
+  width: 100%;
+  position: relative;
+  background-color: rgba(246, 131, 32, 0.42);
+  margin-left: -335px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  height: 580px;
+  border-radius: 0 5% 5% 0;
+}
+
+/* line 289, ../_sass/_flipcards.scss */
+.case-definition p {
+  padding: 10%;
+  text-align: justify;
+  font-size: 1em;
+  width: 100%;
+  text-shadow: 0px 1px 2px #9c7272;
+}
+
+/* line 297, ../_sass/_flipcards.scss */
+div.def {
+  height: auto;
+}
+
+/* line 301, ../_sass/_flipcards.scss */
 .side-right:hover {
   margin-right: 0px;
   cursor: pointer;
 }
 
-/* line 320, ../_sass/_flipcards.scss */
+/* line 306, ../_sass/_flipcards.scss */
 .side-right a {
   color: #FFF;
   margin-left: 20px;
+  text-shadow: 0px 1px 2px black;
 }
 
-/* line 325, ../_sass/_flipcards.scss */
+/* line 312, ../_sass/_flipcards.scss */
 .side-right a:hover {
-  color: #0078a0;
+  color: #F68320;
 }
 
-/* line 329, ../_sass/_flipcards.scss */
-.side-right p {
-  padding: 5% 0 0 0;
-  float: left;
-  margin-left: 10px;
-}
-
-/* line 335, ../_sass/_flipcards.scss */
+/* line 316, ../_sass/_flipcards.scss */
 .side-right .fa {
   font-size: 28px;
   color: #fff;
