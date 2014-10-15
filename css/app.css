@@ -8384,11 +8384,11 @@ a.button:focus {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  height: 580px;
   border-radius: 0 5% 5% 0;
+  height: auto;
 }
 
-/* line 289, ../_sass/_flipcards.scss */
+/* line 290, ../_sass/_flipcards.scss */
 .case-definition p {
   padding: 10%;
   text-align: justify;
@@ -8397,30 +8397,30 @@ a.button:focus {
   text-shadow: 0px 1px 2px #9c7272;
 }
 
-/* line 297, ../_sass/_flipcards.scss */
+/* line 298, ../_sass/_flipcards.scss */
 div.def {
   height: auto;
 }
 
-/* line 301, ../_sass/_flipcards.scss */
+/* line 302, ../_sass/_flipcards.scss */
 .side-right:hover {
   margin-right: 0px;
   cursor: pointer;
 }
 
-/* line 306, ../_sass/_flipcards.scss */
+/* line 307, ../_sass/_flipcards.scss */
 .side-right a {
   color: #FFF;
   margin-left: 20px;
   text-shadow: 0px 1px 2px black;
 }
 
-/* line 312, ../_sass/_flipcards.scss */
+/* line 313, ../_sass/_flipcards.scss */
 .side-right a:hover {
   color: #F68320;
 }
 
-/* line 316, ../_sass/_flipcards.scss */
+/* line 317, ../_sass/_flipcards.scss */
 .side-right .fa {
   font-size: 28px;
   color: #fff;
@@ -8544,6 +8544,13 @@ div.def {
 .sub-nav.main-link a:hover {
   color: #413939 !important;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* line 106, ../_sass/_navbar.scss */
+.img-sub-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 100%;
 }
 
 /* line 1, ../_sass/_page_loader.scss */

@@ -281,8 +281,9 @@ a.button:focus {
   background-color: rgba(246, 131, 32, 0.42);
   margin-left: -335px;
   @include transition(all 1s ease-in-out);
-  height: 580px;
   border-radius: 0 5% 5% 0;
+  // max-height: 580px;
+  height: auto;
 }
 
 

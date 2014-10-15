@@ -151,7 +151,7 @@ function initPageLoader() {
 
 		setTimeout('slickSlide()', pageloadDelay);
 		setTimeout('initGoogleMap()', pageloadDelay * 2);
-		chromeSmmothScroll();
+		// chromeSmmothScroll();
 		
 	}, pageloadDelay);
 }
@@ -257,7 +257,7 @@ function setHeight(){
 	
 	$('.show .def').each(function(){
 		if($(this).hasClass('heightDone')) return;
-	  	if($(this)[0].clientHeight < parentHeight){
+	  	if($(this)[0].clientHeight < 580){
 	  		$(this).closest('.case-definition').css('height', 'auto');
 	  	}
 		else{
