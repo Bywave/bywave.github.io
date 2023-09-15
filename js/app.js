@@ -14,7 +14,7 @@ var timeoutFadingHeader,
 /**
 * Page Loader
 */
-var pageloadDelay = 1000,
+var pageloadDelay = 1001,
 	documentScrollTop,
 	mainPageId = '#main-page',
 	loader = new SVGLoader($('#loader')[0], { speedIn : 400, easingIn : mina.easeinout });
